@@ -4,15 +4,20 @@ import React, { useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
+// MUI
 
-import { BrowserRouter,Route, Routes } from 'react-router-dom';
+import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
 import Logo from '../../assets/images/Logo';
+// Pages
+import Client from '../Client/Client';
 
 import './Main.css'
+import CLientForm from '../Client/CLientForm';
 function Main() {
     const [ headerDropDown,setHeaderDropDown ] = useState(false)
     return (
         <section className='main'>
+            <BrowserRouter>
             <nav>
                 <Logo/>
                 <ul className='nav-list'>
@@ -22,12 +27,12 @@ function Main() {
                         </div>
                         <span>Dashboard</span>
                     </li>
-                    <li className='nav-item'>
+                    <Link to='/client' className='nav-item'>
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
                         <span>Clients</span>
-                    </li>
+                    </Link>
                 </ul>
             </nav>
             <main>
@@ -44,17 +49,22 @@ function Main() {
                     sx={{ width: 50, height: 50 }}
                     src='https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-1/static/media/avatar-s-11.1d46cc62.jpg'/>
                     <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'}>
-                        <li className='header_dropdown_item'>
+                        <Link to='/login' className='header_dropdown_item'>
                             <div className='header_dropdown_icon'>
                                 <PowerSettingsNewOutlinedIcon/>
                             </div>
                             <p>Log Out</p>
-                        </li>
+                        </Link>
                     </ul>
                 </header>
                 <div className='content'>
+                    <Routes>
+                        <Route path='/client' element={<Client/>}/>
+                        <Route path='/client/form' element={<CLientForm/>}/>
+                    </Routes>
                 </div>
             </main>
+            </BrowserRouter>
         </section>
     )
 }
