@@ -24,13 +24,9 @@ nav{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 20%;
+    width: 230px;
     padding: 10px;
-<<<<<<< HEAD
-    background-color: var(--light);
-=======
     background-color: white;
->>>>>>> a1f235f9b9ffd2c9757e47b40c8e1f4254f75a6c
 }
 .nav-list{
     margin-top: 50px;
@@ -67,28 +63,16 @@ nav{
     margin-left: 10px;
 }
 
-
-
 main{
     position: relative;
-    width: 80%;
-    margin-left: 20%;
-<<<<<<< HEAD
-    background-color: #ededed;
-=======
-    min-height: 100vh;
->>>>>>> a1f235f9b9ffd2c9757e47b40c8e1f4254f75a6c
-    padding: 20px;
+    width:calc( 100% - 230px);
+    margin-left: 230px;
 }
 
 /* Main Content */
 .content{
     margin-top: 100px;
     width: 100%;
-<<<<<<< HEAD
-    min-height: 100%;
-=======
->>>>>>> a1f235f9b9ffd2c9757e47b40c8e1f4254f75a6c
     padding: 20px;
 }
 

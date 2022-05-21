@@ -1,19 +1,23 @@
 import { Avatar } from '@mui/material';
 import React, { useState } from 'react';
+
 // Icons
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
-// MUI
 
+// MUI
 import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
 import Logo from '../../assets/images/Logo';
+
 // Pages
 import Client from '../Client/Client';
+import Home from '../Home/Home'
 
-import './Main.css'
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
+import './Main.css'
+
 function Main() {
     const [ headerDropDown,setHeaderDropDown ] = useState(false)
     return (
@@ -72,6 +76,7 @@ function Main() {
                 </header>
                 <div className='content'>
                     <Routes>
+                        <Route path='/' element={<Home/>} />
                         <Route path='/client' element={<Client/>}/>
                         <Route path='/client/single_form' element={<CLientForm/>}/>
                         <Route path='/client/group_form' element={<GroupForm/>}/>
