@@ -92,3 +92,53 @@
     margin-right: 50px;
     align-items: flex-end;
 }
+
+.client_group{
+    padding: 20px;
+    background-color: white;
+
+}
+.client_tabs{
+    display: flex;
+    flex-direction: column;
+}
+.ant-tabs-nav-list{
+    display: flex;
+    flex-direction: row;
+}
+.ant-tabs-tab{
+    margin-left: 20px;
+    padding: 10px;
+    background-color: white;
+    border: #7367f0 1px solid;
+    color: #7367f0;
+    cursor: pointer;
+    transition: linear .2s all;
+}
+.ant-tabs-tab div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ant-tabs-tab div svg{
+    font-size: 1.2rem;
+}
+.ant-tabs-tab:hover{
+    transform: scale(1.05);
+}
+.ant-tabs-tab-active{
+    background-color: #7367f0;
+    color: white;
+    transform: scale(1.1);
+}
+.ant-tabs-content-holder{
+    margin-top: 20px;
+}
+.client_add_button{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border: #7367f0 1px solid;
+    color: #7367f0;
+    cursor: pointer;
+}
