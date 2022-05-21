@@ -1,3 +1,10 @@
+.client{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+}
 .client_title{
     font-size: 2rem;
     font-weight: 600;
@@ -22,24 +29,32 @@
     transform: scale(1.05);
     background-color: #7367f0;
 }
+.client_form{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+}
 .clientform_title{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .clientform_form{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2,50%);
 }
 .clientform_form label{
-    font-size: 1.1rem;
-    margin-top: 40px;
+    font-size: 0.8rem;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    color :#3f3f3f;
 }
 .clientform_form label input{
-    margin-top: 10px;
-    width: 70%;
+    margin-top: 5px;
+    width: 90%;
     border-radius: .3rem;
     border: 1px solid rgb(176, 176, 176);
     padding: 0.5rem 1rem;
@@ -47,4 +62,21 @@
 .clientform_form label input:focus{
     outline: none;
     border: #7367f0 solid 1px;
+    box-shadow: 0 3px 10px 0 rgba(34,41,47,.1);
+}
+.client_submit{
+    padding: 10px;
+    font-size: 1.2rem;
+}
+.client_submit{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-height: 40px;
+    max-width: 200px;
+}
+.client_label{
+    display: flex;
+    margin-right: 50px;
+    align-items: flex-end;
 }

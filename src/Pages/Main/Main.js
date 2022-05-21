@@ -13,6 +13,7 @@ import Client from '../Client/Client';
 
 import './Main.css'
 import CLientForm from '../Client/CLientForm';
+import GroupForm from '../Client/GroupForm';
 function Main() {
     const [ headerDropDown,setHeaderDropDown ] = useState(false)
     return (
@@ -60,7 +61,8 @@ function Main() {
                 <div className='content'>
                     <Routes>
                         <Route path='/client' element={<Client/>}/>
-                        <Route path='/client/form' element={<CLientForm/>}/>
+                        <Route path='/client/single_form' element={<CLientForm/>}/>
+                        <Route path='/client/group_form' element={<GroupForm/>}/>
                     </Routes>
                 </div>
             </main>
