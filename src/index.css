@@ -11,7 +11,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+<<<<<<< HEAD
   background-color: var(--grey) ;
+=======
+  min-height: 100vh;
+  background-color: #ededed;
+>>>>>>> a1f235f9b9ffd2c9757e47b40c8e1f4254f75a6c
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -22,5 +27,5 @@ code {
   min-height: 100vh;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
 }
