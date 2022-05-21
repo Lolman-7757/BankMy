@@ -62,11 +62,9 @@ function CLientForm() {
         Were Issued By Date
           <input type='date'/>
         </label>
-        <label className="client_label">
         <button className='client_submit'>
           Submit Client
         </button>
-        </label>
       </form>
     </div>
   )

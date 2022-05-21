@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 function GroupForm() {
   return (
-    <div>GroupForm</div>
+    <div className='client_group'>
+    </div>
   )
 }
 

@@ -26,6 +26,7 @@ nav{
     height: 100vh;
     width: 20%;
     padding: 10px;
+    background-color: white;
 }
 .nav-list{
     margin-top: 50px;
@@ -68,8 +69,7 @@ main{
     position: relative;
     width: 80%;
     margin-left: 20%;
-    min-height: 100%;
-    background-color: #ededed;
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -77,6 +77,7 @@ main{
 .content{
     margin-top: 100px;
     width: 100%;
+    padding: 20px;
 }
 
 
