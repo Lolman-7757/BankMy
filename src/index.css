@@ -1,3 +1,8 @@
+:root{
+  --grey:#ededed;
+  --purple:linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+  --light:white;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,10 +11,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+<<<<<<< HEAD
+  background-color: var(--grey) ;
+=======
   min-height: 100vh;
   background-color: #ededed;
+>>>>>>> a1f235f9b9ffd2c9757e47b40c8e1f4254f75a6c
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

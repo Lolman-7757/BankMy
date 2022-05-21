@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/charts": "^1.3.6",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.0",
@@ -12,11 +13,16 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "antd": "^4.20.5",
+=======
+    "ant-design": "^1.0.0",
+>>>>>>> a540ea181939c640c88dad7ed1ea5d15a1ee3a86
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0",
+    "react-script": "^2.0.5",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.0.2",
     "styled-components": "^5.3.5",

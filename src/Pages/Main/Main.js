@@ -22,17 +22,29 @@ function Main() {
             <nav>
                 <Logo/>
                 <ul className='nav-list'>
-                    <li className='nav-item nav-item_active'>
+                    <Link to='/' className='nav-item nav-item_active'>
                         <div className='nav-item_icon'>
                             <HomeOutlinedIcon/>
                         </div>
                         <span>Dashboard</span>
-                    </li>
+                    </Link>
                     <Link to='/client' className='nav-item'>
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
                         <span>Clients</span>
+                    </Link>
+                    <Link to='/client' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>Shartnama</span>
+                    </Link>
+                    <Link to='/client' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>Taminat</span>
                     </Link>
                 </ul>
             </nav>
