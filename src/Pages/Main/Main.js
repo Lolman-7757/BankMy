@@ -13,6 +13,7 @@ import Logo from '../../assets/images/Logo';
 // Pages
 import Client from '../Client/Client';
 import Home from '../Home/Home'
+import Shartnama from '../Shartnama/Shartnama'
 
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
@@ -38,7 +39,7 @@ function Main() {
                         </div>
                         <span>Clients</span>
                     </Link>
-                    <Link to='/client' className='nav-item'>
+                    <Link to='/shartnama' className='nav-item'>
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
@@ -80,6 +81,7 @@ function Main() {
                         <Route path='/client' element={<Client/>}/>
                         <Route path='/client/single_form' element={<CLientForm/>}/>
                         <Route path='/client/group_form' element={<GroupForm/>}/>
+                        <Route path='/shartnama' element={<Shartnama/>}/>
                     </Routes>
                 </div>
             </main>
