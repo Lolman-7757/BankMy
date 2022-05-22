@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
+import { BiEnvelope } from 'react-icons/bi'
 
 // MUI
 import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
@@ -12,8 +13,9 @@ import Logo from '../../assets/images/Logo';
 
 // Pages
 import Client from '../Client/Client';
-import Home from '../Home/Home'
-import Shartnama from '../Shartnama/Shartnama'
+import Home from '../Home/Home';
+import Login from '../Login/Login'
+import Shartnama from '../Shartnama/Shartnama';
 
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
@@ -32,7 +34,7 @@ function Main() {
         <section className='main'>
             <BrowserRouter>
             <nav>
-                <Logo/>
+                <Link to='/'><Logo/></Link>
                 <Tabs defaultActiveKey="1" onChange={onChange} className="nav-list">
                     <TabPane 
                     tab={
@@ -68,30 +70,33 @@ function Main() {
             
             <main>
                 <header>
-                    <div className='header_info'>
-                    
-                        <h2>John Doe</h2>
-                        <p>admin</p>
+                    <BiEnvelope className='email'/>
+                    <div className='header_last'>
+                        <div className='header_info'>
+                            <h2>John Doe</h2>
+                            <p>admin</p>
+                        </div>
+                        <Avatar
+                        onClick={()=>{setHeaderDropDown(!headerDropDown)}}
+                        className='header_avatar'
+                        alt="John Doe" 
+                        sx={{ width: 50, height: 50 }}
+                        src='https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-1/static/media/avatar-s-11.1d46cc62.jpg'/>
+                        <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'}>
+                            <Link to='/login' className='header_dropdown_item'>
+                                <div className='header_dropdown_icon'>
+                                    <PowerSettingsNewOutlinedIcon/>
+                                </div>
+                                <p>Log Out</p>
+                            </Link>
+                        </ul>
                     </div>
-                    <Avatar
-                    onClick={()=>{setHeaderDropDown(!headerDropDown)}}
-                    className='header_avatar'
-                    alt="John Doe" 
-                    sx={{ width: 50, height: 50 }}
-                    src='https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-1/static/media/avatar-s-11.1d46cc62.jpg'/>
-                    <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'}>
-                        <Link to='/login' className='header_dropdown_item'>
-                            <div className='header_dropdown_icon'>
-                                <PowerSettingsNewOutlinedIcon/>
-                            </div>
-                            <p>Log Out</p>
-                        </Link>
-                    </ul>
                 </header>
                 <div className='content'>
                     <Routes>
                         <Route path='/' element={<Home/>} />
                         <Route path='/client' element={<Client/>}/>
+                        <Route path='/login' element={<Login/>}/>
                         <Route path='/client/single_form' element={<CLientForm/>}/>
                         <Route path='/client/group_form' element={<GroupForm/>}/>
                         <Route path='/shartnama' element={<Shartnama/>}/>
