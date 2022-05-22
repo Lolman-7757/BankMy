@@ -15,10 +15,7 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
     "ant-design": "^1.0.0",
-<<<<<<< HEAD
     "antd": "^4.20.6",
-=======
->>>>>>> aa65e3a7071a3d68392bf78ea31d33733eb21e8a
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
