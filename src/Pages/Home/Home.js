@@ -1,7 +1,6 @@
 import React from 'react'
 import DemoDualAxes from '../../Charts/ChartBar'
 import DemoBar from '../../Charts/ChartHoriz.js'
-import { ChartHoriz } from '../../Charts/ChartHoriz.js'
 import DemoRingProgress from '../../Charts/ChartCircle'
 
 import './Home.css'
@@ -45,7 +44,7 @@ function Home() {
         </div>
         <div className='total-end'>
           <p className='total-end-text-red'>
-            <span><i class='bx bx-down-arrow-alt'></i> 0.82%</span> since last week
+            <span><i className='bx bx-down-arrow-alt'></i> 0.82%</span> since last week
           </p>
         </div>
       </div>
@@ -65,7 +64,7 @@ function Home() {
         </div>
         <div className='total-end'>
           <p className='total-end-text-red'>
-            <span><i class='bx bx-down-arrow-alt'></i> 6.24%</span> since last week
+            <span><i className='bx bx-down-arrow-alt'></i> 6.24%</span> since last week
           </p>
         </div>
       </div>

@@ -17,6 +17,13 @@ import Home from '../Home/Home'
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import './Main.css'
+import { Tabs } from 'antd';
+
+const { TabPane } = Tabs;
+
+const onChange = (key) => {
+  console.log(key);
+};
 
 function Main() {
     const [ headerDropDown,setHeaderDropDown ] = useState(false)
@@ -25,33 +32,29 @@ function Main() {
             <BrowserRouter>
             <nav>
                 <Logo/>
-                <ul className='nav-list'>
-                    <Link to='/' className='nav-item nav-item_active'>
-                        <div className='nav-item_icon'>
-                            <HomeOutlinedIcon/>
-                        </div>
-                        <span>Dashboard</span>
-                    </Link>
-                    <Link to='/client' className='nav-item'>
-                        <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
-                        </div>
-                        <span>Clients</span>
-                    </Link>
-                    <Link to='/client' className='nav-item'>
-                        <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
-                        </div>
-                        <span>Shartnama</span>
-                    </Link>
-                    <Link to='/client' className='nav-item'>
-                        <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
-                        </div>
-                        <span>Taminat</span>
-                    </Link>
-                </ul>
+                <Tabs defaultActiveKey="1" onChange={onChange} className="nav-list">
+                    <TabPane 
+                    tab={
+                        <Link to='/' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <HomeOutlinedIcon/>
+                            </div>
+                            <span>Dashboard</span>
+                        </Link>} 
+                    key="1"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/client' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <PersonOutlineOutlinedIcon/>
+                            </div>
+                            <span>Clients</span>
+                        </Link>
+                    } 
+                    key="2"/>
+                </Tabs>
             </nav>
+            
             <main>
                 <header>
                     <div className='header_info'>

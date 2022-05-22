@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Client.css'
-import { Tabs, Button } from 'antd';
+import { Tabs } from 'antd';
 import { AiOutlineUser } from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 // function deleteClient (){
   //   let indexOfDeleted = +prompt('Write Down Number of that man who you dont like!')
@@ -14,8 +15,8 @@ import { AiOutlineUser } from 'react-icons/ai'
       name: 'Client 1'
     }
   ]
-  
   function GroupForm(props) {
+  
     let allInformation = [
       {
         code: {},
@@ -38,8 +39,12 @@ import { AiOutlineUser } from 'react-icons/ai'
     function callback(key) {
       console.log(key);
       setNewKey(key)
+      if(tabList.length == 1){
+        setDeleteState(false)
+      }
     }
   const [ code, setCode ] = useState(null),
+  [ groupName, setGroupName ] = useState(null),
   [ name, setName ] = useState(null),
   [ birth, setBirth ] = useState(null),
   [ address, setAddress ] = useState(null),
@@ -52,21 +57,25 @@ import { AiOutlineUser } from 'react-icons/ai'
   [ serialNum, setSerialNum ] = useState(null),
   [ issuedBy, setIssuedBy ] = useState(null),
   [ issuedDate, setIssuedDate ] = useState(null),
-  [ newKey, setNewKey ] = useState(0)
+  [ newKey, setNewKey ] = useState(0),
+  [ deleteState, setDeleteState ] = useState(true),
+  [ addButton, setAddButton ] = useState(true)
 
-  const operations = <button className='client_add_button' onClick={()=>addClient()}>Add new Client</button>
-  const [ tabList,setTabList ] = useState([tabs])
-  const [ infoList,setInfoList ] = useState([allInformation])
+  const operations = <div className='clientform_extra'><button className={addButton?'client_add_button':'none'} onClick={()=>addClient()}>+</button><label className='clientform_group'>Write Down your Group Name<input type='text' placeholder='Rene Bank'  onInput={(event)=>{setGroupName(event.target.value)}}/></label></div>
+  const [ tabList,setTabList ] = useState([{name: `Client1`,id:0}])
+  const [ infoList,setInfoList ] = useState(allInformation)
+  // Delete Button Being
   // Adding Client Func
   function addClient (){
-    if(tabs.length<4){
-      const newTab = [
-        {
-          name: `Client${tabs.length+1}`
-        }
+    if(tabList.length<4){
+      var newTab =[
+
+        {name: `Client${tabList.length+1}`}
+      
       ]
       const newInformation = [
         {
+          group_name: {},
           code: {},
           name: {},
           birth_date: {},
@@ -82,18 +91,37 @@ import { AiOutlineUser } from 'react-icons/ai'
           issued_date: {}
         }
       ]
-      setInfoList(allInformation.push.apply(allInformation,newInformation))
-      setTabList(tabs.push.apply(tabs,newTab))
-      console.log(tabs)
+      setInfoList(infoList.concat(newInformation))
+      setTabList(tabList.concat(newTab))
+      if(tabList.length>3){
+
+      }
     }else{
-      console.log('bye bye');
+      setAddButton(false)
     }
   }
-  
+  // Deleting CLient Func
+  function deleteClient(id){
+    if(tabList.length>1){
+      let newTabList = tabList.filter((tab,tabId)=> tabId !== (id))
+      console.log(newTabList);
+      setTabList(newTabList)
+      let newInfoList = infoList.filter((info,infoId)=>infoId !== (id))
+      setInfoList(newInfoList)
+      console.log(newInfoList)
+      if(tabList.length == 1){
+        setDeleteState(false)
+      }
+    }else if(tabList.length == 1){
+      setDeleteState(false)
+    }
+    
+  }
   // Typing data Func
   function insertData (e){
     e.preventDefault()
-    allInformation[newKey] = {
+    infoList[newKey] = {
+      group_name: {groupName},
       code: {code},
       name: {name},
       birth_date: {birth},
@@ -112,14 +140,25 @@ import { AiOutlineUser } from 'react-icons/ai'
   }
   return(
     <>
-    <Tabs tabBarExtraContent={operations}  defaultActiveKey="1" onChange={callback} className='client_tabs'>
+    <Tabs tabBarExtraContent={operations}  defaultActiveKey="2" onChange={callback} className='client_tabs'>
     {
-      tabs.map((tab,tabId)=>{
+      tabList.map((tab,tabId)=>{
         return(
-
-        <TabPane tab={<div><AiOutlineUser/>{tab.name}</div>} key={`${tabId}`}>
-          <div className='client_form'>
-            <div className='clientform_title'>Fill out this form to add a {tab.name}!</div>
+        <TabPane
+        tab={
+          <div className='clientform_user'>
+            <div className='clientform_icon'><AiOutlineUser/>{tab.name}</div>
+            {/* <div className='clientform_info'>
+              <p>Client №{tabId+1}</p>
+              <span>Personal Information</span>
+            </div> */}
+          </div>
+        } 
+        key={`${tabId}`}
+        >
+          <div className={`client_form`}>
+            <div className='clientform_title'>Account {tabId+1} Details!</div>
+            <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
             <form className='clientform_form'>
               <label>
                 Code
@@ -173,17 +212,24 @@ import { AiOutlineUser } from 'react-icons/ai'
               Were Issued By Date
                 <input type='date' onInput={(event)=>{setIssuedDate(event.target.value)}}/>
               </label>
-              <button className='client_submit' onClick={insertData}>
-                Submit Client
-              </button>
             </form>
+              <div className='clientform_buttons'>
+              <button className='client_submit' onClick={()=>document.querySelector(`form`).reset()}>
+                Reset Form
+              </button>
+              <button className={deleteState?'client_submit':'client_submit none'} onClick={()=>deleteClient(tabId)}>
+                Delete Client
+              </button>
+              </div>
           </div>
         </TabPane>
         )
       })
     }
   </Tabs>
-  <button className='client_add_button' >Delete Client</button>
+          <Link to='/' className='client_submit' onClick={insertData}>
+            Submit Group
+          </Link>
   </>
   
   )

@@ -13,11 +13,8 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
-    "antd": "^4.20.5",
-=======
     "ant-design": "^1.0.0",
->>>>>>> a540ea181939c640c88dad7ed1ea5d15a1ee3a86
+    "antd": "^4.20.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",

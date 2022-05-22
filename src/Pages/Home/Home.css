@@ -61,9 +61,11 @@
     border-radius: 10px;
 }
 .horizChart{
+    height: auto;
     width: 33%;
     background-color: #fff;
     padding: 20px;
-    height: 300px;
+    padding-bottom: 40px;
+    height: 330px;
     border-radius: 10px;
 }

@@ -6,12 +6,17 @@
     padding: 20px;
 }
 .client_title{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.clientform_subtitle{
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #808080;
 }
 .client_button{
     margin-left: 50px;
@@ -35,6 +40,7 @@
     padding: 20px;
     background-color: white;
     border-radius: 12px;
+    animation: appearence 1s;
 }
 .clientform_title{
     font-size: 1.5rem;
@@ -64,18 +70,15 @@
     border: #7367f0 solid 1px;
     box-shadow: 0 3px 10px 0 rgba(34,41,47,.1);
 }
-.client_submit{
-    padding: 10px;
-    font-size: 1.2rem;
-}
+
 .client_submit{
     display:flex;
     justify-content:center;
     align-items:center;
     height: 40px;
+    font-size: 1.2rem;
     width: 200px;
     margin-top: 30px;
-    margin-left: 50px;
     background-color: white;
     border: 1px solid #7367f0;
     color: #7367f0;
@@ -102,43 +105,184 @@
     display: flex;
     flex-direction: column;
 }
-.ant-tabs-nav-list{
+.client_tabs .ant-tabs-nav{
+    position: relative;
+}
+.client_tabs .ant-tabs-nav-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.client_tabs .ant-tabs-tab{
+    margin-left: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: linear .2s all;
+    animation: appearence .5s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.client_tabs .ant-tabs-tab div{
+    display: flex;
+    justify-content: center;
+}
+.client_tabs .ant-tabs-tab div svg{
+    font-size: 1.2rem;
+}
+.client_tabs .ant-tabs-tab:hover{
+    transform: scale(1.05);
+    /* border: 2px solid #7367f0; */
+    /* border-radius: 7px; */
+}
+.client_tabs .ant-tabs-nav-operations{
+    display: none;
+}
+.client_tabs .ant-tabs-extra-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+}
+.client_tabs .ant-tabs-content-holder{
+    margin-top: 20px;
+}
+.client_tabs .ant-tabs-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.client_tabs .ant-tabs-tab-active{
+    color: #7367f0;
+    transform: scale(1.1);
+}
+.client_tabs .ant-tabs-tab-active .clientform_icon{
+    color: white;
+    background-color: #7367f0;
+}
+.clientform_user{
     display: flex;
     flex-direction: row;
 }
-.ant-tabs-tab{
-    margin-left: 20px;
-    padding: 10px;
+.clientform_icon{
     background-color: white;
-    border: #7367f0 1px solid;
-    color: #7367f0;
+    padding: 10px;
+    border-radius: 7px;
+}
+.clientform_info{
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 15px;
+}
+.clientform_info p{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.clientform_info span{
+    font-size: 0.8rem;
+    color: #808080;
+}
+.client_tabs .ant-tabs-tab-btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.client_add_button{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    background-color: #7367f0;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     transition: linear .2s all;
 }
-.ant-tabs-tab div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.ant-tabs-tab div svg{
-    font-size: 1.2rem;
-}
-.ant-tabs-tab:hover{
-    transform: scale(1.05);
-}
-.ant-tabs-tab-active{
-    background-color: #7367f0;
-    color: white;
+.client_add_button:hover{
     transform: scale(1.1);
 }
-.ant-tabs-content-holder{
-    margin-top: 20px;
+@keyframes appearence {
+    0%{
+        z-index: 80;
+        opacity: 0;
+        margin-bottom: 0px;
+        transform: scale(0.8);
+    }
+    50%{
+        z-index: 80;
+        opacity: 0.5;
+        transform: translateY(-30px);
+    }
+    100%{
+        z-index: 80;
+        opacity: 1;
+        margin-bottom: 0px;
+        transform: scale(1);
+    }
 }
-.client_add_button{
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    border: #7367f0 1px solid;
-    color: #7367f0;
-    cursor: pointer;
+@keyframes appearence {
+    0%{
+        z-index: 80;
+        opacity: 0;
+        margin-bottom: 0px;
+        transform: scale(0.8);
+    }
+    50%{
+        z-index: 80;
+        opacity: 0.5;
+        transform: translateY(-20px);
+    }
+    100%{
+        z-index: 80;
+        opacity: 1;
+        margin-bottom: 0px;
+        transform: scale(1);
+    }
+}
+
+.clientform_extra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.clientform_group{
+    justify-self: flex-end;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    min-width: 500px;
+}
+.clientform_group input{
+    margin-top: 5px;
+    width: 90%;
+    border-radius: .3rem;
+    border: 1px solid rgb(176, 176, 176);
+    padding: 0.5rem 1rem;
+}
+.clientform_group input:focus{
+    outline: none;
+    border: #7367f0 solid 1px;
+    box-shadow: 0 3px 10px 0 rgba(34,41,47,.1);
+}
+.none{
+    display: none;
+}
+.clientform_buttons{
+    display: flex;
+    flex-direction: row;
+}
+.clientform_buttons button{
+    margin-left: 20px;
 }

@@ -46,8 +46,20 @@ nav{
     transition: linear all .2s;
     padding-left: 15px;
 }
-.nav-item_active{
+.nav-list .ant-tabs-tab{
+    transition: .2s linear all;
+    border-radius: 7px;
+}
+.nav-list .ant-tabs-tab:hover{
     background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+}
+.nav-list .ant-tabs-tab a:hover{
+    color: white;
+}
+.nav-list .ant-tabs-tab-active{
+    background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+}
+.nav-list .ant-tabs-tab-active a{
     color: white;
 }
 .nav-item_icon{
@@ -63,6 +75,7 @@ nav{
 .nav-item:hover .nav-item_icon{
     margin-left: 10px;
 }
+
 
 main{
     position: relative;
@@ -83,9 +96,9 @@ header{
     z-index: 100;
     position: fixed;
     top: 20px;
-    left: calc(20%+20px);
+    left: calc(20%);
     right: 20px;
-    width: calc(75%);
+    width: calc(78%);
     height: 70px;
     display: flex;
     flex-direction: row;
