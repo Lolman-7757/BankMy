@@ -1,0 +1,52 @@
+.shart-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 2em;
+}
+.shart-check{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; 
+}
+.shart-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shart-select p{
+    font-size: 14px;
+    color: #7367f0;
+}
+.shart-select select{
+    height: 40px;
+    width: 90%;
+    border: 2px solid rgb(199, 198, 198);
+    border-radius: 10px;
+}
+.shart-selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shart-selector p{
+    font-size: 14px;
+    color: #7367f0;
+}
+.shart-selector div{
+    display: flex;
+    flex-direction: column;
+}
+.shart-button{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: #7367f0;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: var(--light);
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: calc(100% - 250px);
+}

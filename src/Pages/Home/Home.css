@@ -23,11 +23,11 @@
     justify-content: space-between;
 }
 .total-part-circle-blue{
-    font-size: 50px;
+    font-size: 60px;
     color: #1E90FF;
 }
 .total-part-circle-yellow{
-    font-size: 50px;
+    font-size: 60px;
     color: rgb(219, 219, 22);
 }
 .price-total{
@@ -38,6 +38,9 @@
 .total-text{
     font-size: 14px;
     color: grey;
+}
+.total-end{
+    margin-top: 10px;
 }
 .total-end-text-green span{
     color: rgb(17, 168, 17);

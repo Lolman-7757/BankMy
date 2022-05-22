@@ -96,9 +96,9 @@ header{
     z-index: 100;
     position: fixed;
     top: 20px;
-    left: calc(20%);
+    left: calc(230px+20px);
     right: 20px;
-    width: calc(78%);
+    width: calc(75% + 40px);
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -108,6 +108,7 @@ header{
     border-radius: 12px;
     padding-right: 20px;
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.178);
+    z-index: 5;
 }
 .header_info{
     height: 80%;
