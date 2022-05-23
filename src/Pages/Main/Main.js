@@ -29,7 +29,7 @@ const onChange = (key) => {
 };
 
 function Main() {
-    const [ headerDropDown,setHeaderDropDown ] = useState(false)
+    const [ headerDropDown,setHeaderDropDown ] = useState(false);
     return (
         <section className='main'>
             <BrowserRouter>
@@ -85,7 +85,7 @@ function Main() {
                         <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'}>
                             <Link to='/login' className='header_dropdown_item'>
                                 <div className='header_dropdown_icon'>
-                                    <PowerSettingsNewOutlinedIcon/>
+                                    <PowerSettingsNewOutlinedIcon onClick={()=>{setHeaderDropDown(false)}}/>
                                 </div>
                                 <p>Log Out</p>
                             </Link>

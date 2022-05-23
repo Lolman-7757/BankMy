@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Input } from '@nextui-org/react';
+
 import './Client.css'
 
 function CLientForm() {
@@ -39,65 +41,146 @@ function CLientForm() {
       <div className='clientform_title'>Account Details!</div>
             <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
             <form className='clientform_form'>
-              <label>
-                Code
-                <input type='number' onInput={(event)=>{setCode(event.target.value)}}/>
-              </label>
-              <label>
-                Name
-                <input type='text' placeholder='John Doe' onInput={(event)=>{setName(event.target.value)}}/>
-              </label>
-              <label>
-                Birth date
-                <input type='date' placeholder='00.01.2005' onInput={(event)=>{setBirth(event.target.value)}}/>
-              </label>
-              <label>
-                Address
-                <input type='text' placeholder='2nd Boulevar' onInput={(event)=>{setAddress(event.target.value)}}/>
-              </label>
-              <label>
-                City
-                <input type='text' placeholder='Manhetton' onInput={(event)=>{setCity(event.target.value)}}/>
-              </label>
-              <label>
-                Citizienship
-                <input type='text' placeholder='Russian' onInput={(event)=>{setCitizienship(event.target.value)}}/>
-              </label>
-              <label>
-                Nation
-                <input type='text' placeholder='Uzbek' onInput={(event)=>{setNation(event.target.value)}}/>
-              </label>
-              <label>
-                PINFL
-                <input type='text' maxLength='14' placeholder='12345678901234' onInput={(event)=>{setPinfl(event.target.value)}}/>
-              </label>
-              <label>
-                Phone
-                <input type='number' placeholder='+998991235678' onInput={(event)=>{setNumber(event.target.value)}}/>
-              </label>
-              <label>
-                Document Type
-                <input type='text' placeholder='ID' onInput={(event)=>{setDoc(event.target.value)}}/>
-              </label>
-              <label>
-                Serial Number
-                <input type='text' placeholder='AD123456789' onInput={(event)=>{setSerialNum(event.target.value)}}/>
-              </label>
-              <label>
-              Were Issued By
-                <input type='text' placeholder='Robert Pattison' onInput={(event)=>{setIssuedBy(event.target.value)}}/>
-              </label>
-              <label>
-              Were Issued By Date
-                <input type='date' onInput={(event)=>{setIssuedDate(event.target.value)}}/>
-              </label>
+              <Input
+                width='90%'
+                clearable
+                label="Code"
+                placeholder='1234'
+                className='vall'
+                bordered
+                color="secondary"
+                onChange={e => setCode(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Name"
+                placeholder='Jane'
+                bordered
+                className='vall'
+                color="secondary"
+                onChange={e => setName(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Birth date"
+                bordered
+                className='vall'
+                type='date'
+                color="secondary"
+                onChange={e => setBirth(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Address"
+                bordered
+                className='vall'
+                placeholder='2nd Boulevar'
+                color="secondary"
+                onChange={e => setAddress(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="City"
+                bordered
+                className='vall'
+                placeholder='Manhetton'
+                color="secondary"
+                onChange={e => setCity(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Citizienship"
+                bordered
+                className='vall'
+                placeholder='Russian'
+                color="secondary"
+                onChange={e => setCitizienship(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Nation"
+                bordered
+                className='vall'
+                placeholder='Uzbek'
+                color="secondary"
+                onChange={e => setNation(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="PINFL"
+                bordered
+                className='vall'
+                placeholder='12345678901234'
+                color="secondary"
+                onChange={e => setPinfl(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Phone"
+                bordered
+                className='vall'
+                placeholder='+998991235678'
+                type='number'
+                color="secondary"
+                onChange={e => setNumber(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label=" Document Type"
+                bordered
+                className='vall'
+                placeholder='ID'
+                color="secondary"
+                onChange={e => setDoc(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Serial Number"
+                bordered
+                className='vall'
+                placeholder='AD123456789'
+                color="secondary"
+                onChange={e => setSerialNum(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Were Issued By"
+                bordered
+                className='vall'
+                placeholder='Robert Pattison'
+                color="secondary"
+                onChange={e => setIssuedBy(e.target.value)}
+              />
+              <Input
+                width='90%'
+                clearable
+                label="Were Issued By Date"
+                bordered
+                className='vall'
+                type='date'
+                color="secondary"
+                onChange={e => setIssuedDate(e.target.value)}
+              />  
             </form>
-            <button className='client_submit' onClick={insertData}>
+            <div className='submit-buttons'>
+              <button className='client_submit' onClick={insertData}>
                 Submit Client
               </button>
               <button className='client_submit' onClick={()=>document.querySelector(`form`).reset()}>
                 Reset Form
               </button>
+            </div>
     </div>
   )
 }

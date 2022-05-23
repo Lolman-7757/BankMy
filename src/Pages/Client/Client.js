@@ -7,9 +7,11 @@ function Client() {
     return (
         <div className='client'>
             <div className='client_title'>
-                Clients List!
-            <Link className='client_button' to='/client/single_form'>Add a new Client!</Link>
-            <Link className='client_button' to='/client/group_form'>Add a new Group!</Link>
+                <p>Clients List!</p>
+                <div>
+                    <Link className='client_button' to='/client/single_form'>Add a new Client!</Link>
+                    <Link className='client_button' to='/client/group_form'>Add a new Group!</Link>
+                </div>
             </div>
             <div style={{ height: 400, width: '100%',marginTop:'50px' }}>
                 <DataGrid

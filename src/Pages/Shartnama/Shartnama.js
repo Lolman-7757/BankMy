@@ -12,9 +12,9 @@ function Shartnama() {
             width='90%'
             clearable
             label="Buyurtma sanasi"
-            placeholder="09.03.2022"
             bordered
             color="secondary"
+            type='date'
             />
             <Input
             width='90%'
@@ -160,25 +160,25 @@ function Shartnama() {
             width='90%'
             clearable
             label="Mikroqarz berish sanasi"
-            placeholder="26.03.2022"
             bordered
             color="secondary"
+            type='date'
             />
             <Input
             width='90%'
             clearable
             label="Birinchi tolov sonasi"
-            placeholder="26.04.2022"
             bordered
             color="secondary"
+            type='date'
             />
             <Input
             width='90%'
             clearable
             label="Shartnoma sanasi"
-            placeholder="09.03.2022"
             bordered
             color="secondary"
+            type='date'
             />
             <Input
             width='90%'
