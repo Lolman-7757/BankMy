@@ -1,6 +1,7 @@
 import React from 'react'
 import {Input} from '@nextui-org/react'
 import { Checkbox } from "@nextui-org/react";
+import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai'
 
 import './Shartnama.css'
 
@@ -9,6 +10,7 @@ function Shartnama() {
     <div className='client'>
         <div className='shart-main'>
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Buyurtma sanasi"
@@ -17,6 +19,7 @@ function Shartnama() {
             type='date'
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="So'ralayotgan qarz miqdor"
@@ -25,6 +28,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Qarz miqdori, yozuvda"
@@ -42,6 +46,7 @@ function Shartnama() {
                 </Checkbox>
             </div>
             <Input
+            className='vall'
             width='90%'
             clearable
             label="So'ralayotgan muddat"
@@ -63,6 +68,7 @@ function Shartnama() {
                 </select>
             </div>
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Maqsadi"
@@ -71,6 +77,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Kredit mahsuloti nomi"
@@ -79,6 +86,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Oylik o'rtacha daromad"
@@ -106,6 +114,7 @@ function Shartnama() {
                 </div>
             </div>
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Ustama foiz stavkasi, yillik"
@@ -114,6 +123,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Ustama foiz stavkasi, yillik (yozuvda)"
@@ -122,6 +132,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Penya, kunlik"
@@ -130,6 +141,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Oylik komission yig'im, %da"
@@ -157,6 +169,7 @@ function Shartnama() {
                 </div>
             </div>
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Mikroqarz berish sanasi"
@@ -165,6 +178,7 @@ function Shartnama() {
             type='date'
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Birinchi tolov sonasi"
@@ -173,6 +187,7 @@ function Shartnama() {
             type='date'
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Shartnoma sanasi"
@@ -181,6 +196,7 @@ function Shartnama() {
             type='date'
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="Shartnoma raqami"
@@ -189,6 +205,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label="SSKS / Hisobraqam"
@@ -197,6 +214,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label=" Bank nomi"
@@ -205,6 +223,7 @@ function Shartnama() {
             color="secondary"
             />
             <Input
+            className='vall'
             width='90%'
             clearable
             label=" Bank MFOsi"
@@ -213,9 +232,18 @@ function Shartnama() {
             color="secondary"
             />
         </div>
-        <button className='shart-button'>Отправить</button>
+        <div className='submit-buttons'>
+                    <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                        Reset Form
+                        <AiOutlineClear/>
+                    </button>
+                    <button className='client_submit submit' >
+                        Submit Client
+                        <AiOutlineFileAdd/>
+                    </button>
+            </div>
     </div>
-  )
+    )
 }
 
 export default Shartnama

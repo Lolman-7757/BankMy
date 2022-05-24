@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Input } from '@nextui-org/react';
-
+import {  AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai'
 import './Client.css'
 
 function CLientForm() {
@@ -173,11 +173,13 @@ function CLientForm() {
               />  
             </form>
             <div className='submit-buttons'>
-              <button className='client_submit' onClick={insertData}>
-                Submit Client
-              </button>
-              <button className='client_submit' onClick={()=>document.querySelector(`form`).reset()}>
+              <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
                 Reset Form
+                <AiOutlineClear/>
+              </button>
+              <button className='client_submit submit' onClick={insertData}>
+                Submit Client
+                <AiOutlineUserAdd/>
               </button>
             </div>
     </div>

@@ -65,7 +65,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 20px;
 }
 .submit-buttons button:last-child{
@@ -78,17 +78,16 @@
     height: 40px;
     font-size: 17px;
     width: 200px;
-    background-color: white;
-    border: 2px solid #7367f0;
-    color: #7367f0;
+    color: white;
     border-radius: 7px;
     cursor: pointer;    
     transition: .2s linear all;
     font-weight: 600;
+    border: none;
 }
 .client_submit:hover{
-    color: white;
-    background-color: #7367f0;
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 .client_label{
     display: flex;
@@ -298,4 +297,38 @@
 }
 .nextui-input button{
     transform: translateX(-20px);
+}
+.nextui-c-ctQnhE-kEXoss-visible-true{
+    transform: translateX(-20px);
+}
+.vall button{
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.vall button svg{
+    width: 100%;
+    height: 100%;
+}
+.reset{
+    background-color: rgb(255, 213, 0);
+}
+.submit{
+    background-color: rgb(70, 172, 255);
+}
+.delete{
+    background-color: red;
+}
+.delete svg,.reset svg,.submit svg{
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }

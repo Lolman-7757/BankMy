@@ -3,6 +3,9 @@ import { Tabs } from 'antd';
 import { AiOutlineUser } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { Input } from '@nextui-org/react';
+import { BiTrash } from 'react-icons/bi'
+import { AiOutlineUsergroupAdd, AiOutlineClear } from 'react-icons/ai';
+
 
 import './Client.css'
 // function deleteClient (){
@@ -304,11 +307,13 @@ import './Client.css'
               />
             </form>
               <div className='submit-buttons'>
-              <button className='client_submit' onClick={()=>document.querySelector(`form`).reset()}>
+              <button className='client_submit reset  ' onClick={()=>document.querySelector(`form`).reset()}>
                 Reset Form
+                <AiOutlineClear/>
               </button>
-              <button className={deleteState?'client_submit':'client_submit none'} onClick={()=>deleteClient(tabId)}>
+              <button className={deleteState?'client_submit delete':'client_submit none'} onClick={()=>deleteClient(tabId)}>
                 Delete Client
+                <BiTrash/>
               </button>
               </div>
           </div>
@@ -317,8 +322,9 @@ import './Client.css'
       })
     }
   </Tabs>
-          <Link to='/' className='client_submit group-submit' onClick={insertData}>
+          <Link to='/' className='client_submit group-submit submit' onClick={insertData}>
             Submit Group
+            <AiOutlineUsergroupAdd/>
           </Link>
   </>
   

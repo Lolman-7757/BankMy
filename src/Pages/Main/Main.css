@@ -94,11 +94,11 @@ main{
 /* Header */
 header{
     z-index: 100;
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: calc(230px+20px);
     right: 20px;
-    width: calc(75% + 40px);
+    width: 95%;
     height: 70px;
     display: flex;
     flex-direction: row;

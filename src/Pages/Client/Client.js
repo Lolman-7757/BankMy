@@ -3,6 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import './Client.css'
 import { Link } from 'react-router-dom';
 
+
 function Client() {
     return (
         <div className='client'>
