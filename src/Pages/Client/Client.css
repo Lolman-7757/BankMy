@@ -293,3 +293,9 @@
 .group-inputt{
     background-color: var(--light);   
 }
+.nextui-input-clear-button{
+    margin-right: 10px;
+}
+.nextui-input button{
+    transform: translateX(-20px);
+}

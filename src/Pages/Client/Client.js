@@ -13,15 +13,7 @@ function Client() {
                     <Link className='client_button' to='/client/group_form'>Add a new Group!</Link>
                 </div>
             </div>
-            <div style={{ height: 400, width: '100%',marginTop:'50px' }}>
-                <DataGrid
-                rows={rows}
-                columns={columns}
-                pageSize={10}
-                rowsPerPageOptions={[10]}
-                checkboxSelection
-                disableSelectionOnClick
-                />
+            <div>
             </div>
         </div>
     )

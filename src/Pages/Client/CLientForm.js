@@ -63,7 +63,6 @@ function CLientForm() {
               />
               <Input
                 width='90%'
-                clearable
                 label="Birth date"
                 bordered
                 className='vall'

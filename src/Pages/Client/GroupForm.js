@@ -11,13 +11,13 @@ import './Client.css'
   //   console.log(tabs);
   //   tabs.sort()
   // }
-  let tabs = [
-    {
-      name: 'Client 1'
-    }
-  ]
   function GroupForm(props) {
-  
+    
+    let tabs = [
+      {
+        name: 'Client 1'
+      }
+    ]
     let allInformation = [
       {
         code: {},
@@ -60,7 +60,10 @@ import './Client.css'
   [ issuedDate, setIssuedDate ] = useState(null),
   [ newKey, setNewKey ] = useState(0),
   [ deleteState, setDeleteState ] = useState(true),
-  [ addButton, setAddButton ] = useState(true)
+  [ addButton, setAddButton ] = useState(true),
+  [ tabList,setTabList ] = useState([{name: `Client1`,id:0}]),
+  [ infoList,setInfoList ] = useState(allInformation),
+  [ tabLength, setTabLength ] = useState(tabList.length)
 
   const operations = <div className='clientform_extra'>
     <button className={addButton?'client_add_button':'none'} onClick={()=>addClient()}>+</button>
@@ -75,16 +78,13 @@ import './Client.css'
       onChange={e => setGroupName(e.target.value)}
     />
   </div>
-  const [ tabList,setTabList ] = useState([{name: `Client1`,id:0}])
-  const [ infoList,setInfoList ] = useState(allInformation)
   // Delete Button Being
   // Adding Client Func
   function addClient (){
+    console.log(tabList.length);
     if(tabList.length<4){
       var newTab =[
-
         {name: `Client${tabList.length+1}`}
-      
       ]
       const newInformation = [
         {
@@ -104,27 +104,31 @@ import './Client.css'
           issued_date: {}
         }
       ]
+      setTabLength(tabLength+1)
       setInfoList(infoList.concat(newInformation))
       setTabList(tabList.concat(newTab))
+      console.log(tabList.length);
       if(tabList.length>3){
 
       }
-    }else{
+    }else if (tabList.length==4){
       setAddButton(false)
+      setDeleteState(true)
+    }
+    if (tabList.length>1){
+      setDeleteState(true)
     }
   }
   // Deleting CLient Func
   function deleteClient(id){
     if(tabList.length>1){
       let newTabList = tabList.filter((tab,tabId)=> tabId !== (id))
-      console.log(newTabList);
       setTabList(newTabList)
       let newInfoList = infoList.filter((info,infoId)=>infoId !== (id))
       setInfoList(newInfoList)
-      console.log(newInfoList)
-      if(tabList.length == 1){
-        setDeleteState(false)
-      }
+      
+      setAddButton(true)
+      setDeleteState(true)
     }else if(tabList.length == 1){
       setDeleteState(false)
     }
@@ -191,7 +195,6 @@ import './Client.css'
               />
               <Input
                 width='90%'
-                clearable
                 label="Birth date"
                 bordered
                 className='vall'
@@ -292,7 +295,6 @@ import './Client.css'
               />
               <Input
                 width='90%'
-                clearable
                 label="Were Issued By Date"
                 bordered
                 className='vall'

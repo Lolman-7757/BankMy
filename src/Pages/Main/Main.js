@@ -1,5 +1,5 @@
 import { Avatar } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // Icons
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -28,8 +28,25 @@ const onChange = (key) => {
     console.log(key);
 };
 
+
 function Main() {
     const [ headerDropDown,setHeaderDropDown ] = useState(false);
+    const catalogRef = useRef(null)
+    // header DropDown Hendle Script
+    useEffect(() => {
+        document.addEventListener('mousedown', hendleOutSide)
+    
+        return () => {
+            document.removeEventListener('mousedown', hendleOutSide)
+        }
+    }, [])
+
+    const hendleOutSide = (e) => {
+        const { current: wrap } = catalogRef;
+        if (wrap && !wrap.contains(e.target)) {
+            setHeaderDropDown(false)
+        }
+    }
     return (
         <section className='main'>
             <BrowserRouter>
@@ -82,7 +99,7 @@ function Main() {
                         alt="John Doe" 
                         sx={{ width: 50, height: 50 }}
                         src='https://pixinvent.com/demo/vuexy-react-admin-dashboard-template/demo-1/static/media/avatar-s-11.1d46cc62.jpg'/>
-                        <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'}>
+                        <ul className={headerDropDown?'header_dropdown header_dropdown_active':'header_dropdown'} ref={catalogRef}>
                             <Link to='/login' className='header_dropdown_item'>
                                 <div className='header_dropdown_icon'>
                                     <PowerSettingsNewOutlinedIcon onClick={()=>{setHeaderDropDown(false)}}/>
