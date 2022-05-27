@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Input } from '@nextui-org/react';
-import {  AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai'
+import {  AiOutlineClear, AiOutlineUserAdd, AiOutlineRollback } from 'react-icons/ai'
 import './Client.css'
+import { Link } from 'react-router-dom';
 
 function CLientForm() {
   const [ code, setCode ] = useState(null),
@@ -38,6 +39,10 @@ function CLientForm() {
   }
   return (
     <div className='client_form'>
+      <Link to='/client' className='clientform_back'>
+      <AiOutlineRollback/>
+      Back
+    </Link>
       <div className='clientform_title'>Account Details!</div>
             <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
             <form className='clientform_form'>

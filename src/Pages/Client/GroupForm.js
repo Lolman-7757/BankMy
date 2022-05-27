@@ -4,16 +4,10 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { Input } from '@nextui-org/react';
 import { BiTrash } from 'react-icons/bi'
-import { AiOutlineUsergroupAdd, AiOutlineClear } from 'react-icons/ai';
+import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback } from 'react-icons/ai';
 
 
 import './Client.css'
-// function deleteClient (){
-  //   let indexOfDeleted = +prompt('Write Down Number of that man who you dont like!')
-  //   tabs.splice(indexOfDeleted)
-  //   console.log(tabs);
-  //   tabs.sort()
-  // }
   function GroupForm(props) {
     
     let tabs = [
@@ -160,6 +154,10 @@ import './Client.css'
   }
   return(
     <>
+    <Link to='/client' className='clientform_back'>
+      <AiOutlineRollback/>
+      Back
+    </Link>
     <Tabs tabBarExtraContent={operations}  defaultActiveKey="2" onChange={callback} className='client_tabs'>
     {
       tabList.map((tab,tabId)=>{
@@ -185,6 +183,7 @@ import './Client.css'
                 bordered
                 color="secondary"
                 onChange={e => setCode(e.target.value)}
+                required= 'required'
               />
               <Input
                 width='90%'
