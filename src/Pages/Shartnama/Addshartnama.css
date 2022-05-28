@@ -4,6 +4,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
     row-gap: 2em;
+    width: 100%;
 }
 .shart-check{
     display: flex;

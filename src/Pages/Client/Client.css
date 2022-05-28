@@ -359,7 +359,7 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 .client_table{
-    width: 90%;
+    width: 95%;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -412,4 +412,19 @@ input::-webkit-inner-spin-button {
 }
 .client_table-city{
     min-width: 20%;
+}
+
+.back-but{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.clientform_head{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
 }

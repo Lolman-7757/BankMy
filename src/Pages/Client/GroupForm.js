@@ -148,10 +148,12 @@ import './Client.css'
   }
   return(
     <>
+    <div className='back-but'>
     <Link to='/client' className='clientform_back'>
       <AiOutlineRollback/>
       Back
     </Link>
+    </div>
     <Tabs tabBarExtraContent={operations}  defaultActiveKey="2" onChange={callback} className='client_tabs'>
     {
       tabList.map((tab,tabId)=>{

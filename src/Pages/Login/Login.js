@@ -25,16 +25,16 @@ function Login() {
                             label="E-mail"
                             placeholder='admin@mail.com'
                             bordered
-                            className='login_vall'
+                            className='login_vall vall'
                             color="secondary"
                             onChange={e => console.log(e.target.value)}
                             required
                             />
-                        <Input.Password 
-                            labelPlaceholder="Password" 
+                            <Input.Password 
+                            label="Password" 
                             initialValue="nextui123" 
                             bordered
-                            className='login_vall'
+                            className='login_vall vall'
                             width='90%'
                             color="secondary"/>
                         <label className='login_check'>

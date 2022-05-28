@@ -56,12 +56,16 @@ function CLientForm() {
   }
   return (
     <div className='client_form'>
-      <Link to='/client' className='clientform_back'>
-      <AiOutlineRollback/>
-      Back
-    </Link>
-      <div className='clientform_title'>Account Details!</div>
+        <div className='clientform_head'>
+          <div className='clientform_title_container'>
+            <div className='clientform_title'>Account Details!</div>
             <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
+          </div>
+          <Link to='/client' className='clientform_back'>
+            <AiOutlineRollback/>
+            Back
+          </Link>
+      </div>
             <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
               <Input
                 width='90%'
