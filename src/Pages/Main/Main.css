@@ -14,7 +14,6 @@ a{
 
 .main{
     width: 100%;
-    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }

@@ -15,6 +15,7 @@ import Logo from '../../assets/images/Logo';
 import Client from '../Client/Client';
 import Home from '../Home/Home';
 import Login from '../Login/Login'
+import Addshartnama from '../Shartnama/Addshartnama';
 import Shartnama from '../Shartnama/Shartnama';
 
 import CLientForm from '../Client/CLientForm';
@@ -116,7 +117,8 @@ function Main() {
                         <Route path='/login' element={<Login/>}/>
                         <Route path='/client/single_form' element={<CLientForm/>}/>
                         <Route path='/client/group_form' element={<GroupForm/>}/>
-                        <Route path='/shartnama' element={<Shartnama/>}/>
+                        <Route path='/addshartnama' element={<Addshartnama/>}/>
+                        <Route path ='/shartnama' element={<Shartnama/>}/>
                     </Routes>
                 </div>
             </main>
