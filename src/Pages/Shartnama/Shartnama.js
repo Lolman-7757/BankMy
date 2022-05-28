@@ -29,7 +29,7 @@ function Shartnama() {
    },[]);
 
   return (
-    <div className='client'>
+    <div className='shart_nama'>
         <div className='shartnamaMain'>
             <div className='shartnamaHeader'>
                 <p className='shartnamaTitle'>Shartnama</p>
