@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Input } from '@nextui-org/react';
 // Imgs
 import LoginBack from '../../assets/images/LoginBack'
 import Logo from '../../assets/images/Logo'
@@ -18,14 +19,24 @@ function Login() {
                     <h1>Welcome to Renesans!👋</h1>
                     <span>Please sign-in to your account and start the adventure</span>
                     <form>
-                        <label>
-                            E-mail
-                            <input type='email' placeholder='example@mail.com'/>
-                        </label>
-                        <label>
-                            Password  
-                            <input type='password' placeholder='1234567'/>
-                        </label>
+                            <Input
+                            width='90%'
+                            clearable
+                            label="E-mail"
+                            placeholder='admin@mail.com'
+                            bordered
+                            className='login_vall'
+                            color="secondary"
+                            onChange={e => console.log(e.target.value)}
+                            required
+                            />
+                        <Input.Password 
+                            labelPlaceholder="Password" 
+                            initialValue="nextui123" 
+                            bordered
+                            className='login_vall'
+                            width='90%'
+                            color="secondary"/>
                         <label className='login_check'>
                             <input type='checkbox'/>
                             Remember Me

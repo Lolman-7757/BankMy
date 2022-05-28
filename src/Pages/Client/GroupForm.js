@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Tabs } from 'antd';
 import { AiOutlineUser } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
@@ -9,12 +9,6 @@ import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback } from 'react-
 
 import './Client.css'
   function GroupForm(props) {
-    
-    let tabs = [
-      {
-        name: 'Client 1'
-      }
-    ]
     let allInformation = [
       {
         code: {},
@@ -37,7 +31,7 @@ import './Client.css'
     function callback(key) {
       console.log(key);
       setNewKey(key)
-      if(tabList.length == 1){
+      if(tabList.length === 1){
         setDeleteState(false)
       }
     }
@@ -61,7 +55,8 @@ import './Client.css'
   [ tabList,setTabList ] = useState([{name: `Client1`,id:0}]),
   [ infoList,setInfoList ] = useState(allInformation),
   [ tabLength, setTabLength ] = useState(tabList.length)
-
+  
+  // Add Button
   const operations = <div className='clientform_extra'>
     <button className={addButton?'client_add_button':'none'} onClick={()=>addClient()}>+</button>
     <Input
@@ -75,7 +70,6 @@ import './Client.css'
       onChange={e => setGroupName(e.target.value)}
     />
   </div>
-  // Delete Button Being
   // Adding Client Func
   function addClient (){
     console.log(tabList.length);
@@ -85,20 +79,20 @@ import './Client.css'
       ]
       const newInformation = [
         {
-          group_name: {},
-          code: {},
-          name: {},
-          birth_date: {},
-          address: {},
-          city: {},
-          citizienship: {},
-          nation: {},
-          pinfl: {},
-          number: {},
-          document_type: {},
-          serial_number: {},
-          issued_by: {},
-          issued_date: {}
+          group_name: '',
+          code: '',
+          name: '',
+          birth_date: '',
+          address: '',
+          city: '',
+          citizienship: '',
+          nation: '',
+          pinfl: '',
+          number: '',
+          document_type: '',
+          serial_number: '',
+          issued_by: '',
+          issued_date: ''
         }
       ]
       setTabLength(tabLength+1)
@@ -108,7 +102,7 @@ import './Client.css'
       if(tabList.length>3){
 
       }
-    }else if (tabList.length==4){
+    }else if (tabList.length===4){
       setAddButton(false)
       setDeleteState(true)
     }
@@ -126,7 +120,7 @@ import './Client.css'
       
       setAddButton(true)
       setDeleteState(true)
-    }else if(tabList.length == 1){
+    }else if(tabList.length === 1){
       setDeleteState(false)
     }
     
@@ -135,22 +129,22 @@ import './Client.css'
   function insertData (e){
     e.preventDefault()
     infoList[newKey] = {
-      group_name: {groupName},
-      code: {code},
-      name: {name},
-      birth_date: {birth},
-      address: {address},
-      city: {city},
-      citizienship: {citizienship},
-      nation: {nation},
-      pinfl: {pinfl},
-      number: {number},
-      document_type: {doc},
-      serial_number: {serialNum},
-      issued_by: {issuedBy},
-      issued_date: {issuedDate}
+      group_name: groupName,
+      code: code,
+      name: name,
+      birth_date: birth,
+      address: address,
+      city: city,
+      citizienship: citizienship,
+      nation: nation,
+      pinfl: pinfl,
+      number: number,
+      document_type: doc,
+      serial_number: serialNum,
+      issued_by: issuedBy,
+      issued_date: issuedDate
     }
-    console.log(allInformation);
+    alert(allInformation);
   }
   return(
     <>

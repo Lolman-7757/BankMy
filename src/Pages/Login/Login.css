@@ -49,25 +49,7 @@
     margin-top: 20px;
     font-size: 14px;
 }
-.login-secondary_wrapper form label input{
-    margin-top: 5px;
-    width: 80%;
-    height: 30px;
-    background-color: rgba(240, 255, 255, 0);
-    border: 1px solid #d8d6de;
-    border-radius: 7px;
-    color: rgb(180, 180, 180);
-    font-size: 15px;
-    text-indent: 10px;
-    letter-spacing: 1px;
-    box-shadow: 0px 1px 100px -66px rgba(34, 60, 80, 0.16);
-    transition: .2s all linear;
-}
-.login-secondary_wrapper form label input:focus{
-    color: black;
-    border: 1px solid #9c9c9c;
-    outline: none;
-}
+
 .login_check{
     flex-direction: row !important;
     align-items: center;
@@ -103,4 +85,7 @@
 .login-secondary_wrapper a:hover{
     transform: scale(1.05);
     box-shadow: 0px 3px 8px 4px rgba(34, 60, 80, 0.2);
+}
+.login_main .nextui-input-main-container{
+    margin-top: 20px;
 }
