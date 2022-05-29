@@ -61,6 +61,7 @@ function Addshartnama() {
     function cashInputAppearence () {
         if(cash){
             return(
+
                 <>
                 <Input
             className='vall'
@@ -107,6 +108,12 @@ function Addshartnama() {
             Back
         </Link>
         <div className='client'>
+        <div className='shartnamaform_head'>
+            <div className='shartnamaform_title_container'>
+                <div className='shartnamaform_title'>Shartnama Details!</div>
+                <div className='shartnamaform_subtitle'>Fill Out this form to add a Shartnama.</div>
+            </div>
+        </div>
             <form className='shart-main'>
                 <Input
                 className='vall'

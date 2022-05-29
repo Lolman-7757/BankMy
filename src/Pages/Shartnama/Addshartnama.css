@@ -5,6 +5,7 @@
     column-gap: 1em;
     row-gap: 2em;
     width: 100%;
+    margin-top: 40px;
 }
 .shart-check{
     display: flex;
@@ -58,4 +59,17 @@
 }
 .back-back{
     margin-bottom: 20px;
+}
+.shartnamaform_head{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.shartnamaform_title{
+    font-size: 1.5rem;
+}
+.shartnamaform_subtitle{
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #808080;
 }
