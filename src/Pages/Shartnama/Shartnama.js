@@ -1,13 +1,36 @@
-import React, {useState,useEffect} from 'react'
+import React,  {useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Input } from '@nextui-org/react'
-import { Pagination } from "@nextui-org/react";
+import Pagination from "../../Components/Pagination/Pagination";
 
 import './Shartnama.css'
 
 function Shartnama() {
 
     const [shartnamalar, setShartnamalar] = useState([]);
+    const [ shartnamaWarn, setShartnamaWarn ] = useState(false)
+    const shartnamaRef = useRef(null)
+    const [ currentPage, setCurrentPage ] = useState(1);
+    const [ shartnamaPerPage, setShartnamasPerPage ] = useState(10)
+
+    const lastShartnamaIndex = currentPage * shartnamaPerPage;
+    const firstShartnamaIndex = lastShartnamaIndex - shartnamaPerPage;
+    const currentShartnama = shartnamalar.slice(firstShartnamaIndex,lastShartnamaIndex)
+    // header DropDown Hendle Script
+    useEffect(() => {
+        document.addEventListener('mousedown', shartnamaHendleOutSide)
+    
+        return () => {
+            document.removeEventListener('mousedown', shartnamaHendleOutSide)
+        }
+    }, [])
+
+    const shartnamaHendleOutSide = (e) => {
+        const { current: wrap } = shartnamaRef;
+        if (wrap && !wrap.contains(e.target)) {
+            setShartnamaWarn(false)
+        }
+    }
 
     useEffect(() => {
         setShartnamalar(
@@ -29,9 +52,19 @@ function Shartnama() {
         )
     },[]);
 
+    const paginate = pageNumber => setCurrentPage(pageNumber)
+
     return (
         <div className='shart_nama'>
             <div className='shartnamaMain'>
+                <div className={shartnamaWarn?'shartnama_warn shartnama_warn_active':'shartnama_warn'}>
+                    <div className='shartnama_warn_title'>Warning!</div>
+                    <div className='shartnama_warn_text'>Are you sure you want to delete it?</div>
+                    <div className='shartnama_warn_buttons'>
+                        <button>Yes!</button>
+                        <button onClick={()=>setShartnamaWarn(!shartnamaWarn)} ref={shartnamaRef}>No!</button>
+                    </div>
+                </div>
                 <div className='shartnamaHeader'>
                     <p className='shartnamaTitle'>Shartnama</p>
                 </div>
@@ -58,14 +91,14 @@ function Shartnama() {
                         </div>
                         <ul className='tableInfo'>
                             {
-                                shartnamalar.map((item,index)=>{
-                                    return <li>
+                                currentShartnama.map((item,index)=>{
+                                    return <li key={index}>
                                         <p className='liName li'><span>{index + 1}.</span>{item.name}</p>
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>
                                             <button><i className='bx bx-edit-alt'></i></button>
-                                            <button><i className='bx bx-trash'></i></button>
+                                            <button onClick={()=>setShartnamaWarn(!shartnamaWarn)}><i className='bx bx-trash'></i></button>
                                         </div>
                                     </li>
                                 })
@@ -73,6 +106,11 @@ function Shartnama() {
                         </ul>
                     </div>
                 </div>
+                <Pagination
+                itemsPerPage={shartnamaPerPage}
+                totalItems={shartnamalar.length}
+                paginate={paginate}
+                />
                 {/* <div className='tablePagination'>
                     <Pagination rounded total={10} initialPage={6} />;
                 </div> */}

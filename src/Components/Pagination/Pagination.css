@@ -1,0 +1,12 @@
+.pagination{
+    display: flex;
+    flex-direction: row;
+}
+.pagination_item{
+    padding: 10px 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid rgb(226, 225, 225);
+    cursor: pointer;
+}
