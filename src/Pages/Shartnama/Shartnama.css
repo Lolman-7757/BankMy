@@ -29,19 +29,6 @@
     background-color: #7367f0;
     color: white;
 }
-.shartnamaTablePart{
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 6px;
-    border: 1px solid rgb(234, 234, 234);
-    /* box-shadow: 0px 0px 19px 1px rgba(34, 60, 80, 0.11); */
-    overflow: hidden;
-}
 .shartnamaSearch{
     width: 100%;
     margin-top: 20px;
@@ -52,11 +39,27 @@
 .search-input i{
     font-size: 18px;
 }
+.shartnamaTablePart{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 1px solid rgb(234, 234, 234);
+    overflow: hidden;
+}
 .tableHeader{
     display: flex;
+    padding: 0 17px 0 0;
     flex-direction: row;
-    padding: 20px;
     background-color: rgb(239, 239, 239);
+}
+.tableHeader p{
+    border-right: 2px solid rgb(201, 201, 201);
+    padding: 20px 15px;
 }
 .tableHeader .headerTable-title:nth-child(1){
     flex-basis: 30%;
@@ -81,9 +84,9 @@
 }
 .tableInfo li{
     width: 100%;
-    height: 80px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-bottom: 1px solid rgb(216, 214, 214);
 }
 .tableInfo li:last-child{
@@ -93,16 +96,19 @@
 .tableInfo li p:nth-child(1){
     flex-basis: 30%;
     font-weight: 500;
+    padding: 15px;
 }
 .tableInfo li p:nth-child(2){
     flex-basis: 25%;
     text-align: center;
     font-weight: 500;
+    padding: 15px;
 }
 .tableInfo li p:nth-child(3){
     flex-basis: 25%;
     text-align: center;
-    font-weight: 500;   
+    font-weight: 500; 
+    padding: 15px;
 }
 .liName span{
     margin-right: 3px;
@@ -111,24 +117,33 @@
     flex-basis: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .userButtons button{
-    width: 70px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     background: none;
     margin-right: 10px;
     border: none;
     border-radius: 5px;
     font-weight: 600;
+    font-size: 18px;
 }
 .userButtons button:nth-child(1){
     background-color: green;
     color: white;
+    transition-duration: 0.3s;
+}
+.userButtons button:nth-child(1):hover{
+    background-color: rgb(3, 61, 3);
 }
 .userButtons button:nth-child(2){
     background-color: red;
     color: white;
+    transition-duration: 0.3s;
+}
+.userButtons button:nth-child(2):hover{
+    background-color: rgb(163, 10, 10);
 }
 .shartnamaLink{
     font-weight: 600;
@@ -146,11 +161,14 @@
     color: white;
     transform: scale(1.05);
 }
-
-
-
 .li{
     border-right: 2px solid rgb(201, 201, 201);
     height: 100%;
-    padding: 0;
 }
+/* .tablePagination{
+    width: calc(100% - 17px);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */

@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Input } from '@nextui-org/react'
+import { Pagination } from "@nextui-org/react";
 
 import './Shartnama.css'
 
@@ -63,8 +64,8 @@ function Shartnama() {
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>
-                                            <button>Edit <i className='bx bx-edit-alt'></i></button>
-                                            <button>Delete <i className='bx bx-trash'></i></button>
+                                            <button><i className='bx bx-edit-alt'></i></button>
+                                            <button><i className='bx bx-trash'></i></button>
                                         </div>
                                     </li>
                                 })
@@ -72,6 +73,9 @@ function Shartnama() {
                         </ul>
                     </div>
                 </div>
+                {/* <div className='tablePagination'>
+                    <Pagination rounded total={10} initialPage={6} />;
+                </div> */}
             </div>
         </div>
     )

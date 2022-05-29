@@ -55,173 +55,175 @@ function CLientForm() {
     );
   }
   return (
-    <div className='client_form'>
-        <div className='clientform_head'>
-          <div className='clientform_title_container'>
-            <div className='clientform_title'>Account Details!</div>
-            <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
-          </div>
-          <Link to='/client' className='clientform_back'>
-            <AiOutlineRollback/>
-            Back
-          </Link>
-      </div>
-            <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
-              <Input
-                width='90%'
-                clearable
-                label="Code"
-                placeholder='1234'
-                className='vall'
-                bordered
-                color="secondary"
-                onInput={e => setCode(e.target.value)}
-                minLength={1}
-                maxLength={10}
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Name"
-                placeholder='Jane'
-                bordered
-                className='vall'
-                color="secondary"
-                onChange={e => setName(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                label="Birth date"
-                bordered
-                className='vall'
-                type='date'
-                color="secondary"
-                onChange={e => setBirth(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Address"
-                bordered
-                className='vall'
-                placeholder='2nd Boulevar'
-                color="secondary"
-                onChange={e => setAddress(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="City"
-                bordered
-                className='vall'
-                placeholder='Manhetton'
-                color="secondary"
-                onChange={e => setCity(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Citizienship"
-                bordered
-                className='vall'
-                placeholder='Russian'
-                color="secondary"
-                onChange={e => setCitizienship(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Nation"
-                bordered
-                className='vall'
-                placeholder='Uzbek'
-                color="secondary"
-                onChange={e => setNation(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="PINFL"
-                bordered
-                className='vall'
-                placeholder='12345678901234'
-                color="secondary"
-                onChange={e => setPinfl(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Phone"
-                bordered
-                className='vall'
-                placeholder='+998991235678'
-                type='number'
-                color="secondary"
-                onChange={e => setNumber(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label=" Document Type"
-                bordered
-                className='vall'
-                placeholder='ID'
-                color="secondary"
-                onChange={e => setDoc(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Serial Number"
-                bordered
-                className='vall'
-                placeholder='AD123456789'
-                color="secondary"
-                onChange={e => setSerialNum(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                clearable
-                label="Were Issued By"
-                bordered
-                className='vall'
-                placeholder='Robert Pattison'
-                color="secondary"
-                onChange={e => setIssuedBy(e.target.value)}
-                required
-              />
-              <Input
-                width='90%'
-                label="Were Issued By Date"
-                bordered
-                className='vall'
-                type='date'
-                color="secondary"
-                onChange={e => setIssuedDate(e.target.value)}
-                required
-              />  
-            </form>
-            <div className='submit-buttons'>
-              <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
-                Reset Form
-                <AiOutlineClear/>
-              </button>
-              <button type='submit' className='client_submit submit'>
-                Submit Client
-                <AiOutlineUserAdd/>
-              </button>
+    <>
+      <Link to='/client' className='clientform_back'>
+        <AiOutlineRollback/>
+        Back
+      </Link>
+      <div className='client_form'>
+          <div className='clientform_head'>
+            <div className='clientform_title_container'>
+              <div className='clientform_title'>Account Details!</div>
+              <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
             </div>
-    </div>
+          </div>
+              <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
+                <Input
+                  width='90%'
+                  clearable
+                  label="Code"
+                  placeholder='1234'
+                  className='vall'
+                  bordered
+                  color="secondary"
+                  onInput={e => setCode(e.target.value)}
+                  minLength={1}
+                  maxLength={10}
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Name"
+                  placeholder='Jane'
+                  bordered
+                  className='vall'
+                  color="secondary"
+                  onChange={e => setName(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  label="Birth date"
+                  bordered
+                  className='vall'
+                  type='date'
+                  color="secondary"
+                  onChange={e => setBirth(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Address"
+                  bordered
+                  className='vall'
+                  placeholder='2nd Boulevar'
+                  color="secondary"
+                  onChange={e => setAddress(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="City"
+                  bordered
+                  className='vall'
+                  placeholder='Manhetton'
+                  color="secondary"
+                  onChange={e => setCity(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Citizienship"
+                  bordered
+                  className='vall'
+                  placeholder='Russian'
+                  color="secondary"
+                  onChange={e => setCitizienship(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Nation"
+                  bordered
+                  className='vall'
+                  placeholder='Uzbek'
+                  color="secondary"
+                  onChange={e => setNation(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="PINFL"
+                  bordered
+                  className='vall'
+                  placeholder='12345678901234'
+                  color="secondary"
+                  onChange={e => setPinfl(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Phone"
+                  bordered
+                  className='vall'
+                  placeholder='+998991235678'
+                  type='number'
+                  color="secondary"
+                  onChange={e => setNumber(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label=" Document Type"
+                  bordered
+                  className='vall'
+                  placeholder='ID'
+                  color="secondary"
+                  onChange={e => setDoc(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Serial Number"
+                  bordered
+                  className='vall'
+                  placeholder='AD123456789'
+                  color="secondary"
+                  onChange={e => setSerialNum(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  clearable
+                  label="Were Issued By"
+                  bordered
+                  className='vall'
+                  placeholder='Robert Pattison'
+                  color="secondary"
+                  onChange={e => setIssuedBy(e.target.value)}
+                  required
+                />
+                <Input
+                  width='90%'
+                  label="Were Issued By Date"
+                  bordered
+                  className='vall'
+                  type='date'
+                  color="secondary"
+                  onChange={e => setIssuedDate(e.target.value)}
+                  required
+                />  
+              </form>
+              <div className='submit-buttons'>
+                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                  Reset Form
+                  <AiOutlineClear/>
+                </button>
+                <button type='submit' className='client_submit submit'>
+                  Submit Client
+                  <AiOutlineUserAdd/>
+                </button>
+              </div>
+      </div>
+    </>
   )
 }
 
