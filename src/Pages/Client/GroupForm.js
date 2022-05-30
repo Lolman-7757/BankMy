@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { Tabs } from 'antd';
-import { AiOutlineUser } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { Input } from '@nextui-org/react';
 import { BiTrash } from 'react-icons/bi'
-import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback } from 'react-icons/ai';
+import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback, AiOutlineUser } from 'react-icons/ai';
 
 
 import './Client.css'
