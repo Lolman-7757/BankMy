@@ -134,7 +134,7 @@ function Client() {
                             currentClient.map((item,index)=>{
                                 return <li key={index}>
                                     <p className='clientliName li'><span>{index + 1}.</span>{item.name}</p>
-                                    <p className='li'>{item.city}</p>
+                                    <p className='li'>{item.code}</p>
                                     <p className='li'>{item.pinfl}</p>
                                     <p className='li'>{item.city}</p>
                                     <div className='clientuserButtons'>

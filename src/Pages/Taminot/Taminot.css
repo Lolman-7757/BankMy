@@ -96,3 +96,47 @@
 .taminot_tableform_delete_active{
     display: flex;
 }
+.taminot_table{
+    margin: 0 0 20px 0;
+}
+.taminot_table .rare{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.taminot_table .rare p{
+    font-size: 20px;
+    margin-right: 20px;
+    font-weight: 600;
+}
+.rare select{
+    padding: 5px 30px;
+}
+.taminot_ratio_parent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0 0 0;
+    
+}
+.taminot_ratio_parent p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.taminot_ratio:nth-child(2){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    justify-content: space-between;
+}
+.taminot_ratio:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width:20%;
+    justify-content: space-between;
+}
