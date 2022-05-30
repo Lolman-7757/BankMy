@@ -170,14 +170,14 @@ function Addshartnama() {
                     <select
                     onChange={e => setSector(e.target.value)}
                     >
-                        <option value="1 вариант">1 вариант</option>
-                        <option value="2 вариант">2 вариант</option>
-                        <option value="3 вариант">3 вариант</option>
-                        <option value="4 вариант">4 вариант</option>
-                        <option value="5 вариант">5 вариант</option>
-                        <option value="6 вариант">6 вариант</option>
-                        <option value="7 вариант">7 вариант</option>
-                        <option value="8 вариант">8 вариант</option>
+                        <option value="1">1 вариант</option>
+                        <option value="2">2 вариант</option>
+                        <option value="3">3 вариант</option>
+                        <option value="4">4 вариант</option>
+                        <option value="5">5 вариант</option>
+                        <option value="6">6 вариант</option>
+                        <option value="7">7 вариант</option>
+                        <option value="8">8 вариант</option>
                     </select>
                 </div>
                 <Input

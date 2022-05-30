@@ -22,6 +22,8 @@ import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import './Main.css'
 import { Tabs } from 'antd';
+import Taminot from '../Taminot/Taminot';
+import TaminotForm from '../Taminot/TaminotForm';
 
 const { TabPane } = Tabs;
 
@@ -83,6 +85,16 @@ function Main() {
                     </Link>
                     } 
                     key="3"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/taminot' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>Taminot</span>
+                    </Link>
+                    } 
+                    key="4"/>
                 </Tabs>
             </nav>
             
@@ -119,6 +131,8 @@ function Main() {
                         <Route path='/client/group_form' element={<GroupForm/>}/>
                         <Route path='/addshartnama' element={<Addshartnama/>}/>
                         <Route path ='/shartnama' element={<Shartnama/>}/>
+                        <Route path ='/taminot' element={<Taminot/>}/>
+                        <Route path ='/taminot/form' element={<TaminotForm/>}/>
                     </Routes>
                 </div>
             </main>
