@@ -1,13 +1,18 @@
-import { Input } from '@nextui-org/react';
-import React, { useState } from 'react';
-import { Radio } from "@nextui-org/react";
-import { BiTrash } from 'react-icons/bi';
+
+import React , { useState } from 'react';
 
 import './Taminot.css';
 import TillaBuyum from './TillaBuyum';
 
 function TaminotForm() {
-    
+    const [ selectedSector, setSelectedSector ] = useState(1)
+
+    const sectorChoosing = () =>{
+        if(selectedSector == 1){
+            return(<TillaBuyum/>)
+        }
+    }
+
 
     return (
         <section>
@@ -15,7 +20,7 @@ function TaminotForm() {
                 <div className='taminot_table'>
                     <div className='rare'>
                         <p>Taminot turi</p>
-                        <select className='taminot_main_select'>
+                        <select className='taminot_main_select' onChange={(event)=>setSelectedSector(event.target.value)}>
                             <option value="1">Tilla Buyumlar Kafilligi</option>
                             <option value="2">Transport Vositasi Garovi</option>
                             <option value="3">Transport Vositasi Garovi va kafillik</option>
@@ -24,7 +29,9 @@ function TaminotForm() {
                             <option value="6">Solidar guruh kafilligi</option>
                         </select>
                     </div>
-                    <TillaBuyum/>
+                    {
+                        sectorChoosing()
+                    }
                 </div>
             </div>
         </section>
