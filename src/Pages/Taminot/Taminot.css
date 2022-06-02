@@ -115,7 +115,11 @@
     font-weight: 600;
 }
 .rare select{
-    padding: 5px 30px;
+    padding: 5px 10px;
+    height: 45px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #7828c8;
 }
 .taminot_ratio_parent{
     margin-top: 20px;

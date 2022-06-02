@@ -1,10 +1,9 @@
-
 import React , { useState } from 'react';
-
 import TillaBuyum from './TillaBuyum';
-import './Taminot.css';
 import Transport from '../../TableParts/Transport/Transport';
-import UchinchiShaxs from './UchinchiShaxs';
+import UchinchiShaxs from '../../TableParts/Uchinchi/UchinchiShaxs';
+
+import './Taminot.css';
 
 function TaminotForm() {
     const [ selectedSector, setSelectedSector ] = useState(1)

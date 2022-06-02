@@ -1,11 +1,38 @@
 import React, { useState } from 'react'
-import { Input } from '@nextui-org/react'
+import { Input,Radio } from '@nextui-org/react'
 
 import './Transport.css'
 
 function Transport() {
 
     const [transportProducts, setTransportProducts] = useState([{}]);
+    const [firstTable,setFirstTable]= useState('transport_garovPart close');
+    const [secondTable,setSecondTable]= useState('transport_ishonchnomaPart close');
+    const [garov, setGarov]= useState('transport_fourInputs close');
+    
+
+    function tables(a){
+        if(a==1){
+            setFirstTable('transport_garovPart close')
+            setSecondTable('transport_ishonchnomaPart close')
+        }
+        else if(a==2){
+            setFirstTable('transport_garovPart open')
+            setSecondTable('transport_ishonchnomaPart close')
+        }else if(a==3){
+            setFirstTable('transport_garovPart open')
+            setSecondTable('transport_ishonchnomaPart open')
+        }
+    }
+
+    function fourInputs(b){
+        if(b==1){
+            setGarov('transport_fourInputs open')
+        }
+        else if(b==2){
+            setGarov('transport_fourInputs close')
+        }
+    }
 
     function addNewTransportProduct(){
         let newProduct = [{}]
@@ -27,23 +54,22 @@ function Transport() {
             <div className='transport_garov'>
                 <p>Garov mulkining egasi</p>
                 <div>
-                    <input type='radio' id='gavor_first' name='garov' value='first' checked></input>
-                    <p>Mijozning o'zi</p>
-                    <input type='radio' id='gavor_second' name='garov' value='second'></input>
-                    <p>Uchinchi shaxs</p>
-                    <input type='radio' id='gavor_third' name='garov' value='third'></input>
-                    <p>Ishonchnoma asosida</p>
+                    <Radio.Group color='secondary' value={1} size='sm' className='transport_garov_radioGroup' onChange={(e)=>tables(e)}>
+                        <Radio value={1} className='transport_garov_radio'>Mijozning o'zi</Radio>
+                        <Radio value={2} className='transport_garov_radio'>Uchinchi shaxs</Radio>
+                        <Radio value={3} className='transport_garov_radio'>Ishonchnoma asosida</Radio>
+                    </Radio.Group>
                 </div>
             </div>
 
             <div className='transport_addition'>
-                <input type='radio' id='addition_first' name='addition' value='second'zz></input>
-                <p>Mustaqil baholash asosida</p>
-                <input type='radio' id='addition_second' name='addition' value='third'zz></input>
-                <p>O'zaro kelishuvga asosan</p>
+                <Radio.Group color='secondary' value={2} size='sm' className='transport_addition_radioGroup' onChange={(e)=>fourInputs(e)}>
+                    <Radio value={1} className='transport_addition_radio'>Mustaqil baholash asosida</Radio>
+                    <Radio value={2} className='transport_addition_radio'>O'zaro kelishuvga asosan</Radio>
+                </Radio.Group>
             </div>
 
-            <div className='transport_fourInputs'>
+            <div className={garov}>
                 <Input 
                     label='Transport vositasini baholovchi tashkilo'
                     placeholder='Vosiq Mirzo'
@@ -270,7 +296,7 @@ function Transport() {
                 </Input>  
             </div>
 
-            <div className='transport_garovPart'>
+            <div className={firstTable}>
                 <p>Garov mulki egasining ma'lumotlari</p>
                 <div>
                     <Input 
@@ -347,7 +373,7 @@ function Transport() {
                 </div>
             </div>
 
-            <div className='transport_ishonchnomaPart'>
+            <div className={secondTable}>
                 <p>Ishonchnoma berilgan shaxs ma'lumotlari</p>
                 <div>
                     <Input 

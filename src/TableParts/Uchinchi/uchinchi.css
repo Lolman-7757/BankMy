@@ -1,0 +1,10 @@
+.uchinchi_section{
+    padding: 20px 0;
+}
+.uchinchi_main{
+    display: flex;
+    flex-direction: column;
+}
+.uchinchi_main .uchinchi_input{
+    margin-bottom: 15px;
+}
