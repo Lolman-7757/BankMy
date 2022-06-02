@@ -50,13 +50,13 @@ nav{
     border-radius: 7px;
 }
 .nav-list .ant-tabs-tab:hover{
-    background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+    background: linear-gradient(118deg,#7828c8,rgba(115,103,240,.7));
 }
 .nav-list .ant-tabs-tab a:hover{
     color: white;
 }
 .nav-list .ant-tabs-tab-active{
-    background: linear-gradient(118deg,#7367f0,rgba(115,103,240,.7));
+    background: linear-gradient(118deg,#7828c8,rgba(115,103,240,.7));
 }
 .nav-list .ant-tabs-tab-active a{
     color: white;
@@ -181,7 +181,7 @@ header{
 }
 .header_dropdown_item:hover{
     background-color: #7267f034;
-    color: #7367f0;
+    color: #7828c8;
 }
 .header_dropdown_item p{
     margin-left: 5px;

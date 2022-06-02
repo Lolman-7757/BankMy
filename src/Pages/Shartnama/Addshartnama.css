@@ -19,7 +19,7 @@
 }
 .shart-select p{
     font-size: 14px;
-    color: #7367f0;
+    color: #7828c8;
 }
 .shart-select select{
     height: 42px;
@@ -38,7 +38,7 @@
 }
 .shart-selector p{
     font-size: 14px;
-    color: #7367f0;
+    color: #7828c8;
 }
 .shart-selector div{
     display: flex;
@@ -48,7 +48,7 @@
     margin-top: 20px;
     width: 200px;
     height: 50px;
-    background-color: #7367f0;
+    background-color: #7828c8;
     border: none;
     outline: none;
     border-radius: 10px;

@@ -23,12 +23,12 @@
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
-    border: #7367f0 2px solid;
-    color: #7367f0;
+    border: #7828c8 2px solid;
+    color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
 }
 .taminot_link:hover{
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     transform: scale(1.05);
 }
@@ -64,8 +64,8 @@
     margin-top: 20px;
     padding: 10px;
     font-size: 1.2rem;
-    color: #7367f0;
-    border: 2px solid #7367f0;
+    color: #7828c8;
+    border: 2px solid #7828c8;
     background-color: white;
     border-radius: 7px;
     transition: linear all .2s;
@@ -74,7 +74,7 @@
 }
 .taminot_tableform_add:hover{
     transform: scale(1.05);
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
 }
 .taminot_tableform_delete{

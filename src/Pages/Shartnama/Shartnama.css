@@ -20,14 +20,14 @@
     padding: 10px 25px;
     font-size: 16px;
     background: none;
-    border: 2px solid #7367f0;
-    color: #7367f0;
+    border: 2px solid #7828c8;
+    color: #7828c8;
     border-radius: 8px;
     font-weight: 600;
     transition-duration: 0.3s;
 }
 .shartnamaHeader button:hover{
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
 }
 .shartnamaSearch{
@@ -152,12 +152,12 @@
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
-    border: #7367f0 2px solid;
-    color: #7367f0;
+    border: #7828c8 2px solid;
+    color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
 }
 .shartnamaLink:hover{
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     transform: scale(1.05);
 }

@@ -63,11 +63,11 @@
     margin-right: 20px;
 }
 .login_check input:checked{
-    background-color: #7367f0;
+    background-color: #7828c8;
     outline: none;
 }
 .login-secondary_wrapper a{
-    background-color: #7367f0;
+    background-color: #7828c8;
     border: none;
     width: 50%;
     align-self: center;
