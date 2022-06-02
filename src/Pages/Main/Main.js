@@ -18,6 +18,9 @@ import Login from '../Login/Login'
 import Addshartnama from '../Shartnama/Addshartnama';
 import Shartnama from '../Shartnama/Shartnama';
 
+// Components
+import Transport from '../../TableParts/Transport/Transport';
+
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import './Main.css'
@@ -28,7 +31,6 @@ import TaminotForm from '../Taminot/TaminotForm';
 const { TabPane } = Tabs;
 
 const onChange = (key) => {
-    console.log(key);
 };
 
 

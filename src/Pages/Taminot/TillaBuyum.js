@@ -1,25 +1,63 @@
 import { Input } from '@nextui-org/react';
 import React, { useState } from 'react';
 import { Radio } from "@nextui-org/react";
+
+// Icons
+import { AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai';
 import { BiTrash } from 'react-icons/bi';
+
 
 import './Taminot.css';
 
 function TillaBuyum() {
-    let bahos = [
-        {
-
-        }
-    ]
-    const [ bahoItems, setBahoItems ] = useState(bahos)
+    
     const [ addBaho, setAddBaho ] = useState(false)
     const [ deleteBaho, setDeleteBaho ] = useState(false)
     const [ bahoType, setBahoType ] = useState(true)
+    // bahoData
+    const [ nomi, setNomi ] = useState('')
+    const [ proba, setProba ] = useState('')
+    const [ soni, setSoni ] = useState('')
+    const [ umumiy, setUmumiy ] = useState('')
+    const [ toshlar, setToshlar ] = useState('')
+    const [ sof, setSof ] = useState('')
+    const [ bahoQiymat, setBahoQiymat ] = useState('')
+    const [ costPerGr, setCostPerGr ] = useState('')
     const maxBaho = 5;
+    
+    let bahos = [
+        {
+            nomi: nomi,
+            proba: proba,
+            soni: soni,
+            umumiy_ogirlik: umumiy,
+            toshlar_ogirlik: toshlar,
+            sof_ogirlik: sof,
+            baholangan_qiymat: bahoQiymat,
+        },
+    ]
+    let baho = {
+        bahoses: bahos,
+    }
+    const [ bahoItems, setBahoItems ] = useState(bahos)
 
+    function resetForm (e) {
+        e.preventDefault(); 
+        document.querySelector(`form`).reset()
+    }
     function addNewPoint() {
         if (bahoItems.length<maxBaho){
-            let newPoint = [{}];
+            let newPoint = [
+                {
+                    nomi: nomi,
+                    proba: proba,
+                    soni: soni,
+                    umumiy_ogirlik: umumiy,
+                    toshlar_ogirlik: toshlar,
+                    sof_ogirlik: sof,
+                    baholangan_qiymat: bahoQiymat,
+                }
+            ];
             setBahoItems(bahoItems.concat(newPoint))
         }else if(bahoItems.length>1){
             setDeleteBaho(false)
@@ -86,7 +124,7 @@ function TillaBuyum() {
 
 
     return (
-        <div className='taminot_form'>
+        <form className='taminot_form'>
             <div className='taminot_ratio_parent'>
                 <p>Gavor mulkimning egasi</p>
                 <Radio.Group defaultValue={1} size='sm' className='taminot_ratio'>
@@ -144,6 +182,7 @@ function TillaBuyum() {
                                 clearable
                                 placeholder="Uzuk"
                                 color="secondary"
+                                onChange={(event)=>setNomi(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -153,6 +192,7 @@ function TillaBuyum() {
                                 clearable
                                 placeholder="583"
                                 color="secondary"
+                                onChange={(event)=>setProba(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -162,6 +202,7 @@ function TillaBuyum() {
                                 width='60px'
                                 placeholder="1"
                                 color="secondary"
+                                onChange={(event)=>setSoni(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -171,6 +212,7 @@ function TillaBuyum() {
                                 width='155px'
                                 placeholder="1"
                                 color="secondary"
+                                onChange={(event)=>setUmumiy(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -180,6 +222,7 @@ function TillaBuyum() {
                                 width='145px'
                                 placeholder="1"
                                 color="secondary"
+                                onChange={(event)=>setToshlar(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -189,6 +232,19 @@ function TillaBuyum() {
                                 width='115px'
                                 placeholder="1"
                                 color="secondary"
+                                readOnly
+                                initialValue={umumiy - toshlar}
+                                onChange={(event)=>setSof(event.target.value)}
+                                />
+                                <Input
+                                bordered
+                                type='number'
+                                label='Gramm uchun narx(so`m)'
+                                className='taminot_tableform_input'
+                                width='200px'
+                                placeholder="1"
+                                color="secondary"
+                                onChange={(event)=>setCostPerGr(event.target.value)}
                                 />
                                 <Input
                                 bordered
@@ -198,6 +254,9 @@ function TillaBuyum() {
                                 width='200px'
                                 placeholder="1"
                                 color="secondary"
+                                readOnly
+                                initialValue={(sof*costPerGr)*soni}
+                                onChange={(event)=>setBahoQiymat(event.target.value)}
                                 />
                             </form>
                         <button 
@@ -245,7 +304,17 @@ function TillaBuyum() {
                                 />
                 </div>
             </div>
-        </div>
+            <div className='taminot_button_block'>
+                <button className='taminot_reset' onClick={(event)=> resetForm(event)}>
+                    Reset
+                    <AiOutlineClear/>
+                </button>
+                <button className='taminot_submit' onClick={()=>console.log(bahoItems)}>
+                    Submit
+                    <AiOutlineUserAdd/>
+                </button>
+            </div>
+        </form>
     )
 }
 

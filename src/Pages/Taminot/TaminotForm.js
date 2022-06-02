@@ -1,8 +1,10 @@
 
 import React , { useState } from 'react';
 
-import './Taminot.css';
 import TillaBuyum from './TillaBuyum';
+import './Taminot.css';
+import Transport from '../../TableParts/Transport/Transport';
+import UchinchiShaxs from './UchinchiShaxs';
 
 function TaminotForm() {
     const [ selectedSector, setSelectedSector ] = useState(1)
@@ -10,6 +12,10 @@ function TaminotForm() {
     const sectorChoosing = () =>{
         if(selectedSector == 1){
             return(<TillaBuyum/>)
+        }else if(selectedSector == 2 || selectedSector == 3){
+            return(<Transport/>)
+        }else if(selectedSector == 4){
+            return(<UchinchiShaxs/>)
         }
     }
 

@@ -23,12 +23,12 @@
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
-    border: #7367f0 2px solid;
-    color: #7367f0;
+    border: #7828c8 2px solid;
+    color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
 }
 .taminot_link:hover{
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     transform: scale(1.05);
 }
@@ -63,10 +63,11 @@
 
 .taminot_tableform_add{
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px;
     font-size: 1.2rem;
-    color: #7367f0;
-    border: 2px solid #7367f0;
+    color: #7828c8;
+    border: 2px solid #7828c8;
     background-color: white;
     border-radius: 7px;
     transition: linear all .2s;
@@ -75,7 +76,7 @@
 }
 .taminot_tableform_add:hover{
     transform: scale(1.05);
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
 }
 .taminot_tableform_delete{
@@ -168,4 +169,45 @@
 .taminot_grid{
     display: flex;
     flex-direction: column;
+}
+
+/* Taminot Buttons */
+.taminot_button_block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.taminot_button_block button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: .2s linear all;
+    cursor: pointer;
+}
+.taminot_button_block button svg{
+    margin-left: 10px;
+}
+.taminot_button_block button:hover{
+    transform: scale(1.1);
+    border: none;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.taminot_button_block button:not(:hover){
+    border: none;
+}
+.taminot_reset{
+    background-color: rgb(255, 213, 0);
+}
+.taminot_submit{
+    background-color: rgb(70, 172, 255);
+}
+.taminot_delete{
+    background-color: red;
 }

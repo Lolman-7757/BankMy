@@ -32,8 +32,8 @@
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
-    border: #7367f0 2px solid;
-    color: #7367f0;
+    border: #7828c8 2px solid;
+    color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
 }
 .client_button:nth-child(2){
@@ -42,7 +42,7 @@
 .client_button:hover{
     color: white;
     transform: scale(1.05);
-    background-color: #7367f0;
+    background-color: #7828c8;
 }
 .client_form{
     width: 100%;
@@ -161,12 +161,12 @@
     width: 100%;
 }
 .client_tabs .ant-tabs-tab-active{
-    color: #7367f0;
+    color: #7828c8;
     transform: scale(1.1);
 }
 .client_tabs .ant-tabs-tab-active .clientform_icon{
     color: white;
-    background-color: #7367f0;
+    background-color: #7828c8;
 }
 .clientform_user{
     display: flex;
@@ -203,7 +203,7 @@
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     border: none;
     border-radius: 50%;
@@ -334,7 +334,7 @@
 }
 .clientform_back{
     padding: 10px;
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     border-radius: 7px;
     width: 100px;
@@ -484,12 +484,12 @@ input::-webkit-inner-spin-button {
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
-    border: #7367f0 2px solid;
-    color: #7367f0;
+    border: #7828c8 2px solid;
+    color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
 }
 .shartnamaLink:hover{
-    background-color: #7367f0;
+    background-color: #7828c8;
     color: white;
     transform: scale(1.05);
 }
