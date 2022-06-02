@@ -65,7 +65,7 @@ function TaminotForm() {
                     </div>
                 </div>
                 <div className='tamilot_main_table'>
-                    <h1>Baholash</h1>
+                    <p className='tamilot_'>Baholash</p>
                     {
                         bahoItems.map((item,itemId)=>(
                             <div className='taminot_tableform_item' key={itemId}>

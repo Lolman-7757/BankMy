@@ -13,6 +13,7 @@ function Taminot() {
                 <div className='taminot_title'>Taminot</div>
                 <div className='taminot_subheader'>
                     <Link to='/taminot/form' className='taminot_link'>Add New Taminot!</Link>
+                    <Link to='/taminot/form/transport' className='taminot_link'>Transport</Link>
                     <Input
                         rounded
                         bordered

@@ -1,0 +1,65 @@
+.transport_section{
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+.transport_garov{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.transport_garov div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.transport_garov div input{
+    margin-right: 5px;
+}
+.transport_garov div p{
+    margin-right: 40px;
+}
+.transport_garov div p:last-child{
+    margin:0;
+}
+.transport_addition{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+    width: 90%;
+}
+.transport_addition p{
+    margin-right: 50px;
+}
+.transport_addition p:last-child{
+    margin: 0;
+}
+.transport_addition input{
+    margin-right: 5px;
+}
+
+.transport_fourInputs{
+    padding: 20px 0;
+    border-bottom: 1px solid #000;
+}
+.transport_fourInputs_input{
+    margin-bottom: 15px;
+}
+.transport_fourInputs_input:last-child{
+    margin: none;
+}
+.nextui-input-clear-button{
+    margin-right: 10px;
+}
+
+.transport_mainInputs{
+    margin: 15px 0;
+}
+.transport_mainInputs .transport_mainInputs_input{
+    margin-bottom: 15px;
+}

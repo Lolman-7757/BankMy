@@ -18,6 +18,9 @@ import Login from '../Login/Login'
 import Addshartnama from '../Shartnama/Addshartnama';
 import Shartnama from '../Shartnama/Shartnama';
 
+// Components
+import Transport from '../../TableParts/Transport/Transport';
+
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import './Main.css'
@@ -133,6 +136,7 @@ function Main() {
                         <Route path ='/shartnama' element={<Shartnama/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
+                        <Route path ='/taminot/form/transport' element={<Transport/>}/>
                     </Routes>
                 </div>
             </main>
