@@ -56,11 +56,6 @@
     margin-left: 20px;
     margin-top: 10px;
 }
-
-
-
-
-
 .taminot_tableform_add{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -120,6 +115,10 @@
     width: 80%;
     border-radius: 10px;
     border: 2px solid #7828c8;
+}
+.rare select option{
+    padding: 5px 10px;
+    height: 45px;
 }
 .taminot_ratio_parent{
     margin-top: 20px;

@@ -84,8 +84,13 @@
     font-weight: 600;
     margin-right: 15px;
 }
-.transport_table_title_part button{
-    width: 40px;
+.transport_product_addPlace{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.transport_product_addPlace button{
+    width: 70px;
     height: 40px;
     font-size: 25px;
     color: white;
@@ -102,7 +107,7 @@
     border: 1px solid #7828c8;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .transport_table_product_title{
     display: flex;

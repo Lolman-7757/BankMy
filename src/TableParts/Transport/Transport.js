@@ -159,7 +159,6 @@ function Transport() {
             <div className='transport_table'>
                 <div className='transport_table_title_part'>
                     <p className='transport_table_title'>Baholash natijalari</p>
-                    <button onClick={()=>addNewTransportProduct()}><i className='bx bx-plus-circle'></i></button>
                 </div>
                 {
                     transportProducts.map((product,productIndex)=>{
@@ -242,11 +241,12 @@ function Transport() {
                                         </Input>
                                         <Input 
                                             label="Baholangan qiymati, so'm"
-                                            placeholder='140 000 000,00som'
+                                            placeholder='140 000 000'
                                             clearable
                                             width='200px'
                                             color="secondary"
                                             bordered 
+                                            type='number'
                                             className='transport_tableProduct_input' 
                                         >
                                         </Input>
@@ -255,6 +255,9 @@ function Transport() {
                         )
                     })
                 }
+                <div className='transport_product_addPlace'>
+                    <button className='transport_product_addButton' onClick={()=>addNewTransportProduct()}><i className='bx bx-plus-circle'></i></button>
+                </div>
             </div>
 
 
@@ -270,7 +273,8 @@ function Transport() {
                 </Input>  
                 <Input 
                     label="Qabul qilish qiymati, so'mda"
-                    placeholder=' 50 000 000,00 som'
+                    placeholder=' 50 000 000'
+                    type='number'
                     width='100%'
                     color="secondary"
                     bordered 

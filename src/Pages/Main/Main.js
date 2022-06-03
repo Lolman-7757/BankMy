@@ -15,8 +15,8 @@ import Logo from '../../assets/images/Logo';
 import Client from '../Client/Client';
 import Home from '../Home/Home';
 import Login from '../Login/Login'
-import Addshartnama from '../Shartnama/Addshartnama';
-import Shartnama from '../Shartnama/Shartnama';
+import Addshartnama from '../Shartnoma/Addshartnama';
+import Shartnama from '../Shartnoma/Shartnama';
 
 // Components
 import Transport from '../../TableParts/Transport/Transport';
@@ -64,7 +64,7 @@ function Main() {
                             <div className='nav-item_icon'>
                                 <HomeOutlinedIcon/>
                             </div>
-                            <span>Dashboard</span>
+                            <span>Statistika</span>
                         </Link>} 
                     key="1"/>
                     <TabPane 
@@ -73,7 +73,7 @@ function Main() {
                             <div className='nav-item_icon'>
                                 <PersonOutlineOutlinedIcon/>
                             </div>
-                            <span>Clients</span>
+                            <span>Klientlar</span>
                         </Link>
                     } 
                     key="2"/>
@@ -83,7 +83,7 @@ function Main() {
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
-                        <span>Shartnama</span>
+                        <span>Buyurtma</span>
                     </Link>
                     } 
                     key="3"/>
@@ -93,10 +93,20 @@ function Main() {
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
-                        <span>Taminot</span>
+                        <span>Ta'minot</span>
                     </Link>
                     } 
                     key="4"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/shartnama' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>Shartnoma</span>
+                    </Link>
+                    } 
+                    key="5"/>
                 </Tabs>
             </nav>
             
