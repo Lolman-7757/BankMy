@@ -97,8 +97,9 @@ function Shartnama() {
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>
+                                            <button><i className='bx bx-user'></i></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
-                                            <button onClick={()=>setShartnamaWarn(!shartnamaWarn)}><i className='bx bx-trash'></i></button>
+                                            <button><i className='bx bx-trash'></i></button>
                                         </div>
                                     </li>
                                 })
@@ -107,13 +108,10 @@ function Shartnama() {
                     </div>
                 </div>
                 <Pagination
-                itemsPerPage={shartnamaPerPage}
-                totalItems={shartnamalar.length}
-                paginate={paginate}
+                    itemsPerPage={shartnamaPerPage}
+                    totalItems={shartnamalar.length}
+                    paginate={paginate}
                 />
-                {/* <div className='tablePagination'>
-                    <Pagination rounded total={10} initialPage={6} />;
-                </div> */}
             </div>
         </div>
     )

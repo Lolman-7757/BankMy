@@ -17,12 +17,14 @@ import Home from '../Home/Home';
 import Login from '../Login/Login'
 import Addshartnama from '../Shartnoma/Addshartnama';
 import Shartnama from '../Shartnoma/Shartnama';
+import Buyurtma from '../Buyurtma/Buyurtma';
 
 // Components
 import Transport from '../../TableParts/Transport/Transport';
 
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
+import BuyurtmaForm from '../Buyurtma/BuyurtmaForm';
 import './Main.css'
 import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
@@ -79,7 +81,7 @@ function Main() {
                     key="2"/>
                     <TabPane 
                     tab={
-                        <Link to='/shartnama' className='nav-item'>
+                        <Link to='/buyurtma' className='nav-item'>
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
@@ -143,6 +145,8 @@ function Main() {
                         <Route path='/client/group_form' element={<GroupForm/>}/>
                         <Route path='/addshartnama' element={<Addshartnama/>}/>
                         <Route path ='/shartnama' element={<Shartnama/>}/>
+                        <Route path='/buyurtma' element={<Buyurtma/>}/>
+                        <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
                     </Routes>

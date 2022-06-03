@@ -63,35 +63,35 @@ function Addshartnama() {
             return(
 
                 <>
-                <Input
-            className='vall'
-            width='90%'
-            clearable
-            label="SSKS / Hisobraqam"
-            placeholder="8600 1223 3445 5667"
-            bordered
-            color="secondary"
-            onChange={e => setSsks(e.target.value)}
+            <Input
+                className='vall'
+                width='90%'
+                clearable
+                label="SSKS / Hisobraqam"
+                placeholder="8600 1223 3445 5667"
+                bordered
+                color="secondary"
+                onChange={e => setSsks(e.target.value)}
             />
             <Input
-            className='vall'
-            width='90%'
-            clearable
-            label=" Bank nomi"
-            placeholder="Univercial Bank Toshkent filiali"
-            bordered
-            color="secondary"
-            onChange={e => setBankName(e.target.value)}
+                className='vall'
+                width='90%'
+                clearable
+                label=" Bank nomi"
+                placeholder="Univercial Bank Toshkent filiali"
+                bordered
+                color="secondary"
+                onChange={e => setBankName(e.target.value)}
             />
             <Input
-            className='vall'
-            width='90%'
-            clearable
-            label=" Bank MFOsi"
-            placeholder="00996"
-            bordered
-            color="secondary"
-            onChange={e => setBankMfo(e.target.value)}
+                className='vall'
+                width='90%'
+                clearable
+                label=" Bank MFOsi"
+                placeholder="00996"
+                bordered
+                color="secondary"
+                onChange={e => setBankMfo(e.target.value)}
             />
                 </>
             )
@@ -108,108 +108,7 @@ function Addshartnama() {
             Back
         </Link>
         <div className='client'>
-        <div className='shartnamaform_head'>
-            <div className='shartnamaform_title_container'>
-                <div className='shartnamaform_title'>Shartnama Details!</div>
-                <div className='shartnamaform_subtitle'>Fill Out this form to add a Shartnama.</div>
-            </div>
-        </div>
             <form className='shart-main'>
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Buyurtma sanasi"
-                bordered
-                color="secondary"
-                type='date'
-                onChange={e => setOrder(e.target.value)}
-                />
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="So'ralayotgan qarz miqdor"
-                placeholder="20 000 000 som"
-                bordered
-                color="secondary"
-                onChange={e => setMoney(e.target.value)}
-                />
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Qarz miqdori, yozuvda"
-                placeholder="Yigirma million som 00 tiyin"
-                bordered
-                color="secondary"
-                onChange={e => setMoneyText(e.target.value)}
-                />
-                <div className='shart-check'>
-                    <Checkbox 
-                    value="Kredit Qo'mitasi qorariga asosan"
-                    size='md'
-                    color="secondary"
-                    onChange={e => setCommittee(e.target)}
-                    >
-                        Kredit Qo'mitasi qorariga asosan
-                    </Checkbox>
-                </div>
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="So'ralayotgan muddat"
-                placeholder="4 oy"
-                bordered
-                color="secondary"
-                onChange={e => setCreditTime(e.target.value)}
-                />
-                <div className='shart-select'>
-                    <p>Sektor</p>
-                    <select
-                    onChange={e => setSector(e.target.value)}
-                    >
-                        <option value="1">1 вариант</option>
-                        <option value="2">2 вариант</option>
-                        <option value="3">3 вариант</option>
-                        <option value="4">4 вариант</option>
-                        <option value="5">5 вариант</option>
-                        <option value="6">6 вариант</option>
-                        <option value="7">7 вариант</option>
-                        <option value="8">8 вариант</option>
-                    </select>
-                </div>
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Maqsadi"
-                placeholder="shirinlik mahsulotlari savdosi"
-                bordered
-                color="secondary"
-                onChange={e => setGoal(e.target.value)}
-                />
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Kredit mahsuloti nomi"
-                placeholder="ReneTrade"
-                bordered
-                color="secondary"
-                onChange={e => setProductName(e.target.value)}
-                />
-                <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Oylik o'rtacha daromad"
-                placeholder="4 800 000 som"
-                bordered
-                color="secondary"
-                onChange={e => setNumber(e.target.value)}
-                />
                 <div className='shart-selector'>
                     <p>Kredit ajratish tartibi</p>
                     <div>
@@ -224,52 +123,53 @@ function Addshartnama() {
                     </div>
                 </div>
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Ustama foiz stavkasi, yillik"
-                placeholder="58,00%"
-                bordered
-                color="secondary"
-                onChange={e => setAnnual(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Ustama foiz stavkasi, yillik"
+                    placeholder="58,00%"
+                    bordered
+                    color="secondary"
+                    onChange={e => setAnnual(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Ustama foiz stavkasi, yillik (yozuvda)"
-                placeholder=""
-                bordered
-                color="secondary"
-                onChange={e => setAnnualText(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Ustama foiz stavkasi, yillik (yozuvda)"
+                    placeholder=""
+                    bordered
+                    color="secondary"
+                    onChange={e => setAnnualText(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Penya, kunlik"
-                placeholder="0,40%"
-                bordered
-                color="secondary"
-                onChange={e => setDailyPenya(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Penya, kunlik"
+                    placeholder="0,40%"
+                    bordered
+                    color="secondary"
+                    onChange={e => setDailyPenya(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Oylik komission yig'im, %da"
-                placeholder="0,40%"
-                bordered
-                color="secondary"
-                onChange={e => setMonthlyCom(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Oylik komission yig'im, %da"
+                    placeholder="0,40%"
+                    bordered
+                    color="secondary"
+                    onChange={e => setMonthlyCom(e.target.value)}
                 />
                 <div className='shart-selector'>
                     <p>So'ndirish tartibi</p>
                     <div>
                         <Radio.Group 
-                        size='sm' 
-                        value={false}
-                        onChange={event=> setShutDown(event)}
+                            size='sm' 
+                            value={false}
+                            onChange={event=> setShutDown(event)}
+                            className='shart-selector-group'
                         >
                             <Radio value={false}>Bir qil miqdor(Annuitet)</Radio>
                             <Radio value={true}>Kamayib boruvshi(differensial)</Radio>
@@ -277,44 +177,44 @@ function Addshartnama() {
                     </div>
                 </div>
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Mikroqarz berish sanasi"
-                bordered
-                color="secondary"
-                type='date'
-                onChange={e => setCreditDate(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Mikroqarz berish sanasi"
+                    bordered
+                    color="secondary"
+                    type='date'
+                    onChange={e => setCreditDate(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Birinchi tolov sonasi"
-                bordered
-                color="secondary"
-                type='date'
-                onChange={e => setFPaymentDate(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Birinchi tolov sonasi"
+                    bordered
+                    color="secondary"
+                    type='date'
+                    onChange={e => setFPaymentDate(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Shartnoma sanasi"
-                bordered
-                color="secondary"
-                type='date'
-                onChange={e => setShartnamaDate(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Shartnoma sanasi"
+                    bordered
+                    color="secondary"
+                    type='date'
+                    onChange={e => setShartnamaDate(e.target.value)}
                 />
                 <Input
-                className='vall'
-                width='90%'
-                clearable
-                label="Shartnoma raqami"
-                placeholder="34"
-                bordered
-                color="secondary"
-                onChange={e => setShartnamaNum(e.target.value)}
+                    className='vall'
+                    width='90%'
+                    clearable
+                    label="Shartnoma raqami"
+                    placeholder="34"
+                    bordered
+                    color="secondary"
+                    onChange={e => setShartnamaNum(e.target.value)}
                 />
                 {
                     cashInputAppearence()
