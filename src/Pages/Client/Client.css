@@ -215,7 +215,7 @@
 .client_add_button:hover{
     transform: scale(1.1);
 }
-@keyframes appearence {
+/* @keyframes appearence {
     0%{
         z-index: 80;
         opacity: 0;
@@ -233,7 +233,7 @@
         margin-bottom: 0px;
         transform: scale(1);
     }
-}
+} */
 @keyframes appearence {
     0%{
         z-index: 80;

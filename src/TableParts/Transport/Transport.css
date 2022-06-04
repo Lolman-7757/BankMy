@@ -172,3 +172,13 @@
 .transport_ishonchnomaPart .transport_ishonchnomaPart_input{
     margin-bottom: 15px;
 }
+.taminot_shaxs{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.taminot_shaxs select{
+    margin-left: 20px;
+}

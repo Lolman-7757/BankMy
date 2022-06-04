@@ -32,7 +32,6 @@ function TaminotForm() {
                             <option value="3">Transport Vositasi Garovi va kafillik</option>
                             <option value="4">3 shaxs kafilligi</option>
                             <option value="5">Sugurta kompaniyasi sugurta polisi</option>
-                            <option value="6">Solidar guruh kafilligi</option>
                         </select>
                     </div>
                     {

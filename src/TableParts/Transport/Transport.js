@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Input } from '@nextui-org/react'
-
+import { AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai'
 import './Transport.css'
 
 function Transport() {
@@ -442,6 +442,17 @@ function Transport() {
                 </div>
             </div>
         </div>
+        <div className='taminot_button_block'>
+                <button className='taminot_reset' onClick={(event)=>{event.preventDefault();document.querySelector(`form`).reset()}}>
+                    Reset
+                    <AiOutlineClear/>
+                </button>
+                <button className='taminot_submit'>
+                    Submit
+                    <AiOutlineUserAdd/>
+                    
+                </button>
+            </div>
     </section>
   )
 }

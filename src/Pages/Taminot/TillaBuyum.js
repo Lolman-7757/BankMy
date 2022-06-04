@@ -45,7 +45,8 @@ function TillaBuyum() {
         e.preventDefault(); 
         document.querySelector(`form`).reset()
     }
-    function addNewPoint() {
+    function addNewPoint(e) {
+        e.preventDefault()
         if (bahoItems.length<maxBaho){
             let newPoint = [
                 {
@@ -65,7 +66,8 @@ function TillaBuyum() {
             setAddBaho(true)
         }
     }
-    function deletePoint(index) {
+    function deletePoint(index,event) {
+        event.preventDefault()
         if (bahoItems.length>1){
             let filtredPoint = bahoItems.filter((bahi,bahoId)=> bahoId !== (index))
             setBahoItems(filtredPoint)
@@ -78,12 +80,12 @@ function TillaBuyum() {
     function baholashType (){
         if(bahoType){
             return(
-                <>
+                <div className='taminot_bahoType'>
                 <Input
                 bordered
                 label='Tilla buyumlarni baholovchi tashkilot'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 clearable
                 placeholder="Voziq Mirzo"
                 color="secondary"
@@ -92,7 +94,7 @@ function TillaBuyum() {
                 bordered
                 label='Litsenzya'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 clearable
                 placeholder=" Litsenziya BL001, RR0118, 19.02.2014 y. berilgan"
                 color="secondary"
@@ -101,7 +103,7 @@ function TillaBuyum() {
                 bordered
                 label='Baholovchining ismi sharifi'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 clearable
                 placeholder="B.Asomov"
                 color="secondary"
@@ -110,12 +112,12 @@ function TillaBuyum() {
                 bordered
                 label='Baholash hujjati raqami'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 clearable
                 placeholder="06/002"
                 color="secondary"
                 />
-            </>
+            </div>
             )
         }else{
             return(<></>)
@@ -125,14 +127,14 @@ function TillaBuyum() {
 
     return (
         <form className='taminot_form'>
-            <div className='taminot_ratio_parent'>
+            <div className='taminot_tilla_title'>
                 <p>Gavor mulkimning egasi</p>
-                <Radio.Group defaultValue={1} size='sm' className='taminot_ratio'>
+                <Radio.Group value={1} size='sm' className='taminot_ratio'>
                     <Radio value={1}>Mijozining Ozi</Radio>
                 </Radio.Group>
             </div>
-            <div className='taminot_ratio_parent'>
-                <Radio.Group size='sm' className='taminot_ratio' onChange={(event)=>setBahoType(event)}>
+            <div className='taminot_tilla_subtitle'>
+                <Radio.Group value={true} size='sm' className='taminot_ratio' onChange={(event)=>setBahoType(event)}>
                     <Radio value={true}>Mustaqil Baholash Asosida</Radio>
                     <Radio value={false}>O'zaro kelishuvga asosan</Radio>
                 </Radio.Group>
@@ -143,7 +145,7 @@ function TillaBuyum() {
                 bordered
                 label='Baholash hujjati sanasi'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 type='date'
                 placeholder="11.02.22"
                 color="secondary"
@@ -152,7 +154,7 @@ function TillaBuyum() {
                 bordered
                 label='Tilla buyumlarning baholangan qiymati'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 type='number'
                 placeholder="17.000.000"
                 color="secondary"
@@ -162,17 +164,26 @@ function TillaBuyum() {
                 bordered
                 label='Baholangan qiymat, yozuvda'
                 className='taminot_tableform_input'
-                width='40%'
+                width='100%'
                 type='text'
                 placeholder="On yetti million"
                 color="secondary"
                 />
             </div>
             <div className='tamilot_main_table'>
-                <h1>Baholash</h1>
+                <h1>Baholash natijalari</h1>
                 {
                     bahoItems.map((item,itemId)=>(
                         <div className='taminot_tableform_item' key={itemId}>
+                            <div className='taminot_tableform_title'>
+                                <h2>Product №{itemId+1}</h2>
+                                <button 
+                                className={deleteBaho?'taminot_tableform_delete':'taminot_tableform_delete taminot_tableform_delete_active'} 
+                                onClick={(event)=> deletePoint(itemId,event)}
+                                >
+                                    <BiTrash/>
+                                </button>
+                            </div>
                             <form>
                                 <Input
                                 bordered
@@ -188,7 +199,7 @@ function TillaBuyum() {
                                 bordered
                                 label='Proba'
                                 className='taminot_tableform_input'
-                                width='60px'
+                                width='200px'
                                 clearable
                                 placeholder="583"
                                 color="secondary"
@@ -199,7 +210,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Soni'
                                 className='taminot_tableform_input'
-                                width='60px'
+                                width='200px'
                                 placeholder="1"
                                 color="secondary"
                                 onChange={(event)=>setSoni(event.target.value)}
@@ -209,7 +220,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Umumiy og`irligi(gr)'
                                 className='taminot_tableform_input'
-                                width='155px'
+                                width='200px'
                                 placeholder="1"
                                 color="secondary"
                                 onChange={(event)=>setUmumiy(event.target.value)}
@@ -219,7 +230,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Toshlari og`irligi(gr)'
                                 className='taminot_tableform_input'
-                                width='145px'
+                                width='200px'
                                 placeholder="1"
                                 color="secondary"
                                 onChange={(event)=>setToshlar(event.target.value)}
@@ -229,7 +240,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Sof og`irligi(gr)'
                                 className='taminot_tableform_input'
-                                width='115px'
+                                width='200px'
                                 placeholder="1"
                                 color="secondary"
                                 readOnly
@@ -259,18 +270,12 @@ function TillaBuyum() {
                                 onChange={(event)=>setBahoQiymat(event.target.value)}
                                 />
                             </form>
-                        <button 
-                        className={deleteBaho?'taminot_tableform_delete':'taminot_tableform_delete taminot_tableform_delete_active'} 
-                        onClick={()=> deletePoint(itemId)}
-                        >
-                            <BiTrash/>
-                        </button>
                         </div>
                     ))
                 }
                 <button 
                 className={addBaho?'taminot_tableform_add':'taminot_tableform_add taminot_tableform_add_active'} 
-                onClick={() => addNewPoint()}
+                onClick={(event) => addNewPoint(event)}
                 >
                     Add new Pointing!
                 </button>
@@ -280,7 +285,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Qabul qilish qiymati, %da'
                                 className='taminot_tableform_input'
-                                width='50%'
+                                width='100%'
                                 placeholder="1"
                                 color="secondary"
                                 />
@@ -289,7 +294,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Qabul qilish qiymati, somda'
                                 className='taminot_tableform_input'
-                                width='50%'
+                                width='100%'
                                 placeholder="1"
                                 color="secondary"
                                 />
@@ -298,7 +303,7 @@ function TillaBuyum() {
                                 type='number'
                                 label='Qabul qilish qiymati, yozuv50%da'
                                 className='taminot_tableform_input'
-                                width='50%'
+                                width='100%'
                                 placeholder="1"
                                 color="secondary"
                                 />

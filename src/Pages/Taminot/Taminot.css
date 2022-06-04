@@ -44,17 +44,45 @@
     font-size: 1.5rem;
 }
 .taminot_tableform_item{
+    animation: tableFormItem 1s;
     margin-top: 20px;
-    border-bottom: 1px solid rgb(207, 207, 207);
-    padding-bottom: 10px;
+    border-radius: 7px;
+    border: 1px solid #7828c8;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+}
+@keyframes tableFormItem {
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.taminot_tableform form .nextui-input-main-container{
-    margin-left: 20px;
-    margin-top: 10px;
+
+.taminot_tableform_item form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.taminot_tableform_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.taminot_tableform_title h2{
+    font-size: 15px;
+    font-weight: 700;
 }
 
 
@@ -81,8 +109,8 @@
 }
 .taminot_tableform_delete{
     margin-left: 20px;
-    height: 50px;
-    width: 70px;
+    height: 35px;
+    width: 35px;
     display:none;
     justify-content:center;
     align-items:center;
@@ -163,9 +191,7 @@
 .taminot_form .nextui-input-main-container{
     margin-top: 20px;
 }
-.taminot_grid_inputs .nextui-input-main-container:nth-child(2n){
-    margin-left: 20px;
-}
+
 .taminot_grid{
     display: flex;
     flex-direction: column;
@@ -210,4 +236,29 @@
 }
 .taminot_delete{
     background-color: red;
+}
+
+/* Tilla */
+.taminot_tilla_title{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.taminot_tilla_title .taminot_ratio{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.taminot_tilla_subtitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.taminot_bahoType{
+    width: 100%;
+    border-bottom: 2px solid #7828c8;
+    padding-bottom: 20px;
 }
