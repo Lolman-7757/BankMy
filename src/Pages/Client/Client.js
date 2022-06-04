@@ -101,7 +101,7 @@ function Client() {
                     </div>
                 </div>
             <div className='client_title'>
-                <p>Clients List!</p>
+                <p>Klientlar</p>
             </div>
             <div className='client_addition'>
                 <div>
@@ -133,13 +133,14 @@ function Client() {
                         {
                             currentClient.map((item,index)=>{
                                 return <li key={index}>
-                                    <p className='clientliName li'><span>{index + 1}.</span>{item.name}</p>
+                                    <p className='clientliName li'><span>{index + 1 + (currentPage-1)*10}.</span>{item.name}</p>
                                     <p className='li'>{item.code}</p>
                                     <p className='li'>{item.pinfl}</p>
                                     <p className='li'>{item.city}</p>
                                     <div className='clientuserButtons'>
+                                        <button><i className='bx bx-user'></i></button>
                                         <button><i className='bx bx-edit-alt'></i></button>
-                                        <button onClick={()=>setClientWarn(!clientWarn)}><i className='bx bx-trash'></i></button>
+                                        <button><i className='bx bx-trash'></i></button>
                                     </div>
                                 </li>
                             })
@@ -148,10 +149,9 @@ function Client() {
                 </div>
             </div>
             <Pagination
-
-            itemsPerPage={clientsPerPage}
-            totalItems={clients.length}
-            paginate={paginate}
+                itemsPerPage={clientsPerPage}
+                totalItems={clients.length}
+                paginate={paginate}
             />
             <div>
             </div>

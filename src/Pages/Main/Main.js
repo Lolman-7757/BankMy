@@ -15,14 +15,16 @@ import Logo from '../../assets/images/Logo';
 import Client from '../Client/Client';
 import Home from '../Home/Home';
 import Login from '../Login/Login'
-import Addshartnama from '../Shartnama/Addshartnama';
-import Shartnama from '../Shartnama/Shartnama';
+import Addshartnama from '../Shartnoma/Addshartnama';
+import Shartnama from '../Shartnoma/Shartnama';
+import Buyurtma from '../Buyurtma/Buyurtma';
 
 // Components
 import Transport from '../../TableParts/Transport/Transport';
 
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
+import BuyurtmaForm from '../Buyurtma/BuyurtmaForm';
 import './Main.css'
 import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
@@ -64,7 +66,7 @@ function Main() {
                             <div className='nav-item_icon'>
                                 <HomeOutlinedIcon/>
                             </div>
-                            <span>Dashboard</span>
+                            <span>Statistika</span>
                         </Link>} 
                     key="1"/>
                     <TabPane 
@@ -73,17 +75,17 @@ function Main() {
                             <div className='nav-item_icon'>
                                 <PersonOutlineOutlinedIcon/>
                             </div>
-                            <span>Clients</span>
+                            <span>Klientlar</span>
                         </Link>
                     } 
                     key="2"/>
                     <TabPane 
                     tab={
-                        <Link to='/shartnama' className='nav-item'>
+                        <Link to='/buyurtma' className='nav-item'>
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
-                        <span>Shartnama</span>
+                        <span>Buyurtma</span>
                     </Link>
                     } 
                     key="3"/>
@@ -93,10 +95,20 @@ function Main() {
                         <div className='nav-item_icon'>
                             <PersonOutlineOutlinedIcon/>
                         </div>
-                        <span>Taminot</span>
+                        <span>Ta'minot</span>
                     </Link>
                     } 
                     key="4"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/shartnama' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>Shartnoma</span>
+                    </Link>
+                    } 
+                    key="5"/>
                 </Tabs>
             </nav>
             
@@ -133,6 +145,8 @@ function Main() {
                         <Route path='/client/group_form' element={<GroupForm/>}/>
                         <Route path='/addshartnama' element={<Addshartnama/>}/>
                         <Route path ='/shartnama' element={<Shartnama/>}/>
+                        <Route path='/buyurtma' element={<Buyurtma/>}/>
+                        <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
                     </Routes>

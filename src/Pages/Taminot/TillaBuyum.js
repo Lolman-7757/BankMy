@@ -129,12 +129,12 @@ function TillaBuyum() {
         <form className='taminot_form'>
             <div className='taminot_tilla_title'>
                 <p>Gavor mulkimning egasi</p>
-                <Radio.Group value={1} size='sm' className='taminot_ratio'>
+                <Radio.Group color='secondary' value={1} size='sm' className='taminot_ratio'>
                     <Radio value={1}>Mijozining Ozi</Radio>
                 </Radio.Group>
             </div>
-            <div className='taminot_tilla_subtitle'>
-                <Radio.Group value={true} size='sm' className='taminot_ratio' onChange={(event)=>setBahoType(event)}>
+            <div className='taminot_ratio_parent'>
+                <Radio.Group color='secondary' value={true} size='sm' className='taminot_ratio' onChange={(event)=>setBahoType(event)}>
                     <Radio value={true}>Mustaqil Baholash Asosida</Radio>
                     <Radio value={false}>O'zaro kelishuvga asosan</Radio>
                 </Radio.Group>
