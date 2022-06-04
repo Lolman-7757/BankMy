@@ -154,7 +154,6 @@
     flex-direction: row;
     align-items: center;
     padding: 10px 0 0 0;
-    
 }
 .taminot_ratio_parent label{
     display:flex;
@@ -264,4 +263,7 @@
     width: 100%;
     border-bottom: 2px solid #7828c8;
     padding-bottom: 20px;
+}
+.taminot_tilla_radio{
+    justify-content: flex-end;
 }

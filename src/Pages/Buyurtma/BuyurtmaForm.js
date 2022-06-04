@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Input,Checkbox } from '@nextui-org/react'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
@@ -7,6 +7,8 @@ import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
 import './Buyurtma.css'
 
 function BuyurtmaForm() {
+    // const [ money, setMoney ] = useState(0);
+    
   return (
       <>
         <Link to='/buyurtma' className='clientform_back back-back'>
@@ -35,6 +37,8 @@ function BuyurtmaForm() {
                         type='number'
                         bordered
                         color="secondary"
+                        // value={money}
+                        // onInput={(event)=>setMoney(event.target.value.replace(/(?:(^\d{1,3})(?=(?:\d{3})*$)|(\d{3}))(?!$)/mg, '$1$2.'))}
                     />
                     <Input
                         className='buyurtma_form_inputs'
