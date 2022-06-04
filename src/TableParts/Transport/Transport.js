@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Input,Radio } from '@nextui-org/react'
+import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
+
 
 import './Transport.css'
 
@@ -470,6 +472,17 @@ function Transport() {
                     >
                     </Input>   
                 </div>
+            </div>
+
+            <div className='submit-buttons'>
+                <button className='client_submit reset'>
+                    Reset Form
+                    <AiOutlineClear/>
+                </button>
+                <button className='client_submit submit'>
+                    Submit Client
+                    <AiOutlineFileAdd/>
+                </button>
             </div>
         </div>
     </section>

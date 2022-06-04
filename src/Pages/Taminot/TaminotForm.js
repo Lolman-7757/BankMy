@@ -3,6 +3,8 @@ import TillaBuyum from './TillaBuyum';
 import Transport from '../../TableParts/Transport/Transport';
 import UchinchiShaxs from '../../TableParts/Uchinchi/UchinchiShaxs';
 import Sugurta from '../../TableParts/Sugurta/Sugurta';
+import { AiOutlineRollback } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 import './Taminot.css';
 
@@ -25,6 +27,10 @@ function TaminotForm() {
 
     return (
         <section>
+            <Link to='/taminot' className='clientform_back back-back'>
+                <AiOutlineRollback/>
+                Back
+            </Link>
             <div className='taminot_tableform'>
                 <div className='taminot_table'>
                     <div className='rare'>

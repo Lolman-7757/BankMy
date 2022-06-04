@@ -10,12 +10,15 @@ function Shartnama() {
     const [shartnamalar, setShartnamalar] = useState([]);
     const [ shartnamaWarn, setShartnamaWarn ] = useState(false)
     const shartnamaRef = useRef(null)
+
+
     const [ currentPage, setCurrentPage ] = useState(1);
     const [ shartnamaPerPage, setShartnamasPerPage ] = useState(10)
 
     const lastShartnamaIndex = currentPage * shartnamaPerPage;
     const firstShartnamaIndex = lastShartnamaIndex - shartnamaPerPage;
     const currentShartnama = shartnamalar.slice(firstShartnamaIndex,lastShartnamaIndex)
+
     // header DropDown Hendle Script
     useEffect(() => {
         document.addEventListener('mousedown', shartnamaHendleOutSide)
@@ -66,10 +69,10 @@ function Shartnama() {
                     </div>
                 </div>
                 <div className='shartnamaHeader'>
-                    <p className='shartnamaTitle'>Shartnama</p>
+                    <p className='shartnamaTitle'>Shartnoma</p>
                 </div>
                     <div className='shartnamaSearch'>
-                    <Link to='/addshartnama' className='shartnamaLink'>Add new shartnama</Link>     
+                    <Link to='/addshartnama' className='shartnamaLink'>Add new shartnoma</Link>     
                     <Input
                         rounded
                         bordered
@@ -86,14 +89,14 @@ function Shartnama() {
                     <div className='shartTable'>
                         <div className='tableHeader'>
                             <p className='headerTable-title'>Name</p>
-                            <p className='headerTable-title'>Shartnama raqami</p>
+                            <p className='headerTable-title'>Shartnoma raqami</p>
                             <p className='headerTable-title'>Mahsulot nomi</p>
                         </div>
                         <ul className='tableInfo'>
                             {
                                 currentShartnama.map((item,index)=>{
                                     return <li key={index}>
-                                        <p className='liName li'><span>{index + 1}.</span>{item.name}</p>
+                                        <p className='liName li'><span>{index + 1 + (currentPage-1)*10}.</span>{item.name}</p>
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>

@@ -61,8 +61,7 @@ function Addshartnama() {
     function cashInputAppearence () {
         if(cash){
             return(
-
-                <>
+        <>
             <Input
                 className='vall'
                 width='90%'
@@ -93,7 +92,7 @@ function Addshartnama() {
                 color="secondary"
                 onChange={e => setBankMfo(e.target.value)}
             />
-                </>
+        </>
             )
         }else{
             return(
@@ -229,7 +228,7 @@ function Addshartnama() {
                             Submit Client
                             <AiOutlineFileAdd/>
                         </button>
-                </div>
+            </div>
         </div>
     </>
     )

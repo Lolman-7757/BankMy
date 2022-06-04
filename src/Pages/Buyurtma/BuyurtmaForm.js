@@ -2,6 +2,7 @@ import React from 'react'
 import { Input,Checkbox } from '@nextui-org/react'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
 
 import './Buyurtma.css'
 
@@ -104,6 +105,16 @@ function BuyurtmaForm() {
                         bordered
                         color="secondary"
                     />
+                </div>
+                <div className='submit-buttons'>
+                    <button className='client_submit reset'>
+                        Reset Form
+                        <AiOutlineClear/>
+                    </button>
+                    <button className='client_submit submit'>
+                        Submit Client
+                        <AiOutlineFileAdd/>
+                    </button>
                 </div>
             </div>
         </div>
