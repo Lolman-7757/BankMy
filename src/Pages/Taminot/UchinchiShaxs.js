@@ -61,6 +61,14 @@ function UchinchiShaxs() {
                         className='transport_garovPart_input' 
                     />
                     <Input 
+                        label='Telefon Raqami'
+                        type='number'
+                        width='100%'
+                        color="secondary"
+                        bordered 
+                        className='transport_garovPart_input' 
+                    />
+                    <Input 
                         label="Ro'yxat bo'yicha yashash manzili"
                         clearable
                         placeholder='Toshkent viloyati Bo`ka tumani Y.Xojimetov fu O`zbekiston ko`chasi 92 uy'
