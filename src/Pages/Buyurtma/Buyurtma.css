@@ -291,6 +291,48 @@
     font-size: 1.1rem;
     font-weight: 600;
 }
-.buyurtma_value{
-    
+.buyurtma_buttons{
+    display: flex;
+    height: 40px;
+    flex-direction: row;
+}
+.buyurtma_buttons button{
+    display:flex;
+    margin-left: 20px;
+    justify-content:center;
+    align-items:center;
+    padding: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    transition: linear all .2s;
+    cursor: pointer;
+}
+.buyurtma_buttons button:hover{
+    transform: scale(1.2);
+}
+.buyurtma_buttons button:nth-child(1){
+    background-color: green;
+}
+.buyurtma_buttons button:nth-child(2){
+    background-color: blue;
+}
+.single_buyurtma_b1{
+    position: fixed;
+    z-index: 1999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    background-color: white;
+}
+@media print {
+    .single_buyurtma_b1{
+        display: flex;
+    }
 }

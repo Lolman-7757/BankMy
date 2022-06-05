@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { BiUser } from 'react-icons/bi'
 
 const buyurtmaData = {
     name: "Usmonova Muyassar Abduvalievna",
@@ -21,6 +20,9 @@ const buyurtmaData = {
 function SingleBuyurtnama() {
     return (
         <section className='single_buyurtma'>
+            <div className='single_buyurtma_b1'>
+                hiii
+            </div>
             <div className='single_buyurtma_icon'>
                 <img src='https://freesvg.org/img/abstract-user-flat-1.png' alt='user'/>
             </div>
@@ -74,6 +76,10 @@ function SingleBuyurtnama() {
                     <span className='buyurtma_parameter'>Muddat vaqti : </span>
                     <u className='buyurtma_value'>{buyurtmaData.muddat_time} oy</u>
                 </p>
+            </div>
+            <div className='buyurtma_buttons'>
+                <button>B1</button>
+                <button>B3</button>
             </div>
         </section>
     )   
