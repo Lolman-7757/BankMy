@@ -59,7 +59,7 @@ function Main() {
         <section className='main'>
             <BrowserRouter>
             <nav>
-                <Link to='/'><Logo/></Link>
+                <Link to='/'><Logo width={175}/></Link>
                 <Tabs defaultActiveKey="1" onChange={onChange} className="nav-list">
                     <TabPane 
                     tab={
