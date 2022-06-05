@@ -90,7 +90,7 @@ function Buyurtma() {
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>
-                                            <button><i className='bx bx-user'></i></button>
+                                            <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
                                             <button><i className='bx bx-trash'></i></button>
                                         </div>

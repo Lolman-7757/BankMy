@@ -29,6 +29,7 @@ import './Main.css'
 import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
 import TaminotForm from '../Taminot/TaminotForm';
+import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
 
 const { TabPane } = Tabs;
 
@@ -147,6 +148,7 @@ function Main() {
                         <Route path ='/shartnama' element={<Shartnama/>}/>
                         <Route path='/buyurtma' element={<Buyurtma/>}/>
                         <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
+                        <Route path='/buyurtma/singleBuyurtma' element={<SingleBuyurtnama/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
                     </Routes>
