@@ -319,20 +319,69 @@
 .buyurtma_buttons button:nth-child(2){
     background-color: blue;
 }
-.single_buyurtma_b1{
+.b1{
     position: fixed;
     z-index: 1999;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display:none;
-    justify-content:center;
-    align-items:center;
+    display:flex;
+    padding-top: 20px;
+    flex-direction: column;
     background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.b1_img{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.b1 img{
+    justify-self: flex-end;
+}
+.b1_subtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+.b1 h1{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.b1_content{
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-style: italic;
+    padding: 0px 20px;
+    word-spacing: 12px;
+}
+.b1_content p{
+    margin-top: 20px;
+}
+.b1_endData{
+    display: flex;
+    flex-direction: column;
+}
+.b1_lines span{
+    width: 70%;
+    height: 5px;
+    background-color: black;
 }
 @media print {
-    .single_buyurtma_b1{
+    .b1{
         display: flex;
     }
+    .header-left-top, .a-right-bottom, .time-right-bottom {
+        display: none;
+    }
+    @page { margin: 0; }
+    body { margin: 1.0cm; }
 }
