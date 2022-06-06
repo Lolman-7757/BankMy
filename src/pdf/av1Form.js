@@ -21,6 +21,7 @@ function Av1Form() {
         </div>
 
         <div className='pdf_container'>
+            <p className='av1_form_title'>Kreditning asosiy shartlari to‘g‘risidagi axborot varaqasi</p>
             <div className='av1_form_main'>
                 <div className='grid margin '>
                     <p className='startRow'>Mikrokredit tashkilotining nomi</p>
