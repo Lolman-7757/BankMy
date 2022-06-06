@@ -17,6 +17,7 @@
     align-items: center;
 }
 .taminot_link{
+    cursor: pointer;
     font-weight: 600;
     font-size: 15px;
     text-decoration: none;
@@ -305,6 +306,11 @@
     border: none;
     outline: none;
     margin-top: 20px;
+    transition: linear all .2s;
+    cursor: pointer;
+}
+.shartnoma_modal .shartnoma_modal_button:hover{
+    transform: scale(1.1);
 }
 .shartnoma_modal_button:nth-child(2){
     background-color: red;

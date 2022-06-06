@@ -30,8 +30,8 @@ import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
 import TaminotForm from '../Taminot/TaminotForm';
 import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
-import B1Form from '../../pdf/B1Form';
-import Av1Form from '../../pdf/Av1Form';
+import B1Form from '../../PDF/B1Form';
+import Av1Form from '../../PDF/Av1Form';
 
 const { TabPane } = Tabs;
 

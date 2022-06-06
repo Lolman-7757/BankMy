@@ -11,7 +11,7 @@ function Login() {
     return (
         <section className='login'>
             <div className='login-main'>
-                <Logo/>
+                <Logo width={300}/>
                 <LoginBack/>
             </div>
             <div className='login-secondary'>
