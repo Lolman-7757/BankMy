@@ -132,7 +132,7 @@ function Client() {
                     <ul className='clienttableInfo'>
                         {
                             currentClient.map((item,index)=>{
-                                return <li key={index}>
+                                return <li className='client_row' key={index}>
                                     <p className='clientliName li'><span>{index + 1 + (currentPage-1)*10}.</span>{item.name}</p>
                                     <p className='li'>{item.code}</p>
                                     <p className='li'>{item.pinfl}</p>
