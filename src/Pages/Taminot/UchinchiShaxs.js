@@ -11,7 +11,7 @@ function UchinchiShaxs() {
   return (
     <form className='taminot_shaxs'>
       <div className='transport_garovPart'>
-                <p>Uchinchi shaxs mulki egasining ma'lumotlari</p>
+                <p className='additionPart_title'>Uchinchi shaxs mulki egasining ma'lumotlari</p>
                 <div>
                     <Input 
                         label='Uchinchi mulki egasining F.I.Sh.'
@@ -22,18 +22,21 @@ function UchinchiShaxs() {
                         bordered 
                         className='transport_garovPart_input' 
                     />
-                    <select className='transport_garovPart_input'>
-                        <option>O'zR fuqarosining ID kartasi </option>
-                        <option>O'zR Fuqarosining pasporti</option>
-                        <option>Harbiy xizmatchi guvohnomasi</option>
-                        <option>Xizmat guvohnomasi</option>
-                        <option>Xorijiy fuqaro pasporti</option>
-                        <option>Yashash guvohnomasi</option>
-                        <option>O'zR Fuqarosining biometrik pasporti </option>
-                        <option>Tug'ulganlik haqidagi guvohnoma</option>
-                        <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
-                        <option>Boshqa </option>
-                    </select>
+                    <div className='transport_garovPart_selectPart'>
+                        <p>Shaxsini tasdiqlovchi xujjat</p>
+                        <select className='transport_garovPart_input'>
+                            <option>O'zR fuqarosining ID kartasi </option>
+                            <option>O'zR Fuqarosining pasporti</option>
+                            <option>Harbiy xizmatchi guvohnomasi</option>
+                            <option>Xizmat guvohnomasi</option>
+                            <option>Xorijiy fuqaro pasporti</option>
+                            <option>Yashash guvohnomasi</option>
+                            <option>O'zR Fuqarosining biometrik pasporti </option>
+                            <option>Tug'ulganlik haqidagi guvohnoma</option>
+                            <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
+                            <option>Boshqa </option>
+                        </select>
+                    </div>
                     <Input 
                         label='Seriyasi va raqami'
                         placeholder='AA 87654321'

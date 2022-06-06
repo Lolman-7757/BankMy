@@ -303,7 +303,7 @@ function Transport() {
             </div>
 
             <div className={firstTable}>
-                <p>Garov mulki egasining ma'lumotlari</p>
+                <p className='additionPart_title'>Garov mulki egasining ma'lumotlari</p>
                 <div>
                     <Input 
                         label='Garov mulki egasining F.I.Sh.'
@@ -315,18 +315,21 @@ function Transport() {
                         className='transport_garovPart_input' 
                     >
                     </Input>
-                    <select className='transport_garovPart_input'>
-                        <option>O'zR fuqarosining ID kartasi </option>
-                        <option>O'zR Fuqarosining pasporti</option>
-                        <option>Harbiy xizmatchi guvohnomasi</option>
-                        <option>Xizmat guvohnomasi</option>
-                        <option>Xorijiy fuqaro pasporti</option>
-                        <option>Yashash guvohnomasi</option>
-                        <option>O'zR Fuqarosining biometrik pasporti </option>
-                        <option>Tug'ulganlik haqidagi guvohnoma</option>
-                        <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
-                        <option>Boshqa </option>
-                    </select>
+                    <div className='transport_garovPart_selectPart'>
+                        <p>Shaxsini tasdiqlovchi xujjat turi</p>
+                        <select className='transport_garovPart_input'>
+                            <option>O'zR fuqarosining ID kartasi </option>
+                            <option>O'zR Fuqarosining pasporti</option>
+                            <option>Harbiy xizmatchi guvohnomasi</option>
+                            <option>Xizmat guvohnomasi</option>
+                            <option>Xorijiy fuqaro pasporti</option>
+                            <option>Yashash guvohnomasi</option>
+                            <option>O'zR Fuqarosining biometrik pasporti </option>
+                            <option>Tug'ulganlik haqidagi guvohnoma</option>
+                            <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
+                            <option>Boshqa </option>
+                        </select>
+                    </div>
                     <Input 
                         label='Seriyasi va raqami'
                         placeholder='AA 87654321'
@@ -380,7 +383,7 @@ function Transport() {
             </div>
 
             <div className={secondTable}>
-                <p>Ishonchnoma berilgan shaxs ma'lumotlari</p>
+                <p className='additionPart_title'>Ishonchnoma berilgan shaxs ma'lumotlari</p>
                 <div>
                     <Input 
                         label='F.I.Sh.'
@@ -392,18 +395,21 @@ function Transport() {
                         className='transport_ishonchnomaPart_input' 
                     >
                     </Input>
-                    <select className='transport_ishonchnomaPart_input'>
-                        <option>O'zR fuqarosining ID kartasi </option>
-                        <option>O'zR Fuqarosining pasporti</option>
-                        <option>Harbiy xizmatchi guvohnomasi</option>
-                        <option>Xizmat guvohnomasi</option>
-                        <option>Xorijiy fuqaro pasporti</option>
-                        <option>Yashash guvohnomasi</option>
-                        <option>O'zR Fuqarosining biometrik pasporti </option>
-                        <option>Tug'ulganlik haqidagi guvohnoma</option>
-                        <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
-                        <option>Boshqa </option>
-                    </select>
+                    <div className='transport_garovPart_selectPart'>
+                        <p>Shaxsini tasdiqlovchi hujjat turi</p>
+                        <select className='transport_ishonchnomaPart_input'>
+                            <option>O'zR fuqarosining ID kartasi </option>
+                            <option>O'zR Fuqarosining pasporti</option>
+                            <option>Harbiy xizmatchi guvohnomasi</option>
+                            <option>Xizmat guvohnomasi</option>
+                            <option>Xorijiy fuqaro pasporti</option>
+                            <option>Yashash guvohnomasi</option>
+                            <option>O'zR Fuqarosining biometrik pasporti </option>
+                            <option>Tug'ulganlik haqidagi guvohnoma</option>
+                            <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
+                            <option>Boshqa </option>
+                        </select>
+                    </div>
                     <Input 
                         label='Seriyasi va raqami'
                         placeholder='AA 87654321'
@@ -485,17 +491,6 @@ function Transport() {
                 </button>
             </div>
         </div>
-        <div className='taminot_button_block'>
-                <button className='taminot_reset' onClick={(event)=>{event.preventDefault();document.querySelector(`form`).reset()}}>
-                    Reset
-                    <AiOutlineClear/>
-                </button>
-                <button className='taminot_submit'>
-                    Submit
-                    <AiOutlineUserAdd/>
-                    
-                </button>
-            </div>
     </section>
   )
 }

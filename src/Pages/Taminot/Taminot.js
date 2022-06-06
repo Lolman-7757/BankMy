@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Input } from '@nextui-org/react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import Pagination from '../../Components/Pagination/Pagination'
 
 // Styles
@@ -8,6 +8,14 @@ import './Taminot.css'
 
 
 function Taminot() {
+
+    // Modalka
+    const [modalka,setModalka] = useState('shartnoma_modal close');
+    const [modalCode, setModalCode] = useState('');
+    let navigate = useNavigate();
+    function navigateAdd(){
+        navigate("/taminot/form", { replace: true })
+    }
 
     // Pagination
     const [buyurtmalar, setBuyurtmalar] = useState([]);
@@ -61,10 +69,31 @@ function Taminot() {
 
     return (
         <section className='taminot'>
+
+        {/* Modalka */}
+        <div className={modalka}>
+            <Input
+                rounded
+                bordered
+                width='300px'
+                color='secondary'
+                label='User code'
+                placeholder='12345'
+                clearable
+                onChange={(e)=>setModalCode(e.target.value)}
+            ></Input>
+            <div>
+                <button 
+                    onClick={navigateAdd}
+                    className='shartnoma_modal_button'>Submit</button>
+                <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Back</button>
+            </div>
+        </div>
+
             <div className='taminot_header'>
                 <div className='taminot_title'>Ta'minot</div>
                 <div className='taminot_subheader'>
-                    <Link to='/taminot/form' className='taminot_link'>Add New Ta'minot!</Link>
+                    <button onClick={()=>setModalka('shartnoma_modal open')} className='taminot_link'>Add New Ta'minot!</button>
                     <Input
                         rounded
                         bordered

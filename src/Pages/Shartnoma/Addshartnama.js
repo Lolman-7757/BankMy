@@ -229,6 +229,7 @@ function Addshartnama() {
                             <AiOutlineFileAdd/>
                         </button>
             </div>
+            {/* <button onClick={()=>window.print()}>Pdf</button> */}
         </div>
     </>
     )

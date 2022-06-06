@@ -1,11 +1,19 @@
 import React,  {useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { Input } from '@nextui-org/react'
 import Pagination from "../../Components/Pagination/Pagination";
 
 import './Buyurtma.css'
 
 function Buyurtma() {
+
+    // Modalka
+    const [modalka,setModalka] = useState('shartnoma_modal close');
+    const [modalCode, setModalCode] = useState('');
+    let navigate = useNavigate();
+    function navigateAdd(){
+        navigate("/buyurtma/form", { replace: true })
+    }
 
     const [buyurtmalar, setBuyurtmalar] = useState([]);
 
@@ -56,13 +64,33 @@ function Buyurtma() {
 
   return (
     <div className='shart_nama'>
-            <div className='shartnamaMain'>
 
+        {/* Modalka */}
+        <div className={modalka}>
+            <Input
+                rounded
+                bordered
+                width='300px'
+                color='secondary'
+                label='User code'
+                placeholder='12345'
+                clearable
+                onChange={(e)=>setModalCode(e.target.value)}
+            ></Input>
+            <div>
+                <button 
+                    onClick={navigateAdd}
+                    className='shartnoma_modal_button'>Submit</button>
+                <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Back</button>
+            </div>
+        </div>
+
+            <div className='shartnamaMain'>
                 <div className='shartnamaHeader'>
                     <p className='shartnamaTitle'>Buyurtma</p>
                 </div>
                     <div className='shartnamaSearch'>
-                    <Link to='/buyurtma/form' className='shartnamaLink'>Add new buyurtma</Link>     
+                    <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Add new buyurtma</button>     
                     <Input
                         rounded
                         bordered
