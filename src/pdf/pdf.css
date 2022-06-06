@@ -1,16 +1,17 @@
-.print_container{
-    position: fixed;
+.pdf_container{
+    /* position: fixed;
     z-index: 1999;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
-    height: 100%;
-    display: none;
+    min-height: 100vh;
+    display: flex;
     padding-top: 20px;
     flex-direction: column;
     background-color: white;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 12px;
 }
 .b1_img{
     width: 100%;
@@ -55,8 +56,11 @@
     background-color: black;
 }
 @media print {
-    .b1{
-        display: flex;
+    .pdf_container{
+        position: fixed;
+        z-index: 1999;
+        top: 0;
+        left: 0;
     }
     .header-left-top, .a-right-bottom, .time-right-bottom {
         display: none;

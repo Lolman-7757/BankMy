@@ -30,6 +30,8 @@ import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
 import TaminotForm from '../Taminot/TaminotForm';
 import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
+import B1Form from '../../pdf/B1Form';
+import Av1Form from '../../pdf/Av1Form';
 
 const { TabPane } = Tabs;
 
@@ -149,6 +151,8 @@ function Main() {
                         <Route path='/buyurtma' element={<Buyurtma/>}/>
                         <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
                         <Route path='/buyurtma/singleBuyurtma' element={<SingleBuyurtnama/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/b1' element={<B1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/av1' element={<Av1Form/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
                     </Routes>
