@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Radio } from "@nextui-org/react";
 
 // Icons
-import { AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai';
+import { AiOutlineClear, AiOutlineUserAdd} from 'react-icons/ai';
 import { BiTrash } from 'react-icons/bi';
 
 
@@ -92,7 +92,7 @@ function TillaBuyum() {
                 />
                 <Input
                 bordered
-                label='Litsenzya'
+                label='Litsenziya'
                 className='taminot_tableform_input'
                 width='100%'
                 clearable
@@ -170,7 +170,7 @@ function TillaBuyum() {
                     bahoItems.map((item,itemId)=>(
                         <div className='taminot_tableform_item' key={itemId}>
                             <div className='taminot_tableform_title'>
-                                <h2>Product №{itemId+1}</h2>
+                                <h2>Mahsulot №{itemId+1}</h2>
                                 <button 
                                 className={deleteBaho?'taminot_tableform_delete':'taminot_tableform_delete taminot_tableform_delete_active'} 
                                 onClick={(event)=> deletePoint(itemId,event)}
@@ -303,16 +303,16 @@ function TillaBuyum() {
                                 />
                 </div>
             </div>
-            <div className='taminot_button_block'>
-                <button className='taminot_reset' onClick={(event)=> resetForm(event)}>
-                    Reset
-                    <AiOutlineClear/>
+            <div className='submit-buttons'>
+                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                  Formani tiklash
+                  <AiOutlineClear/>
                 </button>
-                <button className='taminot_submit' onClick={()=>console.log(bahoItems)}>
-                    Submit
-                    <AiOutlineUserAdd/>
+                <button type='submit' className='client_submit submit'>
+                  Clientni qo'shish
+                  <AiOutlineUserAdd/>
                 </button>
-            </div>
+              </div>
         </form>
     )
 }

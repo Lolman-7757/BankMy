@@ -58,20 +58,19 @@ function CLientForm() {
     <>
       <Link to='/client' className='clientform_back'>
         <AiOutlineRollback/>
-        Back
+        Orqaga
       </Link>
       <div className='client_form'>
           <div className='clientform_head'>
             <div className='clientform_title_container'>
-              <div className='clientform_title'>Account Details!</div>
-              <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
+              <div className='clientform_title'><p>Foydalanuvchi tafsilotlari</p></div>
             </div>
           </div>
               <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Code"
+                  label="Kod"
                   placeholder='1234'
                   className='vall'
                   bordered
@@ -81,9 +80,9 @@ function CLientForm() {
                   maxLength={10}
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Name"
+                  label="Ism"
                   placeholder='Jane'
                   bordered
                   className='vall'
@@ -92,8 +91,8 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
-                  label="Birth date"
+                  width='100%'
+                  label="Tug'ilgan sana"
                   bordered
                   className='vall'
                   type='date'
@@ -102,9 +101,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Address"
+                  label="Manzil"
                   bordered
                   className='vall'
                   placeholder='2nd Boulevar'
@@ -113,9 +112,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="City"
+                  label="Shahar"
                   bordered
                   className='vall'
                   placeholder='Manhetton'
@@ -124,9 +123,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Citizienship"
+                  label="Fuqarolik"
                   bordered
                   className='vall'
                   placeholder='Russian'
@@ -135,9 +134,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Nation"
+                  label="Millat"
                   bordered
                   className='vall'
                   placeholder='Uzbek'
@@ -146,7 +145,7 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
                   label="PINFL"
                   bordered
@@ -157,9 +156,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Phone"
+                  label="Telefon raqami"
                   bordered
                   className='vall'
                   placeholder='+998991235678'
@@ -169,9 +168,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label=" Document Type"
+                  label="Hujjat turi"
                   bordered
                   className='vall'
                   placeholder='ID'
@@ -180,9 +179,9 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Serial Number"
+                  label="Ishlab chiqarish raqami"
                   bordered
                   className='vall'
                   placeholder='AD123456789'
@@ -191,19 +190,18 @@ function CLientForm() {
                   required
                 />
                 <Input
-                  width='90%'
+                  width='100%'
                   clearable
-                  label="Were Issued By"
+                  label="Kim bilan chiqarildi"
                   bordered
                   className='vall'
-                  placeholder='Robert Pattison'
                   color="secondary"
                   onChange={e => setIssuedBy(e.target.value)}
                   required
                 />
                 <Input
-                  width='90%'
-                  label="Were Issued By Date"
+                  width='100%'
+                  label="Chiqarilgan sana"
                   bordered
                   className='vall'
                   type='date'
@@ -214,11 +212,11 @@ function CLientForm() {
               </form>
               <div className='submit-buttons'>
                 <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
-                  Reset Form
+                  Formani tiklash
                   <AiOutlineClear/>
                 </button>
                 <button type='submit' className='client_submit submit'>
-                  Submit Client
+                  Clientni qo'shish
                   <AiOutlineUserAdd/>
                 </button>
               </div>

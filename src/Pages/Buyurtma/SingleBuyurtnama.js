@@ -52,10 +52,6 @@ function SingleBuyurtnama() {
                         <u className='buyurtma_value'>{buyurtmaData.bank}</u>
                     </p>
                     <p>
-                        <span className='buyurtma_parameter'>PINFL : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.pinfl}</u>
-                    </p>
-                    <p>
                         <span className='buyurtma_parameter'>Passport ID : </span>
                         <u className='buyurtma_value'>{buyurtmaData.pass_id}</u>
                     </p>

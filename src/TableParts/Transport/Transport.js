@@ -167,7 +167,7 @@ function Transport() {
                         return(
                                 <div className='transport_table_product' key={productIndex}>
                                     <div className='transport_table_product_title'>
-                                        <p>Product {productIndex + 1}</p>
+                                        <p>Mahsulot {productIndex + 1}</p>
                                         <button onClick={()=>deleteTransportProduct(productIndex)}><i className='bx bxs-trash'></i></button>
                                     </div>
                                     <div className='transport_table_things'>
@@ -481,13 +481,13 @@ function Transport() {
             </div>
 
             <div className='submit-buttons'>
-                <button className='client_submit reset'>
-                    Reset Form
+                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                    Formani tiklash
                     <AiOutlineClear/>
                 </button>
-                <button className='client_submit submit'>
-                    Submit Client
-                    <AiOutlineFileAdd/>
+                <button type='submit' className='client_submit submit'>
+                    Clientni qo'shish
+                    <AiOutlineUserAdd/>
                 </button>
             </div>
         </div>

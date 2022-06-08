@@ -28,7 +28,7 @@ function TaminotForm() {
         <section>
             <Link to='/taminot' className='clientform_back back-back'>
                 <AiOutlineRollback/>
-                Back
+                Orqaga
             </Link>
             <div className='taminot_tableform'>
                 <div className='taminot_table'>

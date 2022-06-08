@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Checkbox, Radio, Input } from "@nextui-org/react";
-import { AiOutlineFileAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
+import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
 
 
 import './Addshartnama.css'
@@ -64,7 +64,7 @@ function Addshartnama() {
         <>
             <Input
                 className='vall'
-                width='90%'
+                width='100%'
                 clearable
                 label="SSKS / Hisobraqam"
                 placeholder="8600 1223 3445 5667"
@@ -74,7 +74,7 @@ function Addshartnama() {
             />
             <Input
                 className='vall'
-                width='90%'
+                width='100%'
                 clearable
                 label=" Bank nomi"
                 placeholder="Univercial Bank Toshkent filiali"
@@ -84,7 +84,7 @@ function Addshartnama() {
             />
             <Input
                 className='vall'
-                width='90%'
+                width='100%'
                 clearable
                 label=" Bank MFOsi"
                 placeholder="00996"
@@ -104,7 +104,7 @@ function Addshartnama() {
     <>
         <Link to='/shartnama' className='clientform_back back-back'>
             <AiOutlineRollback/>
-            Back
+            Orqaga
         </Link>
         <div className='client'>
             <form className='shart-main'>
@@ -178,7 +178,6 @@ function Addshartnama() {
                 <Input
                     className='vall'
                     width='90%'
-                    clearable
                     label="Mikroqarz berish sanasi"
                     bordered
                     color="secondary"
@@ -188,7 +187,6 @@ function Addshartnama() {
                 <Input
                     className='vall'
                     width='90%'
-                    clearable
                     label="Birinchi tolov sonasi"
                     bordered
                     color="secondary"
@@ -198,7 +196,6 @@ function Addshartnama() {
                 <Input
                     className='vall'
                     width='90%'
-                    clearable
                     label="Shartnoma sanasi"
                     bordered
                     color="secondary"
@@ -220,15 +217,15 @@ function Addshartnama() {
                 }
             </form>
             <div className='submit-buttons'>
-                        <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
-                            Reset Form
-                            <AiOutlineClear/>
-                        </button>
-                        <button className='client_submit submit' onClick={(event)=>insertData(event)}>
-                            Submit Client
-                            <AiOutlineFileAdd/>
-                        </button>
-            </div>
+                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                  Formani tiklash
+                  <AiOutlineClear/>
+                </button>
+                <button type='submit' className='client_submit submit'>
+                  Clientni qo'shish
+                  <AiOutlineUserAdd/>
+                </button>
+              </div>
             {/* <button onClick={()=>window.print()}>Pdf</button> */}
         </div>
     </>

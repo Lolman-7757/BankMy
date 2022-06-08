@@ -1,6 +1,6 @@
 import React from 'react'
 import {Input} from '@nextui-org/react';
-import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
+import { AiOutlineUserAdd,AiOutlineClear } from 'react-icons/ai';
 
 
 import './Sugurta.css'
@@ -10,7 +10,7 @@ function Sugurta() {
     <section className='sugurta_section'>
       <div className='sugurta_main'>
         <Input 
-            label='Имя страховой компании'
+            label="Sug'urta kompaniyasining nomi"
             placeholder='Vosiq Mirzo'
             width='100%'
             color="secondary"
@@ -20,7 +20,7 @@ function Sugurta() {
         >  
         </Input>
         <Input 
-            label='Номер полиса'
+            label='Siyosat raqami'
             placeholder='12345678'
             width='100%'
             color="secondary"
@@ -30,7 +30,7 @@ function Sugurta() {
         >
         </Input>
         <Input 
-            label='Сумма страхования(som)'
+            label="Sug'urta summasi"
             placeholder='120 000 000'
             type='number'
             width='100%'
@@ -41,7 +41,7 @@ function Sugurta() {
         >
         </Input>
         <Input 
-            label='Дата страхования'
+            label="Sug'urta sanasi"
             width='100%'
             color="secondary"
             bordered 
@@ -51,14 +51,14 @@ function Sugurta() {
         </Input>
       </div>
       <div className='submit-buttons'>
-          <button className='client_submit reset'>
-              Reset Form
-              <AiOutlineClear/>
-          </button>
-          <button className='client_submit submit'>
-              Submit Client
-              <AiOutlineFileAdd/>
-          </button>
+        <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+          Formani tiklash
+          <AiOutlineClear/>
+        </button>
+        <button type='submit' className='client_submit submit'>
+          Clientni qo'shish
+          <AiOutlineUserAdd/>
+        </button>
       </div>
     </section>
   )

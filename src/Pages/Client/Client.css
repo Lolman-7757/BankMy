@@ -25,16 +25,32 @@
     font-size: 0.9rem;
     color: #808080;
 }
+.client_addition div{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
 .client_button{
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
+    display: flex;
     padding: 8px 15px;
     border-radius: 7px;
     transition: linear all .2s;
     border: #7828c8 2px solid;
     color: #7828c8;
     background-color: rgba(255, 255, 255, 0);
+}
+.client_button i{
+    font-size: 22px;
+    margin-left: 7px;
+}
+.client_button p{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .client_button:nth-child(2){
     margin-left: 30px;
@@ -54,13 +70,14 @@
     margin-top: 15px;
 }
 .clientform_title{
-    font-size: 1.5rem;
+    font-size: 22px;
+    font-weight: 600;
 }
 .clientform_form{
     width: 100%;
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2,50%);
+    display: flex;
+    flex-direction: column;
 }
 .vall{
     margin-bottom: 20px;
@@ -253,7 +270,7 @@
         transform: scale(1);
     }
 }
-
+client_button
 .clientform_extra{
     display: flex;
     flex-direction: row;
@@ -271,7 +288,7 @@
 }
 .clientform_group input{
     margin-top: 5px;
-    width: 90%;
+    width: 100%;
     border-radius: .3rem;
     border: 1px solid rgb(176, 176, 176);
     padding: 0.5rem 1rem;
@@ -297,15 +314,6 @@
 }
 .group-inputt{
     background-color: var(--light);   
-}
-.nextui-input-clear-button{
-    margin-right: 10px;
-}
-.nextui-input button{
-    transform: translateX(-20px);
-}
-.nextui-c-ctQnhE-kEXoss-visible-true{
-    transform: translateX(-20px);
 }
 .vall button{
     margin-right: 10px;
@@ -443,7 +451,7 @@ input::-webkit-inner-spin-button {
     padding: 15px;
 }
 .liName span{
-    margin-right: 3px;
+    margin-right: 7px;
 }
 .clienttableInfo li .clientuserButtons{
     flex-basis: 15%;

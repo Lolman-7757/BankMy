@@ -93,11 +93,11 @@ function Client() {
     return (
         <div className='client'>
             <div className={clientWarn?'client_warn client_warn_active':'client_warn'}>
-                    <div className='client_warn_title'>Warning!</div>
-                    <div className='client_warn_text'>Are you sure you want to delete it?</div>
+                    <div className='client_warn_title'>Ogohlantirish</div>
+                    <div className='client_warn_text'>Haqiqatan ham uni o'chirib tashlamoqchimisiz</div>
                     <div className='client_warn_buttons'>
-                        <button>Yes!</button>
-                        <button onClick={()=>setClientWarn(!clientWarn)} ref={clientRef}>No!</button>
+                        <button>Ha</button>
+                        <button onClick={()=>setClientWarn(!clientWarn)} ref={clientRef}>Yo'q</button>
                     </div>
                 </div>
             <div className='client_title'>
@@ -105,13 +105,13 @@ function Client() {
             </div>
             <div className='client_addition'>
                 <div>
-                    <Link className='client_button' to='/client/single_form'>Add a new Client!</Link>
-                    <Link className='client_button' to='/client/group_form'>Add a new Group!</Link>
+                    <Link className='client_button' to='/client/single_form'><p>Klient</p> <i className='bx bx-plus-circle'></i></Link>
+                    <Link className='client_button' to='/client/group_form'><p>Guruh</p> <i className='bx bx-plus-circle'></i></Link>
                 </div>
                 <Input
                     rounded
                     bordered
-                    placeholder="Search"
+                    placeholder="Foydalanuvchi kodi..."
                     color="secondary"
                     width='300px'
                     className='search-input'
@@ -124,16 +124,16 @@ function Client() {
             <div className='clientTablePart'>
                 <div className='clientTable'>
                     <div className='clienttableHeader'>
-                        <p className='clientheaderTable-title'>Name</p>
-                        <p className='clientheaderTable-title'>Code</p>
+                        <p className='clientheaderTable-title'>Ism</p>
+                        <p className='clientheaderTable-title'>Kod</p>
                         <p className='clientheaderTable-title'>PinFl</p>
-                        <p className='clientheaderTable-title'>City</p>
+                        <p className='clientheaderTable-title'>Shahar</p>
                     </div>
                     <ul className='clienttableInfo'>
                         {
                             currentClient.map((item,index)=>{
                                 return <li className='client_row' key={index}>
-                                    <p className='clientliName li'><span>{index + 1 + (currentPage-1)*10}.</span>{item.name}</p>
+                                    <p className='clientliName li'>{/*<span>{index + 1 + (currentPage-1)*10}.</span>*/}{item.name}</p>
                                     <p className='li'>{item.code}</p>
                                     <p className='li'>{item.pinfl}</p>
                                     <p className='li'>{item.city}</p>

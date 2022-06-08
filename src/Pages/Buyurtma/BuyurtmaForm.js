@@ -13,7 +13,7 @@ function BuyurtmaForm() {
       <>
         <Link to='/buyurtma' className='clientform_back back-back'>
             <AiOutlineRollback/>
-            Back
+             Orqaga
         </Link>
         <div className='shart_nama'>
             <div className='buyurtma_form_main'>
@@ -22,7 +22,6 @@ function BuyurtmaForm() {
                     <Input
                         className='buyurtma_form_inputs'
                         width='100%'
-                        clearable
                         label="Buyurtma sanasi"
                         bordered
                         color="secondary"
@@ -40,7 +39,7 @@ function BuyurtmaForm() {
                         // value={money}
                         // onInput={(event)=>setMoney(event.target.value.replace(/(?:(^\d{1,3})(?=(?:\d{3})*$)|(\d{3}))(?!$)/mg, '$1$2.'))}
                     />
-                    <Input
+                    {/* <Input
                         className='buyurtma_form_inputs'
                         width='100%'
                         clearable
@@ -48,7 +47,7 @@ function BuyurtmaForm() {
                         placeholder="Yigirma million som 00 tiyin"
                         bordered
                         color="secondary"
-                    />
+                    /> */}
                     <div className='shart-check'>
                         <Checkbox 
                         value="Kredit Qo'mitasi qorariga asosan"
@@ -71,14 +70,14 @@ function BuyurtmaForm() {
                         <p>Sektor</p>
                         <select
                         >
-                            <option value="1">1 вариант</option>
-                            <option value="2">2 вариант</option>
-                            <option value="3">3 вариант</option>
-                            <option value="4">4 вариант</option>
-                            <option value="5">5 вариант</option>
-                            <option value="6">6 вариант</option>
-                            <option value="7">7 вариант</option>
-                            <option value="8">8 вариант</option>
+                            <option value="1">1 variant</option>
+                            <option value="2">2 variant</option>
+                            <option value="3">3 variant</option>
+                            <option value="4">4 variant</option>
+                            <option value="5">5 variant</option>
+                            <option value="6">6 variant</option>
+                            <option value="7">7 variant</option>
+                            <option value="8">8 variant</option>
                         </select>
                     </div>
                     <Input
@@ -112,11 +111,11 @@ function BuyurtmaForm() {
                 </div>
                 <div className='submit-buttons'>
                     <button className='client_submit reset'>
-                        Reset Form
+                        Formani tiklash
                         <AiOutlineClear/>
                     </button>
                     <button className='client_submit submit'>
-                        Submit Client
+                        Clientni qo'shish
                         <AiOutlineFileAdd/>
                     </button>
                 </div>

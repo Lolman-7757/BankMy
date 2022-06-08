@@ -61,7 +61,7 @@ import './Client.css'
     <Input
       width='50%'
       clearable
-      label="Write down your group name"
+      label="Guruh nomini yozing"
       bordered
       className='group-inputt'
       placeholder='Rene Bare'
@@ -150,7 +150,7 @@ import './Client.css'
     <div className='back-but'>
     <Link to='/client' className='clientform_back'>
       <AiOutlineRollback/>
-      Back
+      Orqaga
     </Link>
     </div>
     <Tabs tabBarExtraContent={operations}  defaultActiveKey="2" onChange={callback} className='client_tabs'>
@@ -166,13 +166,12 @@ import './Client.css'
         key={`${tabId}`}
         >
           <div className={`client_form`}>
-            <div className='clientform_title'>Account {tabId+1} Details!</div>
-            <div className='clientform_subtitle'>Fill Out this form to add a Client.</div>
+            <div className='clientform_title'>{tabId+1}. Foydalanuvchi tafsilotlari</div>
             <form className='clientform_form'>
             <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Code"
+                label="Kod"
                 placeholder='1234'
                 className='vall'
                 bordered
@@ -181,18 +180,18 @@ import './Client.css'
                 required= 'required'
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Name"
-                placeholder='Jane'
+                label="Ism"
+                placeholder='Abdikadir'
                 bordered
                 className='vall'
                 color="secondary"
                 onChange={e => setName(e.target.value)}
               />
               <Input
-                width='90%'
-                label="Birth date"
+                width='100%'
+                label="Tug'ilgan sana"
                 bordered
                 className='vall'
                 type='date'
@@ -200,9 +199,9 @@ import './Client.css'
                 onChange={e => setBirth(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Address"
+                label="Manzil"
                 bordered
                 className='vall'
                 placeholder='2nd Boulevar'
@@ -210,29 +209,29 @@ import './Client.css'
                 onChange={e => setAddress(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="City"
+                label="Shahar"
                 bordered
                 className='vall'
-                placeholder='Manhetton'
+                placeholder='Nukus'
                 color="secondary"
                 onChange={e => setCity(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Citizienship"
+                label="Fuqarolik"
                 bordered
                 className='vall'
-                placeholder='Russian'
+                placeholder='Uzbekistan'
                 color="secondary"
                 onChange={e => setCitizienship(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Nation"
+                label="Millat"
                 bordered
                 className='vall'
                 placeholder='Uzbek'
@@ -240,7 +239,7 @@ import './Client.css'
                 onChange={e => setNation(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
                 label="PINFL"
                 bordered
@@ -250,9 +249,9 @@ import './Client.css'
                 onChange={e => setPinfl(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Phone"
+                label="Telefon raqami"
                 bordered
                 className='vall'
                 placeholder='+998991235678'
@@ -261,9 +260,9 @@ import './Client.css'
                 onChange={e => setNumber(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label=" Document Type"
+                label="Hujjat turi"
                 bordered
                 className='vall'
                 placeholder='ID'
@@ -271,9 +270,9 @@ import './Client.css'
                 onChange={e => setDoc(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Serial Number"
+                label="Ishlab chiqarish raqami"
                 bordered
                 className='vall'
                 placeholder='AD123456789'
@@ -281,9 +280,9 @@ import './Client.css'
                 onChange={e => setSerialNum(e.target.value)}
               />
               <Input
-                width='90%'
+                width='100%'
                 clearable
-                label="Were Issued By"
+                label="Kim bilan berilgan"
                 bordered
                 className='vall'
                 placeholder='Robert Pattison'
@@ -291,8 +290,8 @@ import './Client.css'
                 onChange={e => setIssuedBy(e.target.value)}
               />
               <Input
-                width='90%'
-                label="Were Issued By Date"
+                width='100%'
+                label="Berilgan sana"
                 bordered
                 className='vall'
                 type='date'
@@ -302,11 +301,11 @@ import './Client.css'
             </form>
               <div className='submit-buttons'>
               <button className='client_submit reset  ' onClick={()=>document.querySelector(`form`).reset()}>
-                Reset Form
+                Formani tiklash
                 <AiOutlineClear/>
               </button>
               <button className={deleteState?'client_submit delete':'client_submit none'} onClick={()=>deleteClient(tabId)}>
-                Delete Client
+                Clientni o'chirish
                 <BiTrash/>
               </button>
               </div>
@@ -317,7 +316,7 @@ import './Client.css'
     }
   </Tabs>
           <Link to='/' className='client_submit group-submit submit' onClick={insertData}>
-            Submit Group
+            Guruhni qo'shish
             <AiOutlineUsergroupAdd/>
           </Link>
   </>

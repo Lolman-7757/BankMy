@@ -27,3 +27,9 @@ code {
   justify-content:center;
   align-items:flex-start;
 }
+/* x button */
+.nextui-c-eXOOPO svg{
+  margin-right: 10px;
+  transform: scale(1.35);
+  color: #7828c8;
+}

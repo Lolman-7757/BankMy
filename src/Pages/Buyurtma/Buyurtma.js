@@ -30,32 +30,32 @@ function Buyurtma() {
     useEffect(() => {
         setBuyurtmalar(
             [
-                {name:'Jaiden Rush', raqam:'22',mahsulot:'rene'},
-                {name:'Lydia Levy', raqam:'25',mahsulot:'rene'},
-                {name:'Dan Cope', raqam:'28',mahsulot:'rene'},
-                {name:'Rimsha Charlton', raqam:'12',mahsulot:'rene'},
-                {name:'Paul Mann', raqam:'23',mahsulot:'rene'},
-                {name:'Tehya Sears', raqam:'54',mahsulot:'rene'},
-                {name:'Kacie Driscoll', raqam:'61',mahsulot:'rene'},
-                {name:'Violet Payne', raqam:'67',mahsulot:'rene'},
-                {name:'Antonina Sanderson', raqam:'87',mahsulot:'rene'},
-                {name:'Jaiden Rush', raqam:'73',mahsulot:'rene'},
-                {name:'Kacie Driscoll', raqam:'46',mahsulot:'rene'},
-                {name:'Faraz Marshall', raqam:'12',mahsulot:'rene'},
-                {name:'Antonina Sanderson', raqam:'98',mahsulot:'rene'},
-                {name:'Jaiden Rush', raqam:'22',mahsulot:'rene'},
-                {name:'Lydia Levy', raqam:'25',mahsulot:'rene'},
-                {name:'Dan Cope', raqam:'28',mahsulot:'rene'},
-                {name:'Rimsha Charlton', raqam:'12',mahsulot:'rene'},
-                {name:'Paul Mann', raqam:'23',mahsulot:'rene'},
-                {name:'Tehya Sears', raqam:'54',mahsulot:'rene'},
-                {name:'Kacie Driscoll', raqam:'61',mahsulot:'rene'},
-                {name:'Violet Payne', raqam:'67',mahsulot:'rene'},
-                {name:'Antonina Sanderson', raqam:'87',mahsulot:'rene'},
-                {name:'Jaiden Rush', raqam:'73',mahsulot:'rene'},
-                {name:'Kacie Driscoll', raqam:'46',mahsulot:'rene'},
-                {name:'Faraz Marshall', raqam:'12',mahsulot:'rene'},
-                {name:'Antonina Sanderson', raqam:'98',mahsulot:'rene'}
+                {name:'Jaiden Rush', raqam:'22',mahsulot:'ReneTrade'},
+                {name:'Lydia Levy', raqam:'25',mahsulot:'ReneTrade'},
+                {name:'Dan Cope', raqam:'28',mahsulot:'ReneTrade'},
+                {name:'Rimsha Charlton', raqam:'12',mahsulot:'ReneTrade'},
+                {name:'Paul Mann', raqam:'23',mahsulot:'ReneTrade'},
+                {name:'Tehya Sears', raqam:'54',mahsulot:'ReneTrade'},
+                {name:'Kacie Driscoll', raqam:'61',mahsulot:'ReneTrade'},
+                {name:'Violet Payne', raqam:'67',mahsulot:'ReneTrade'},
+                {name:'Antonina Sanderson', raqam:'87',mahsulot:'ReneTrade'},
+                {name:'Jaiden Rush', raqam:'73',mahsulot:'ReneTrade'},
+                {name:'Kacie Driscoll', raqam:'46',mahsulot:'ReneTrade'},
+                {name:'Faraz Marshall', raqam:'12',mahsulot:'ReneTrade'},
+                {name:'Antonina Sanderson', raqam:'98',mahsulot:'ReneTrade'},
+                {name:'Jaiden Rush', raqam:'22',mahsulot:'ReneTrade'},
+                {name:'Lydia Levy', raqam:'25',mahsulot:'ReneTrade'},
+                {name:'Dan Cope', raqam:'28',mahsulot:'ReneTrade'},
+                {name:'Rimsha Charlton', raqam:'12',mahsulot:'ReneTrade'},
+                {name:'Paul Mann', raqam:'23',mahsulot:'ReneTrade'},
+                {name:'Tehya Sears', raqam:'54',mahsulot:'ReneTrade'},
+                {name:'Kacie Driscoll', raqam:'61',mahsulot:'ReneTrade'},
+                {name:'Violet Payne', raqam:'67',mahsulot:'ReneTrade'},
+                {name:'Antonina Sanderson', raqam:'87',mahsulot:'ReneTrade'},
+                {name:'Jaiden Rush', raqam:'73',mahsulot:'ReneTrade'},
+                {name:'Kacie Driscoll', raqam:'46',mahsulot:'ReneTrade'},
+                {name:'Faraz Marshall', raqam:'12',mahsulot:'ReneTrade'},
+                {name:'Antonina Sanderson', raqam:'98',mahsulot:'ReneTrade'}
             ]
         )
         
@@ -72,7 +72,7 @@ function Buyurtma() {
                 bordered
                 width='300px'
                 color='secondary'
-                label='User code'
+                label='Foydalanuvchi kodi'
                 placeholder='12345'
                 clearable
                 onChange={(e)=>setModalCode(e.target.value)}
@@ -80,8 +80,8 @@ function Buyurtma() {
             <div>
                 <button 
                     onClick={navigateAdd}
-                    className='shartnoma_modal_button'>Submit</button>
-                <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Back</button>
+                    className='shartnoma_modal_button'>Qo'shish</button>
+                <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Orqaga</button>
             </div>
         </div>
 
@@ -90,11 +90,11 @@ function Buyurtma() {
                     <p className='shartnamaTitle'>Buyurtma</p>
                 </div>
                     <div className='shartnamaSearch'>
-                    <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Add new buyurtma</button>     
+                    <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Buyurtma <i className='bx bx-plus-circle'></i></button>     
                     <Input
                         rounded
                         bordered
-                        placeholder="Search"
+                        placeholder="Buyurtma raqami..."
                         color="secondary"
                         width='300px'
                         className='search-input'
@@ -106,7 +106,7 @@ function Buyurtma() {
                 <div className='shartnamaTablePart'>
                     <div className='shartTable'>
                         <div className='tableHeader'>
-                            <p className='headerTable-title'>Name</p>
+                            <p className='headerTable-title'>Ism</p>
                             <p className='headerTable-title'>Buyurtma raqami</p>
                             <p className='headerTable-title'>Mahsulot nomi</p>
                         </div>
@@ -114,13 +114,13 @@ function Buyurtma() {
                             {
                                 currentBuyurtma.map((item,index)=>{
                                     return <li key={index}>
-                                        <p className='liName li'><span>{index + 1 + (currentList-1)*10}.</span>{item.name}</p>
+                                        <p className='liName li'>{/*<span>{index + 1 + (currentList-1)*10}.</span>*/}{item.name}</p>
                                         <p className='li'>{item.raqam}</p>
                                         <p className='li'>{item.mahsulot}</p>
                                         <div className='userButtons'>
                                             <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
-                                            <button><i className='bx bx-trash'></i></button>
+                                            {/* <button><i className='bx bx-trash'></i></button> */}
                                         </div>
                                     </li>
                                 })

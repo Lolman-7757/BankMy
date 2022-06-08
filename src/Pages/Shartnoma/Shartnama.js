@@ -85,8 +85,8 @@ function Shartnama() {
                     <div>
                         <button 
                             onClick={navigateAdd}
-                            className='shartnoma_modal_button'>Submit</button>
-                        <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Back</button>
+                            className='shartnoma_modal_button'>Qo'shish</button>
+                        <button onClick={()=>setModalka('shartnoma_modal close')} className='shartnoma_modal_button'>Orqaga</button>
                     </div>
                 </div>
 
@@ -104,11 +104,11 @@ function Shartnama() {
                         <p className='shartnamaTitle'>Shartnoma</p>
                     </div>
                         <div className='shartnamaSearch'>
-                        <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Add new shartnoma</button>     
+                        <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Shartnoma <i className='bx bx-plus-circle'></i></button>     
                         <Input
                             rounded
                             bordered
-                            placeholder="Search"
+                            placeholder="shartnoma raqami..."
                             color="secondary"
                             width='300px'
                             className='search-input'
@@ -120,7 +120,7 @@ function Shartnama() {
                     <div className='shartnamaTablePart'>
                         <div className='shartTable'>
                             <div className='tableHeader'>
-                                <p className='headerTable-title'>Name</p>
+                                <p className='headerTable-title'>Ism</p>
                                 <p className='headerTable-title'>Shartnoma raqami</p>
                                 <p className='headerTable-title'>Mahsulot nomi</p>
                             </div>
@@ -128,13 +128,13 @@ function Shartnama() {
                                 {
                                     currentShartnama.map((item,index)=>{
                                         return <li key={index}>
-                                            <p className='liName li'><span>{index + 1 + (currentPage-1)*10}.</span>{item.name}</p>
+                                            <p className='liName li'>{/*<span>{index + 1 + (currentPage-1)*10}.</span>*/}{item.name}</p>
                                             <p className='li'>{item.raqam}</p>
                                             <p className='li'>{item.mahsulot}</p>
                                             <div className='userButtons'>
                                                 <button><i className='bx bx-user'></i></button>
                                                 <button><i className='bx bx-edit-alt'></i></button>
-                                                <button><i className='bx bx-trash'></i></button>
+                                                {/* <button><i className='bx bx-trash'></i></button> */}
                                             </div>
                                         </li>
                                     })

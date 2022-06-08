@@ -91,15 +91,14 @@ function UchinchiShaxs() {
                     />  
                 </div>
             </div>
-            <div className='taminot_button_block'>
-                <button className='taminot_reset' onClick={(event)=>{event.preventDefault();document.querySelector(`form`).reset()}}>
-                    Reset
+            <div className='submit-buttons'>
+                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                    Formani tiklash
                     <AiOutlineClear/>
                 </button>
-                <button className='taminot_submit'>
-                    Submit
+                <button type='submit' className='client_submit submit'>
+                    Clientni qo'shish
                     <AiOutlineUserAdd/>
-                    
                 </button>
             </div>
     </form>
