@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
-import { BiEnvelope } from 'react-icons/bi'
+import { AiOutlineBell } from 'react-icons/ai'
 
 // MUI
 import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
@@ -115,7 +115,7 @@ function Main() {
             
             <main>
                 <header>
-                    <BiEnvelope className='email'/>
+                    <AiOutlineBell className='email'/>
                     <div className='header_last'>
                         <div className='header_info'>
                             <h2>John Doe</h2>

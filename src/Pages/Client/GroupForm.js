@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Tabs } from 'antd';
 import { Link } from 'react-router-dom';
-import { Input } from '@nextui-org/react';
+import { Input, Radio } from '@nextui-org/react';
 import { BiTrash } from 'react-icons/bi'
 import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback, AiOutlineUser } from 'react-icons/ai';
 
@@ -168,6 +168,13 @@ import './Client.css'
           <div className={`client_form`}>
             <div className='clientform_title'>{tabId+1}. Foydalanuvchi tafsilotlari</div>
             <form className='clientform_form'>
+            <label className='clientform_gender'>
+              <p>Jinsi</p>
+              <Radio.Group aria-label='Пол' color='secondary' value={true} size='sm' className='clientform_gender_radio' onChange={(event)=>console.log(event)}>
+                <Radio value={true}>Erkak</Radio>
+                <Radio value={false}>Ayol</Radio>
+              </Radio.Group>
+            </label>
             <Input
                 width='100%'
                 clearable
@@ -254,7 +261,8 @@ import './Client.css'
                 label="Telefon raqami"
                 bordered
                 className='vall'
-                placeholder='+998991235678'
+                labelLeft='+998'
+                  placeholder='991235678'
                 type='number'
                 color="secondary"
                 onChange={e => setNumber(e.target.value)}

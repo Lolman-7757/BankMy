@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input } from '@nextui-org/react';
+import { Input, Radio } from '@nextui-org/react';
 import {  AiOutlineClear, AiOutlineUserAdd, AiOutlineRollback } from 'react-icons/ai'
 import './Client.css'
 import { Link } from 'react-router-dom';
@@ -67,6 +67,13 @@ function CLientForm() {
             </div>
           </div>
               <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
+                <label className='clientform_gender'>
+                  <p>Jinsi</p>
+                  <Radio.Group aria-label='Пол' color='secondary' value={true} size='sm' className='clientform_gender_radio' onChange={(event)=>console.log(event)}>
+                    <Radio value={true}>Erkak</Radio>
+                    <Radio value={false}>Ayol</Radio>
+                  </Radio.Group>
+                </label>
                 <Input
                   width='100%'
                   clearable
@@ -161,7 +168,9 @@ function CLientForm() {
                   label="Telefon raqami"
                   bordered
                   className='vall'
-                  placeholder='+998991235678'
+                  pattern='[0-9]'
+                  labelLeft='+998'
+                  placeholder='991235678'
                   type='number'
                   color="secondary"
                   onChange={e => setNumber(e.target.value)}

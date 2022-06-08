@@ -62,8 +62,9 @@
     padding: 20px 15px;
 }
 .tableHeader .headerTable-title:nth-child(1){
-    flex-basis: 30%;
+    flex-basis: 15%;
     font-weight: 600;
+    text-align: center;
 }
 .tableHeader .headerTable-title:nth-child(2){
     flex-basis: 25%;
@@ -72,6 +73,17 @@
 }
 .tableHeader .headerTable-title:nth-child(3){
     flex-basis: 30%;
+    font-weight: 600;
+    text-align: center;
+}
+.tableHeader .headerTable-title:nth-child(4){
+    flex-basis: 10%;
+    font-weight: 600;
+    text-align: center;
+}
+.tableHeader .headerTable-title:nth-child(5){
+    flex-basis: 15%;
+    border: none;
     font-weight: 600;
     text-align: center;
 }
@@ -85,6 +97,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 100%;
     border-bottom: 1px solid rgb(216, 214, 214);
 }
 .tableInfo li:last-child{
@@ -92,9 +105,10 @@
     font-weight: 500;
 }
 .tableInfo li p:nth-child(1){
-    flex-basis: 30%;
+    flex-basis: 15%;
     font-weight: 500;
     padding: 15px;
+    text-align: center;
 }
 .tableInfo li p:nth-child(2){
     flex-basis: 25%;
@@ -108,6 +122,9 @@
     font-weight: 500; 
     padding: 15px;
 }
+.tableInfo li p:nth-child(4){
+    flex-basis: 10%;
+}
 .liName span{
     margin-right: 7px;
 }
@@ -115,8 +132,8 @@
     flex-basis: 15%;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content:space-around;
-    padding: 0 10px;
 }
 .userButtons button{
     width: 40px;
@@ -381,4 +398,19 @@
 }
 .open{
     display: flex;
+}
+
+
+
+#green{
+    background-color: greenyellow;
+    padding: 25px;
+}
+#red{
+    background-color: red;
+    padding: 25px;
+}
+#yellow{
+    background-color: orange;
+    padding: 25px;
 }

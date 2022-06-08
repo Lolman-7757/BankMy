@@ -69,6 +69,8 @@ function UchinchiShaxs() {
                         width='100%'
                         color="secondary"
                         bordered 
+                        labelLeft='+998'
+                        placeholder='991235678'
                         className='transport_garovPart_input' 
                     />
                     <Input 

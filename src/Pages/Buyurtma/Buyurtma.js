@@ -30,32 +30,21 @@ function Buyurtma() {
     useEffect(() => {
         setBuyurtmalar(
             [
-                {name:'Jaiden Rush', raqam:'22',mahsulot:'ReneTrade'},
-                {name:'Lydia Levy', raqam:'25',mahsulot:'ReneTrade'},
-                {name:'Dan Cope', raqam:'28',mahsulot:'ReneTrade'},
-                {name:'Rimsha Charlton', raqam:'12',mahsulot:'ReneTrade'},
-                {name:'Paul Mann', raqam:'23',mahsulot:'ReneTrade'},
-                {name:'Tehya Sears', raqam:'54',mahsulot:'ReneTrade'},
-                {name:'Kacie Driscoll', raqam:'61',mahsulot:'ReneTrade'},
-                {name:'Violet Payne', raqam:'67',mahsulot:'ReneTrade'},
-                {name:'Antonina Sanderson', raqam:'87',mahsulot:'ReneTrade'},
-                {name:'Jaiden Rush', raqam:'73',mahsulot:'ReneTrade'},
-                {name:'Kacie Driscoll', raqam:'46',mahsulot:'ReneTrade'},
-                {name:'Faraz Marshall', raqam:'12',mahsulot:'ReneTrade'},
-                {name:'Antonina Sanderson', raqam:'98',mahsulot:'ReneTrade'},
-                {name:'Jaiden Rush', raqam:'22',mahsulot:'ReneTrade'},
-                {name:'Lydia Levy', raqam:'25',mahsulot:'ReneTrade'},
-                {name:'Dan Cope', raqam:'28',mahsulot:'ReneTrade'},
-                {name:'Rimsha Charlton', raqam:'12',mahsulot:'ReneTrade'},
-                {name:'Paul Mann', raqam:'23',mahsulot:'ReneTrade'},
-                {name:'Tehya Sears', raqam:'54',mahsulot:'ReneTrade'},
-                {name:'Kacie Driscoll', raqam:'61',mahsulot:'ReneTrade'},
-                {name:'Violet Payne', raqam:'67',mahsulot:'ReneTrade'},
-                {name:'Antonina Sanderson', raqam:'87',mahsulot:'ReneTrade'},
-                {name:'Jaiden Rush', raqam:'73',mahsulot:'ReneTrade'},
-                {name:'Kacie Driscoll', raqam:'46',mahsulot:'ReneTrade'},
-                {name:'Faraz Marshall', raqam:'12',mahsulot:'ReneTrade'},
-                {name:'Antonina Sanderson', raqam:'98',mahsulot:'ReneTrade'}
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
+                {raqam:233,place:'Nukus',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:13,place:'Andijon',mahsulot_name:'ReneTrade',status:"red"},
+                {raqam:3,place:'Samarqand',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:1,place:'Muynaq',mahsulot_name:'ReneTrade',status:"green"},
+                {raqam:5,place:'London',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:26,place:'Fergana',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:213,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
+                {raqam:253,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
+                {raqam:236,place:'Tashkent',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"yellow"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
             ]
         )
         
@@ -106,17 +95,21 @@ function Buyurtma() {
                 <div className='shartnamaTablePart'>
                     <div className='shartTable'>
                         <div className='tableHeader'>
-                            <p className='headerTable-title'>Ism</p>
-                            <p className='headerTable-title'>Buyurtma raqami</p>
+                            <p className='headerTable-title'>Raqam</p>
+                            <p className='headerTable-title'>Joy</p>
                             <p className='headerTable-title'>Mahsulot nomi</p>
+                            <p className='headerTable-title'>Status</p>
+                            <p className='headerTable-title'></p>
                         </div>
                         <ul className='tableInfo'>
                             {
                                 currentBuyurtma.map((item,index)=>{
                                     return <li key={index}>
-                                        <p className='liName li'>{/*<span>{index + 1 + (currentList-1)*10}.</span>*/}{item.name}</p>
+                                        {/* <p className='liName li'><span>{index + 1 + (currentList-1)*10}.</span>{item.name}</p> */}
                                         <p className='li'>{item.raqam}</p>
-                                        <p className='li'>{item.mahsulot}</p>
+                                        <p className='li'>{item.place}</p>
+                                        <p className='li'>{item.mahsulot_name}</p>
+                                        <p className='li' id={item.status}></p>
                                         <div className='userButtons'>
                                             <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
