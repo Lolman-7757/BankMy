@@ -1,19 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Input,Checkbox } from '@nextui-org/react'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
+// import 'antd/dist/antd.css';
 
 import './Buyurtma.css'
 
+
+
 function BuyurtmaForm() {
     // const [ money, setMoney ] = useState(0);
-    
-  return (
-      <>
+    return (
+        <>
         <Link to='/buyurtma' className='clientform_back back-back'>
             <AiOutlineRollback/>
-             Orqaga
+                Orqaga
         </Link>
         <div className='shart_nama'>
             <div className='buyurtma_form_main'>

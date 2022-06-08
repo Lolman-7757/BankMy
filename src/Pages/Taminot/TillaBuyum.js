@@ -267,12 +267,9 @@ function TillaBuyum() {
                         </div>
                     ))
                 }
-                <button 
-                className={addBaho?'taminot_tableform_add':'taminot_tableform_add taminot_tableform_add_active'} 
-                onClick={(event) => addNewPoint(event)}
-                >
-                    Add new Pointing!
-                </button>
+                <div className='transport_product_addPlace'>
+                    <button className='transport_product_addButton' onClick={(event) => addNewPoint(event)}><i className='bx bx-plus-circle'></i></button>
+                </div>
                 <div className='taminot_grid'>
                                 <Input
                                 bordered
@@ -304,15 +301,15 @@ function TillaBuyum() {
                 </div>
             </div>
             <div className='submit-buttons'>
-                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
-                  Formani tiklash
-                  <AiOutlineClear/>
+                <button className='client_submit reset' onClick={(event)=>resetForm(event)}>
+                    Formani tiklash
+                    <AiOutlineClear/>
                 </button>
                 <button type='submit' className='client_submit submit'>
-                  Clientni qo'shish
-                  <AiOutlineUserAdd/>
+                    Clientni qo'shish
+                    <AiOutlineUserAdd/>
                 </button>
-              </div>
+            </div>
         </form>
     )
 }

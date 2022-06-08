@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from '../assets/images/Logo'
 import { Link } from 'react-router-dom'
 import { AiOutlineRollback, AiOutlinePrinter } from 'react-icons/ai'
 

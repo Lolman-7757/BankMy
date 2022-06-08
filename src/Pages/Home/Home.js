@@ -33,7 +33,7 @@ function Home() {
       <div className='circle-total'>
         <div className='total-part'>
           <p className='price-total'>
-           5,643
+            5,643
           </p>
           <p className='total-text'>
             Orders

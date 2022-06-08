@@ -164,10 +164,11 @@
 }
 .client_tabs .ant-tabs-extra-content{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    width: 100%;
+    width: 70%;
 }
+.client_tabs .ant-tabs-extra-content 
 .client_tabs .ant-tabs-content-holder{
     margin-top: 20px;
 }
@@ -175,6 +176,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 .client_tabs .ant-tabs-tab-active{
@@ -270,7 +272,6 @@
         transform: scale(1);
     }
 }
-client_button
 .clientform_extra{
     display: flex;
     flex-direction: row;

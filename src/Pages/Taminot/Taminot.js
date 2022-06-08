@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Input } from '@nextui-org/react'
-import { Link,useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Pagination from '../../Components/Pagination/Pagination'
 
 // Styles

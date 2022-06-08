@@ -16,7 +16,7 @@ function TaminotForm() {
             return(<TillaBuyum/>)
         }else if(selectedSector == 2){
             return(<Transport/>)
-        }else if(selectedSector == 4){
+        }else if(selectedSector == 3){
             return(<Sugurta/>)
         }else{
             return(<UchinchiShaxs/>)

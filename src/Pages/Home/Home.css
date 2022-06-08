@@ -16,6 +16,11 @@
     align-items: center;
     border-radius: 10px;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: .2s linear all;
+}
+.circle-total:hover{
+    transform: scale(1.1);
 }
 .big-statistics{
     display: flex;

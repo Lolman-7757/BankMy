@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Input,Radio } from '@nextui-org/react'
-import { AiOutlineFileAdd,AiOutlineClear,AiOutlineUserAdd } from 'react-icons/ai';
+import { AiOutlineClear,AiOutlineUserAdd } from 'react-icons/ai';
 
 
 import './Transport.css'
@@ -14,24 +14,24 @@ function Transport() {
     
 
     function tables(a){
-        if(a==1){
+        if(a===1){
             setFirstTable('transport_garovPart close')
             setSecondTable('transport_ishonchnomaPart close')
         }
-        else if(a==2){
+        else if(a===2){
             setFirstTable('transport_garovPart open')
             setSecondTable('transport_ishonchnomaPart close')
-        }else if(a==3){
+        }else if(a===3){
             setFirstTable('transport_garovPart open')
             setSecondTable('transport_ishonchnomaPart open')
         }
     }
 
     function fourInputs(b){
-        if(b==1){
+        if(b===1){
             setGarov('transport_fourInputs open')
         }
-        else if(b==2){
+        else if(b===2){
             setGarov('transport_fourInputs close')
         }
     }

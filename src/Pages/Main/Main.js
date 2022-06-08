@@ -20,8 +20,6 @@ import Shartnama from '../Shartnoma/Shartnama';
 import Buyurtma from '../Buyurtma/Buyurtma';
 
 // Components
-import Transport from '../../TableParts/Transport/Transport';
-
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import BuyurtmaForm from '../Buyurtma/BuyurtmaForm';

@@ -1,6 +1,5 @@
 import React,  {useState, useEffect, useRef} from 'react'
 import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
 import { Input } from '@nextui-org/react'
 import Pagination from "../../Components/Pagination/Pagination";
 
