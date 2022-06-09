@@ -58,6 +58,7 @@ function Addshartnama() {
         }
         console.log(allInformation);
     }
+
     function cashInputAppearence () {
         if(cash){
             return(
@@ -100,8 +101,29 @@ function Addshartnama() {
             )
         }
     }
+
+    const [resetWarning, setResetWarning] = useState('warning_reset_main close')
+
+    function openReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main open')
+    }
+    function closeReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main close')
+    }
+
     return (
     <>
+        {/* Reset Warning */}
+        <div className={resetWarning}>
+            <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
+            <div >
+            <button onClick={closeReset}>Haa</button>
+            <button onClick={closeReset}>Yoq</button>
+            </div>
+        </div>
+
         <Link to='/shartnama' className='clientform_back back-back'>
             <AiOutlineRollback/>
             Orqaga
@@ -217,7 +239,7 @@ function Addshartnama() {
                 }
             </form>
             <div className='submit-buttons'>
-                <button className='client_submit reset' onClick={()=>document.querySelector(`form`).reset()}>
+                <button className='client_submit reset' onClick={openReset}>
                   Formani tiklash
                   <AiOutlineClear/>
                 </button>

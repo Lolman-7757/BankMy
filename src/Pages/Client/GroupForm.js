@@ -53,7 +53,18 @@ import './Client.css'
   [ addButton, setAddButton ] = useState(true),
   [ tabList,setTabList ] = useState([{name: `Client1`,id:0}]),
   [ infoList,setInfoList ] = useState(allInformation),
-  [ tabLength, setTabLength ] = useState(tabList.length)
+  [ tabLength, setTabLength ] = useState(tabList.length);
+
+  const [resetWarning, setResetWarning] = useState('warning_reset_main close')
+
+  function openReset(e){
+    e.preventDefault()
+    setResetWarning('warning_reset_main open')
+  }
+  function closeReset(e){
+    e.preventDefault()
+    setResetWarning('warning_reset_main close')
+  }
   
   // Add Button
   const operations = <div className='clientform_extra'>
@@ -147,6 +158,15 @@ import './Client.css'
   }
   return(
     <>
+    {/* Reset Warning */}
+    <div className={resetWarning}>
+        <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
+        <div >
+          <button onClick={closeReset}>Haa</button>
+          <button onClick={closeReset}>Yoq</button>
+        </div>
+      </div>
+
     <div className='back-but'>
     <Link to='/client' className='clientform_back'>
       <AiOutlineRollback/>
@@ -267,16 +287,20 @@ import './Client.css'
                 color="secondary"
                 onChange={e => setNumber(e.target.value)}
               />
-              <Input
-                width='100%'
-                clearable
-                label="Hujjat turi"
-                bordered
-                className='vall'
-                placeholder='ID'
-                color="secondary"
-                onChange={e => setDoc(e.target.value)}
-              />
+              <div className='clientForm_selector vall'>
+                <p>Sektor</p>
+                <select
+                >
+                    <option value="1">1 variant</option>
+                    <option value="2">2 variant</option>
+                    <option value="3">3 variant</option>
+                    <option value="4">4 variant</option>
+                    <option value="5">5 variant</option>
+                    <option value="6">6 variant</option>
+                    <option value="7">7 variant</option>
+                    <option value="8">8 variant</option>
+                </select>
+              </div>
               <Input
                 width='100%'
                 clearable
@@ -308,7 +332,7 @@ import './Client.css'
               />
             </form>
               <div className='submit-buttons'>
-              <button className='client_submit reset  ' onClick={()=>document.querySelector(`form`).reset()}>
+              <button className='client_submit reset' onClick={openReset}>
                 Formani tiklash
                 <AiOutlineClear/>
               </button>

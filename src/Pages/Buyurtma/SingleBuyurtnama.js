@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineRollback } from 'react-icons/ai'
+import { Input } from '@nextui-org/react'
 
 import './Buyurtma.css'
 
@@ -38,51 +39,63 @@ function SingleBuyurtnama() {
 
             <section className='single_buyurtma'>
                 <div className='single_buyurtma_info'>
-                    <h1>{buyurtmaData.name}</h1>
-                    <p>
-                        <span className='buyurtma_parameter'>PINFL : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.pinfl}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>SSKS : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.ssks}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Bank : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.bank}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Passport ID : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.pass_id}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Qarz miqdor summasi : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.qarz_miqdor}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Qarz miqdor summasi yozuvda : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.qarz_miqdor_text}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Kredit mahsulot nomi : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.kredit_mahsulot_name}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Buyurtma tuzilish payti : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.buyurtma_date}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Sektor : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.sektor}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Oylik daromad : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.oylik_daromad}</u>
-                    </p>
-                    <p>
-                        <span className='buyurtma_parameter'>Muddat vaqti : </span>
-                        <u className='buyurtma_value'>{buyurtmaData.muddat_time} oy</u>
-                    </p>
+                    <p className='single_buyurtma_title'>{buyurtmaData.name}</p>
+                    <div className='single_buyurtma_inputs'>
+                        <p>PINFL :</p>
+                        <p>{buyurtmaData.pinfl}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>SSKS :</p>
+                        <p>{buyurtmaData.ssks}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Bank :</p>
+                        <p>{buyurtmaData.bank}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Passport ID :</p>
+                        <p>{buyurtmaData.pass_id}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Passport ID :</p>
+                        <p>{buyurtmaData.pass_id}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Qarz miqdor summasi :</p>
+                        <p>{buyurtmaData.qarz_miqdor}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Qarz miqdor summasi yozuvda :</p>
+                        <p>{buyurtmaData.qarz_miqdor_text}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Kredit mahsulot nomi :</p>
+                        <p>{buyurtmaData.kredit_mahsulot_name}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Buyurtma tuzilish payti :</p>
+                        <p>{buyurtmaData.buyurtma_date}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Sektor :</p>
+                        <p>{buyurtmaData.sektor}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Oylik daromad :</p>
+                        <p>{buyurtmaData.oylik_daromad}</p>
+                    </div>
+                    <div className='single_buyurtma_inputs'>
+                        <p>Muddat vaqti :</p>
+                        <p>{buyurtmaData.muddat_time}</p>
+                    </div>
+                    <Input 
+                        className='inputtts'
+                        bordered
+                        width='100%'
+                        label='PINFL :'
+                        initialValue={buyurtmaData.pinfl}
+                        color='secondary'
+                    ></Input>
                 </div>
             </section>
         </>

@@ -77,20 +77,29 @@ function Buyurtma() {
             <div className='shartnamaMain'>
                 <div className='shartnamaHeader'>
                     <p className='shartnamaTitle'>Buyurtma</p>
+                    <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Buyurtma <i className='bx bx-plus-circle'></i></button>
                 </div>
                     <div className='shartnamaSearch'>
-                    <button onClick={()=>setModalka('shartnoma_modal open')} className='shartnamaLink'>Buyurtma <i className='bx bx-plus-circle'></i></button>     
-                    <Input
-                        rounded
-                        bordered
-                        placeholder="Buyurtma raqami..."
-                        color="secondary"
-                        width='300px'
-                        className='search-input'
-                        contentRight={
-                            <i className='bx bx-search-alt-2'></i>
-                        }
-                    />
+                        <div className='sort_main'>
+                            <p>Tartiblash:</p>
+                            <div>
+                                <button>Barcha</button>
+                                <button>Yangi</button>
+                                <button>Tashdiqlangan</button>
+                                <button>Rad etilgan</button>
+                            </div>
+                        </div>
+                        <Input
+                            rounded
+                            bordered
+                            placeholder="Buyurtma raqami..."
+                            color="secondary"
+                            width='300px'
+                            className='search-input'
+                            contentRight={
+                                <i className='bx bx-search-alt-2'></i>
+                            }
+                        />
                     </div>
                 <div className='shartnamaTablePart'>
                     <div className='shartTable'>

@@ -82,6 +82,26 @@
 .vall{
     margin-bottom: 20px;
 }
+.clientForm_selector{
+    display: flex;
+    flex-direction: column;
+}
+.clientForm_selector p{
+    font-size: 15px;
+    color:#7828c8;
+    margin-bottom: 8px;
+}
+.clientForm_selector select{
+    height: 45px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: 2px solid rgb(216, 215, 215);
+    transition-duration: 0.3s;
+}
+.clientForm_selector select:hover{
+    border: 2px solid #7828c8;
+}
+
 .submit-buttons{
     display: flex;
     flex-direction: row;
@@ -615,4 +635,56 @@ input::-webkit-inner-spin-button {
 }
 .clientform_gender_radio label{
     margin-top: 0px !important;
+}
+
+/* Reset Warning */
+.warning_reset_main{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: white;
+    z-index: 200;
+    border: 2px solid #7828c8;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.warning_reset_main p{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.warning_reset_main div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.warning_reset_main div button{
+    padding: 10px 20px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white;
+    transition-duration: 0.3s;
+}
+.warning_reset_main div button:hover{
+    transform: scale(1.2);
+}
+.warning_reset_main div button:nth-child(1){
+    background-color: red;
+    margin-right: 30px;
+}
+.warning_reset_main div button:nth-child(2){
+    background-color: green;
+    margin-left: 30px;
+}
+.close{
+    display: none;
+}
+.open{
+    display: flex;
 }

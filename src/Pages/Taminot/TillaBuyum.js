@@ -123,9 +123,30 @@ function TillaBuyum() {
             return(<></>)
         }
     }
+
+    const [resetWarning, setResetWarning] = useState('warning_reset_main close')
+
+    function openReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main open')
+    }
+    function closeReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main close')
+    }
     
 
     return (
+    <>
+        {/* Reset Warning */}
+        <div className={resetWarning}>
+            <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
+            <div >
+            <button onClick={closeReset}>Haa</button>
+            <button onClick={closeReset}>Yoq</button>
+            </div>
+        </div>
+
         <form className='taminot_form'>
             <div className='taminot_ratio_parent taminot_tilla_radio'>
                 <Radio.Group color='secondary' value={true} size='sm' className='taminot_ratio' onChange={(event)=>setBahoType(event)}>
@@ -301,7 +322,7 @@ function TillaBuyum() {
                 </div>
             </div>
             <div className='submit-buttons'>
-                <button className='client_submit reset' onClick={(event)=>resetForm(event)}>
+                <button className='client_submit reset' onClick={openReset}>
                     Formani tiklash
                     <AiOutlineClear/>
                 </button>
@@ -311,6 +332,7 @@ function TillaBuyum() {
                 </button>
             </div>
         </form>
+    </>
     )
 }
 

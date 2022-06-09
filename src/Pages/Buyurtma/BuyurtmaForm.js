@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Input,Checkbox } from '@nextui-org/react'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
@@ -11,8 +11,29 @@ import './Buyurtma.css'
 
 function BuyurtmaForm() {
     // const [ money, setMoney ] = useState(0);
+
+    const [resetWarning, setResetWarning] = useState('warning_reset_main close')
+
+    function openReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main open')
+    }
+    function closeReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main close')
+    }
+
     return (
         <>
+        {/* Reset Warning */}
+        <div className={resetWarning}>
+            <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
+            <div >
+            <button onClick={closeReset}>Haa</button>
+            <button onClick={closeReset}>Yoq</button>
+            </div>
+        </div>
+
         <Link to='/buyurtma' className='clientform_back back-back'>
             <AiOutlineRollback/>
                 Orqaga
@@ -112,7 +133,7 @@ function BuyurtmaForm() {
                     />
                 </div>
                 <div className='submit-buttons'>
-                    <button className='client_submit reset'>
+                    <button className='client_submit reset' onClick={openReset}>
                         Formani tiklash
                         <AiOutlineClear/>
                     </button>

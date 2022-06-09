@@ -40,6 +40,56 @@
 .search-input i{
     font-size: 18px;
 }
+.sort_main{
+    display: flex;
+    flex-direction: column;
+}
+.sort_main p{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sort_main button{
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    transition-duration: 0.3s;
+}
+.sort_main button:nth-child(1){
+    background-color: #7828c8;
+    border: 2px solid #7828c8;
+}
+.sort_main button:nth-child(1):hover{
+    color: #7828c8;
+    background-color: white;
+}
+.sort_main button:nth-child(2){
+    background-color: blue;
+    border: 2px solid blue;
+}
+.sort_main button:nth-child(2):hover{
+   color: blue;
+   background-color: white;
+}
+.sort_main button:nth-child(3){
+    background-color: green;
+    border: 2px solid green;
+}
+.sort_main button:nth-child(3):hover{
+    color: green;
+    background-color: white;
+}
+.sort_main button:nth-child(4){
+    background-color: red;
+    border: 2px solid red;
+}
+.sort_main button:nth-child(4):hover{
+    color: red;
+    background-color: white;
+}
 .shartnamaTablePart{
     margin: auto;
     margin-top: 20px;
@@ -289,7 +339,7 @@
 
 
 
-/* Single Buyurtma */
+            /**************************___ Single Buyurtma ___***********************/
 .buyurtma_topPart{
     display: flex;
     flex-direction: row;
@@ -298,27 +348,39 @@
 }
 .single_buyurtma{
     margin-top: 20px;
-    display:flex;
-    flex-direction: row;
-    padding: 30px 0;
+    padding: 30px;
     background-color: white;
     border-radius: 12px;
-    
-    width: 100%;
 }
-.single_buyurtma_icon img{
-    width: 300px;
-    height: 300px;
-}
-.single_buyurtma_info{
-    margin-left: 40px;
-}
-.single_buyurtma_info p{
-    margin-top: 20px;
-}
-.buyurtma_parameter{
-    font-size: 1.1rem;
+.single_buyurtma_info .single_buyurtma_title{
+    margin-bottom: 20px;
+    font-size: 25px;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.single_buyurtma_info .single_buyurtma_inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.single_buyurtma_inputs p:nth-child(1){
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.single_buyurtma_inputs p:nth-child(2){
+    border: 2px solid rgb(216, 215, 215);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+    font-size: 15px;
+}
+.single_buyurtma_inputs p:nth-child(2):hover{
+    border: 2px solid #7828c8;
 }
 .buyurtma_buttons{
     display: flex;
