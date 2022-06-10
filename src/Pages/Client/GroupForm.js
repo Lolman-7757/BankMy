@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Input, Radio } from '@nextui-org/react';
 import { BiTrash } from 'react-icons/bi'
 import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback, AiOutlineUser } from 'react-icons/ai';
-
+import Select from 'react-select';
 
 import './Client.css'
   function GroupForm(props) {
@@ -80,6 +80,7 @@ import './Client.css'
       onChange={e => setGroupName(e.target.value)}
     />
   </div>
+
   // Adding Client Func
   function addClient (){
     console.log(tabList.length);
@@ -120,6 +121,7 @@ import './Client.css'
       setDeleteState(true)
     }
   }
+  
   // Deleting CLient Func
   function deleteClient(id){
     if(tabList.length>1){
@@ -135,6 +137,7 @@ import './Client.css'
     }
     
   }
+
   // Typing data Func
   function insertData (e){
     e.preventDefault()
@@ -156,6 +159,30 @@ import './Client.css'
     }
     alert(allInformation);
   }
+
+  // Selector
+  const options = [
+    { value: '1', label: 'variant 1' },
+    { value: '2', label: 'variant 2' },
+    { value: '3', label: 'variant 3' },
+    { value: '4', label: 'variant 4' },
+    { value: '5', label: 'variant 5' },
+    { value: '6', label: 'variant 6' }
+  ];
+  const customStyles = {
+      option: (provided, state) => ({
+          ...provided,
+          padding: 10,
+          borderRadius:5
+      }),
+      singleValue: (provided, state) => {
+          const opacity = state.isDisabled ? 0.5 : 1;
+          const transition = 'opacity 300ms';
+          
+          return { ...provided, opacity, transition };
+      }
+  }
+
   return(
     <>
     {/* Reset Warning */}
@@ -287,19 +314,25 @@ import './Client.css'
                 color="secondary"
                 onChange={e => setNumber(e.target.value)}
               />
-              <div className='clientForm_selector vall'>
+              <div className='clientForm_selector'>
                 <p>Sektor</p>
-                <select
-                >
-                    <option value="1">1 variant</option>
-                    <option value="2">2 variant</option>
-                    <option value="3">3 variant</option>
-                    <option value="4">4 variant</option>
-                    <option value="5">5 variant</option>
-                    <option value="6">6 variant</option>
-                    <option value="7">7 variant</option>
-                    <option value="8">8 variant</option>
-                </select>
+                <Select
+                    // value={selectedOption}
+                    defaultValue={options[0]}
+                    // styles={customStyles}
+                    options={options}
+                    className='buyurtma_select_new'
+                    styles={customStyles}
+                    theme={(theme) => ({
+                        ...theme,
+                        borderRadius: 12,
+                        colors: {
+                        ...theme.colors,
+                        primary25: '#7828c8',
+                        primary: '#7828c8',
+                        },
+                    })}
+                />
               </div>
               <Input
                 width='100%'

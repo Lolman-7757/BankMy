@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Input,Radio } from '@nextui-org/react'
 import { AiOutlineClear,AiOutlineUserAdd } from 'react-icons/ai';
-
+import Select from 'react-select';
 
 import './Transport.css'
 
@@ -58,6 +58,33 @@ function Transport() {
     function closeReset(e){
         e.preventDefault()
         setResetWarning('warning_reset_main close')
+    }
+
+    // Selector
+    const options = [
+        { value: '1', label: "O'zR fuqarosining ID kartasi" },
+        { value: '2', label: "O'zR Fuqarosining pasporti" },
+        { value: '3', label: "Harbiy xizmatchi guvohnomasi" },
+        { value: '4', label: "Xizmat guvohnomasi" },
+        { value: '5', label: "Xorijiy fuqaro pasporti" },
+        { value: '6', label: "Yashash guvohnomasi" },
+        { value: '7', label: "O'zR Fuqarosining biometrik pasporti" },
+        { value: '8', label: "Tug'ulganlik haqidagi guvohnoma" },
+        { value: '9', label: "O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi" },
+        { value: '10', label: "Boshqa" }
+    ];
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            padding: 10,
+            borderRadius:5
+        }),
+        singleValue: (provided, state) => {
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const transition = 'opacity 300ms';
+            
+            return { ...provided, opacity, transition };
+        }
     }
 
   return (
@@ -337,18 +364,23 @@ function Transport() {
                         </Input>
                         <div className='transport_garovPart_selectPart'>
                             <p>Shaxsini tasdiqlovchi xujjat turi</p>
-                            <select className='transport_garovPart_input'>
-                                <option>O'zR fuqarosining ID kartasi </option>
-                                <option>O'zR Fuqarosining pasporti</option>
-                                <option>Harbiy xizmatchi guvohnomasi</option>
-                                <option>Xizmat guvohnomasi</option>
-                                <option>Xorijiy fuqaro pasporti</option>
-                                <option>Yashash guvohnomasi</option>
-                                <option>O'zR Fuqarosining biometrik pasporti </option>
-                                <option>Tug'ulganlik haqidagi guvohnoma</option>
-                                <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
-                                <option>Boshqa </option>
-                            </select>
+                            <Select
+                                // value={selectedOption}
+                                defaultValue={options[0]}
+                                // styles={customStyles}
+                                options={options}
+                                className='buyurtma_select_new'
+                                styles={customStyles}
+                                theme={(theme) => ({
+                                    ...theme,
+                                    borderRadius: 12,
+                                    colors: {
+                                    ...theme.colors,
+                                    primary25: '#7828c8',
+                                    primary: '#7828c8',
+                                    },
+                                })}
+                            />
                         </div>
                         <Input 
                             label='Seriyasi va raqami'
@@ -417,18 +449,23 @@ function Transport() {
                         </Input>
                         <div className='transport_garovPart_selectPart'>
                             <p>Shaxsini tasdiqlovchi hujjat turi</p>
-                            <select className='transport_ishonchnomaPart_input'>
-                                <option>O'zR fuqarosining ID kartasi </option>
-                                <option>O'zR Fuqarosining pasporti</option>
-                                <option>Harbiy xizmatchi guvohnomasi</option>
-                                <option>Xizmat guvohnomasi</option>
-                                <option>Xorijiy fuqaro pasporti</option>
-                                <option>Yashash guvohnomasi</option>
-                                <option>O'zR Fuqarosining biometrik pasporti </option>
-                                <option>Tug'ulganlik haqidagi guvohnoma</option>
-                                <option>O'zR fuqarosining yangi namunadagi haydovchilik guvohnomasi </option>
-                                <option>Boshqa </option>
-                            </select>
+                            <Select
+                                // value={selectedOption}
+                                defaultValue={options[0]}
+                                // styles={customStyles}
+                                options={options}
+                                className='buyurtma_select_new'
+                                styles={customStyles}
+                                theme={(theme) => ({
+                                    ...theme,
+                                    borderRadius: 12,
+                                    colors: {
+                                    ...theme.colors,
+                                    primary25: '#7828c8',
+                                    primary: '#7828c8',
+                                    },
+                                })}
+                            />
                         </div>
                         <Input 
                             label='Seriyasi va raqami'

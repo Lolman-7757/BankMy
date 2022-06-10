@@ -206,6 +206,11 @@
     display: flex;
     flex-direction: column;
 }
+/* Selector */
+.buyurtma_select_taminot{
+    z-index: 502;
+    width: 60%;
+}
 
 /* Taminot Buttons */
 .taminot_button_block{

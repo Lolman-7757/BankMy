@@ -5,10 +5,33 @@ import UchinchiShaxs from './UchinchiShaxs';
 import Sugurta from '../../TableParts/Sugurta/Sugurta';
 import { AiOutlineRollback } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
 
 import './Taminot.css';
 
 function TaminotForm() {
+    
+    // Selector
+    const options = [
+        { value: '1', label: "Tilla Buyumlar Kafilligi" },
+        { value: '2', label: "Transport Vositasi Garovi" },
+        { value: '3', label: "3 shaxs kafilligi" },
+        { value: '4', label: "Sugurta kompaniyasi sugurta polisi" }
+    ];
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            padding: 10,
+            borderRadius:5
+        }),
+        singleValue: (provided, state) => {
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const transition = 'opacity 300ms';
+            
+            return { ...provided, opacity, transition };
+        }
+    }
+    
     const [ selectedSector, setSelectedSector ] = useState(1)
 
     const sectorChoosing = () =>{
@@ -16,13 +39,12 @@ function TaminotForm() {
             return(<TillaBuyum/>)
         }else if(selectedSector == 2){
             return(<Transport/>)
-        }else if(selectedSector == 3){
+        }else if(selectedSector == 4){
             return(<Sugurta/>)
         }else{
             return(<UchinchiShaxs/>)
         }
     }
-
 
     return (
         <section>
@@ -34,12 +56,25 @@ function TaminotForm() {
                 <div className='taminot_table'>
                     <div className='rare'>
                         <p>Taminot turi</p>
-                        <select className='taminot_main_select' onChange={(event)=>{setSelectedSector(event.target.value);console.log(event.target.value);}}>
-                            <option value="1">Tilla Buyumlar Kafilligi</option>
-                            <option value="2">Transport Vositasi Garovi</option>
-                            <option value="3">3 shaxs kafilligi</option>
-                            <option value="4">Sugurta kompaniyasi sugurta polisi</option>
-                        </select>
+                        <Select
+                            width='100%'
+                            // value={selectedOption}
+                            // onChange={(event)=>{setSelectedSector(event.target.value)}}
+                            onChange={(e)=>setSelectedSector(e.value)}
+                            defaultValue={options[0]}
+                            options={options}
+                            className='buyurtma_select_taminot'
+                            styles={customStyles}
+                            theme={(theme) => ({
+                                ...theme,
+                                borderRadius: 12,
+                                colors: {
+                                ...theme.colors,
+                                primary25: '#7828c8',
+                                primary: '#7828c8',
+                                },
+                            })}
+                        />
                     </div>
                     {
                         sectorChoosing()

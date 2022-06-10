@@ -3,14 +3,19 @@ import { Input,Checkbox } from '@nextui-org/react'
 import { AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { AiOutlineFileAdd,AiOutlineClear } from 'react-icons/ai';
+import Select from 'react-select';
+// import { Select } from 'antd';
+
 // import 'antd/dist/antd.css';
 
 import './Buyurtma.css'
+// const { Option } = Select;
 
 
 
 function BuyurtmaForm() {
     // const [ money, setMoney ] = useState(0);
+
 
     const [resetWarning, setResetWarning] = useState('warning_reset_main close')
 
@@ -21,6 +26,29 @@ function BuyurtmaForm() {
     function closeReset(e){
         e.preventDefault()
         setResetWarning('warning_reset_main close')
+    }
+
+    // Selector
+    const options = [
+        { value: '1', label: 'variant 1' },
+        { value: '2', label: 'variant 2' },
+        { value: '3', label: 'variant 3' },
+        { value: '4', label: 'variant 4' },
+        { value: '5', label: 'variant 5' },
+        { value: '6', label: 'variant 6' }
+      ];
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            padding: 10,
+            borderRadius:5
+        }),
+        singleValue: (provided, state) => {
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const transition = 'opacity 300ms';
+            
+            return { ...provided, opacity, transition };
+        }
     }
 
     return (
@@ -91,17 +119,23 @@ function BuyurtmaForm() {
                     />
                     <div className='shart-select'>
                         <p>Sektor</p>
-                        <select
-                        >
-                            <option value="1">1 variant</option>
-                            <option value="2">2 variant</option>
-                            <option value="3">3 variant</option>
-                            <option value="4">4 variant</option>
-                            <option value="5">5 variant</option>
-                            <option value="6">6 variant</option>
-                            <option value="7">7 variant</option>
-                            <option value="8">8 variant</option>
-                        </select>
+                        <Select
+                            // value={selectedOption}
+                            defaultValue={options[0]}
+                            // styles={customStyles}
+                            options={options}
+                            className='buyurtma_select_new'
+                            styles={customStyles}
+                            theme={(theme) => ({
+                                ...theme,
+                                borderRadius: 12,
+                                colors: {
+                                ...theme.colors,
+                                primary25: '#7828c8',
+                                primary: '#7828c8',
+                                },
+                            })}
+                        />
                     </div>
                     <Input
                         className='buyurtma_form_inputs'
@@ -131,6 +165,7 @@ function BuyurtmaForm() {
                         bordered
                         color="secondary"
                     />
+                    
                 </div>
                 <div className='submit-buttons'>
                     <button className='client_submit reset' onClick={openReset}>

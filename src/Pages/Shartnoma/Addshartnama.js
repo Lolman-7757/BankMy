@@ -145,7 +145,7 @@ function Addshartnama() {
                 </div>
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     clearable
                     label="Ustama foiz stavkasi, yillik"
                     placeholder="58,00%"
@@ -155,7 +155,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     clearable
                     label="Ustama foiz stavkasi, yillik (yozuvda)"
                     placeholder=""
@@ -165,7 +165,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     clearable
                     label="Penya, kunlik"
                     placeholder="0,40%"
@@ -175,7 +175,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     clearable
                     label="Oylik komission yig'im, %da"
                     placeholder="0,40%"
@@ -199,7 +199,7 @@ function Addshartnama() {
                 </div>
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     label="Mikroqarz berish sanasi"
                     bordered
                     color="secondary"
@@ -208,7 +208,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     label="Birinchi tolov sonasi"
                     bordered
                     color="secondary"
@@ -217,7 +217,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     label="Shartnoma sanasi"
                     bordered
                     color="secondary"
@@ -226,7 +226,7 @@ function Addshartnama() {
                 />
                 <Input
                     className='vall'
-                    width='90%'
+                    width='100%'
                     clearable
                     label="Shartnoma raqami"
                     placeholder="34"

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Input, Radio } from '@nextui-org/react';
 import {  AiOutlineClear, AiOutlineUserAdd, AiOutlineRollback } from 'react-icons/ai'
-import './Client.css'
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
 
+import './Client.css'
 
 function CLientForm() {
   const [ code, setCode ] = useState(null),
@@ -49,21 +50,45 @@ function CLientForm() {
       issued_date: issuedDate
     }
     alert(`
-      code: ${allInformation.code},
-      name: ${allInformation.name},
-      birth_date: ${allInformation.birth_date},
-      address: ${allInformation.address},
-      city: ${allInformation.city},
-      citizienship: ${allInformation.citizienship},
-      nation: ${allInformation.nation},
-      pinfl: ${allInformation.pinfl},
-      number: ${allInformation.number},
-      document_type: ${allInformation.document_type},
-      serial_number: ${allInformation.serial_number},
-      issued_by: ${allInformation.issued_by},
-      issued_date: ${allInformation.issued_date}`
-    );
-  }
+        code: ${allInformation.code},
+        name: ${allInformation.name},
+        birth_date: ${allInformation.birth_date},
+        address: ${allInformation.address},
+        city: ${allInformation.city},
+        citizienship: ${allInformation.citizienship},
+        nation: ${allInformation.nation},
+        pinfl: ${allInformation.pinfl},
+        number: ${allInformation.number},
+        document_type: ${allInformation.document_type},
+        serial_number: ${allInformation.serial_number},
+        issued_by: ${allInformation.issued_by},
+        issued_date: ${allInformation.issued_date}`
+      );
+    }
+
+    // Selector
+    const options = [
+      { value: '1', label: 'variant 1' },
+      { value: '2', label: 'variant 2' },
+      { value: '3', label: 'variant 3' },
+      { value: '4', label: 'variant 4' },
+      { value: '5', label: 'variant 5' },
+      { value: '6', label: 'variant 6' }
+    ];
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            padding: 10,
+            borderRadius:5
+        }),
+        singleValue: (provided, state) => {
+            const opacity = state.isDisabled ? 0.5 : 1;
+            const transition = 'opacity 300ms';
+            
+            return { ...provided, opacity, transition };
+        }
+    }
+
   return (
     <>
     {/* Reset Warning */}
@@ -195,19 +220,25 @@ function CLientForm() {
                   onChange={e => setNumber(e.target.value)}
                   required
                 />
-                <div className='clientForm_selector vall'>
+                <div className='clientForm_selector'>
                   <p>Sektor</p>
-                  <select
-                  >
-                      <option value="1">1 variant</option>
-                      <option value="2">2 variant</option>
-                      <option value="3">3 variant</option>
-                      <option value="4">4 variant</option>
-                      <option value="5">5 variant</option>
-                      <option value="6">6 variant</option>
-                      <option value="7">7 variant</option>
-                      <option value="8">8 variant</option>
-                  </select>
+                  <Select
+                      // value={selectedOption}
+                      defaultValue={options[0]}
+                      // styles={customStyles}
+                      options={options}
+                      className='buyurtma_select_new'
+                      styles={customStyles}
+                      theme={(theme) => ({
+                          ...theme,
+                          borderRadius: 12,
+                          colors: {
+                          ...theme.colors,
+                          primary25: '#7828c8',
+                          primary: '#7828c8',
+                          },
+                      })}
+                  />
                 </div>
                 <Input
                   width='100%'
