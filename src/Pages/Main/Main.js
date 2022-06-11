@@ -18,18 +18,19 @@ import Login from '../Login/Login'
 import Addshartnama from '../Shartnoma/Addshartnama';
 import Shartnama from '../Shartnoma/Shartnama';
 import Buyurtma from '../Buyurtma/Buyurtma';
-
-// Components
 import CLientForm from '../Client/CLientForm';
 import GroupForm from '../Client/GroupForm';
 import BuyurtmaForm from '../Buyurtma/BuyurtmaForm';
-import './Main.css'
-import { Tabs } from 'antd';
 import Taminot from '../Taminot/Taminot';
 import TaminotForm from '../Taminot/TaminotForm';
 import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
 import B1Form from '../../PDF/B1Form';
 import Av1Form from '../../PDF/Av1Form';
+import KL1 from '../KL1/KL1';
+
+// Components
+import './Main.css'
+import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
@@ -110,6 +111,16 @@ function Main() {
                     </Link>
                     } 
                     key="5"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/kl1' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <PersonOutlineOutlinedIcon/>
+                        </div>
+                        <span>KL1</span>
+                    </Link>
+                    } 
+                    key="6"/>
                 </Tabs>
             </nav>
             
@@ -153,6 +164,7 @@ function Main() {
                         <Route path='/buyurtma/singleBuyurtma/av1' element={<Av1Form/>}/>
                         <Route path ='/taminot' element={<Taminot/>}/>
                         <Route path ='/taminot/form' element={<TaminotForm/>}/>
+                        <Route path ='/kl1' element={<KL1/>}/>
                     </Routes>
                 </div>
             </main>
