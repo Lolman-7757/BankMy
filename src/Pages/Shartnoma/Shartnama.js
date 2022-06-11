@@ -119,18 +119,18 @@ function Shartnama() {
                     <div className='shartnamaTablePart'>
                         <div className='shartTable'>
                             <div className='tableHeader'>
-                                <p className='headerTable-title'>Ism</p>
-                                <p className='headerTable-title'>Shartnoma raqami</p>
-                                <p className='headerTable-title'>Mahsulot nomi</p>
+                                <p className='headerTable-title_shartnoma'>Ism</p>
+                                <p className='headerTable-title_shartnoma'>Shartnoma raqami</p>
+                                <p className='headerTable-title_shartnoma'>Mahsulot nomi</p>
                             </div>
                             <ul className='tableInfo'>
                                 {
                                     currentShartnama.map((item,index)=>{
                                         return <li key={index}>
-                                            <p className='liName li'>{/*<span>{index + 1 + (currentPage-1)*10}.</span>*/}{item.name}</p>
-                                            <p className='li'>{item.raqam}</p>
-                                            <p className='li'>{item.mahsulot}</p>
-                                            <div className='userButtons'>
+                                            <p className='liName li_shartnoma'>{/*<span>{index + 1 + (currentPage-1)*10}.</span>*/}{item.name}</p>
+                                            <p className='li_shartnoma'>{item.raqam}</p>
+                                            <p className='li_shartnoma'>{item.mahsulot}</p>
+                                            <div className='userButtons_shartnoma'>
                                                 <button><i className='bx bx-user'></i></button>
                                                 <button><i className='bx bx-edit-alt'></i></button>
                                                 {/* <button><i className='bx bx-trash'></i></button> */}

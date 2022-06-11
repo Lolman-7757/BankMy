@@ -104,22 +104,21 @@ function Buyurtma() {
                 <div className='shartnamaTablePart'>
                     <div className='shartTable'>
                         <div className='tableHeader'>
-                            <p className='headerTable-title'>Raqam</p>
-                            <p className='headerTable-title'>Joy</p>
-                            <p className='headerTable-title'>Mahsulot nomi</p>
-                            <p className='headerTable-title'>Status</p>
-                            <p className='headerTable-title'></p>
+                            <p className='headerTable-title_buyurtma'>Raqam</p>
+                            <p className='headerTable-title_buyurtma'>Joy</p>
+                            <p className='headerTable-title_buyurtma'>Mahsulot nomi</p>
+                            <p className='headerTable-title_buyurtma'>Status</p>
                         </div>
                         <ul className='tableInfo'>
                             {
                                 currentBuyurtma.map((item,index)=>{
                                     return <li key={index}>
                                         {/* <p className='liName li'><span>{index + 1 + (currentList-1)*10}.</span>{item.name}</p> */}
-                                        <p className='li'>{item.raqam}</p>
-                                        <p className='li'>{item.place}</p>
-                                        <p className='li'>{item.mahsulot_name}</p>
-                                        <p className='li' id={item.status}></p>
-                                        <div className='userButtons'>
+                                        <p className='li_buyurtma'>{item.raqam}</p>
+                                        <p className='li_buyurtma'>{item.place}</p>
+                                        <p className='li_buyurtma'>{item.mahsulot_name}</p>
+                                        <p className='li_buyurtma' id={item.status}><div></div></p>
+                                        <div className='userButtons_buyurtma'>
                                             <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
                                             {/* <button><i className='bx bx-trash'></i></button> */}
