@@ -103,3 +103,11 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.kl1_daromad_radio{
+    display: flex;
+    flex-direction: row;
+}
+.kl1_daromad_radio .kl1_daromad_radio_one{
+    margin-right: 30px;
+}

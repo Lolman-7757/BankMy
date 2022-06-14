@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // Components
-import { Input, Textarea } from '@nextui-org/react'
+import { Input, Textarea, Radio } from '@nextui-org/react'
 
 // Styles
 import './KL1.css'
@@ -277,15 +277,16 @@ function KL1() {
                 width='100%'
                 className='kl1_input'
                 />
-<<<<<<< HEAD
 
                 <div className='kl1_daromad_part'>
                     <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
-                    <div className='kl1_daromad_radio'>
-                        
-                    </div>
+                    <Radio.Group color='secondary' value={3} size='sm' className='kl1_daromad_radio'>
+                        <Radio value={1} className='kl1_daromad_radio_one'>Biznes daromadlar</Radio>
+                        <Radio value={2} className='kl1_daromad_radio_one'>Mavsumiy daromadlar</Radio>
+                        <Radio value={3} className='kl1_daromad_radio_one'>Boshqa daromadlar</Radio>
+                    </Radio.Group>
                 </div>
-=======
+
                 <h2 className='kl1_subtitle'>Oilaviy daromadlar va xarajatlar (Uy xo'jaligining daromad va xarajatlari)</h2>
                 {
                     familyDaromad.map((familyDaromad,familyDaromadId)=>(
@@ -366,7 +367,6 @@ function KL1() {
                 type='number'
                 className='kl1_input'
                 />
->>>>>>> f6a4cc2454477cd87e7da32af00d39f0c57a438e
             </div>
         </section>
     )
