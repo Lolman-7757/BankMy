@@ -117,7 +117,7 @@ function Buyurtma() {
                                         <p className='li_buyurtma'>{item.raqam}</p>
                                         <p className='li_buyurtma'>{item.place}</p>
                                         <p className='li_buyurtma'>{item.mahsulot_name}</p>
-                                        <p className='li_buyurtma' id={item.status}><div></div></p>
+                                        <p className='li_buyurtma' id={item.status}>{item.status}<div></div></p>
                                         <div className='userButtons_buyurtma'>
                                             <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>

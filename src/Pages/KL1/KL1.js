@@ -263,6 +263,13 @@ function KL1() {
                 width='100%'
                 className='kl1_input'
                 />
+
+                <div className='kl1_daromad_part'>
+                    <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
+                    <div className='kl1_daromad_radio'>
+                        
+                    </div>
+                </div>
             </div>
         </section>
     )

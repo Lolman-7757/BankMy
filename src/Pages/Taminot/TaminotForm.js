@@ -70,7 +70,7 @@ function TaminotForm() {
                                 borderRadius: 12,
                                 colors: {
                                 ...theme.colors,
-                                primary25: '#7828c8',
+                                primary25: 'rgb(216,215,215)',
                                 primary: '#7828c8',
                                 },
                             })}
