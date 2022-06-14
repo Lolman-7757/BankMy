@@ -15,8 +15,10 @@ function KL1() {
         familyInformation : familyInfo,
     }
     let familyMembers = [{}]
+    let familyDaromads = [{}]
     let mulkItems = [{}]
     const [ familyMem, setFamilyMem ] = useState(familyMembers)
+    const [ familyDaromad, setFamilyDaromad ] = useState(familyDaromads)
     const [ mulkItem, setMulkItem ] = useState(mulkItems)
     const [ allInformation, setAllInformation ] = useState(dataFirst)
 
@@ -41,6 +43,18 @@ function KL1() {
         if(mulkItem.length>1){
             let newmulkItems = mulkItem.filter((mulk,mulkId)=> mulkId !== (id))
             setMulkItem(newmulkItems)
+        }
+    }
+
+    // Family Daromads Adding and Deleting Functions
+    function addfamDaromad () {
+        let newfamilyDaromad = [{}]
+        setFamilyDaromad(familyDaromad.concat(newfamilyDaromad))
+    }
+    function deletefamDaromad (id) {
+        if(familyDaromad.length>1){
+            let newfamilyDaromads = familyDaromad.filter((famDaromad,famDaromadId)=> famDaromadId !== (id))
+            setFamilyDaromad(newfamilyDaromads)
         }
     }
 
@@ -263,6 +277,7 @@ function KL1() {
                 width='100%'
                 className='kl1_input'
                 />
+<<<<<<< HEAD
 
                 <div className='kl1_daromad_part'>
                     <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
@@ -270,6 +285,88 @@ function KL1() {
                         
                     </div>
                 </div>
+=======
+                <h2 className='kl1_subtitle'>Oilaviy daromadlar va xarajatlar (Uy xo'jaligining daromad va xarajatlari)</h2>
+                {
+                    familyDaromad.map((familyDaromad,familyDaromadId)=>(
+                        <div className='kl1_products' key={familyDaromadId}>
+                            <div className='kl1_product_title'>
+                                Product {familyDaromadId+1}
+                                <button
+                                className='kl1_delete_button'
+                                onClick={() => deletefamDaromad(familyDaromadId)}
+                                >
+                                    <i className='bx bx-trash'></i>
+                                </button>
+                            </div>
+                            <div className='kl1_product'>
+                                <Input
+                                rounded
+                                bordered
+                                label='Daromad Egasi'
+                                placeholder="Otasi"
+                                color="secondary"
+                                width='200px'
+                                className='kl1_input'
+                                />
+                                <Input
+                                rounded
+                                bordered
+                                label='Faoliyat Turi'
+                                placeholder="Nafaqada"
+                                color="secondary"
+                                width='200px'
+                                className='kl1_input'
+                                />
+                                <Input
+                                rounded
+                                bordered
+                                label='Faoliyat Joyi'
+                                placeholder="Yuqorichirchiq tuman 54-maktab"
+                                color="secondary"
+                                width='300px'
+                                className='kl1_input'
+                                />
+                                <Input
+                                rounded
+                                bordered
+                                label='Bir oylik daromad'
+                                placeholder="1 000 000"
+                                color="secondary"
+                                width='300px'
+                                type='number'
+                                className='kl1_input'
+                                />
+                                <Textarea
+                                width='100%'
+                                bordered
+                                rounded
+                                color="secondary"
+                                className='kl1_input'
+                                label='Izoh'
+                                />
+                            </div>
+                        </div>
+                    ))
+                }
+                <button
+                className='kl1_add_button'
+                onClick={()=>{addfamDaromad()}}
+                >
+                    Daromad qoshish
+                </button>
+                <Input
+                rounded
+                bordered
+                readOnly
+                label='Jami'
+                initialValue='11 000 000'
+                color="secondary"
+                width='300px'
+                type='number'
+                className='kl1_input'
+                />
+>>>>>>> f6a4cc2454477cd87e7da32af00d39f0c57a438e
             </div>
         </section>
     )

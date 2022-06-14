@@ -12,7 +12,10 @@
     font-weight: 700;
 }
 .kl1_subtitle{
-    margin-top: 20px;
+    border-top: 2px solid #7828c8;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 1.2rem;
@@ -36,6 +39,13 @@
     align-items: center;
     justify-content: space-between;
 }
+.kl1_product_title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.kl1_product_title .kl1_delete_button{
+    margin-left: 20px;
+}
 .kl1_delete_button{
     margin-top: 5px;
     padding: 5px 7px;
@@ -51,6 +61,7 @@
     transform: scale(1.2);
 }
 .kl1_add_button{
+    margin-top: 15px;
     padding: 10px;
     font-size: 1rem;
     font-weight: 600;
@@ -67,4 +78,28 @@
     background-color: #7828c8;
     color: white;
     transform: scale(1.1);
+}
+.kl1_radio{
+    display: flex;
+    flex-direction: row;
+}
+.kl1_radio label{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.kl1_products{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.kl1_products .kl1_product{
+    padding: 15px;
+    border: 2px solid #7828c8;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
