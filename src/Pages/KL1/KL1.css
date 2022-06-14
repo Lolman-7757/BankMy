@@ -25,3 +25,46 @@
 .kl1_input{
     margin-bottom: 10px;
 }
+.kl1_formtitle{
+    margin-top: 20px; 
+    font-weight: 600;
+}
+.kl1_product{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.kl1_delete_button{
+    margin-top: 5px;
+    padding: 5px 7px;
+    color: white;
+    border: none;
+    background-color: red;
+    font-size: 1.6rem;
+    border-radius: 7px;
+    transition: linear all .2s;
+    cursor: pointer;
+}
+.kl1_delete_button:hover{
+    transform: scale(1.2);
+}
+.kl1_add_button{
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 250px;
+    border: 2px solid #7828c8;
+    border-radius: 7px;
+    background-color: white;
+    color: #7828c8;
+    transition: linear all .2s;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.kl1_add_button:hover{
+    background-color: #7828c8;
+    color: white;
+    transform: scale(1.1);
+}
