@@ -82,7 +82,7 @@ function Buyurtma() {
                     <div className='shartnamaSearch'>
                         <div className='sort_main'>
                             <p>Tartiblash:</p>
-                            <div>
+                            <div className='sort_main_buttons'>
                                 <button>Barcha</button>
                                 <button>Yangi</button>
                                 <button>Tashdiqlangan</button>
