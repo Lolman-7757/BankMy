@@ -29,7 +29,7 @@
 }
 .kl1_formtitle{
     margin-top: 20px; 
-    font-weight: 600;
+    font-weight: 500;
 }
 .kl1_product{
     margin-top: 10px;
@@ -109,4 +109,8 @@
 }
 .kl1_daromad_radio .kl1_daromad_radio_one{
     margin-right: 30px;
+}
+.kl1_daromad_part{
+    display: flex;
+    flex-direction: column;
 }
