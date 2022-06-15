@@ -102,11 +102,51 @@
     justify-content: space-between;
     align-items: center;
 }
-
+.kl1_product_footer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .kl1_daromad_radio{
     display: flex;
     flex-direction: row;
 }
 .kl1_daromad_radio .kl1_daromad_radio_one{
     margin-right: 30px;
+}
+
+/* kl1 table */
+.kl1_table{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid black;
+}
+.kl1_table div{
+    text-align: center;
+    border: 1px solid black;
+}
+.kl1_table_double{
+    display: flex;
+    flex-direction: row;
+}
+.kl1_table_double p{
+    flex-basis: 50%;
+}
+.kl1_table_double p:nth-child(2){
+    border-left: 1px solid black;
+}
+.kl1_table_yellow-bg{
+    background-color: rgb(255, 255, 157);
+}
+.kl1_table_red-bg{
+    background-color: rgb(255, 185, 185);
+    color: red;
+}
+.kl1_table_dark-bg{
+    background-color: rgb(215, 215, 215);
 }

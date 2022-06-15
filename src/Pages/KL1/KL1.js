@@ -14,12 +14,14 @@ function KL1() {
     let dataFirst = {
         familyInformation : familyInfo,
     }
+    // Datas
     let familyMembers = [{}]
     let mulkItems = [{}]
     let familyDaromads = [{}]
     let familyXarajats = [{}]
     let familyMalumots = [{}]
     let familyMavjuds = [{}]
+
     const [ familyMem, setFamilyMem ] = useState(familyMembers)
     const [ familyDaromad, setFamilyDaromad ] = useState(familyDaromads)
     const [ mulkItem, setMulkItem ] = useState(mulkItems)
@@ -388,23 +390,25 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addfamDaromad()}}
-                >
-                    Daromad qoshish
-                </button>
-                <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami'
-                initialValue='11 000 000'
-                color="secondary"
-                width='300px'
-                type='number'
-                className='kl1_input'
-                />
+                <div className='kl1_product_footer'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addfamDaromad()}}
+                    >
+                        Daromad qoshish
+                    </button>
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                </div>
                 <p className='kl1_formtitle'>Uy xojaligining xarajatlari</p>
                 {
                     familyXarajat.map((familyXarajat,familyXarajatId)=>(
@@ -449,23 +453,25 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addfamXarajat()}}
-                >
-                    Xarajat qoshish
-                </button>
-                <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami'
-                initialValue='11 000 000'
-                color="secondary"
-                width='300px'
-                type='number'
-                className='kl1_input'
-                />
+                <div className='kl1_product_footer'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addfamXarajat()}}
+                    >
+                        Xarajat qoshish
+                    </button>
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                </div>
                 <p className='kl1_formtitle'>Uy xojaligi azolarining mavjud kredit va qarzdorliklari togrisidagi malumotlar</p>
                 {
                     familyMalumot.map((familyMalumot,familyMalumotId)=>(
@@ -520,34 +526,36 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addfamMalumot()}}
-                >
-                    Malumot qoshish
-                </button>
-                <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami asosiy qarz qoldigi'
-                initialValue='11 000 000'
-                color="secondary"
-                width='300px'
-                type='number'
-                className='kl1_input'
-                />
-                <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami oylik tolov miqdori'
-                initialValue='11 000 000'
-                color="secondary"
-                width='300px'
-                type='number'
-                className='kl1_input'
-                />
+                <div className='kl1_product_footer'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addfamMalumot()}}
+                    >
+                        Malumot qoshish
+                    </button>
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami asosiy qarz qoldigi'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami oylik tolov miqdori'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                </div>
                 <Input
                 rounded
                 bordered
@@ -613,33 +621,173 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addfamMavjud()}}
-                >
-                    Mavjud kredit va qarz qoshish
-                </button>
+                <div className='kl1_product_footer'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addfamMavjud()}}
+                    >
+                        Mavjud kredit va qarz qoshish
+                    </button>
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami asosiy qarz qoldigi'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                    <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami oylik tolov miqdori'
+                    initialValue='11 000 000'
+                    color="secondary"
+                    width='300px'
+                    type='number'
+                    className='kl1_input'
+                    />
+                </div>
                 <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami asosiy qarz qoldigi'
-                initialValue='11 000 000'
-                color="secondary"
-                width='300px'
-                type='number'
-                className='kl1_input'
+                    rounded
+                    bordered
+                    readOnly
+                    label='Joiriy kreditlar boyicha qarz yuki korsatkichi'
+                    initialValue='22%'
+                    color="secondary"
+                    width='100%'
+                    className='kl1_input'
+                />
+                <h2 className='kl1_subtitle'>Oylik kredit tolovi ( eng katta tolov miqdori )</h2>
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Asosiy qarz'
+                    initialValue='5 000 000'
+                    color="secondary"
+                    width='100%'
+                    className='kl1_input'
                 />
                 <Input
-                rounded
+                    rounded
+                    bordered
+                    readOnly
+                    label='Foizlar'
+                    initialValue='985 205'
+                    color="secondary"
+                    width='100%'
+                    className='kl1_input'
+                />
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami oylik tolov'
+                    initialValue='5 985 205'
+                    color="secondary"
+                    width='100%'
+                    className='kl1_input'
+                />
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Soralayotgan kredit hisobi qarzi yoki korsatkichi (<50%)'
+                    initialValue='83,5%'
+                    status="error"
+                    shadow={false}
+                    width='100%'
+                    className='kl1_input'
+                />
+                <Textarea
+                width='100%'
                 bordered
-                readOnly
-                label='Jami oylik tolov miqdori'
-                initialValue='11 000 000'
+                rounded
                 color="secondary"
-                width='300px'
-                type='number'
                 className='kl1_input'
+                placeholder='Jami 7 marotaba kredit olgan, shu jumladan, Renesansdan 2 marotaba. Muntazam o‘z vaqtida to‘lagan. 30 kungacha kechiktirishlar soni - 0, 30 kundan ortiq kechiktirishlar soni - 0'
+                label='Kredit tarixi'
+                />
+                <div className='kl1_table'>
+                    <div className='kl1_table_dark-bg'>Hulq atvori</div>
+                    <div className='kl1_table_dark-bg'>Shaxsiy sifatida baholanishi</div>
+                    <div className='kl1_table_dark-bg'>Moliaviy malumotlar va savodxonlik</div>
+                    <div className='kl1_table_double'>
+                        <p>сухбат</p>
+                        <p>ижобий</p>
+                    </div>
+                    <div className='kl1_table_double '>
+                        <p>учрашув</p>
+                        <p>ижобий</p>
+                    </div>
+                    <div>ижобий</div>
+                    <div className='kl1_table_double '>
+                        <p>oylik tolov</p>
+                        <p>OT/OD</p>
+                    </div>
+                    <div className='kl1_table_double kl1_table_dark-bg'>
+                        <p>SD/OT</p>
+                        <p>OHX</p>
+                    </div>
+                    <div className='kl1_table_dark-bg'>Natija</div>
+                    <div className='kl1_table_double kl1_table_dark-bg'>
+                        <p className='kl1_table_yellow-bg'>5 985 205,42</p>
+                        <p className='kl1_table_red-bg'>62,04%</p>
+                    </div>
+                    <div className='kl1_table_double'>
+                        <p className='kl1_table_yellow-bg'>161,18%</p>
+                        <p className='kl1_table_yellow-bg'>7 153 000,00</p>
+                    </div>
+                    <div className='kl1_table_yellow-bg'> {`<= 50% и >= 120%`}</div>
+                    <div className='kl1_table_dark-bg'>Shaxsiy kapital miqdori</div>
+                    <div className='kl1_table_dark-bg'>Shaxsiy kapital/kreditlar</div>
+                    <div className='kl1_table_dark-bg'>Natija</div>
+                    <div>25 000 000,00</div>
+                    <div className='kl1_table_yellow-bg'>125%</div>
+                    <div className='kl1_table_yellow-bg'>50</div>
+                    <div className='kl1_table_dark-bg'>Daromad manbai</div>
+                    <div className='kl1_table_dark-bg'>Faoliyat barqarorligi</div>
+                    <div className='kl1_table_dark-bg'>Kutilayotgan rivojlanish</div>
+                    <div>баркарор</div>
+                    <div>баркарор</div>
+                    <div>ижобий</div>
+                    <div className='kl1_table_dark-bg'>Taminot turi</div>
+                    <div className='kl1_table_dark-bg'>Taminot qiymati</div>
+                    <div className='kl1_table_dark-bg'>Kreditni qoplash koeffitsenti</div>
+                    <div>tilla buyumlar garovi</div>
+                    <div>20 000 000,00</div>
+                    <div className='kl1_table_yellow-bg'>100%</div>
+                </div>
+                <Textarea
+                width='100%'
+                bordered
+                rounded
+                color="secondary"
+                className='kl1_input'
+                placeholder='Ajratiladigan kreditga mijoz qoshimcha 150 litr LukOil moylarini, shuningdek, moy alishtirish jarayonida zaruriy bolgan avto ehtiyot qismlar savdosini ham yolga qoymoqchi. Birlamchi hisob kitoblar buyurtmachi daromadi qoshimcha 1 500 000 somga oshishini korsatmoqda.'
+                label='Ajratilgan kreditning buyurtmachi uchun tasirini baholash'
+                />
+                <Textarea
+                width='100%'
+                bordered
+                rounded
+                color="secondary"
+                className='kl1_input'
+                placeholder='дохода клиента достаточно для получения кредита'
+                label='Monitoring boyicha masul xodimning yakuniy xulosasi'
+                />
+                <Input
+                    rounded
+                    bordered
+                    label='Monitoring amalga oshirgan xodim F.I.Sh'
+                    placeholder='someone'
+                    color='secondary'
+                    width='100%'
+                    className='kl1_input'
                 />
             </div>
         </section>
