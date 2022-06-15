@@ -129,6 +129,10 @@
 .kl1_table div{
     text-align: center;
     border: 1px solid black;
+    padding: 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .kl1_table_double{
     display: flex;
@@ -136,6 +140,7 @@
 }
 .kl1_table_double p{
     flex-basis: 50%;
+    height: 100%;
 }
 .kl1_table_double p:nth-child(2){
     border-left: 1px solid black;
@@ -153,4 +158,51 @@
 .kl1_daromad_part{
     display: flex;
     flex-direction: column;
+}
+.kl1_table_noPadding{
+    padding: 0 !important;
+    text-align: center !important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.kl1_table_noPadding p{
+    padding: 5px;
+}
+
+
+
+
+.kl1_accepting{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.kl1_accepting p{
+    flex-basis: 62%;
+}
+.kl1_accepting_radio{
+    height: 80px;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.kl1_accept{
+    flex-basis: 50% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+.kl1_accept:nth-child(1){
+    background-color: greenyellow;
+}
+.kl1_accept:nth-child(2){
+    background-color: red;
 }

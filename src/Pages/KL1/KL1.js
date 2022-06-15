@@ -343,57 +343,57 @@ function KL1() {
                     {
                         myDaromads?.map((item,index)=>{
                             return(
-                        <div className='kl1_products' key={index}>
-                            <div className='kl1_product_title'>
-                                Daromad {index + 1}
-                                <button className='kl1_delete_button' onClick={()=>{deleteMyDaromad(index)}}><i className='bx bx-trash'></i></button>
-                            </div>
-                            <div className='kl1_product'>
-                                <Input
-                                    rounded
-                                    bordered
-                                    label='Hajmi'
-                                    color="secondary"
-                                    width='47%'
-                                    className='kl1_input'
-                                />
-                                <Input
-                                    rounded
-                                    bordered
-                                    label='Birlik narxi'
-                                    type='number'
-                                    color="secondary"
-                                    width='47%'
-                                    className='kl1_input'
-                                />
-                                <Input
-                                    rounded
-                                    bordered
-                                    label='Qiymati'
-                                    color="secondary"
-                                    width='47%'
-                                    className='kl1_input'
-                                />
-                                <Input
-                                    rounded
-                                    bordered
-                                    label='Oylik daromad'
-                                    color="secondary"
-                                    width='47%'
-                                    type='number'
-                                    className='kl1_input'
-                                />
-                                <Textarea
-                                    width='100%'
-                                    bordered
-                                    rounded
-                                    color="secondary"
-                                    className='kl1_input'
-                                    label='Izoh'
-                                />
-                            </div>
-                        </div>
-                           )
+                                <div className='kl1_products' key={index}>
+                                    <div className='kl1_product_title'>
+                                        Daromad {index + 1}
+                                        <button className='kl1_delete_button' onClick={()=>{deleteMyDaromad(index)}}><i className='bx bx-trash'></i></button>
+                                    </div>
+                                    <div className='kl1_product'>
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Hajmi'
+                                            color="secondary"
+                                            width='47%'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Birlik narxi'
+                                            type='number'
+                                            color="secondary"
+                                            width='47%'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Qiymati'
+                                            color="secondary"
+                                            width='47%'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Oylik daromad'
+                                            color="secondary"
+                                            width='47%'
+                                            type='number'
+                                            className='kl1_input'
+                                        />
+                                        <Textarea
+                                            width='100%'
+                                            bordered
+                                            rounded
+                                            color="secondary"
+                                            className='kl1_input'
+                                            label='Izoh'
+                                        />
+                                    </div>
+                                </div>
+                            )
                         })
                     }
                         <button className='kl1_add_button' onClick={()=>{addMyDaromad()}}>
@@ -510,7 +510,7 @@ function KL1() {
                     familyXarajat.map((familyXarajat,familyXarajatId)=>(
                         <div className='kl1_products' key={familyXarajatId}>
                             <div className='kl1_product_title'>
-                                Product {familyXarajatId+1}
+                                Xarajat {familyXarajatId+1}
                                 <button
                                 className='kl1_delete_button'
                                 onClick={() => deletefamXarajat(familyXarajatId)}
@@ -573,7 +573,7 @@ function KL1() {
                     familyMalumot.map((familyMalumot,familyMalumotId)=>(
                         <div className='kl1_products' key={familyMalumotId}>
                             <div className='kl1_product_title'>
-                                Product {familyMalumotId+1}
+                                Malumot {familyMalumotId+1}
                                 <button
                                 className='kl1_delete_button'
                                 onClick={() => deletefamMalumot(familyMalumotId)}
@@ -668,7 +668,7 @@ function KL1() {
                     familyMavjud.map((familyMavjud,familyMavjudId)=>(
                         <div className='kl1_products' key={familyMavjudId}>
                             <div className='kl1_product_title'>
-                                Product {familyMavjudId+1}
+                                Mavjud malumot {familyMavjudId+1}
                                 <button
                                 className='kl1_delete_button'
                                 onClick={() => deletefamMavjud(familyMavjudId)}
@@ -812,29 +812,29 @@ function KL1() {
                     <div className='kl1_table_dark-bg'>Hulq atvori</div>
                     <div className='kl1_table_dark-bg'>Shaxsiy sifatida baholanishi</div>
                     <div className='kl1_table_dark-bg'>Moliaviy malumotlar va savodxonlik</div>
-                    <div className='kl1_table_double'>
+                    <div className='kl1_table_double kl1_table_noPadding'>
                         <p>сухбат</p>
                         <p>ижобий</p>
                     </div>
-                    <div className='kl1_table_double '>
+                    <div className='kl1_table_double kl1_table_noPadding'>
                         <p>учрашув</p>
                         <p>ижобий</p>
                     </div>
                     <div>ижобий</div>
-                    <div className='kl1_table_double '>
+                    <div className='kl1_table_double kl1_table_noPadding'>
                         <p>oylik tolov</p>
                         <p>OT/OD</p>
                     </div>
-                    <div className='kl1_table_double kl1_table_dark-bg'>
+                    <div className='kl1_table_double kl1_table_dark-bg kl1_table_noPadding'>
                         <p>SD/OT</p>
                         <p>OHX</p>
                     </div>
                     <div className='kl1_table_dark-bg'>Natija</div>
-                    <div className='kl1_table_double kl1_table_dark-bg'>
+                    <div className='kl1_table_double kl1_table_dark-bg kl1_table_noPadding'>
                         <p className='kl1_table_yellow-bg'>5 985 205,42</p>
                         <p className='kl1_table_red-bg'>62,04%</p>
                     </div>
-                    <div className='kl1_table_double'>
+                    <div className='kl1_table_double kl1_table_noPadding'>
                         <p className='kl1_table_yellow-bg'>161,18%</p>
                         <p className='kl1_table_yellow-bg'>7 153 000,00</p>
                     </div>
@@ -876,6 +876,13 @@ function KL1() {
                 placeholder='дохода клиента достаточно для получения кредита'
                 label='Monitoring boyicha masul xodimning yakuniy xulosasi'
                 />
+                <div className='kl1_accepting'>
+                    <p>Taqdim etilgan va toplangan malumotlar hamda kredit byurosidan olingan kredit tarixiga asoslanib men tomonimdan otkazilgan organish va tahlillar asosida ushbu buyurtma boyicha quiydagi yakuniy xulosamni kredit komissiyasida korib chiqish uchun taqdim etaman</p>
+                    <Radio.Group color='secondary' value={true} size='sm' className='kl1_accepting_radio'>
+                        <div className='kl1_accept'><Radio value={true}>Kredit ajratish</Radio></div>
+                        <div className='kl1_accept'><Radio value={false}>Rad etish</Radio></div>
+                    </Radio.Group>
+                </div>
                 <Input
                     rounded
                     bordered
