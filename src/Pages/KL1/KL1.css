@@ -14,7 +14,7 @@
 .kl1_subtitle{
     width: 100%;
     padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 22px;
@@ -30,7 +30,9 @@
 }
 .kl1_formtitle{
     margin-top: 20px; 
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 19px;
+    text-decoration: underline;
 }
 .kl1_product{
     margin-top: 10px;
@@ -40,11 +42,18 @@
     justify-content: space-between;
 }
 .kl1_product_title{
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 600;
 }
+.kl1_calendar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
 .kl1_product_title .kl1_delete_button{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 .kl1_delete_button{
     margin-top: 5px;
@@ -91,7 +100,7 @@
 .kl1_products{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .kl1_products .kl1_product{
     padding: 15px;
@@ -130,6 +139,10 @@
 .kl1_table div{
     text-align: center;
     border: 1px solid black;
+    padding: 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .kl1_table_double{
     display: flex;
@@ -137,6 +150,7 @@
 }
 .kl1_table_double p{
     flex-basis: 50%;
+    height: 100%;
 }
 .kl1_table_double p:nth-child(2){
     border-left: 1px solid black;
@@ -154,4 +168,62 @@
 .kl1_daromad_part,.kl1_mavsumiy_daromad{
     display: flex;
     flex-direction: column;
+}
+.kl1_table_noPadding{
+    padding: 0 !important;
+    text-align: center !important;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.kl1_table_noPadding p{
+    padding: 20px;
+}
+
+
+
+
+.kl1_accepting{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.kl1_accepting p{
+    flex-basis: 62%;
+}
+.kl1_accepting_radio{
+    height: 80px;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.kl1_accept{
+    flex-basis: 50% !important;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+.kl1_accept:nth-child(1){
+    background-color: greenyellow;
+}
+.kl1_accept:nth-child(2){
+    background-color: red;
+}
+
+
+
+
+
+.close{
+    display: none;
+}
+.open{
+    display: flex;
 }
