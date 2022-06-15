@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // Components
-import { Input, Textarea } from '@nextui-org/react'
+import { Input, Textarea, Radio } from '@nextui-org/react'
 
 // Styles
 import './KL1.css'
@@ -317,10 +317,13 @@ function KL1() {
 
                 <div className='kl1_daromad_part'>
                     <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
-                    <div className='kl1_daromad_radio'>
-                        
-                    </div>
+                    <Radio.Group color='secondary' value={3} size='sm' className='kl1_daromad_radio'>
+                        <Radio value={1} className='kl1_daromad_radio_one'>Biznes daromadlar</Radio>
+                        <Radio value={2} className='kl1_daromad_radio_one'>Mavsumiy daromadlar</Radio>
+                        <Radio value={3} className='kl1_daromad_radio_one'>Boshqa daromadlar</Radio>
+                    </Radio.Group>
                 </div>
+
                 <h2 className='kl1_subtitle'>Oilaviy daromadlar va xarajatlar (Uy xo'jaligining daromad va xarajatlari)</h2>
                 <p className='kl1_formtitle'>Oila azolarining daromadlar , shuningdek uy xojaligining boshqa daromadlari</p>
                 {
@@ -342,7 +345,7 @@ function KL1() {
                                 label='Daromad Egasi'
                                 placeholder="Otasi"
                                 color="secondary"
-                                width='200px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -351,7 +354,7 @@ function KL1() {
                                 label='Faoliyat Turi'
                                 placeholder="Nafaqada"
                                 color="secondary"
-                                width='200px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -360,7 +363,7 @@ function KL1() {
                                 label='Faoliyat Joyi'
                                 placeholder="Yuqorichirchiq tuman 54-maktab"
                                 color="secondary"
-                                width='300px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
