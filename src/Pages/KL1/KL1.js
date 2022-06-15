@@ -307,7 +307,7 @@ function KL1() {
                                 label='Daromad Egasi'
                                 placeholder="Otasi"
                                 color="secondary"
-                                width='200px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -316,7 +316,7 @@ function KL1() {
                                 label='Faoliyat Turi'
                                 placeholder="Nafaqada"
                                 color="secondary"
-                                width='200px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -325,7 +325,7 @@ function KL1() {
                                 label='Faoliyat Joyi'
                                 placeholder="Yuqorichirchiq tuman 54-maktab"
                                 color="secondary"
-                                width='300px'
+                                width='30%'
                                 className='kl1_input'
                                 />
                                 <Input
