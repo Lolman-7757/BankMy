@@ -510,7 +510,7 @@ function KL1() {
                                 label='Xarajat nomi'
                                 placeholder="Oziq-ovqat uchun"
                                 color="secondary"
-                                width='45%'
+                                width='47%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -519,7 +519,7 @@ function KL1() {
                                 label='Ortaja oylik xarajat'
                                 placeholder="1 500 000,00"
                                 color="secondary"
-                                width='45%'
+                                width='47%'
                                 className='kl1_input'
                                 />
                                 <Textarea
@@ -571,7 +571,7 @@ function KL1() {
                                 label='Malumot nomi'
                                 placeholder="Qishloq Qurilish bank"
                                 color="secondary"
-                                width='45%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -580,7 +580,7 @@ function KL1() {
                                 label='Asosiy qarz qoldigi'
                                 placeholder="5 700 000,00"
                                 color="secondary"
-                                width='20%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -589,7 +589,7 @@ function KL1() {
                                 label='Oylik tolov miqdori'
                                 placeholder="843 000,00"
                                 color="secondary"
-                                width='20%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Textarea
@@ -618,7 +618,7 @@ function KL1() {
                 label='Jami asosiy qarz qoldigi'
                 initialValue='11 000 000'
                 color="secondary"
-                width='300px'
+                width='50%'
                 type='number'
                 className='kl1_input'
                 />
@@ -629,7 +629,7 @@ function KL1() {
                 label='Jami oylik tolov miqdori'
                 initialValue='11 000 000'
                 color="secondary"
-                width='300px'
+                width='50%'
                 type='number'
                 className='kl1_input'
                 />
@@ -664,7 +664,7 @@ function KL1() {
                                 label='Mavjud kredit va qarzlar'
                                 placeholder="Qishloq Qurilish bank"
                                 color="secondary"
-                                width='45%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -673,7 +673,7 @@ function KL1() {
                                 label='Asosiy qarz qoldigi'
                                 placeholder="5 700 000,00"
                                 color="secondary"
-                                width='20%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Input
@@ -682,7 +682,7 @@ function KL1() {
                                 label='Oylik tolov miqdori'
                                 placeholder="843 000,00"
                                 color="secondary"
-                                width='20%'
+                                width='31%'
                                 className='kl1_input'
                                 />
                                 <Textarea
