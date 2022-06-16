@@ -99,7 +99,7 @@
 } */
 .shartnamaTablePart{
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     width: 100%;
     margin-top: 40px;
@@ -505,15 +505,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     border: 2px solid #7828c8;
     border-radius: 20px;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab{
-    padding: 15px;
+    padding: 12px;
     color: #7828c8;
     border-left: 2px solid #7828c8;
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: linear .2s all;
