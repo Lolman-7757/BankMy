@@ -1,9 +1,17 @@
 import React,  {useState, useEffect } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import { Input } from '@nextui-org/react'
+import { Tabs } from 'antd';
 import Pagination from "../../Components/Pagination/Pagination";
 
 import './Buyurtma.css'
+
+
+const { TabPane } = Tabs;
+
+const onChange = (key) => {
+  console.log(key);
+};
 
 function Buyurtma() {
 
@@ -82,12 +90,16 @@ function Buyurtma() {
                     <div className='shartnamaSearch'>
                         <div className='sort_main'>
                             <p>Tartiblash:</p>
-                            <div className='sort_main_buttons'>
-                                <button>Barcha</button>
-                                <button>Yangi</button>
-                                <button>Tashdiqlangan</button>
-                                <button>Rad etilgan</button>
-                            </div>
+                        <Tabs defaultActiveKey="1" onChange={onChange} className="sort_main_buttons">
+                            <TabPane tab="Barcha" key="1">
+                            </TabPane>
+                            <TabPane tab="Yangi" key="2">
+                            </TabPane>
+                            <TabPane tab="Tashdiqlangan" key="3">
+                            </TabPane>
+                            <TabPane tab="Rad etilgan" key="4">
+                            </TabPane>
+                        </Tabs>
                         </div>
                         <Input
                             rounded
