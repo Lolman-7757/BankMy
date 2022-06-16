@@ -30,21 +30,21 @@ function Buyurtma() {
     useEffect(() => {
         setBuyurtmalar(
             [
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
-                {raqam:233,place:'Nukus',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:13,place:'Andijon',mahsulot_name:'ReneTrade',status:"red"},
-                {raqam:3,place:'Samarqand',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:1,place:'Muynaq',mahsulot_name:'ReneTrade',status:"green"},
-                {raqam:5,place:'London',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:26,place:'Fergana',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:213,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
-                {raqam:253,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
-                {raqam:236,place:'Tashkent',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"yellow"},
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"green"},
-                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"red"},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"tashdiqlangan", color:'green'},
+                {raqam:233,place:'Nukus',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:13,place:'Andijon',mahsulot_name:'ReneTrade',status:"rad etilgan", color:'red'},
+                {raqam:3,place:'Samarqand',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:1,place:'Muynaq',mahsulot_name:'ReneTrade',status:"tashdiqlangan", color:'green'},
+                {raqam:5,place:'London',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:26,place:'Fergana',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:213,place:'Tashkent',mahsulot_name:'ReneTrade',status:"tashdiqlangan", color:'green'},
+                {raqam:253,place:'Tashkent',mahsulot_name:'ReneTrade',status:"rad etilgan", color:'red'},
+                {raqam:236,place:'Tashkent',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"rad etilgan", color:'red'},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"rad etilgan", color:'red'},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"kutmoqta", color:'yellow'},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"tashdiqlangan", color:'green'},
+                {raqam:23,place:'Tashkent',mahsulot_name:'ReneTrade',status:"rad etilgan", color:'red'}
             ]
         )
         
@@ -117,7 +117,7 @@ function Buyurtma() {
                                         <p className='li_buyurtma'>{item.raqam}</p>
                                         <p className='li_buyurtma'>{item.place}</p>
                                         <p className='li_buyurtma'>{item.mahsulot_name}</p>
-                                        <p className='li_buyurtma' id={item.status}>{item.status}<div></div></p>
+                                        <p className='li_buyurtma' id={item.color}>{item.status}</p>
                                         <div className='userButtons_buyurtma'>
                                             <button><Link to='/buyurtma/singleBuyurtma'><i className='bx bx-user'></i></Link></button>
                                             <button><i className='bx bx-edit-alt'></i></button>
