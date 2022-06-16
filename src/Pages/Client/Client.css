@@ -156,7 +156,9 @@
     align-items: center;
     justify-content: flex-start;
 }
-
+.client_tabs .ant-tabs-ink-bar{
+    display: none;
+}
 .client_tabs .ant-tabs-tab{
     margin-left: 20px;
     padding: 10px;
@@ -186,7 +188,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    width: 70%;
+    flex-basis: 90%;
 }
 .client_tabs .ant-tabs-extra-content 
 .client_tabs .ant-tabs-content-holder{
@@ -198,6 +200,10 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+.clientform_extra .nextui-input-main-container{
+    justify-self: flex-end !important;
+    margin-left: 150px;
 }
 .client_tabs .ant-tabs-tab-active{
     color: #7828c8;
@@ -297,7 +303,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    flex-basis: 80%;
 }
 .clientform_group{
     justify-self: flex-end;
