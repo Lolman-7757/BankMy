@@ -70,9 +70,8 @@
     transform: scale(1.2);
 }
 .kl1_add_button{
-    margin-top: 15px;
-    padding: 10px;
-    font-size: 1rem;
+    padding: 7px;
+    font-size: 15px;
     font-weight: 600;
     width: 250px;
     border: 2px solid #7828c8;
@@ -81,7 +80,6 @@
     color: #7828c8;
     transition: linear all .2s;
     cursor: pointer;
-    margin-bottom: 20px;
 }
 .kl1_add_button:hover{
     background-color: #7828c8;
@@ -101,8 +99,11 @@
     font-weight: 600;
     font-style: italic;
 }
-.margin_button{
+.margin_bottom{
     margin-bottom: 10px;
+}
+.margin_bottom20{
+    margin-bottom: 20px;
 }
 .flex_column{
     display: flex;
@@ -133,6 +134,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 .kl1_daromad_radio{
     display: flex;
@@ -228,15 +230,11 @@
     color: white;
 }
 .kl1_accept:nth-child(1){
-    background-color: rgb(4, 151, 4);
+    background-color: rgb(10, 216, 10);
 }
 .kl1_accept:nth-child(2){
-    background-color: rgb(226, 7, 7);
+    background-color: rgb(253, 37, 37);
 }
-
-
-
-
 
 .close{
     display: none;

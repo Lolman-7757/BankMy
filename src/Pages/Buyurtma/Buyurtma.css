@@ -507,7 +507,9 @@
     align-items: center;
     margin-top: 10px;
     border: 2px solid #7828c8;
-    border-radius: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: #7828c8;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab{
     padding: 12px;
@@ -515,17 +517,18 @@
     border-left: 2px solid #7828c8;
     font-size: 16px;
     font-weight: 600;
+    background-color: white;
     cursor: pointer;
     transition: linear .2s all;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:first-child{
     border-left: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:nth-child(4){
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active{
     background-color: #7828c8;

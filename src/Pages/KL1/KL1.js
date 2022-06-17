@@ -333,12 +333,14 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addFamilyMember()}}
-                >
-                    Istiqomat qiluvhci qoshish
-                </button>
+                <div className='margin_bottom20'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addFamilyMember()}}
+                    >
+                        Istiqomat qiluvhci qoshish
+                    </button>
+                </div>
                 <Textarea
                 width='100%'
                 bordered
@@ -370,12 +372,14 @@ function KL1() {
                         </div>
                     ))
                 }
-                <button
-                className='kl1_add_button'
-                onClick={()=>{addMulkItem()}}
-                >
-                    Mulkni xqoshish
-                </button>
+                <div className='margin_bottom20'>
+                    <button
+                    className='kl1_add_button'
+                    onClick={()=>{addMulkItem()}}
+                    >
+                        Mulkni qoshish
+                    </button>
+                </div>
                 <Textarea
                 width='100%'
                 bordered
@@ -1273,8 +1277,8 @@ function KL1() {
                         Malumot qoshish
                     </button>
                     <div className='flex_column'>
-                        <p className='kl1_jami margin_button'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
-                        <p className='kl1_jami margin_button'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
+                        <p className='kl1_jami margin_bottom'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
+                        <p className='kl1_jami margin_bottom'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
                     </div>
                 </div>
                 <p className='kl1_jami'>Uy xojaligi byudjetining ortacha oylik ortiqcha mablagi yoki kamomadi miqdori: {'10 000 000'} so`m</p>
@@ -1341,7 +1345,7 @@ function KL1() {
                         Mavjud kredit va qarz qoshish
                     </button>
                     <div className='flex_column'>
-                        <p className='kl1_jami margin_button'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
+                        <p className='kl1_jami margin_bottom'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
                         <p className='kl1_jami'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
                     </div>
                 </div>
@@ -1478,19 +1482,10 @@ function KL1() {
                 <div className='kl1_accepting'>
                     <p>Taqdim etilgan va toplangan malumotlar hamda kredit byurosidan olingan kredit tarixiga asoslanib men tomonimdan otkazilgan organish va tahlillar asosida ushbu buyurtma boyicha quiydagi yakuniy xulosamni kredit komissiyasida korib chiqish uchun taqdim etaman</p>
                     <Radio.Group value={true} size='sm' className='kl1_accepting_radio'>
-                        <div className='kl1_accept'><Radio color='success' value={true}>Kredit ajratish</Radio></div>
-                        <div className='kl1_accept'><Radio color='error' value={false}>Rad etish</Radio></div>
+                        <div className='kl1_accept'><Radio color='primary' className='radio_end' value={true}>Kredit ajratish</Radio></div>
+                        <div className='kl1_accept'><Radio color='primary' className='radio_end' value={false}>Rad etish</Radio></div>
                     </Radio.Group>
                 </div>
-                <Input
-                    rounded
-                    bordered
-                    label='Monitoring amalga oshirgan xodim F.I.Sh'
-                    placeholder='someone'
-                    color='secondary'
-                    width='100%'
-                    className='kl1_input'
-                />
            </div> 
         </section>
     )
