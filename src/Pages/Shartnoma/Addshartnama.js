@@ -240,14 +240,14 @@ function Addshartnama() {
             </form>
             <div className='submit-buttons'>
                 <button className='client_submit reset' onClick={openReset}>
-                  Formani tiklash
-                  <AiOutlineClear/>
+                    Formani tiklash
+                    <AiOutlineClear/>
                 </button>
                 <button type='submit' className='client_submit submit'>
-                  Clientni qo'shish
-                  <AiOutlineUserAdd/>
+                    Clientni qo'shish
+                    <AiOutlineUserAdd/>
                 </button>
-              </div>
+            </div>
             {/* <button onClick={()=>window.print()}>Pdf</button> */}
         </div>
     </>

@@ -1,15 +1,20 @@
 import { Avatar } from '@mui/material';
 import React, { useState, useRef, useEffect } from 'react';
+import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
 
 // Icons
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
-import { AiOutlineBell } from 'react-icons/ai'
+import { AiOutlineBell, AiOutlineUserAdd } from 'react-icons/ai'
+import { BsBuilding } from 'react-icons/bs'
 
-// MUI
-import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
+// Styles
+import './Main.css'
+
+// Components
 import Logo from '../../assets/images/Logo';
+import { Tabs } from 'antd';
 
 // Pages
 import Client from '../Client/Client';
@@ -27,10 +32,12 @@ import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
 import B1Form from '../../PDF/B1Form';
 import Av1Form from '../../PDF/Av1Form';
 import KL1 from '../KL1/KL1';
-
-// Components
-import './Main.css'
-import { Tabs } from 'antd';
+import Filial from '../Filiallar/Filial';
+import AddFilial from '../Filiallar/AddFilial';
+import Xodim from '../Xodim/Xodim';
+import AddXodim from '../Xodim/AddXodim';
+import Section from '../Section/Section';
+import AddSection from '../Section/AddSection';
 
 const { TabPane } = Tabs;
 
@@ -121,6 +128,26 @@ function Main() {
                     </Link>
                     } 
                     key="6"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/filials' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <BsBuilding/>
+                        </div>
+                        <span>Filiallar</span>
+                    </Link>
+                    } 
+                    key="7"/>
+                    <TabPane 
+                    tab={
+                        <Link to='/xodim' className='nav-item'>
+                        <div className='nav-item_icon'>
+                            <AiOutlineUserAdd/>
+                        </div>
+                        <span>Xodimlar</span>
+                    </Link>
+                    } 
+                    key="8"/>
                 </Tabs>
             </nav>
             
@@ -156,15 +183,21 @@ function Main() {
                         <Route path='/client/single_form' element={<CLientForm/>}/>
                         <Route path='/client/group_form' element={<GroupForm/>}/>
                         <Route path='/addshartnama' element={<Addshartnama/>}/>
-                        <Route path ='/shartnama' element={<Shartnama/>}/>
+                        <Route path='/shartnama' element={<Shartnama/>}/>
                         <Route path='/buyurtma' element={<Buyurtma/>}/>
                         <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
                         <Route path='/buyurtma/singleBuyurtma' element={<SingleBuyurtnama/>}/>
                         <Route path='/buyurtma/singleBuyurtma/b1' element={<B1Form/>}/>
                         <Route path='/buyurtma/singleBuyurtma/av1' element={<Av1Form/>}/>
-                        <Route path ='/taminot' element={<Taminot/>}/>
-                        <Route path ='/taminot/form' element={<TaminotForm/>}/>
-                        <Route path ='/kl1' element={<KL1/>}/>
+                        <Route path='/taminot' element={<Taminot/>}/>
+                        <Route path='/taminot/form' element={<TaminotForm/>}/>
+                        <Route path='/kl1' element={<KL1/>}/>
+                        <Route path='/filials' element={<Filial/>}/>
+                        <Route path='/filials/addfilial' element={<AddFilial/>}/>
+                        <Route path='/xodim' element={<Xodim/>}/>
+                        <Route path='/xodim/addxodim' element={<AddXodim/>}/>
+                        <Route path='/sections' element={<Section/>}/>
+                        <Route path='/sections/addsection' element={<AddSection/>}/>
                     </Routes>
                 </div>
             </main>
