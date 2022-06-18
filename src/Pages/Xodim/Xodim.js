@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-// Styles
-import './Xodim.css'
-
 import { Input } from '@nextui-org/react'
 import Pagination from '../../Components/Pagination/Pagination'
+
+// Styles
+import './Xodim.css'
 
 function Xodim() {
     const [ xodimlar, setXodimlar ] = useState([])
@@ -20,41 +20,27 @@ function Xodim() {
 
     useEffect(() => {
         setXodimlar(
-            // <div>Filial</div>
-            //         <div>Bo'lim</div>
-            //         <div>Ismi</div>
-            //         <div>Ishi</div>
-            //         <div>Kod</div>
-            //         <div>Harakat</div>
             [
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
-                {branch:'Amaliyot', section:'Ishonchnoma',name:'Name Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789},
+                {branch:'Amaliyot', section:'Ishonchnoma',name:'Surname',job:'bankir',code:123456789}
             ]
         )
     },[]);
@@ -85,20 +71,18 @@ function Xodim() {
             <div className='xodim_table_block'>
             <ul className='xodim_table'>
                 <li className='xodim_table_header'>
-                    <div>Filial</div>
-                    <div>Bo'lim</div>
-                    <div>Ismi</div>
-                    <div>Ishi</div>
-                    <div>Kod</div>
-                    <div>Harakat</div>
+                    <p>Fillial</p>
+                    <p>Bo'lim</p>
+                    <p>Ismi</p>
+                    <p>Kod</p>
+                    <p></p>
                 </li>
                 {
                     currentXodim.map((item,index)=>{
-                        return <li key={index}>
+                        return <li key={index} className='xodim_table_product' >
                             <div className=''>{item.branch}</div>
                             <div className=''>{item.section}</div>
                             <div className=''>{item.name}</div>
-                            <div className=''>{item.job}</div>
                             <div className=''>{item.code}</div>
                             <div className=''>
                                 <button><i className='bx bx-trash'></i></button>
