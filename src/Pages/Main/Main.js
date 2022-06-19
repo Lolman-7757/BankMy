@@ -6,7 +6,7 @@ import { BrowserRouter,Link,Route, Routes } from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import PowerSettingsNewOutlinedIcon from '@mui/icons-material/PowerSettingsNewOutlined';
-import { AiOutlineBell, AiOutlineUserAdd } from 'react-icons/ai'
+import { AiOutlineBell,AiFillDatabase,AiFillFileText,AiOutlineFileAdd,AiFillFolderOpen,AiFillFile,AiOutlineBook,AiOutlineUsergroupAdd,AiOutlineAim } from 'react-icons/ai'
 import { BsBuilding } from 'react-icons/bs'
 
 // Styles
@@ -94,7 +94,7 @@ function Main() {
                     tab={
                         <Link to='/buyurtma' className='nav-item'>
                         <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
+                            <AiFillFileText/>
                         </div>
                         <span>Buyurtma</span>
                     </Link>
@@ -104,7 +104,7 @@ function Main() {
                     tab={
                         <Link to='/taminot' className='nav-item'>
                         <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
+                            <AiFillFolderOpen/>
                         </div>
                         <span>Ta'minot</span>
                     </Link>
@@ -114,7 +114,7 @@ function Main() {
                     tab={
                         <Link to='/shartnama' className='nav-item'>
                         <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
+                            <AiFillFile/>
                         </div>
                         <span>Shartnoma</span>
                     </Link>
@@ -124,7 +124,7 @@ function Main() {
                     tab={
                         <Link to='/kl1' className='nav-item'>
                         <div className='nav-item_icon'>
-                            <PersonOutlineOutlinedIcon/>
+                            <AiOutlineBook/>
                         </div>
                         <span>KL1</span>
                     </Link>
@@ -144,7 +144,7 @@ function Main() {
                     tab={
                         <Link to='/xodim' className='nav-item'>
                         <div className='nav-item_icon'>
-                            <AiOutlineUserAdd/>
+                            <AiOutlineUsergroupAdd/>
                         </div>
                         <span>Xodimlar</span>
                     </Link>
@@ -154,7 +154,7 @@ function Main() {
                         tab={
                             <Link to='/mahsulot' className='nav-item'>
                             <div className='nav-item_icon'>
-                                <AiOutlineUserAdd/>
+                                <AiOutlineFileAdd/>
                             </div>
                             <span>Mahsulotlar</span>
                         </Link>
@@ -162,14 +162,24 @@ function Main() {
                     key="9"/>
                     <TabPane 
                         tab={
+                            <Link to='/maqsad' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <AiOutlineAim/>
+                            </div>
+                            <span>Maqsadlar</span>
+                        </Link>
+                        } 
+                    key="10"/>
+                    <TabPane 
+                        tab={
                             <Link to='/section' className='nav-item'>
                             <div className='nav-item_icon'>
-                                <AiOutlineUserAdd/>
+                                <AiFillDatabase/>
                             </div>
                             <span>Bo'limlar</span>
                         </Link>
                         } 
-                    key="10"/>
+                    key="11"/>
                 </Tabs>
             </nav>
             

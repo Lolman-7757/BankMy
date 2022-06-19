@@ -32,7 +32,7 @@ function AddFilial() {
                     width='100%'
                     clearable
                     bordered
-                    label="Qisqa momi"
+                    label="Qisqa nomi"
                     placeholder='Amaliyot Boshqarmasi'
                     className='filial_input'
                     color="secondary"

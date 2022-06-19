@@ -45,7 +45,7 @@ function Section() {
                 {name:'Mikrokredit', code:45389},
                 {name:'Avtokredit', code:64589},
                 {name:'Uykredit', code:12689},
-                {name:'Mikrokredit', code:4345789}
+                {name:'Mikrokredit', code:4789}
             ]
         )
     },[]);
@@ -63,6 +63,15 @@ function Section() {
                     color="secondary"
                     width='100%'
                     label="Bo'lim nomi"
+                    className='margin_bottom'
+                />
+                <Input
+                    rounded
+                    bordered
+                    placeholder="Kodi..."
+                    color="secondary"
+                    width='100%'
+                    label="Bo'lim kodi"
                 />
                 <div className='add_mahsulot_buttons'>
                     <button onClick={closeFormSection}>Orqaga</button>
@@ -93,7 +102,7 @@ function Section() {
                 <div className='mahsulot_table'>
                     <div className='mahsulot_table_headers'>
                         <p>Bo'lim nomi</p>
-                        <p>Bo'lim code</p>
+                        <p>Bo'lim kodi</p>
                     </div>
 
                     <div className='mahsulot_table_products'>

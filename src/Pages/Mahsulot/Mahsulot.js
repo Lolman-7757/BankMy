@@ -70,10 +70,10 @@ function Mahsulot() {
         <Input
             rounded
             bordered
-            placeholder="Code..."
+            placeholder="Kodi..."
             color="secondary"
             width='100%'
-            label="Mahsulot code"
+            label="Mahsulot kodi"
         />
         <div className='add_mahsulot_buttons'>
             <button onClick={closeForm}>Orqaga</button>
@@ -104,7 +104,7 @@ function Mahsulot() {
             <div className='mahsulot_table'>
                 <div className='mahsulot_table_headers'>
                     <p>Mahsulot nomi</p>
-                    <p>Mahsulot code</p>
+                    <p>Mahsulot kodi</p>
                 </div>
 
                 <div className='mahsulot_table_products'>

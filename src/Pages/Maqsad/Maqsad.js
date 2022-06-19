@@ -69,9 +69,8 @@ function Maqsad() {
             <div className='filial_table_block'>
             <ul className='maqsad_table'>
                 <li className='maqsad_table_header'>
-                    <div>Nomi</div>
-                    <div>Code</div>
-                    <div>Harakat</div>
+                    <div>Maqsad nomi</div>
+                    <div>Maqsad kodi</div>
                 </li>
                 {
                     currentMaqsad.map((item,index)=>{

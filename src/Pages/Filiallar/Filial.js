@@ -74,7 +74,6 @@ function Filial() {
                     <div>Qo`mita</div>
                     <div>Raqam</div>
                     <div>Kredit Cheklash</div>
-                    <div>Harakat</div>
                 </li>
                 {
                     currentFilial.map((item,index)=>{

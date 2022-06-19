@@ -90,15 +90,6 @@ function AddXodim() {
                     width='100%'
                     clearable
                     bordered
-                    label="Bo'lim"
-                    placeholder="Bo'lim 2"
-                    className='xodim_input'
-                    color="secondary"
-                />
-                <Input
-                    width='100%'
-                    clearable
-                    bordered
                     label="Ismi"
                     placeholder='Name'
                     className='xodim_input'
@@ -108,7 +99,7 @@ function AddXodim() {
                     width='100%'
                     clearable
                     bordered
-                    label="Ishi"
+                    label="Lavozim"
                     placeholder='Bank'
                     className='xodim_input'
                     color="secondary"

@@ -338,7 +338,7 @@ function KL1() {
                     className='kl1_add_button'
                     onClick={()=>{addFamilyMember()}}
                     >
-                        Istiqomat qiluvhci qoshish
+                        Istiqomat qiluvchi qoshish
                     </button>
                 </div>
                 <Textarea
