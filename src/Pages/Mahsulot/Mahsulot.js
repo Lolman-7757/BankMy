@@ -84,10 +84,10 @@ function Mahsulot() {
         <section className='mahsulot_section'>
             <h1 className='filial_title'>Mahsulotlar</h1>
             <div className='filial_header'>
-                <a onClick={openForm}>
+                <div className='filial_header_add' onClick={openForm}>
                     Mahsulot Qoshish
                     <i className='bx bx-plus-circle'></i>
-                </a>
+                </div>
                 <Input
                     rounded
                     bordered
