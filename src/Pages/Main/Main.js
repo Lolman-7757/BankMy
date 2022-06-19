@@ -37,7 +37,6 @@ import AddFilial from '../Filiallar/AddFilial';
 import Xodim from '../Xodim/Xodim';
 import AddXodim from '../Xodim/AddXodim';
 import Section from '../Section/Section';
-import AddSection from '../Section/AddSection';
 import Mahsulot from '../Mahsulot/Mahsulot';
 
 const { TabPane } = Tabs;
@@ -159,6 +158,16 @@ function Main() {
                         </Link>
                         } 
                     key="9"/>
+                    <TabPane 
+                        tab={
+                            <Link to='/section' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <AiOutlineUserAdd/>
+                            </div>
+                            <span>Section</span>
+                        </Link>
+                        } 
+                    key="10"/>
                 </Tabs>
             </nav>
             
@@ -208,8 +217,7 @@ function Main() {
                         <Route path='/xodim' element={<Xodim/>}/>
                         <Route path='/xodim/addxodim' element={<AddXodim/>}/>
                         <Route path='/mahsulot' element={<Mahsulot/>}/>
-                        <Route path='/sections' element={<Section/>}/>
-                        <Route path='/sections/addsection' element={<AddSection/>}/>
+                        <Route path='/section' element={<Section/>}/>
                     </Routes>
                 </div>
             </main>

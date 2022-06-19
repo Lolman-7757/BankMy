@@ -57,9 +57,6 @@
     flex-direction: row;
     background-color: rgb(239, 239, 239);
 }
-.tableHeader .headerTable-title{
-    /* border-right: 2px solid rgb(201, 201, 201); */
-}
 .tableHeader .headerTable-title_shartnoma:nth-child(1){
     flex-basis: 30%;
     font-weight: 600;
