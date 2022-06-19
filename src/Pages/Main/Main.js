@@ -37,8 +37,9 @@ import AddFilial from '../Filiallar/AddFilial';
 import Xodim from '../Xodim/Xodim';
 import AddXodim from '../Xodim/AddXodim';
 import Section from '../Section/Section';
-import AddSection from '../Section/AddSection';
 import Mahsulot from '../Mahsulot/Mahsulot';
+import Maqsad from '../Maqsad/Maqsad';
+import AddMaqsad from '../Maqsad/AddMaqsad';
 
 const { TabPane } = Tabs;
 
@@ -155,10 +156,20 @@ function Main() {
                             <div className='nav-item_icon'>
                                 <AiOutlineUserAdd/>
                             </div>
-                            <span>Mahsulorlar</span>
+                            <span>Mahsulotlar</span>
                         </Link>
                         } 
                     key="9"/>
+                    <TabPane 
+                        tab={
+                            <Link to='/maqsad' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <AiOutlineUserAdd/>
+                            </div>
+                            <span>Maqsadlar</span>
+                        </Link>
+                        } 
+                    key="10"/>
                 </Tabs>
             </nav>
             
@@ -208,8 +219,8 @@ function Main() {
                         <Route path='/xodim' element={<Xodim/>}/>
                         <Route path='/xodim/addxodim' element={<AddXodim/>}/>
                         <Route path='/mahsulot' element={<Mahsulot/>}/>
-                        <Route path='/sections' element={<Section/>}/>
-                        <Route path='/sections/addsection' element={<AddSection/>}/>
+                        <Route path='/maqsad' element={<Maqsad/>}/>
+                        <Route path='/maqsad/addmaqsad' element={<AddMaqsad/>}/>
                     </Routes>
                 </div>
             </main>
