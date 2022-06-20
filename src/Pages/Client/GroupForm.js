@@ -7,6 +7,7 @@ import { AiOutlineUsergroupAdd, AiOutlineClear, AiOutlineRollback, AiOutlineUser
 import Select from 'react-select';
 
 import './Client.css'
+
   function GroupForm(props) {
     let allInformation = [
       {
@@ -215,6 +216,7 @@ import './Client.css'
           <div className={`client_form`}>
             <div className='clientform_title'>{tabId+1}. Foydalanuvchi tafsilotlari</div>
             <form className='clientform_form'>
+
             <label className='clientform_gender'>
               <p>Jinsi</p>
               <Radio.Group aria-label='Пол' color='secondary' value={true} size='sm' className='clientform_gender_radio' onChange={(event)=>console.log(event)}>

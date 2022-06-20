@@ -70,7 +70,7 @@ function AddMaqsad() {
                     <p>Mahsulot</p>
                     <Select
                         width='10%'
-                        defaultValue={[maqsads[2], maqsads[3]]}
+                        defaultValue={[maqsads[0], maqsads[1]]}
                         isMulti
                         options={maqsads}
                         className='xodim_select basic-multi-select'

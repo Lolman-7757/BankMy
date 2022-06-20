@@ -580,7 +580,7 @@ function KL1() {
                         <Input
                             rounded
                             bordered
-                            label='Febral'
+                            label='Fevral'
                             placeholder='1 000 000'
                             color="secondary"
                             width='23%'
@@ -1417,13 +1417,19 @@ function KL1() {
                     <div className='kl1_table_dark-bg'>Moliaviy malumotlar va savodxonlik</div>
                     <div className='kl1_table_double kl1_table_noPadding'>
                         <p>сухбат</p>
-                        <p>ижобий</p>
+                        <div className='kl1_table_inputs'>
+                            <input placeholder='ижобий' type='text'/>
+                        </div>
                     </div>
                     <div className='kl1_table_double kl1_table_noPadding'>
                         <p>учрашув</p>
-                        <p>ижобий</p>
+                        <div className='kl1_table_inputs'>
+                            <input placeholder='ижобий' type='text'/>
+                        </div>
                     </div>
-                    <div>ижобий</div>
+                    <div className='kl1_table_inputs'>
+                        <input placeholder='ижобий' type='text'/>
+                    </div>
                     <div className='kl1_table_double kl1_table_noPadding'>
                         <p>oylik tolov</p>
                         <p>OT/OD</p>
@@ -1445,15 +1451,23 @@ function KL1() {
                     <div className='kl1_table_dark-bg'>Shaxsiy kapital miqdori</div>
                     <div className='kl1_table_dark-bg'>Shaxsiy kapital/kreditlar</div>
                     <div className='kl1_table_dark-bg'>Natija</div>
-                    <div>25 000 000,00</div>
+                    <div className='kl1_table_inputs'>
+                        <input placeholder='25 000 000,00' type='number'/>
+                    </div>
                     <div className='kl1_table_yellow-bg'>125%</div>
                     <div className='kl1_table_yellow-bg'>50</div>
                     <div className='kl1_table_dark-bg'>Daromad manbai</div>
                     <div className='kl1_table_dark-bg'>Faoliyat barqarorligi</div>
                     <div className='kl1_table_dark-bg'>Kutilayotgan rivojlanish</div>
-                    <div>баркарор</div>
-                    <div>баркарор</div>
-                    <div>ижобий</div>
+                    <div className='kl1_table_inputs kl1_table_input_padding'>
+                        <input placeholder='баркарор' type='text'/>
+                    </div>
+                    <div className='kl1_table_inputs kl1_table_input_padding'>
+                        <input placeholder='баркарор' type='text'/>
+                    </div>
+                    <div className='kl1_table_inputs kl1_table_input_padding'>
+                        <input placeholder='ижобий' type='text'/>
+                    </div>
                     <div className='kl1_table_dark-bg'>Taminot turi</div>
                     <div className='kl1_table_dark-bg'>Taminot qiymati</div>
                     <div className='kl1_table_dark-bg'>Kreditni qoplash koeffitsenti</div>
@@ -1486,7 +1500,7 @@ function KL1() {
                         <div className='kl1_accept'><Radio color='primary' className='radio_end' value={false}>Rad etish</Radio></div>
                     </Radio.Group>
                 </div>
-           </div> 
+            </div> 
         </section>
     )
 }
