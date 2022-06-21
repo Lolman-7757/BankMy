@@ -1373,21 +1373,21 @@ function KL1() {
                     </button>
                     <div className='flex_column'>
                         <p className='kl1_jami margin_bottom'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
-                        <p className='kl1_jami'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
+                        <p className='kl1_jami margin_bottom'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
+                        <Input
+                            rounded
+                            bordered
+                            readOnly
+                            label='Joiriy kreditlar boyicha qarz yuki korsatkichi'
+                            initialValue='22%'
+                            color="secondary"
+                            width='350px'
+                            className='kl1_input'
+                        />
                     </div>
                 </div>
 
                 <h2 className='kl1_subtitle'>Oylik kredit tolovi ( eng katta tolov miqdori )</h2>
-                <Input
-                    rounded
-                    bordered
-                    readOnly
-                    label='Joiriy kreditlar boyicha qarz yuki korsatkichi'
-                    initialValue='22%'
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                />
                 <Input
                     rounded
                     bordered
