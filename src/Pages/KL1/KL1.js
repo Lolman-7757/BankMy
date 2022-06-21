@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 
 // Components
 import { Input, Textarea, Radio,Checkbox } from '@nextui-org/react'
-
 // Styles
 import { ContentCutOutlined } from '@mui/icons-material'
 import { color } from '@mui/system'
+// Icons
+import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
 
 import './KL1.css'
-// Icons
 
 function KL1() {
     const [ familyNumber, setFamilyNumber ] = useState(0)
@@ -31,7 +31,6 @@ function KL1() {
     const [ familyMalumot, setFamilyMalumot ] = useState(familyMalumots)
     const [ familyMavjud, setFamilyMavjud ] = useState(familyMavjuds)
     const [ allInformation, setAllInformation ] = useState(dataFirst)
-    const [myDaromads, setMyDaromads] = useState([{}])
     const [mavsumiyDaromads, setMavsumiyDaromads] = useState([{}])
     const [biznesDaromads, setBiznesDaromads] = useState([{}])
     const [myXarajats, setMyXarajats] = useState([{}])
@@ -109,18 +108,6 @@ function KL1() {
         if(biznesDaromads.length > 1){
             let newBiznesDaromads = biznesDaromads.filter((item,index)=>index !== id)
             setBiznesDaromads(newBiznesDaromads)
-        }
-    }
-
-    // My Xarajats adding and deleting funtions
-    function addMyXarajat(){
-        let newMyXarajat = [{}]
-        setMyXarajats(myXarajats.concat(newMyXarajat))
-    }
-    function deleteMyXarajat(id){
-        if(myXarajats.length > 1){
-            let newMyXarajats = myXarajats.filter((item,index)=>index !== id)
-            setMyXarajats(newMyXarajats)
         }
     }
 
@@ -204,6 +191,39 @@ function KL1() {
             setFamilyMavjud(newfamilyMavjuds)
         }
     }
+
+    // Jami boshqa daromadlar
+    const [ boshqaDaromadBirlikNarxi,setBoshqaDaromadBirlikNarxi] = useState(0)
+    const [ boshqaDaromadNomi,setBoshqaDaromadNomi] = useState('')
+    const [ boshqaDaromadHajmi,setBoshqaDaromadHajmi] = useState(0)
+    const [ boshqaDaromadQiymati,setBoshqaDaromadQiymati] = useState(0)
+    let boshqaDaromadOylik = boshqaDaromadHajmi*boshqaDaromadBirlikNarxi
+    const [ boshqaDaromadIzoh,setBoshqaDaromadIzoh] = useState('')
+
+    const [myDaromads, setMyDaromads] = useState(
+    [
+        {   
+            nomi:boshqaDaromadNomi,
+            qiymati:boshqaDaromadQiymati,
+            birlikNarxi:boshqaDaromadBirlikNarxi,
+            hajmi:boshqaDaromadHajmi,
+            oylik:boshqaDaromadOylik,
+            izoh:boshqaDaromadIzoh
+        }
+    ])
+
+    // My Xarajats adding and deleting funtions
+    function addMyXarajat(){
+        let newMyXarajat = [{}]
+        setMyXarajats(myXarajats.concat(newMyXarajat))
+    }
+    function deleteMyXarajat(id){
+        if(myXarajats.length > 1){
+            let newMyXarajats = myXarajats.filter((item,index)=>index !== id)
+            setMyXarajats(newMyXarajats)
+        }
+    }
+    console.log(myDaromads)
 
     return (
         <section className='kl1'>
@@ -708,14 +728,17 @@ function KL1() {
                                             color="secondary"
                                             width='100%'
                                             className='kl1_input'
+                                            onChange={(e)=>{setBoshqaDaromadNomi(e.target.value)}}
                                         />
                                         <Input
                                             rounded
                                             bordered
                                             label='Hajmi'
                                             color="secondary"
+                                            type='number'
                                             width='47%'
                                             className='kl1_input'
+                                            onChange={(e)=>{setBoshqaDaromadHajmi(e.target.value)}}
                                         />
                                         <Input
                                             rounded
@@ -725,6 +748,7 @@ function KL1() {
                                             color="secondary"
                                             width='47%'
                                             className='kl1_input'
+                                            onChange={(e)=>{setBoshqaDaromadBirlikNarxi(e.target.value)}}
                                         />
                                         <Input
                                             rounded
@@ -733,6 +757,7 @@ function KL1() {
                                             color="secondary"
                                             width='47%'
                                             className='kl1_input'
+                                            onChange={(e)=>{setBoshqaDaromadQiymati(e.target.value)}}
                                         />
                                         <Input
                                             rounded
@@ -742,6 +767,7 @@ function KL1() {
                                             width='47%'
                                             type='number'
                                             className='kl1_input'
+                                            value={boshqaDaromadBirlikNarxi*boshqaDaromadHajmi}
                                         />
                                         <Textarea
                                             width='100%'
@@ -750,6 +776,7 @@ function KL1() {
                                             color="secondary"
                                             className='kl1_input'
                                             label='Izoh'
+                                            onChange={(e)=>{setBoshqaDaromadIzoh(e.target.value)}}
                                         />
                                     </div>
                                 </div>
@@ -1501,6 +1528,17 @@ function KL1() {
                     </Radio.Group>
                 </div>
             </div> 
+
+            <div className='submit-buttons'>
+                <button className='client_submit reset'>
+                    Formani tiklash
+                    <AiOutlineClear/>
+                </button>
+                <button type='submit' className='client_submit submit'>
+                    Formani qo'shish
+                    <AiOutlineUserAdd/>
+                </button>
+            </div>
         </section>
     )
 }

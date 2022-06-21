@@ -543,7 +543,7 @@ function Transport() {
                         <AiOutlineClear/>
                     </button>
                     <button type='submit' className='client_submit submit'>
-                        Clientni qo'shish
+                        Ta'minotni qo'shish
                         <AiOutlineUserAdd/>
                     </button>
                 </div>

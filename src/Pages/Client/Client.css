@@ -117,9 +117,8 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    height: 40px;
+    padding: 10px 20px;
     font-size: 17px;
-    width: 200px;
     color: white;
     border-radius: 7px;
     cursor: pointer;    

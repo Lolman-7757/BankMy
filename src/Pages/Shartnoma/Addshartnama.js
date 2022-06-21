@@ -244,7 +244,7 @@ function Addshartnama() {
                     <AiOutlineClear/>
                 </button>
                 <button type='submit' className='client_submit submit'>
-                    Clientni qo'shish
+                    Shartnomani qo'shish
                     <AiOutlineUserAdd/>
                 </button>
             </div>

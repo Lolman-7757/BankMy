@@ -69,21 +69,17 @@ function Filial() {
             <div className='filial_table_block'>
             <ul className='filial_table'>
                 <li className='filial_table_header'>
-                    <div>Qisqa nomi</div>
-                    <div>Shartnoma</div>
-                    <div>Qo`mita</div>
-                    <div>Raqam</div>
-                    <div>Kredit Cheklash</div>
+                    <p>Qisqa nomi</p>
+                    <p>Mansil</p>
+                    <p>Shahar</p>
                 </li>
                 {
                     currentFilial.map((item,index)=>{
-                        return <li key={index}>
-                            <div className=''>{item.short_name}</div>
-                            <div className=''>{item.contract}</div>
-                            <div className=''>{item.committee}</div>
-                            <div className=''>{item.phone}</div>
-                            <div className=''>{item.limit_credit}</div>
-                            <div className=''>
+                        return <li key={index} className='filial_table_products'>
+                            <p className='filial_table_product'>{item.short_name}</p>
+                            <p className='filial_table_product'>{item.contract}</p>
+                            <p className='filial_table_product'>{item.committee}</p>
+                            <div className='filial_table_product'>
                                 <button><i className='bx bx-trash'></i></button>
                                 <button><i className='bx bx-edit-alt'></i></button>
                                 {/* <button><i className='bx bx-trash'></i></button> */}

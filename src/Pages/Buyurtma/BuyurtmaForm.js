@@ -173,7 +173,7 @@ function BuyurtmaForm() {
                         <AiOutlineClear/>
                     </button>
                     <button className='client_submit submit'>
-                        Clientni qo'shish
+                        Buyurtmani qo'shish
                         <AiOutlineFileAdd/>
                     </button>
                 </div>
