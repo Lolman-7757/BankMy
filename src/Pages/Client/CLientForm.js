@@ -3,10 +3,28 @@ import { Input, Radio } from '@nextui-org/react';
 import {  AiOutlineClear, AiOutlineUserAdd, AiOutlineRollback } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
-
 import './Client.css'
+import '../../assets/datepicker.css'
+import ReactDatePicker, { registerLocale } from "react-datepicker";
+import uz from "date-fns/locale/uz"; 
+
+import DatePicker from "react-multi-date-picker"
+
 
 function CLientForm() {
+  // Multi DatePicker Configure
+
+  const data = [ '06/22/2022','06/23/2022','06/24/2022','06/25/2022' ]
+
+  newData = data.map((data)=> new Date(data))
+  console.log(newData[0].getDate());
+  const [values, setValues] = useState(newData)
+  const [startDate, setStartDate] = useState();
+  const [ dateData, setDateData ] = useState(newData)
+
+  // DatePicker Configure
+  registerLocale("uz", uz);
+
   const [ code, setCode ] = useState(null),
   [ name, setName ] = useState(null),
   [ birth, setBirth ] = useState(null),
@@ -111,6 +129,25 @@ function CLientForm() {
             </div>
           </div>
               <form className='clientform_form' onSubmit={(event)=>insertData(event)}>
+              <DatePicker
+                className=''
+                multiple
+                value={values} 
+                onChange={(event)=>{console.log(values);}}
+                format="DD.MM.YYYY"
+              />
+                <div className='datepicker_wrapper'>
+                  <ReactDatePicker
+                    todayButton="Bugun"
+                    className='datepicker'
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    excludeDates={newData}
+                    placeholderText='hi'
+                    dateFormat="dd.MM.yyyy"
+                    locale="uz"
+                  />
+                </div>
                 <label className='clientform_gender'>
                   <p>Jinsi</p>
                   <Radio.Group aria-label='Пол' color='secondary' value={true} size='sm' className='clientform_gender_radio' onChange={(event)=>console.log(event)}>
