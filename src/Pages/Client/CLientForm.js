@@ -16,7 +16,7 @@ function CLientForm() {
 
   const data = [ '06/22/2022','06/23/2022','06/24/2022','06/25/2022' ]
 
-  newData = data.map((data)=> new Date(data))
+  let newData = data.map((data)=> new Date(data))
   console.log(newData[0].getDate());
   const [values, setValues] = useState(newData)
   const [startDate, setStartDate] = useState();

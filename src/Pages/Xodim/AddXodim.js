@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
 // Styles
 import './Xodim.css'
@@ -35,97 +35,118 @@ function AddXodim() {
         }
     }
 
+    // WARNING MODALKA
+    const [resetWarning, setResetWarning] = useState('warning_reset_main close')
 
+    function openReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main open')
+    }
+    function closeReset(e){
+        e.preventDefault()
+        setResetWarning('warning_reset_main close')
+    }
 
     return (
-        <section className='xodimform'>
-            <div className='xodimform_header'>
-                <h1>Xodim Yaratish</h1>
-                <Link to='/xodim' className='clientform_back'>
-                    <AiOutlineRollback/>
-                    Orqaga
-                </Link>
+        <>
+        {/* Reset Warning */}
+        <div className={resetWarning}>
+            <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
+            <div >
+            <button onClick={closeReset}>Haa</button>
+            <button onClick={closeReset}>Yoq</button>
             </div>
-            <form className='xodimform_form'>
-                <h1 className='xodimform_title'>Shakllarni To'ldiring:</h1>
-                <div className='xodim_selectform'>
-                    <p>Filiali</p>
-                    <Select
-                    width='100%'
-                    defaultValue={options[0]}
-                    options={options}
-                    className='xodim_select'
-                    styles={customStyles}
-                    theme={(theme) => ({
-                        ...theme,
-                        borderRadius: 12,
-                        colors: {
-                        ...theme.colors,
-                        primary25: 'rgb(216,215,215)',
-                        primary: '#7828c8',
-                        },
-                    })}
+        </div>
+
+            <section className='xodimform'>
+                <div className='xodimform_header'>
+                    <h1>Xodim Yaratish</h1>
+                    <Link to='/xodim' className='clientform_back'>
+                        <AiOutlineRollback/>
+                        Orqaga
+                    </Link>
+                </div>
+                <form className='xodimform_form'>
+                    <h1 className='xodimform_title'>Shakllarni To'ldiring:</h1>
+                    <div className='xodim_selectform'>
+                        <p>Filiali</p>
+                        <Select
+                        width='100%'
+                        defaultValue={options[0]}
+                        options={options}
+                        className='xodim_select'
+                        styles={customStyles}
+                        theme={(theme) => ({
+                            ...theme,
+                            borderRadius: 12,
+                            colors: {
+                            ...theme.colors,
+                            primary25: 'rgb(216,215,215)',
+                            primary: '#7828c8',
+                            },
+                        })}
+                        />
+                    </div>
+                    <div className='xodim_selectform'>
+                        <p>Bo'limi</p>
+                        <Select
+                        width='100%'
+                        defaultValue={bolimlar[0]}
+                        options={bolimlar}
+                        className='xodim_select'
+                        styles={customStyles}
+                        theme={(theme) => ({
+                            ...theme,
+                            borderRadius: 12,
+                            colors: {
+                            ...theme.colors,
+                            primary25: 'rgb(216,215,215)',
+                            primary: '#7828c8',
+                            },
+                        })}
+                        />
+                    </div>
+                    <Input
+                        width='100%'
+                        clearable
+                        bordered
+                        label="Ismi"
+                        placeholder='Name'
+                        className='xodim_input'
+                        color="secondary"
                     />
-                </div>
-                <div className='xodim_selectform'>
-                    <p>Bo'limi</p>
-                    <Select
-                    width='100%'
-                    defaultValue={bolimlar[0]}
-                    options={bolimlar}
-                    className='xodim_select'
-                    styles={customStyles}
-                    theme={(theme) => ({
-                        ...theme,
-                        borderRadius: 12,
-                        colors: {
-                        ...theme.colors,
-                        primary25: 'rgb(216,215,215)',
-                        primary: '#7828c8',
-                        },
-                    })}
+                    <Input
+                        width='100%'
+                        clearable
+                        bordered
+                        label="Lavozim"
+                        placeholder='Bank'
+                        className='xodim_input'
+                        color="secondary"
                     />
-                </div>
-                <Input
-                    width='100%'
-                    clearable
-                    bordered
-                    label="Ismi"
-                    placeholder='Name'
-                    className='xodim_input'
-                    color="secondary"
-                />
-                <Input
-                    width='100%'
-                    clearable
-                    bordered
-                    label="Lavozim"
-                    placeholder='Bank'
-                    className='xodim_input'
-                    color="secondary"
-                />
-                <Input
-                    width='100%'
-                    clearable
-                    bordered
-                    label="Code"
-                    type='number'
-                    placeholder="1234567"
-                    className='xodim_input'
-                    color="secondary"
-                />
-                <div className='xodim_buttons'>
-                    <button className='client_submit reset'>
-                        Formani tiklash
-                        <AiOutlineClear/>
-                    </button>
-                    <button type='submit' className='client_submit submit'>
-                        Xodimni qo'shish
-                        <AiOutlineUserAdd/>
-                    </button>
-                </div>
-            </form>
-        </section>
+                    <Input
+                        width='100%'
+                        clearable
+                        bordered
+                        label="Code"
+                        type='number'
+                        placeholder="1234567"
+                        className='xodim_input'
+                        color="secondary"
+                    />
+                    <div className='xodim_buttons'>
+                        <button className='client_submit reset' onClick={openReset}>
+                            Formani tiklash
+                            <AiOutlineClear/>
+                        </button>
+                        <button type='submit' className='client_submit submit'>
+                            Xodimni qo'shish
+                            <AiOutlineUserAdd/>
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </>
     )
 }
 
