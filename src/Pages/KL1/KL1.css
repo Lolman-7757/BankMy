@@ -10,6 +10,7 @@
 .kl1_title{
     font-size: 1.2rem;
     font-weight: 700;
+    text-align: center;
 }
 .kl1_subtitle{
     width: 100%;
@@ -24,6 +25,9 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+}
+.kl1_tabs_main{
+    margin-top: 25px;
 }
 .kl1_input{
     margin-bottom: 10px;

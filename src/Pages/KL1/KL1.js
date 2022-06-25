@@ -7,6 +7,12 @@ import { ContentCutOutlined } from '@mui/icons-material'
 import { color } from '@mui/system'
 // Icons
 import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
+// tabs
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 
 import './KL1.css'
 
@@ -37,8 +43,14 @@ function KL1() {
     const [mavsumiyXarajats, setMavsumiyXarajats] = useState([{}])
     const [biznesXarajats, setBiznesXarajats] = useState([{}])
 
-    // visibility
 
+    // TABS
+    const [value, setValue] = React.useState('1');
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    // visibility
     const [viewMavsumiy, setviewMavsumiy] = useState('kl1_mavsumiy_daromad close')
     const [viewBiznes, setviewBiznes] = useState('kl1_mavsumiy_daromad close')
 
@@ -256,6 +268,7 @@ function KL1() {
     }
 
 
+
     return (
         <>
         {/* Reset Warning */}
@@ -271,224 +284,236 @@ function KL1() {
                 <div className='kl1_title'>
                 <h1>Kreditga layoqatilikni baholash varaqasi </h1>
                 </div>
+    <div className='kl1_tabs_main'>
+        <Box sx={{ width: '100%', typography: 'body1' }}>
+            <TabContext value={value}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                <TabList
+                onChange={handleChange}
+                aria-label="lab API tabs example"
+                variant="scrollable"
+                scrollButtons="auto">
+                    <Tab label="Shaxsiy ma'lumot" value="1" />
+                    <Tab label="Birinchi qism" value="2" />
+                    <Tab label="Daromad/Xarajat(boshqa)" value="3" />
+                    <Tab label="Daromad/Xarajat(mavsumiy)" value="4" />
+                    <Tab label="Daromad/Xarajat(biznes)" value="5" />
+                    <Tab label="Oltinchi qism" value="6" />
+                    <Tab label="Yettinchi qism" value="7" />
+                    <Tab label="Jadvali" value="8" />
+                </TabList>
+                </Box>
                 <div className='kl1_content'>
-                    <Input
-                    rounded
-                    bordered
-                    label='Hujjat tayyorlangan sana'
-                    type='date'
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Mijoz tekshirilgan va organilgan sana'
-                    type='date'
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Buyurtmachining F.I.Sh'
-                    initialValue="Usmonova Muyassar Abduvalievna"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Doimiy yashash manzili'
-                    initialValue="Sirdariyo viloyati Guliston shahri Begmatov jochasi 46-uy 10-xonadon"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Vaqtinchalik yashash manzili'
-                    initialValue="Royihatga olingan manzili boyicha istiqomat qiladi"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='JSh ShIR'
-                    initialValue="41-3077-9287-0060"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Buyurtmachining telefon raqami'
-                    labelLeft='+998'
-                    initialValue="90 995 59 90"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Kredit maqsadi'
-                    initialValue="Aylanma mablag'larini to'ldirish -Moy almashtirish va moylash materiallari, filtr sotib olish"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Soralayotgan kredit miqdori'
-                    initialValue="20 000 000 сум"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    readOnly
-                    />
-                    <h2 className='kl1_subtitle'>Buyurtmachining oilaviy sharoitini organish natijalari</h2>
-                    <Input
-                    rounded
-                    bordered
-                    label='Oila azolar soni'
-                    placeholder="5"
-                    color="secondary"
-                    width='100%'
-                    type='number'
-                    className='kl1_input'
-                    />
-                    <p className='kl1_formtitle'>Birgalikda istiqomat qiluvchilar</p>
-                    {
-                        familyMem.map((familyMember,familyMemberId)=>(
-                            <div className='kl1_product' key={familyMemberId}>
-                                <Input
-                                rounded
-                                bordered
-                                label='Istiqomat qiluvchi'
-                                placeholder="Otasi"
-                                color="secondary"
-                                width='90%'
-                                className='kl1_input'
-                                />
-                                <button
-                                className='kl1_delete_button'
-                                onClick={() => deleteFamilyMember(familyMemberId)}
-                                >
-                                    <i className='bx bx-trash'></i>
-                                </button>
-                            </div>
-                        ))
-                    }
-                    <div className='margin_bottom20'>
-                        <button
-                        className='kl1_add_button'
-                        onClick={()=>{addFamilyMember()}}
-                        >
-                            Istiqomat qiluvchi qoshish
-                        </button>
-                    </div>
-                    <Textarea
-                    width='100%'
-                    bordered
-                    rounded
-                    color="secondary"
-                    className='kl1_input'
-                    label='Oila azolari bilan suhbat davomida aniqlangan muhim malumotlar'
-                    placeholder='Buyurtmachining va oilaning byudjeti bitta'
-                    />
-                    <p className='kl1_formtitle'>Buyurtmachining boshqa mulklari</p>
-                    {
-                        mulkItem.map((mulk,mulkId)=>(
-                            <div className='kl1_product' key={mulkId}>
-                                <Input
-                                rounded
-                                bordered
-                                label='Mulk nomi'
-                                placeholder="Damas"
-                                color="secondary"
-                                width='90%'
-                                className='kl1_input'
-                                />
-                                <button
-                                className='kl1_delete_button'
-                                onClick={() => deleteMulkItem(mulkId)}
-                                >
-                                    <i className='bx bx-trash'></i>
-                                </button>
-                            </div>
-                        ))
-                    }
-                    <div className='margin_bottom20'>
-                        <button
-                        className='kl1_add_button'
-                        onClick={()=>{addMulkItem()}}
-                        >
-                            Mulkni qoshish
-                        </button>
-                    </div>
-                    <Textarea
-                    width='100%'
-                    bordered
-                    rounded
-                    color="secondary"
-                    className='kl1_input'
-                    label='Yashash sharoiti'
-                    placeholder='Yashash sharoiti ortacha. Uy 3 ta yotoqxona, oshxona, mehmonxona va hammomdan iborat. Uy tamiri orta darajada. Uy otasini nomida. Xovlining umumiy maydoni 6 sotix. Tomorqada 10 dan ortiq mevali daraxtlar bor. Shuningdek, uy xojaligini oz ehtiyojlari uchun pomidor, bodring, qalampir, baqlajon ekilgan.'
-                    />
-                    <h2 className='kl1_subtitle'>Buyurtmachining faoliyati va daromad  manbalarini organish natijalari</h2>
-                    <Textarea
-                    width='100%'
-                    bordered
-                    rounded
-                    color="secondary"
-                    className='kl1_input'
-                    label='Buyurtmachining faoliyat turi'
-                    placeholder='Savdo-transport vositalari uchun moy sotadi. Savdo bolmaydigan kunlari va har kuni soat 16:00 dan 21:00 gacha Yandeks Taksida taksichilik qiladi.'
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Faoliyat manzili'
-                    placeholder="Sergeli ehtiyot qismlari bozori, C blok, 19-do'kon"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Faoliyat joyi (shaxsiy / ijara / boshqa)'
-                    placeholder="Ijara"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    />
-                    <Input
-                    rounded
-                    bordered
-                    label='Ushbu sohada foliyat yuritish davomiyligi'
-                    placeholder="3yildan oshiq"
-                    color="secondary"
-                    width='100%'
-                    className='kl1_input'
-                    />
-
-                    <div className='kl1_daromad_part'>
+                    <TabPanel value="1">
+                        <Input
+                        rounded
+                        bordered
+                        label='Hujjat tayyorlangan sana'
+                        type='date'
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Mijoz tekshirilgan va organilgan sana'
+                        type='date'
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Buyurtmachining F.I.Sh'
+                        initialValue="Usmonova Muyassar Abduvalievna"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Doimiy yashash manzili'
+                        initialValue="Sirdariyo viloyati Guliston shahri Begmatov jochasi 46-uy 10-xonadon"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Vaqtinchalik yashash manzili'
+                        initialValue="Royihatga olingan manzili boyicha istiqomat qiladi"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='JSh ShIR'
+                        initialValue="41-3077-9287-0060"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Buyurtmachining telefon raqami'
+                        labelLeft='+998'
+                        initialValue="90 995 59 90"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Kredit maqsadi'
+                        initialValue="Aylanma mablag'larini to'ldirish -Moy almashtirish va moylash materiallari, filtr sotib olish"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Soralayotgan kredit miqdori'
+                        initialValue="20 000 000 сум"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        readOnly
+                        />
+                    </TabPanel>
+                    <TabPanel value="2">
+                        <h2 className='kl1_subtitle'>Buyurtmachining oilaviy sharoitini organish natijalari</h2>
+                        <p className='kl1_formtitle'>Birgalikda istiqomat qiluvchilar</p>
+                        {
+                            familyMem.map((familyMember,familyMemberId)=>(
+                                <div className='kl1_product' key={familyMemberId}>
+                                    <Input
+                                    rounded
+                                    bordered
+                                    label='Istiqomat qiluvchi'
+                                    placeholder="Otasi"
+                                    color="secondary"
+                                    width='90%'
+                                    className='kl1_input'
+                                    />
+                                    <button
+                                    className='kl1_delete_button'
+                                    onClick={() => deleteFamilyMember(familyMemberId)}
+                                    >
+                                        <i className='bx bx-trash'></i>
+                                    </button>
+                                </div>
+                            ))
+                        }
+                        <div className='margin_bottom20'>
+                            <button
+                            className='kl1_add_button'
+                            onClick={()=>{addFamilyMember()}}
+                            >
+                                Istiqomat qiluvchi qoshish
+                            </button>
+                        </div>
+                        <Textarea
+                        width='100%'
+                        bordered
+                        rounded
+                        color="secondary"
+                        className='kl1_input'
+                        label='Oila azolari bilan suhbat davomida aniqlangan muhim malumotlar'
+                        placeholder='Buyurtmachining va oilaning byudjeti bitta'
+                        />
+                        <p className='kl1_formtitle'>Buyurtmachining boshqa mulklari</p>
+                        {
+                            mulkItem.map((mulk,mulkId)=>(
+                                <div className='kl1_product' key={mulkId}>
+                                    <Input
+                                    rounded
+                                    bordered
+                                    label='Mulk nomi'
+                                    placeholder="Damas"
+                                    color="secondary"
+                                    width='90%'
+                                    className='kl1_input'
+                                    />
+                                    <button
+                                    className='kl1_delete_button'
+                                    onClick={() => deleteMulkItem(mulkId)}
+                                    >
+                                        <i className='bx bx-trash'></i>
+                                    </button>
+                                </div>
+                            ))
+                        }
+                        <div className='margin_bottom20'>
+                            <button
+                            className='kl1_add_button'
+                            onClick={()=>{addMulkItem()}}
+                            >
+                                Mulkni qoshish
+                            </button>
+                        </div>
+                        <Textarea
+                        width='100%'
+                        bordered
+                        rounded
+                        color="secondary"
+                        className='kl1_input'
+                        label='Yashash sharoiti'
+                        placeholder='Yashash sharoiti ortacha. Uy 3 ta yotoqxona, oshxona, mehmonxona va hammomdan iborat. Uy tamiri orta darajada. Uy otasini nomida. Xovlining umumiy maydoni 6 sotix. Tomorqada 10 dan ortiq mevali daraxtlar bor. Shuningdek, uy xojaligini oz ehtiyojlari uchun pomidor, bodring, qalampir, baqlajon ekilgan.'
+                        />
+                        <h2 className='kl1_subtitle'>Buyurtmachining faoliyati va daromad  manbalarini organish natijalari</h2>
+                        <Textarea
+                        width='100%'
+                        bordered
+                        rounded
+                        color="secondary"
+                        className='kl1_input'
+                        label='Buyurtmachining faoliyat turi'
+                        placeholder='Savdo-transport vositalari uchun moy sotadi. Savdo bolmaydigan kunlari va har kuni soat 16:00 dan 21:00 gacha Yandeks Taksida taksichilik qiladi.'
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Faoliyat manzili'
+                        placeholder="Sergeli ehtiyot qismlari bozori, C blok, 19-do'kon"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Faoliyat joyi (shaxsiy / ijara / boshqa)'
+                        placeholder="Ijara"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        />
+                        <Input
+                        rounded
+                        bordered
+                        label='Ushbu sohada foliyat yuritish davomiyligi'
+                        placeholder="3yildan oshiq"
+                        color="secondary"
+                        width='100%'
+                        className='kl1_input'
+                        />
+                    </TabPanel>
+                    <TabPanel value="3">
                         <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
                         <div className='kl1_radio'>
                             <Checkbox size='sm' color='secondary' defaultValue={false} onChange={(e)=>{
@@ -509,16 +534,15 @@ function KL1() {
                             }}>Mavsumiy daromadlar</Checkbox>
                             <Checkbox size='sm' className='kl1_radio_checkbox' color='secondary' defaultSelected={true}>Boshqa daromadlar</Checkbox>
                         </div>
-                        <div className={viewBiznes}>
-                            <p className='kl1_formtitle'>Biznes daromadlar turi</p>
 
-                            {
-                                biznesDaromads?.map((item,index)=>{
-                                    return(
-                                    <div className='kl1_products'>
+                        <p className='kl1_formtitle'>Boshqa daromad turlari shuningdek passiv daromadlar</p>
+                        {
+                            myDaromads?.map((item,index)=>{
+                                return(
+                                    <div className='kl1_products' key={index}>
                                         <div className='kl1_product_title'>
-                                        Biznes daromad {index +1}
-                                            <button className='kl1_delete_button' onClick={()=>{deleteBiznesDaromad(index)}}><i className='bx bx-trash'></i></button>
+                                            Daromad {index + 1}
+                                            <button className='kl1_delete_button' onClick={()=>{deleteMyDaromad(index)}}><i className='bx bx-trash'></i></button>
                                         </div>
                                         <div className='kl1_product'>
                                             <Input
@@ -528,41 +552,71 @@ function KL1() {
                                                 color="secondary"
                                                 width='100%'
                                                 className='kl1_input'
+                                                onChange={(e)=>{
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].nomi = e.target.value
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
                                             />
                                             <Input
                                                 rounded
                                                 bordered
-                                                label='Oylik hajm'
+                                                label='Hajmi'
+                                                color="secondary"
+                                                type='number'
+                                                width='47%'
+                                                className='kl1_input'
+                                                onChange={(e)=>{
+                                                    setBoshqaDaromadHajmi(e.target.value)
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].oylik = (e.target.value)*boshqaDaromadBirlikNarxi
+                                                    newBoshqaDaromads[index].hajmi = e.target.value
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
+                                            />
+                                            <Input
+                                                rounded
+                                                bordered
+                                                label='Birlik narxi'
+                                                type='number'
                                                 color="secondary"
                                                 width='47%'
                                                 className='kl1_input'
+                                                onChange={(e)=>{
+                                                    setBoshqaDaromadBirlikNarxi(e.target.value)
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].birlikNarxi = e.target.value
+                                                    newBoshqaDaromads[index].oylik = (e.target.value)*boshqaDaromadHajmi
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
                                             />
                                             <Input
                                                 rounded
                                                 bordered
-                                                label='1 birlikning o`rtacha sotish naxri'
+                                                label='Qiymati'
+                                                color="secondary"
+                                                width='47%'
+                                                className='kl1_input'
+                                                onChange={(e)=>{
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].qiymati = e.target.value
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
+                                            />
+                                            <Input
+                                                rounded
+                                                bordered
+                                                label='Oylik daromad'
                                                 color="secondary"
                                                 width='47%'
                                                 type='number'
                                                 className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='O`rtacha ustamasi % da'
-                                                color="secondary"
-                                                width='47%'
-                                                type='number'
-                                                className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Bir oylik daromad'
-                                                color="secondary"
-                                                width='47%'
-                                                type='number'
-                                                className='kl1_input'
+                                                value={myDaromads[index].oylik}
+                                                onChange={(e)=>{
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].oylik = e.target.value
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
                                             />
                                             <Textarea
                                                 width='100%'
@@ -571,21 +625,103 @@ function KL1() {
                                                 color="secondary"
                                                 className='kl1_input'
                                                 label='Izoh'
+                                                onChange={(e)=>{
+                                                    const newBoshqaDaromads = [...myDaromads]
+                                                    newBoshqaDaromads[index].izoh = e.target.value
+                                                    setMyDaromads(newBoshqaDaromads)
+                                                }}
                                             />
                                         </div>
                                     </div>
+                                )
+                            })
+                        }
+                        <div className='kl1_product_footer'>
+                            <button className='kl1_add_button' onClick={()=>{addMyDaromad()}}>
+                                Daromad qoshish
+                            </button>
+                            <p className='kl1_jami'>JAMI: {getTotalSum()} so`m</p>
+                        </div>
+                            <p className='kl1_jami_main'>Jami o`rtacha oylik daromadlari: {getTotalSum()} so`m</p>
+                    
+                        <div className='kl1_daromad_part'>
+                            <p className='kl1_formtitle'>Boshqa xarajatlar turi</p>
+                            {
+                                myXarajats?.map((item,index)=>{
+                                    return(
+                                        <div className='kl1_products' key={index}>
+                                            <div className='kl1_product_title'>
+                                                Xarajat {index + 1}
+                                                <button className='kl1_delete_button' onClick={()=>{deleteMyXarajat(index)}}><i className='bx bx-trash'></i></button>
+                                            </div>
+                                            <div className='kl1_product'>
+                                                <Input
+                                                    rounded
+                                                    bordered
+                                                    label='Xarajat nomi'
+                                                    color="secondary"
+                                                    width='100%'
+                                                    className='kl1_input'
+                                                />
+                                                <Input
+                                                    rounded
+                                                    bordered
+                                                    label='Hajmi'
+                                                    color="secondary"
+                                                    width='47%'
+                                                    className='kl1_input'
+                                                />
+                                                <Input
+                                                    rounded
+                                                    bordered
+                                                    label='Narxi'
+                                                    type='number'
+                                                    color="secondary"
+                                                    width='47%'
+                                                    className='kl1_input'
+                                                />
+                                                <Input
+                                                    rounded
+                                                    bordered
+                                                    label='Qiymati'
+                                                    color="secondary"
+                                                    width='47%'
+                                                    className='kl1_input'
+                                                />
+                                                <Input
+                                                    rounded
+                                                    bordered
+                                                    label='Oylik xarajat'
+                                                    color="secondary"
+                                                    width='47%'
+                                                    type='number'
+                                                    className='kl1_input'
+                                                />
+                                                <Textarea
+                                                    width='100%'
+                                                    bordered
+                                                    rounded
+                                                    color="secondary"
+                                                    className='kl1_input'
+                                                    label='Izoh'
+                                                />
+                                            </div>
+                                        </div>
                                     )
                                 })
                             }
                             <div className='kl1_product_footer'>
-                                <button className='kl1_add_button' onClick={()=>{addBiznesDaromad()}}>
-                                    Biznes daromad qoshish
+                                <button className='kl1_add_button' onClick={()=>{addMyXarajat()}}>
+                                    Xarajat qoshish
                                 </button>
-                                <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>  
+                                <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>
                             </div>
+                                <p className='kl1_jami_main'>Jami o`rtacha oylik xarajatlari: {'10 000 000'} so`m</p>
                         </div>
 
-                        <div className={viewMavsumiy}>
+                    </TabPanel>
+                    <TabPanel value="4">
+                    <div className={viewMavsumiy}>
                             <p className='kl1_formtitle'>Mavsumiy daromad turi, manbasi va faoliyat joyi</p>
                         {
                         mavsumiyDaromads?.map((item,index)=>{
@@ -748,122 +884,252 @@ function KL1() {
                                 className='kl1_input'
                                 type='number'
                             />
-
                         </div>
                     </div>
 
-                        <p className='kl1_formtitle'>Boshqa daromad turlari shuningdek passiv daromadlar</p>
+                    <div className={viewMavsumiy}>
+                            <p className='kl1_formtitle'>Mavsumiy xarajatlar</p>
+                    {
+                        mavsumiyXarajats?.map((item,index)=>{
+                            return(
+                            <div className='kl1_products'>
+                                <div className='kl1_product_title'>
+                                Mavsumiy xarajat {index +1}
+                                    <button className='kl1_delete_button' onClick={()=>{deleteMavsumiyXarajat(index)}}><i className='bx bx-trash'></i></button>
+                                </div>
+                                <div className='kl1_product'>
+                                    <Input
+                                        rounded
+                                        bordered
+                                        label='Xarajat nomi'
+                                        color="secondary"
+                                        width='47%'
+                                        className='kl1_input'
+                                    />
+                                    <Input
+                                        rounded
+                                        bordered
+                                        label='Yillik xarajat hajmi'
+                                        color="secondary"
+                                        width='47%'
+                                        type='number'
+                                        className='kl1_input'
+                                    />
+                                </div>
+                            </div>
+
+                            )
+                        })
+                    }
+                    <div className='kl1_product_footer'>
+                        <button className='kl1_add_button' onClick={()=>{addMavsumiyXarajat()}}>
+                        Mavsumiy xarajat qoshish
+                        </button>
+                        <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>
+                    </div>
+                    
+                    <p className='kl1_formtitle'>Mavsumiy xarajatlarning oylar bo'yicha taqsimlanishi</p>
+                    <div className='kl1_calendar'>
+                        <Input
+                            rounded
+                            bordered
+                            label='Yanvar'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Febral'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Mart'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Aprel'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='May'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Iyun'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Iyul'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Avgust'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Sentabr'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Oktabr'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Noyabr'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            label='Dekabr'
+                            placeholder='1 000 000'
+                            color="secondary"
+                            width='23%'
+                            className='kl1_input'
+                            type='number'
+                        />
+                        
+                        </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel value="5">
+                    <div className={viewBiznes}>
+                        <p className='kl1_formtitle'>Biznes daromadlar turi</p>
+
                         {
-                            myDaromads?.map((item,index)=>{
+                            biznesDaromads?.map((item,index)=>{
                                 return(
-                                    <div className='kl1_products' key={index}>
-                                        <div className='kl1_product_title'>
-                                            Daromad {index + 1}
-                                            <button className='kl1_delete_button' onClick={()=>{deleteMyDaromad(index)}}><i className='bx bx-trash'></i></button>
-                                        </div>
-                                        <div className='kl1_product'>
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Daromad nomi'
-                                                color="secondary"
-                                                width='100%'
-                                                className='kl1_input'
-                                                onChange={(e)=>{
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].nomi = e.target.value
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Hajmi'
-                                                color="secondary"
-                                                type='number'
-                                                width='47%'
-                                                className='kl1_input'
-                                                onChange={(e)=>{
-                                                    setBoshqaDaromadHajmi(e.target.value)
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].oylik = (e.target.value)*boshqaDaromadBirlikNarxi
-                                                    newBoshqaDaromads[index].hajmi = e.target.value
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Birlik narxi'
-                                                type='number'
-                                                color="secondary"
-                                                width='47%'
-                                                className='kl1_input'
-                                                onChange={(e)=>{
-                                                    setBoshqaDaromadBirlikNarxi(e.target.value)
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].birlikNarxi = e.target.value
-                                                    newBoshqaDaromads[index].oylik = (e.target.value)*boshqaDaromadHajmi
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Qiymati'
-                                                color="secondary"
-                                                width='47%'
-                                                className='kl1_input'
-                                                onChange={(e)=>{
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].qiymati = e.target.value
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Oylik daromad'
-                                                color="secondary"
-                                                width='47%'
-                                                type='number'
-                                                className='kl1_input'
-                                                value={myDaromads[index].oylik}
-                                                onChange={(e)=>{
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].oylik = e.target.value
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                            <Textarea
-                                                width='100%'
-                                                bordered
-                                                rounded
-                                                color="secondary"
-                                                className='kl1_input'
-                                                label='Izoh'
-                                                onChange={(e)=>{
-                                                    const newBoshqaDaromads = [...myDaromads]
-                                                    newBoshqaDaromads[index].izoh = e.target.value
-                                                    setMyDaromads(newBoshqaDaromads)
-                                                }}
-                                            />
-                                        </div>
+                                <div className='kl1_products'>
+                                    <div className='kl1_product_title'>
+                                    Biznes daromad {index +1}
+                                        <button className='kl1_delete_button' onClick={()=>{deleteBiznesDaromad(index)}}><i className='bx bx-trash'></i></button>
                                     </div>
+                                    <div className='kl1_product'>
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Daromad nomi'
+                                            color="secondary"
+                                            width='100%'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Oylik hajm'
+                                            color="secondary"
+                                            width='47%'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='1 birlikning o`rtacha sotish naxri'
+                                            color="secondary"
+                                            width='47%'
+                                            type='number'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='O`rtacha ustamasi % da'
+                                            color="secondary"
+                                            width='47%'
+                                            type='number'
+                                            className='kl1_input'
+                                        />
+                                        <Input
+                                            rounded
+                                            bordered
+                                            label='Bir oylik daromad'
+                                            color="secondary"
+                                            width='47%'
+                                            type='number'
+                                            className='kl1_input'
+                                        />
+                                        <Textarea
+                                            width='100%'
+                                            bordered
+                                            rounded
+                                            color="secondary"
+                                            className='kl1_input'
+                                            label='Izoh'
+                                        />
+                                    </div>
+                                </div>
                                 )
                             })
                         }
                         <div className='kl1_product_footer'>
-                            <button className='kl1_add_button' onClick={()=>{addMyDaromad()}}>
-                                Daromad qoshish
+                            <button className='kl1_add_button' onClick={()=>{addBiznesDaromad()}}>
+                                Biznes daromad qoshish
                             </button>
-                            <p className='kl1_jami'>JAMI: {getTotalSum()} so`m</p>
+                            <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>  
                         </div>
-                            <p className='kl1_jami_main'>Jami o`rtacha oylik daromadlari: {getTotalSum()} so`m</p>
-                    </div>
-
-                    <div className='kl1_daromad_part'>
-                        <h2 className='kl1_subtitle'>Buyurtmachining xarajatlari</h2>
+                        </div>
                         
                         <div className={viewBiznes}>
                             <p className='kl1_formtitle'>Biznes uchun xarajatlar</p>
@@ -940,248 +1206,8 @@ function KL1() {
                                 <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>
                             </div>
                         </div>
-
-                        <div className={viewMavsumiy}>
-                            <p className='kl1_formtitle'>Mavsumiy xarajatlar</p>
-                    {
-                        mavsumiyXarajats?.map((item,index)=>{
-                            return(
-                            <div className='kl1_products'>
-                                <div className='kl1_product_title'>
-                                Mavsumiy xarajat {index +1}
-                                    <button className='kl1_delete_button' onClick={()=>{deleteMavsumiyXarajat(index)}}><i className='bx bx-trash'></i></button>
-                                </div>
-                                <div className='kl1_product'>
-                                    <Input
-                                        rounded
-                                        bordered
-                                        label='Xarajat nomi'
-                                        color="secondary"
-                                        width='47%'
-                                        className='kl1_input'
-                                    />
-                                    <Input
-                                        rounded
-                                        bordered
-                                        label='Yillik xarajat hajmi'
-                                        color="secondary"
-                                        width='47%'
-                                        type='number'
-                                        className='kl1_input'
-                                    />
-                                </div>
-                            </div>
-
-                            )
-                        })
-                    }
-                    <div className='kl1_product_footer'>
-                        <button className='kl1_add_button' onClick={()=>{addMavsumiyXarajat()}}>
-                        Mavsumiy xarajat qoshish
-                        </button>
-                        <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>
-                    </div>
-                </div>
-                    
-                        <p className='kl1_formtitle'>Mavsumiy xarajatlarning oylar bo'yicha taqsimlanishi</p>
-                        <div className='kl1_calendar'>
-                            <Input
-                                rounded
-                                bordered
-                                label='Yanvar'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Febral'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Mart'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Aprel'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='May'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Iyun'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Iyul'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Avgust'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Sentabr'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Oktabr'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Noyabr'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-                            <Input
-                                rounded
-                                bordered
-                                label='Dekabr'
-                                placeholder='1 000 000'
-                                color="secondary"
-                                width='23%'
-                                className='kl1_input'
-                                type='number'
-                            />
-
-                        </div>
-                    </div>
-
-                        <p className='kl1_formtitle'>Boshqa xarajatlar turi</p>
-                        {
-                            myXarajats?.map((item,index)=>{
-                                return(
-                                    <div className='kl1_products' key={index}>
-                                        <div className='kl1_product_title'>
-                                            Xarajat {index + 1}
-                                            <button className='kl1_delete_button' onClick={()=>{deleteMyXarajat(index)}}><i className='bx bx-trash'></i></button>
-                                        </div>
-                                        <div className='kl1_product'>
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Xarajat nomi'
-                                                color="secondary"
-                                                width='100%'
-                                                className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Hajmi'
-                                                color="secondary"
-                                                width='47%'
-                                                className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Narxi'
-                                                type='number'
-                                                color="secondary"
-                                                width='47%'
-                                                className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Qiymati'
-                                                color="secondary"
-                                                width='47%'
-                                                className='kl1_input'
-                                            />
-                                            <Input
-                                                rounded
-                                                bordered
-                                                label='Oylik xarajat'
-                                                color="secondary"
-                                                width='47%'
-                                                type='number'
-                                                className='kl1_input'
-                                            />
-                                            <Textarea
-                                                width='100%'
-                                                bordered
-                                                rounded
-                                                color="secondary"
-                                                className='kl1_input'
-                                                label='Izoh'
-                                            />
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                        <div className='kl1_product_footer'>
-                            <button className='kl1_add_button' onClick={()=>{addMyXarajat()}}>
-                                Xarajat qoshish
-                            </button>
-                            <p className='kl1_jami'>JAMI: {'10 000 000'} so`m</p>
-                        </div>
-                            <p className='kl1_jami_main'>Jami o`rtacha oylik xarajatlari: {'10 000 000'} so`m</p>
-                    
+                    </TabPanel>
+                    <TabPanel value="6">
 
                     <h2 className='kl1_subtitle'>Oilaviy daromadlar va xarajatlar (Uy xo'jaligining daromad va xarajatlari)</h2>
                     <p className='kl1_formtitle'>Oila azolarining daromadlar , shuningdek uy xojaligining boshqa daromadlari</p>
@@ -1380,125 +1406,129 @@ function KL1() {
                     </div>
                     <p className='kl1_jami'>Uy xojaligi byudjetining ortacha oylik ortiqcha mablagi yoki kamomadi miqdori: {'10 000 000'} so`m</p>
                     
-                    <h2 className='kl1_subtitle'>Buyurtmachining mavjud kredit va qarz majburiyatlari</h2>
-                    {
-                        familyMavjud.map((familyMavjud,familyMavjudId)=>(
-                            <div className='kl1_products' key={familyMavjudId}>
-                                <div className='kl1_product_title'>
-                                    Mavjud malumot {familyMavjudId+1}
-                                    <button
-                                    className='kl1_delete_button'
-                                    onClick={() => deletefamMavjud(familyMavjudId)}
-                                    >
-                                        <i className='bx bx-trash'></i>
-                                    </button>
+                    </TabPanel>
+                    <TabPanel value="7">
+                        <h2 className='kl1_subtitle'>Buyurtmachining mavjud kredit va qarz majburiyatlari</h2>
+                        {
+                            familyMavjud.map((familyMavjud,familyMavjudId)=>(
+                                <div className='kl1_products' key={familyMavjudId}>
+                                    <div className='kl1_product_title'>
+                                        Mavjud malumot {familyMavjudId+1}
+                                        <button
+                                        className='kl1_delete_button'
+                                        onClick={() => deletefamMavjud(familyMavjudId)}
+                                        >
+                                            <i className='bx bx-trash'></i>
+                                        </button>
+                                    </div>
+                                    <div className='kl1_product'>
+                                        <Input
+                                        rounded
+                                        bordered
+                                        label='Mavjud kredit va qarzlar'
+                                        placeholder="Qishloq Qurilish bank"
+                                        color="secondary"
+                                        width='31%'
+                                        className='kl1_input'
+                                        />
+                                        <Input
+                                        rounded
+                                        bordered
+                                        label='Asosiy qarz qoldigi'
+                                        placeholder="5 700 000,00"
+                                        color="secondary"
+                                        width='31%'
+                                        className='kl1_input'
+                                        />
+                                        <Input
+                                        rounded
+                                        bordered
+                                        label='Oylik tolov miqdori'
+                                        placeholder="843 000,00"
+                                        color="secondary"
+                                        width='31%'
+                                        className='kl1_input'
+                                        />
+                                        <Textarea
+                                        width='100%'
+                                        bordered
+                                        rounded
+                                        color="secondary"
+                                        className='kl1_input'
+                                        placeholder='Istemol krediti 23%dan'
+                                        label='Izoh'
+                                        />
+                                    </div>
                                 </div>
-                                <div className='kl1_product'>
-                                    <Input
-                                    rounded
-                                    bordered
-                                    label='Mavjud kredit va qarzlar'
-                                    placeholder="Qishloq Qurilish bank"
-                                    color="secondary"
-                                    width='31%'
-                                    className='kl1_input'
-                                    />
-                                    <Input
-                                    rounded
-                                    bordered
-                                    label='Asosiy qarz qoldigi'
-                                    placeholder="5 700 000,00"
-                                    color="secondary"
-                                    width='31%'
-                                    className='kl1_input'
-                                    />
-                                    <Input
-                                    rounded
-                                    bordered
-                                    label='Oylik tolov miqdori'
-                                    placeholder="843 000,00"
-                                    color="secondary"
-                                    width='31%'
-                                    className='kl1_input'
-                                    />
-                                    <Textarea
-                                    width='100%'
-                                    bordered
-                                    rounded
-                                    color="secondary"
-                                    className='kl1_input'
-                                    placeholder='Istemol krediti 23%dan'
-                                    label='Izoh'
-                                    />
-                                </div>
+                            ))
+                        }
+                        <div className='kl1_product_footer'>
+                            <button
+                            className='kl1_add_button'
+                            onClick={()=>{addfamMavjud()}}
+                            >
+                                Mavjud kredit va qarz qoshish
+                            </button>
+                            <div className='flex_column'>
+                                <p className='kl1_jami margin_bottom'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
+                                <p className='kl1_jami margin_bottom'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
+                                <p className='kl1_jami '>Joiriy kreditlar boyicha qarz yuki korsatkichi: {'22%'}</p>
                             </div>
-                        ))
-                    }
-                    <div className='kl1_product_footer'>
-                        <button
-                        className='kl1_add_button'
-                        onClick={()=>{addfamMavjud()}}
-                        >
-                            Mavjud kredit va qarz qoshish
-                        </button>
-                        <div className='flex_column'>
-                            <p className='kl1_jami margin_bottom'>Jami asosiy qarz qoldigi: {'10 000 000'} so`m</p>
-                            <p className='kl1_jami margin_bottom'>Jami oylik tolov miqdori: {'10 000 000'} so`m</p>
-                            <p className='kl1_jami '>Joiriy kreditlar boyicha qarz yuki korsatkichi: {'22%'}</p>
                         </div>
-                    </div>
 
-                    <h2 className='kl1_subtitle'>Oylik kredit tolovi ( eng katta tolov miqdori )</h2>
-                    <Input
-                        rounded
+                        <h2 className='kl1_subtitle'>Oylik kredit tolovi ( eng katta tolov miqdori )</h2>
+                        <Input
+                            rounded
+                            bordered
+                            readOnly
+                            label='Asosiy qarz'
+                            initialValue='5 000 000'
+                            color="secondary"
+                            width='100%'
+                            className='kl1_input'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            readOnly
+                            label='Foizlar'
+                            initialValue='985 205'
+                            color="secondary"
+                            width='100%'
+                            className='kl1_input'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            readOnly
+                            label='Jami oylik tolov'
+                            initialValue='5 985 205'
+                            color="secondary"
+                            width='100%'
+                            className='kl1_input'
+                        />
+                        <Input
+                            rounded
+                            bordered
+                            readOnly
+                            label='Soralayotgan kredit hisobi qarzi yoki korsatkichi (<50%)'
+                            initialValue='83,5%'
+                            status="error"
+                            shadow={false}
+                            width='100%'
+                            className='kl1_input'
+                        />
+                        <Textarea
+                        width='100%'
                         bordered
-                        readOnly
-                        label='Asosiy qarz'
-                        initialValue='5 000 000'
+                        rounded
                         color="secondary"
-                        width='100%'
                         className='kl1_input'
-                    />
-                    <Input
-                        rounded
-                        bordered
-                        readOnly
-                        label='Foizlar'
-                        initialValue='985 205'
-                        color="secondary"
-                        width='100%'
-                        className='kl1_input'
-                    />
-                    <Input
-                        rounded
-                        bordered
-                        readOnly
-                        label='Jami oylik tolov'
-                        initialValue='5 985 205'
-                        color="secondary"
-                        width='100%'
-                        className='kl1_input'
-                    />
-                    <Input
-                        rounded
-                        bordered
-                        readOnly
-                        label='Soralayotgan kredit hisobi qarzi yoki korsatkichi (<50%)'
-                        initialValue='83,5%'
-                        status="error"
-                        shadow={false}
-                        width='100%'
-                        className='kl1_input'
-                    />
-                    <Textarea
-                    width='100%'
-                    bordered
-                    rounded
-                    color="secondary"
-                    className='kl1_input'
-                    placeholder='Jami 7 marotaba kredit olgan, shu jumladan, Renesansdan 2 marotaba. Muntazam o‘z vaqtida to‘lagan. 30 kungacha kechiktirishlar soni - 0, 30 kundan ortiq kechiktirishlar soni - 0'
-                    label='Kredit tarixi'
-                    />
+                        placeholder='Jami 7 marotaba kredit olgan, shu jumladan, Renesansdan 2 marotaba. Muntazam o‘z vaqtida to‘lagan. 30 kungacha kechiktirishlar soni - 0, 30 kundan ortiq kechiktirishlar soni - 0'
+                        label='Kredit tarixi'
+                        />
+                    </TabPanel>
+                    <TabPanel value="8">
                     <div className='kl1_table'>
                         <div className='kl1_table_dark-bg'>Hulq atvori</div>
                         <div className='kl1_table_dark-bg'>Shaxsiy sifatida baholanishi</div>
@@ -1588,19 +1618,23 @@ function KL1() {
                             <div className='kl1_accept'><Radio color='primary' className='radio_end' value={false}>Rad etish</Radio></div>
                         </Radio.Group>
                     </div>
-                </div> 
 
-                <div className='submit-buttons'>
-                    <button className='client_submit reset' onClick={openReset}>
-                        Formani tiklash
-                        <AiOutlineClear/>
-                    </button>
-                    <button type='submit' className='client_submit submit'>
-                        Formani qo'shish
-                        <AiOutlineUserAdd/>
-                    </button>
+                    </TabPanel>
                 </div>
-            </section>
+            </TabContext>
+        </Box>
+        <div className='submit-buttons'>
+            <button className='client_submit reset' onClick={openReset}>
+                Formani tiklash
+                <AiOutlineClear/>
+            </button>
+            <button type='submit' className='client_submit submit'>
+                Formani qo'shish
+                <AiOutlineUserAdd/>
+            </button>
+        </div>
+    </div>
+</section>
         </>
     )
 }
