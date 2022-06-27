@@ -1,7 +1,5 @@
 import React,{useState} from 'react'
 import { Link } from 'react-router-dom'
-// Styles
-import './Maqsad.css'
 // Icons
 import { AiOutlineRollback, AiOutlineClear, AiOutlineUserAdd } from 'react-icons/ai'
 // Components
@@ -9,6 +7,8 @@ import { Input } from '@nextui-org/react';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
+// Styles
+import './Maqsad.css'
 
 const animatedComponents = makeAnimated();
 

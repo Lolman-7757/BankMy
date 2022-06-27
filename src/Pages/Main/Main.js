@@ -40,6 +40,8 @@ import Section from '../Section/Section';
 import Mahsulot from '../Mahsulot/Mahsulot';
 import Maqsad from '../Maqsad/Maqsad';
 import AddMaqsad from '../Maqsad/AddMaqsad';
+import Foydalan from '../Foydalan/Foydalan';
+import AddFoydalan from '../Foydalan/AddFoydalan';
 
 const { TabPane } = Tabs;
 
@@ -180,6 +182,16 @@ function Main() {
                         </Link>
                         } 
                     key="11"/>
+                    <TabPane 
+                        tab={
+                            <Link to='/foydalanuvchi' className='nav-item'>
+                            <div className='nav-item_icon'>
+                                <AiOutlineUsergroupAdd/>
+                            </div>
+                            <span>Foydalanuvchilar</span>
+                        </Link>
+                        } 
+                    key="12"/>
                 </Tabs>
             </nav>
             
@@ -232,6 +244,8 @@ function Main() {
                         <Route path='/section' element={<Section/>}/>
                         <Route path='/maqsad' element={<Maqsad/>}/>
                         <Route path='/maqsad/addmaqsad' element={<AddMaqsad/>}/>
+                        <Route path='/foydalanuvchi' element={<Foydalan/>}/>
+                        <Route path='/foydalanuvchi/addfoydalanuvchi' element={<AddFoydalan/>}/>
                     </Routes>
                 </div>
             </main>

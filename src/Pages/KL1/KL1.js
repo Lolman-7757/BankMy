@@ -53,23 +53,24 @@ function KL1() {
     // visibility
     const [viewMavsumiy, setviewMavsumiy] = useState('kl1_mavsumiy_daromad close')
     const [viewBiznes, setviewBiznes] = useState('kl1_mavsumiy_daromad close')
+    
 
-    // Radio
-    function radio(a){
-        if(a == 3){
-            setviewBiznes('kl1_mavsumiy_daromad open')
-            setviewMavsumiy('kl1_mavsumiy_daromad open')
-        }
-        else if(a == 2){
-            setviewBiznes('kl1_mavsumiy_daromad close')
-            setviewMavsumiy('kl1_mavsumiy_daromad open')
-        }
-        else if(a == 1){
-            setviewBiznes('kl1_mavsumiy_daromad open')
-            setviewMavsumiy('kl1_mavsumiy_daromad close')
+    function openMavsumiyTab(){
+        if(viewMavsumiy == 'kl1_mavsumiy_daromad open'){
+            return(
+                <Tab label="Daromad/Xarajat(mavsumiy)" value="4" className='tab_title'/>
+            )
         }else{
-            setviewBiznes('kl1_mavsumiy_daromad close')
-            setviewMavsumiy('kl1_mavsumiy_daromad close')
+            return(<></>)
+        }
+    }
+    function openBiznesTab(){
+        if(viewBiznes == 'kl1_mavsumiy_daromad open'){
+            return(
+                <Tab label="Daromad/Xarajat(biznes)" value="5" className='tab_title'/>
+            )
+        }else{
+            return(<></>)
         }
     }
 
@@ -292,15 +293,17 @@ function KL1() {
                 onChange={handleChange}
                 aria-label="lab API tabs example"
                 variant="scrollable"
-                scrollButtons="auto">
-                    <Tab label="Shaxsiy ma'lumot" value="1" />
-                    <Tab label="Birinchi qism" value="2" />
-                    <Tab label="Daromad/Xarajat(boshqa)" value="3" />
-                    <Tab label="Daromad/Xarajat(mavsumiy)" value="4" />
-                    <Tab label="Daromad/Xarajat(biznes)" value="5" />
-                    <Tab label="Oltinchi qism" value="6" />
-                    <Tab label="Yettinchi qism" value="7" />
-                    <Tab label="Jadvali" value="8" />
+                scrollButtons="auto"
+                textColor="secondary"
+                indicatorColor="secondary">
+                    <Tab label="Shaxsiy ma'lumot" value="1" className='tab_title'/>
+                    <Tab label="Birinchi qism" value="2" className='tab_title'/>
+                    <Tab label="Daromad/Xarajat(boshqa)" value="3" className='tab_title'/>
+                    {openMavsumiyTab()}
+                    {openBiznesTab()}
+                    <Tab label="Oltinchi qism" value="6" className='tab_title'/>
+                    <Tab label="Yettinchi qism" value="7" className='tab_title'/>
+                    <Tab label="Jadvali" value="8" className='tab_title'/>
                 </TabList>
                 </Box>
                 <div className='kl1_content'>
@@ -1614,8 +1617,8 @@ function KL1() {
                     <div className='kl1_accepting'>
                         <p>Taqdim etilgan va toplangan malumotlar hamda kredit byurosidan olingan kredit tarixiga asoslanib men tomonimdan otkazilgan organish va tahlillar asosida ushbu buyurtma boyicha quiydagi yakuniy xulosamni kredit komissiyasida korib chiqish uchun taqdim etaman</p>
                         <Radio.Group value={true} size='sm' className='kl1_accepting_radio'>
-                            <div className='kl1_accept'><Radio color='primary' className='radio_end' value={true}>Kredit ajratish</Radio></div>
-                            <div className='kl1_accept'><Radio color='primary' className='radio_end' value={false}>Rad etish</Radio></div>
+                            <div className='kl1_accept margin_bottom'><Radio color='success' className='radio_end' value={true}>Kredit ajratish</Radio></div>
+                            <div className='kl1_accept'><Radio color='error' className='radio_end' value={false}>Rad etish</Radio></div>
                         </Radio.Group>
                     </div>
 
