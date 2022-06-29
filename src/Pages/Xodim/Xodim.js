@@ -47,7 +47,6 @@ function Xodim() {
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
-
     return (
         <section className='xodim'>
             <h1 className='filial_title'>Xodimlar</h1>
@@ -98,6 +97,7 @@ function Xodim() {
                 totalItems={xodimlar.length}
                 paginate={paginate}
             />
+
             </div>
         </section>
     )

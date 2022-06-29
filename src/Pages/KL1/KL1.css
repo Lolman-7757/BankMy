@@ -10,11 +10,10 @@
 .kl1_title{
     font-size: 1.2rem;
     font-weight: 700;
+    text-align: center;
 }
 .kl1_subtitle{
     width: 100%;
-    padding-top: 20px;
-    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 22px;
@@ -24,6 +23,12 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+}
+.kl1_tabs_main{
+    margin-top: 25px;
+}
+.tab_title{
+    font-weight: 600 !important;
 }
 .kl1_input{
     margin-bottom: 10px;
@@ -227,7 +232,7 @@
 
 
 .kl1_accepting{
-    margin: 20px 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -235,31 +240,27 @@
     width: 100%;
 }
 .kl1_accepting p{
-    flex-basis: 62%;
+    width: 60%;
 }
 .kl1_accepting_radio{
-    height: 80px;
-    width: 300px;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
-    overflow: hidden;
 }
 .kl1_accept{
-    height: 40px ;
     width: 300px;
     display: flex;
     flex-direction: row;
-    align-items:flex-start;
-    padding-left: 20px;
     font-weight: 600;
     color: white;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    border-radius: 15px;
 }
 .kl1_accept:nth-child(1){
-    background-color: rgb(10, 216, 10);
+    border:2px solid rgb(10, 216, 10);
 }
 .kl1_accept:nth-child(2){
-    background-color: rgb(253, 37, 37);
+    border: 2px solid rgb(252, 31, 68);
 }
 
 .close{
