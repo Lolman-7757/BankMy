@@ -1,0 +1,29 @@
+.kl1_content .ant-tabs-nav-list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+  margin-bottom: 40px;
+  padding: 3px;
+}
+.kl1_content .ant-tabs-nav-wrap{
+  width: 100%;
+}
+.kl1_content .ant-tabs-nav-operations{
+  display: none;
+}
+.kl1_content .ant-tabs-tab .ant-tabs-tab-btn{
+  border: 2px solid #7828c8;
+  height: 100%;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: linear all .2s;
+  cursor: pointer;
+}
+.kl1_content .ant-tabs-tab-active .ant-tabs-tab-btn{
+  background-color: #7828c8;
+  color: white;
+}
