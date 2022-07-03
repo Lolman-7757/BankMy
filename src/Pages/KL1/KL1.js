@@ -13,12 +13,12 @@ import Biznes from './Parts/Biznes'
 // Components
 import { Tabs } from 'antd';
 
+// Icons
+import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
+
 // Styles
 import './KL1.css'
 import './KL1_tabs.css'
-
-// Icons
-import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'
 
 
 function KL1() {
@@ -39,6 +39,36 @@ function KL1() {
     function closeReset(e){
         e.preventDefault()
         setResetWarning('warning_reset_main close')
+    }
+
+    // Mavsumiy Part
+    const [mavsumiyWindow, setMavsumiyWindow] = useState('close')
+
+    function MavsumiyPage(){
+        if(mavsumiyWindow == 'open'){
+            return(
+                <TabPane tab="Daromad/Xarajat(mavsumiy)" key="4">
+                    <Mavsumiy/>
+                </TabPane>
+            )
+        }else{
+            <></>
+        }
+    }
+
+    // Biznes Part
+    const [biznesWindow, setBiznesWindow] = useState('close')
+
+    function BiznesPage(){
+        if(biznesWindow == 'open'){
+            return(
+                <TabPane tab="Daromad/Xarajat(biznes)" key="5">
+                    <Biznes/>
+                </TabPane>
+            )
+        }else{
+            <></>
+        }
     }
 
     return (
@@ -76,12 +106,12 @@ function KL1() {
                         <TabPane tab="Daromad/Xarajat(boshqa)" key="3">
                             <Boshqa/>
                         </TabPane>
-                        <TabPane tab="Daromad/Xarajat(mavsumiy)" key="4">
-                            <Mavsumiy/>
-                        </TabPane>
-                        <TabPane tab="Daromad/Xarajat(biznes)" key="5">
-                            <Biznes/>
-                        </TabPane>
+                        {
+                            MavsumiyPage()
+                        }
+                        {
+                            BiznesPage()
+                        }
                         <TabPane tab="Oltinchi qism" key="6">
                             <Oilaviy/>
                         </TabPane>
