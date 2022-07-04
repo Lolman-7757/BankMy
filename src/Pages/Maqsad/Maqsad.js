@@ -69,12 +69,12 @@ function Maqsad() {
             <div className='filial_table_block'>
             <ul className='maqsad_table'>
                 <li className='maqsad_table_header'>
-                    <div>Maqsad nomi</div>
-                    <div>Maqsad kodi</div>
+                    <p>Maqsad nomi</p>
+                    <p>Maqsad kodi</p>
                 </li>
                 {
                     currentMaqsad.map((item,index)=>{
-                        return <li key={index}>
+                        return <li key={index} className='maqsad_table-product'>
                             <div className=''>{item.name}</div>
                             <div className=''>{item.code}</div>
                             <div className=''>

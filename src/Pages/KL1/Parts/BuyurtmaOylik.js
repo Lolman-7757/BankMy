@@ -92,47 +92,49 @@ function BuyurtmaOylik() {
             </div>
 
             <h2 className='kl1_subtitle'>Oylik kredit tolovi ( eng katta tolov miqdori )</h2>
-            <Input
-                rounded
-                bordered
-                readOnly
-                label='Asosiy qarz'
-                initialValue='5 000 000'
-                color="secondary"
-                width='100%'
-                className='kl1_input'
-            />
-            <Input
-                rounded
-                bordered
-                readOnly
-                label='Foizlar'
-                initialValue='985 205'
-                color="secondary"
-                width='100%'
-                className='kl1_input'
-            />
-            <Input
-                rounded
-                bordered
-                readOnly
-                label='Jami oylik tolov'
-                initialValue='5 985 205'
-                color="secondary"
-                width='100%'
-                className='kl1_input'
-            />
-            <Input
-                rounded
-                bordered
-                readOnly
-                label='Soralayotgan kredit hisobi qarzi yoki korsatkichi (<50%)'
-                initialValue='83,5%'
-                status="error"
-                shadow={false}
-                width='100%'
-                className='kl1_input'
-            />
+            <div className='flex-row'>
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Asosiy qarz'
+                    initialValue='5 000 000'
+                    color="secondary"
+                    width='23%'
+                    className='kl1_input'
+                />
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Foizlar'
+                    initialValue='985 205'
+                    color="secondary"
+                    width='23%'
+                    className='kl1_input'
+                />
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Jami oylik tolov'
+                    initialValue='5 985 205'
+                    color="secondary"
+                    width='23%'
+                    className='kl1_input'
+                />
+                <Input
+                    rounded
+                    bordered
+                    readOnly
+                    label='Soralayotgan kredit hisobi qarzi yoki korsatkichi (<50%)'
+                    initialValue='83,5%'
+                    status="error"
+                    shadow={false}
+                    width='23%'
+                    className='kl1_input'
+                />
+            </div>
             <Textarea
             width='100%'
             bordered

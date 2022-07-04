@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { Input } from '@nextui-org/react'
+import { Link } from 'react-router-dom'
 import Pagination from '../../Components/Pagination/Pagination'
 
 import './Mahsulot.css'
@@ -84,10 +85,10 @@ function Mahsulot() {
         <section className='mahsulot_section'>
             <h1 className='filial_title'>Mahsulotlar</h1>
             <div className='filial_header'>
-                <div className='filial_header_add' onClick={openForm}>
+                <a onClick={openForm}>
                     Mahsulot Qoshish
                     <i className='bx bx-plus-circle'></i>
-                </div>
+                </a>
                 <Input
                     rounded
                     bordered

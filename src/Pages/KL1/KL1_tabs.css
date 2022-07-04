@@ -6,6 +6,27 @@
   margin-bottom: 40px;
   padding: 10px;
 }
+/* Scroll */
+::-webkit-scrollbar {
+  width: 17px;
+}
+/* Track Scroll */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle Scroll */
+::-webkit-scrollbar-thumb {
+  background: #7828c8; 
+  border-radius: 15px;
+}
+
+/* Handle on hover Scroll */
+::-webkit-scrollbar-thumb:hover {
+  background: #631daa; 
+}
+
 .kl1_content .ant-tabs-nav-wrap{
   width: 100%;
 }

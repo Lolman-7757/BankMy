@@ -12,6 +12,7 @@ import Biznes from './Parts/Biznes'
 
 // Components
 import { Tabs } from 'antd';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 // Icons
 import { AiOutlineUserAdd,AiOutlineClear,AiOutlineRollback } from 'react-icons/ai'

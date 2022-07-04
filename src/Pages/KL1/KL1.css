@@ -263,6 +263,12 @@
     border: 2px solid rgb(252, 31, 68);
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 .close{
     display: none;
 }

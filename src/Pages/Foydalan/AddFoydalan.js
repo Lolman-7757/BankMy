@@ -95,15 +95,10 @@ function AddFoydalan() {
                     className='filial_input'
                     color="secondary"
                 />
-                <Input
+                {/* <input
                     width='100%'
-                    clearable
-                    bordered
-                    label="Surat"
-                    placeholder='img...'
-                    className='filial_input'
-                    color="secondary"
-                />
+                    className='filial_input image' 
+                /> */}
                 <div className='filial_buttons'>
                     <button className='client_submit reset' onClick={openReset}>
                         Formani tiklash
