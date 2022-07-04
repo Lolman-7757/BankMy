@@ -104,7 +104,12 @@ function KL1() {
                             <FirstKl1/>
                         </TabPane>
                         <TabPane tab="Daromad/Xarajat(boshqa)" key="3">
-                            <Boshqa/>
+                            <Boshqa
+                                mavsumiyWindow={mavsumiyWindow}
+                                setMavsumiyWindow={setMavsumiyWindow}
+                                biznesWindow={biznesWindow}
+                                setBiznesWindow={setBiznesWindow}
+                            />
                         </TabPane>
                         {
                             MavsumiyPage()

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // Components
 import { Input, Textarea,Checkbox } from '@nextui-org/react'
 
-function Boshqa() {
+function Boshqa(props) {
   // Jami boshqa daromadlar
   const [ boshqaDaromadBirlikNarxi,setBoshqaDaromadBirlikNarxi] = useState(0)
   const [ boshqaDaromadNomi,setBoshqaDaromadNomi] = useState('')
@@ -70,24 +70,22 @@ function deleteMyXarajat(id){
       <h2 className='kl1_subtitle'>Buyurtmachining daromadlari</h2>
       <div className='kl1_radio'>
           <Checkbox size='sm' color='secondary' defaultValue={false} 
-          // onChange={(e)=>{
-          //     if(e){
-              
-          //         setviewBiznes('kl1_mavsumiy_daromad open')
-          //     }else{
-              
-          //         setviewBiznes('kl1_mavsumiy_daromad close')
-          //     }
-          // }}
+          onChange={(e)=>{
+              if(e){
+                props.setBiznesWindow('open')
+              }else{
+                props.setBiznesWindow('close')
+              }
+          }}
           >Biznes daromadlar</Checkbox>
           <Checkbox size='sm' className='kl1_radio_checkbox' color='secondary' defaultValue={false} 
-          // onChange={(e)=>{
-          //     if(e){
-          //         setviewMavsumiy('kl1_mavsumiy_daromad open')
-          //     }else{
-          //         setviewMavsumiy('kl1_mavsumiy_daromad close')
-          //     }
-          // }}
+          onChange={(e)=>{
+              if(e){
+                props.setMavsumiyWindow('open')
+              }else{
+                props.setMavsumiyWindow('close')
+              }
+          }}
           >Mavsumiy daromadlar</Checkbox>
           <Checkbox size='sm' className='kl1_radio_checkbox' color='secondary' defaultSelected={true}>Boshqa daromadlar</Checkbox>
       </div>
