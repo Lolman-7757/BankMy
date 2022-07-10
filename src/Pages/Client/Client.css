@@ -334,9 +334,11 @@
 .clientform_buttons button{
     margin-left: 20px;
 }
-.group-submit{
+.flex_row_end{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
     margin-top: 20px;
-    margin-left: calc(100% - 200px);
 }
 .group-inputt{
     background-color: var(--light);   

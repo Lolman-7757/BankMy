@@ -503,36 +503,37 @@
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     border: 2px solid #7828c8;
-    border-radius: 25px;
-    overflow: hidden;
+    border-radius: 20px;
+    
     background-color: #7828c8;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab{
-    padding: 12px;
+    padding: 12px 20px;
+    height: 100%;
     color: #7828c8;
     border-left: 2px solid #7828c8;
     font-size: 16px;
     font-weight: 600;
-    background-color: white;
+    color: white;
     cursor: pointer;
     transition: linear .2s all;
+    border-radius: 18px;
 }
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:first-child{
     border-left: none;
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
 }
-.sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:nth-child(4){
+/* .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:nth-child(4){
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
-}
+} */
 .sort_main_buttons .ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active{
-    background-color: #7828c8;
-    color: white;
+    background-color: white;
+    color:#7828c8;
 }
 .sort_main_buttons .ant-tabs-ink-bar{
     display: none;

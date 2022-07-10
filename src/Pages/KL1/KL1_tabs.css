@@ -2,24 +2,26 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  overflow-x: scroll;
+  flex-wrap: wrap;
   margin-bottom: 40px;
-  padding: 10px;
+  background-color: #7828c8;
+  border-radius: 15px;
 }
+
 /* Scroll */
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 15px;
 }
 /* Track Scroll */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+  border-radius: 8px;
 }
  
 /* Handle Scroll */
 ::-webkit-scrollbar-thumb {
   background: #7828c8; 
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 /* Handle on hover Scroll */
@@ -35,7 +37,7 @@
 }
 .kl1_content .ant-tabs-tab .ant-tabs-tab-btn{
   border: 2px solid #7828c8;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,10 +47,11 @@
   padding: 10px 20px;
   transition: linear all .2s;
   cursor: pointer;
-  margin-right: 10px;
   font-weight: 500;
+  color: white;
 }
 .kl1_content .ant-tabs-tab-active .ant-tabs-tab-btn{
-  background-color: #7828c8;
-  color: white;
+  background-color: white;
+  color: #7828c8;
+  padding: 10px 20px;
 }

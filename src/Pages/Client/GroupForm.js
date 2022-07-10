@@ -190,7 +190,7 @@ import './Client.css'
     <div className={resetWarning}>
         <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
         <div >
-          <button onClick={closeReset}>Haa</button>
+          <button onClick={closeReset}>Ha</button>
           <button onClick={closeReset}>Yoq</button>
         </div>
       </div>
@@ -227,7 +227,7 @@ import './Client.css'
             <Input
                 width='100%'
                 clearable
-                label="Kod"
+                label="Parol"
                 placeholder='1234'
                 className='vall'
                 bordered
@@ -382,10 +382,12 @@ import './Client.css'
       })
     }
   </Tabs>
-          <Link to='/' className='client_submit group-submit submit' onClick={insertData}>
+  <div className='flex_row_end'>
+          <Link to='/' className='client_submit  submit' onClick={insertData}>
             Guruhni qo'shish
             <AiOutlineUsergroupAdd/>
           </Link>
+  </div>
   </>
   
   )

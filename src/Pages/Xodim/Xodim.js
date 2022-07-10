@@ -73,7 +73,7 @@ function Xodim() {
                     <p>Fillial</p>
                     <p>Bo'lim</p>
                     <p>Ismi</p>
-                    <p>Kod</p>
+                    <p>Paroli</p>
                     <p></p>
                 </li>
                 {

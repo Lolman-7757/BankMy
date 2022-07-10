@@ -69,7 +69,7 @@ function Buyurtma() {
                 bordered
                 width='300px'
                 color='secondary'
-                label='Foydalanuvchi kodi'
+                label='Foydalanuvchi paroli'
                 placeholder='12345'
                 clearable
                 onChange={(e)=>setModalCode(e.target.value)}

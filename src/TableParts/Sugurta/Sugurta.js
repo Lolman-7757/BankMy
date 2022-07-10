@@ -24,7 +24,7 @@ function Sugurta() {
       <div className={resetWarning}>
         <p>Haqiqatan ham ma'lumontlarni qayta tiklamoqchimisiz?</p>
         <div >
-          <button onClick={closeReset}>Haa</button>
+          <button onClick={closeReset}>Ha</button>
           <button onClick={closeReset}>Yoq</button>
         </div>
       </div>

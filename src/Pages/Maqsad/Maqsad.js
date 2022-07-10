@@ -70,7 +70,7 @@ function Maqsad() {
             <ul className='maqsad_table'>
                 <li className='maqsad_table_header'>
                     <p>Maqsad nomi</p>
-                    <p>Maqsad kodi</p>
+                    <p>Maqsad paroli</p>
                 </li>
                 {
                     currentMaqsad.map((item,index)=>{

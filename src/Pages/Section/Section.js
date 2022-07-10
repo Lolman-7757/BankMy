@@ -68,10 +68,10 @@ function Section() {
                 <Input
                     rounded
                     bordered
-                    placeholder="Kodi..."
+                    placeholder="Paroli..."
                     color="secondary"
                     width='100%'
-                    label="Bo'lim kodi"
+                    label="Bo'lim paroli"
                 />
                 <div className='add_mahsulot_buttons'>
                     <button onClick={closeFormSection}>Orqaga</button>
@@ -102,7 +102,7 @@ function Section() {
                 <div className='mahsulot_table'>
                     <div className='mahsulot_table_headers'>
                         <p>Bo'lim nomi</p>
-                        <p>Bo'lim kodi</p>
+                        <p>Bo'lim paroli</p>
                     </div>
 
                     <div className='mahsulot_table_products'>

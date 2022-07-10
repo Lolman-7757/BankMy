@@ -111,7 +111,7 @@ function Client() {
                 <Input
                     rounded
                     bordered
-                    placeholder="Foydalanuvchi kodi..."
+                    placeholder="Foydalanuvchi paroli..."
                     color="secondary"
                     width='300px'
                     className='search-input'
@@ -125,7 +125,7 @@ function Client() {
                 <div className='clientTable'>
                     <div className='clienttableHeader'>
                         <p className='clientheaderTable-title'>Ism</p>
-                        <p className='clientheaderTable-title'>Kod</p>
+                        <p className='clientheaderTable-title'>Parol</p>
                         <p className='clientheaderTable-title'>PinFl</p>
                         <p className='clientheaderTable-title'>Shahar</p>
                     </div>

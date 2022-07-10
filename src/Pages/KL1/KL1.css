@@ -229,8 +229,6 @@
 }
 
 
-
-
 .kl1_accepting{
     margin-top: 20px;
     display: flex;
@@ -253,7 +251,7 @@
     font-weight: 600;
     color: white;
     padding: 0 20px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-radius: 15px;
 }
 .kl1_accept:nth-child(1){
