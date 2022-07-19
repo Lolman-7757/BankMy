@@ -126,7 +126,7 @@ function Shartnama() {
                             <ul className='tableInfo'>
                                 {
                                     currentShartnama.map((item,index)=>{
-                                        return <li key={index}>
+                                        return <li className='client_row' key={index}>
                                             <p className='liName li_shartnoma'>{/*<span>{index + 1 + (currentPage-1)*10}.</span>*/}{item.name}</p>
                                             <p className='li_shartnoma'>{item.raqam}</p>
                                             <p className='li_shartnoma'>{item.mahsulot}</p>

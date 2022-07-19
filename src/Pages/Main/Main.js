@@ -29,8 +29,6 @@ import BuyurtmaForm from '../Buyurtma/BuyurtmaForm';
 import Taminot from '../Taminot/Taminot';
 import TaminotForm from '../Taminot/TaminotForm';
 import SingleBuyurtnama from '../Buyurtma/SingleBuyurtnama';
-import B1Form from '../../PDF/B1Form';
-import Av1Form from '../../PDF/Av1Form';
 import KL1 from '../KL1/KL1';
 import Filial from '../Filiallar/Filial';
 import AddFilial from '../Filiallar/AddFilial';
@@ -42,6 +40,11 @@ import Maqsad from '../Maqsad/Maqsad';
 import AddMaqsad from '../Maqsad/AddMaqsad';
 import Foydalan from '../Foydalan/Foydalan';
 import AddFoydalan from '../Foydalan/AddFoydalan';
+// pdf
+import B1Form from '../../PDF/B1Form';
+import Av1Form from '../../PDF/Av1Form';
+import B3Form from '../../PDF/B3Form';
+import P1Form from '../../PDF/P1Form';
 
 const { TabPane } = Tabs;
 
@@ -231,8 +234,12 @@ function Main() {
                         <Route path='/buyurtma' element={<Buyurtma/>}/>
                         <Route path='/buyurtma/form' element={<BuyurtmaForm/>}/>
                         <Route path='/buyurtma/singleBuyurtma' element={<SingleBuyurtnama/>}/>
+                        {/* pdf */}
                         <Route path='/buyurtma/singleBuyurtma/b1' element={<B1Form/>}/>
                         <Route path='/buyurtma/singleBuyurtma/av1' element={<Av1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/b3' element={<B3Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/p1' element={<P1Form/>}/>
+                        {/* pdf */}
                         <Route path='/taminot' element={<Taminot/>}/>
                         <Route path='/taminot/form' element={<TaminotForm/>}/>
                         <Route path='/kl1' element={<KL1/>}/>

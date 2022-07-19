@@ -42,6 +42,11 @@
     margin-top: 30px;
     padding-bottom: 20px;
 }
+.pdf_main_container{
+    font-style: italic;
+   padding-right: 30px;
+   padding-left: 30px;
+}
 .print_link{
     border-radius: 12px;
     margin-bottom: 30px;
@@ -50,6 +55,36 @@
     color: white;
     font-weight: 600;
     font-size: 1.2rem;
+}
+.pdf_section_part{
+    line-height: 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    font-family: sans-serif;
+    font-style: italic;
+    padding: 0px 20px;
+    word-spacing: 12px;
+}
+.pdf_margin_top_10{
+    margin-top: 10px;
+}
+.pdf_margin_top_20{
+    margin-top: 20px;
+}
+.pdf_margin_top_30{
+    margin-top: 30px;
+}
+.pdf_margin_top_40{
+    margin-top: 40px;
+}
+.pdf_margin_bottom_50{
+    margin-bottom: 50px;
+}
+.pdt_text_first{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-align: center;
 }
 /* B1 FORM */
 .b1_img{
@@ -131,7 +166,7 @@
     font-size: 20px;
     font-weight: 700;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
 }
 .row_div{
     display: flex;
@@ -147,9 +182,126 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.av1_form_part{
-    margin: 35px 0;
+.align_center{
+    align-items: center;
 }
+.black_text{
+    font-weight: 600;
+    font-size: 16px;
+}
+.av1_form_part{
+    margin: 30px 0;
+}
+/* P1 Form */
+.pdf_p1_table{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.pdf_p1_table_headers{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 2px solid black;
+}
+.pdf_p1_table_headers:last-child{
+    border-bottom: none;
+}
+.pdf_p1_table_headers .p1_headers_product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    font-style: normal;
+}
+.pdf_p1_table_headers .p1_headers_product:last-child{
+    border-right: none;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(1){
+    width: 5%;
+    font-size: 18px;
+    font-weight: 500;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(2){
+    width: 20%;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(3){
+    width: 25%;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(4){
+    width: 20%;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(5){
+    width: 20%;
+}
+.pdf_p1_table_headers .p1_headers_product:nth-child(6){
+    width: 10%;
+}
+.p1_second_table{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.p1_second_table_headers{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+.p1_second_table_headers:last-child{
+    border-bottom:none;
+}
+.p1_second_headers_product{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    padding: 10px 0;
+    text-align: center;
+    font-style: normal;
+}
+.p1_second_headers_product:last-child{
+    border-right: none;
+}
+.p1_second_headers_product:nth-child(1){
+    flex-basis: 3%;
+    font-weight: 600;
+}
+.p1_second_headers_product:nth-child(2){
+    flex-basis: 15%;
+}
+.p1_second_headers_product:nth-child(3){
+    flex-basis: 7%;
+}
+.p1_second_headers_product:nth-child(4){
+    flex-basis: 10%;
+}
+.p1_second_headers_product:nth-child(5){
+    flex-basis: 5%;
+}
+.p1_second_headers_product:nth-child(6){
+    flex-basis: 15%;
+}
+.p1_second_headers_product:nth-child(7){
+    flex-basis: 10%;
+}
+.p1_second_headers_product:nth-child(8){
+    flex-basis: 15%;
+}
+.p1_second_headers_product:nth-child(9){
+    flex-basis: 20%;
+}
+.table_end_text{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
 .margin{
     margin-bottom: 15px;
 }
@@ -203,9 +355,9 @@
         position: fixed;
         z-index: 1999;
         top: 0;
-        margin-top: 0;
         left: 0;
-        min-height: 110%;
+        margin-top: 0;
+        min-height: 100%;
     }
     .header-left-top, .a-right-bottom, .time-right-bottom {
         display: none;

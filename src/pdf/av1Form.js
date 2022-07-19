@@ -33,7 +33,7 @@ function Av1Form() {
                     </div>
                     <p className='endColumn'>Abdurashidova Dildora Asadulla qizi</p>
                 </div>
-                <div className='row_div between margin '>
+                <div className='row_div between'>
                     <p>To‘ldirilgan sana</p> 
                     <p>09.03.2022</p>
                 </div>

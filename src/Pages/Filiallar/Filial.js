@@ -75,7 +75,7 @@ function Filial() {
                 </li>
                 {
                     currentFilial.map((item,index)=>{
-                        return <li key={index} className='filial_table_products'>
+                        return <li key={index} className='filial_table_products client_row'>
                             <p className='filial_table_product'>{item.short_name}</p>
                             <p className='filial_table_product'>{item.contract}</p>
                             <p className='filial_table_product'>{item.committee}</p>

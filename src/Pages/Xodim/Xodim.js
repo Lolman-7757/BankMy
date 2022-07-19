@@ -78,7 +78,7 @@ function Xodim() {
                 </li>
                 {
                     currentXodim.map((item,index)=>{
-                        return <li key={index} className='xodim_table_product' >
+                        return <li key={index} className='xodim_table_product client_row' >
                             <div className=''>{item.branch}</div>
                             <div className=''>{item.section}</div>
                             <div className=''>{item.name}</div>

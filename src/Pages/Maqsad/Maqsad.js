@@ -74,7 +74,7 @@ function Maqsad() {
                 </li>
                 {
                     currentMaqsad.map((item,index)=>{
-                        return <li key={index} className='maqsad_table-product'>
+                        return <li key={index} className='maqsad_table-product client_row'>
                             <div className=''>{item.name}</div>
                             <div className=''>{item.code}</div>
                             <div className=''>

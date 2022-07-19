@@ -124,7 +124,7 @@ function Buyurtma() {
                         <ul className='tableInfo'>
                             {
                                 currentBuyurtma.map((item,index)=>{
-                                    return <li key={index}>
+                                    return <li className='client_row' key={index}>
                                         {/* <p className='liName li'><span>{index + 1 + (currentList-1)*10}.</span>{item.name}</p> */}
                                         <p className='li_buyurtma'>{item.raqam}</p>
                                         <p className='li_buyurtma'>{item.place}</p>

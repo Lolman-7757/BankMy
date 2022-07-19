@@ -112,7 +112,7 @@ function Mahsulot() {
                     {
                         currentMahsulot.map((item,index)=>{
                             return(
-                                <div className='mahsulot_table_product'>
+                                <div className='mahsulot_table_product client_row'>
                                     <p>{item.name}</p>
                                     <p>{item.code}</p>
                                     <div className='mahsulot_prosuct_buttons'>

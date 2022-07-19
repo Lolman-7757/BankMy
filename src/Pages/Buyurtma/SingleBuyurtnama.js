@@ -34,6 +34,8 @@ function SingleBuyurtnama() {
                 <div className='buyurtma_buttons'>
                     <Link to='/buyurtma/singleBuyurtma/b1'>B1</Link>
                     <Link to='/buyurtma/singleBuyurtma/av1'>Av1</Link>
+                    <Link to='/buyurtma/singleBuyurtma/b3'>B3</Link>
+                    <Link to='/buyurtma/singleBuyurtma/p1'>P1</Link>
                 </div>
             </div>
 
@@ -41,58 +43,58 @@ function SingleBuyurtnama() {
                 <div className='single_buyurtma_info'>
                     <p className='single_buyurtma_title'>{buyurtmaData.name}</p>
                     <div className='single_buyurtma_inputs'>
-                        <p>PINFL :</p>
+                        <p>PINFL:</p>
                         <p>{buyurtmaData.pinfl}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>SSKS :</p>
+                        <p>SSKS:</p>
                         <p>{buyurtmaData.ssks}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Bank :</p>
+                        <p>Bank:</p>
                         <p>{buyurtmaData.bank}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Passport ID :</p>
+                        <p>Passport ID:</p>
                         <p>{buyurtmaData.pass_id}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Passport ID :</p>
+                        <p>Passport ID:</p>
                         <p>{buyurtmaData.pass_id}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Qarz miqdor summasi :</p>
+                        <p>Qarz miqdor summasi:</p>
                         <p>{buyurtmaData.qarz_miqdor}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Qarz miqdor summasi yozuvda :</p>
+                        <p>Qarz miqdor summasi yozuvda:</p>
                         <p>{buyurtmaData.qarz_miqdor_text}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Kredit mahsulot nomi :</p>
+                        <p>Kredit mahsulot nomi:</p>
                         <p>{buyurtmaData.kredit_mahsulot_name}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Buyurtma tuzilish payti :</p>
+                        <p>Buyurtma tuzilish payti:</p>
                         <p>{buyurtmaData.buyurtma_date}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Sektor :</p>
+                        <p>Sektor:</p>
                         <p>{buyurtmaData.sektor}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Oylik daromad :</p>
+                        <p>Oylik daromad:</p>
                         <p>{buyurtmaData.oylik_daromad}</p>
                     </div>
                     <div className='single_buyurtma_inputs'>
-                        <p>Muddat vaqti :</p>
+                        <p>Muddat vaqti:</p>
                         <p>{buyurtmaData.muddat_time}</p>
                     </div>
                     <Input 
                         className='inputtts'
                         bordered
                         width='100%'
-                        label='PINFL :'
+                        label='PINFL:'
                         initialValue={buyurtmaData.pinfl}
                         color='secondary'
                     ></Input>

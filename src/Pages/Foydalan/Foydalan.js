@@ -72,7 +72,7 @@ function Foydalan() {
                 {
                     currentFoydalanuvchi.map((item,index)=>{
                         return(
-                            <div className='foydalan_table_product'>
+                            <div className='foydalan_table_product client_row'>
                                 <p className='foydalan_table_product_title'>{item.name}</p>
                                 <p className='foydalan_table_product_title'>{item.email}</p>
                                 <p className='foydalan_table_product_title'>{item.status}</p>

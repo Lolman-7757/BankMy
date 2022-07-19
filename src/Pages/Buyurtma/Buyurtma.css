@@ -377,8 +377,9 @@
 }
 .single_buyurtma_inputs p:nth-child(1){
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 7px;
+    color: #7828c8;
 }
 .single_buyurtma_inputs p:nth-child(2){
     border: 2px solid rgb(216, 215, 215);
