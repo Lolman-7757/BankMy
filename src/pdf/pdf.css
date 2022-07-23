@@ -44,8 +44,8 @@
 }
 .pdf_main_container{
     font-style: italic;
-   padding-right: 30px;
-   padding-left: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 .print_link{
     border-radius: 12px;
@@ -91,6 +91,11 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+.b1_img_start{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 .b1_img img{
     justify-self: flex-end;
@@ -167,27 +172,6 @@
     font-weight: 700;
     text-align: center;
     padding: 10px 0 0 0;
-}
-.row_div{
-    display: flex;
-    flex-direction: row;
-}
-.column_div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.between{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.align_center{
-    align-items: center;
-}
-.black_text{
-    font-weight: 600;
-    font-size: 16px;
 }
 .av1_form_part{
     margin: 30px 0;
@@ -300,8 +284,154 @@
     font-size: 17px;
     font-weight: 600;
 }
+.p1_left_space{
+    margin-left: 20px;
+}
+/* X1 Form */
+.margin_top_minus{
+    margin-top: -15px;
+}
+.x1_preview_part{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.x1_preview_part .x1_preview_div{
+    width: 400px;
+}
+.x1_preview_div p:nth-child(1){
+    font-size: 19px;
+    font-weight: 600;
+}
+.x1_end_width400{
+    width: 400px;
+}
+/* G1 Form */
+.pdf_g1_preview_text{
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+.pdf_g1_table_first{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-top: 20px;
+    width:650px;
+    margin-left: auto;
+    margin-right: auto ;
+}
+.pdf_g1_table_first div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.pdf_g1_table_first div:last-child{
+    border-bottom: none;
+}
+.pdf_g1_table_first div p:nth-child(1){
+    padding: 10px 15px;
+    width: 50%;
+    text-align: start;
+    border-right: 1px solid black;
+}
+.pdf_g1_table_first div p:nth-child(2){
+    text-align: center;
+    width: 50%;
+}
+.pdf_g1_table_second{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.g1_table2_header{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+}
+.g1_table2_header:last-child{
+    border-bottom: none;
+}
+.g1_table2_header p{
+    border-right: 1px solid black;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+}
+.g1_table2_header p:last-child{
+    border-right: none;
+}
+.g1_table2_header p:nth-child(1){
+    width: 5%;
+}
+.g1_table2_header p:nth-child(2){
+    width: 15%;
+}
+.g1_table2_header p:nth-child(3){
+    width: 20%;
+}
+.g1_table2_header p:nth-child(4){
+    width: 20%;
+}
+.g1_table2_header p:nth-child(5){
+    width: 20%;
+}
+.g1_table2_header p:nth-child(6){
+    width: 20%;
+}
+.pdf_end_2sections{
+    display: flex;
+    flex-direction: row;
+}
+.pdf_end_2sections_section{
+    width:50%;
+}
+.pdf_end_2sections_section:nth-child(1){
+    margin-right: 50px;
+}
+.pdf_end_2sections_section:nth-child(2){
+    margin-left: 50px;
+}
+.section_space_pdf{
+    margin-left: 30px;
+}
 
 
+.row_div{
+    display: flex;
+    flex-direction: row;
+}
+.column_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.align_center{
+    align-items: center;
+}
+.black_text{
+    font-weight: 600;
+    font-size: 16px;
+}
+.text_black_18{
+    font-size: 18px;
+    font-weight: 600;
+}
+.point_list{
+    list-style-type:disc;
+    color: black;
+}
+.number_list{
+    list-style-type:decimal;
+    font-size: 15px;
+}
 .margin{
     margin-bottom: 15px;
 }
@@ -344,8 +474,15 @@
     flex-direction:column;
     align-items: flex-end;
 }
-
-
+.text_center{
+    text-align: center;
+}
+.text_degree{
+    font-style: italic;
+}
+.text-norm{
+    font-style: normal;
+}
 
 
 
@@ -357,7 +494,7 @@
         top: 0;
         left: 0;
         margin-top: 0;
-        min-height: 100%;
+       
     }
     .header-left-top, .a-right-bottom, .time-right-bottom {
         display: none;

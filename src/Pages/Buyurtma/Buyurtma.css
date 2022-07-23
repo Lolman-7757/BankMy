@@ -401,18 +401,22 @@
 }
 .buyurtma_buttons a{
     display:flex;
+    height: 40px;
+    width: 50px;
     margin-left: 20px;
     justify-content:center;
     align-items:center;
     padding: 10px;
-    font-size: 1.3rem;
+    font-size: 17px;
     font-weight: 600;
-    color: white;
+    color: #7828c8;
     border: none;
-    border-radius: 7px;
+    border-radius: 10px;
     transition: linear all .2s;
     cursor: pointer;
-    background-color: #7828c8;
+    background-color: white;
+    border: 2px solid #7828c8;
+    box-shadow: 3px 3px 7px rgb(158, 157, 157);
 }
 .buyurtma_buttons a:hover{
     transform: scale(1.2);

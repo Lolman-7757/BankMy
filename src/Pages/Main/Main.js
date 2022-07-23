@@ -45,6 +45,10 @@ import B1Form from '../../PDF/B1Form';
 import Av1Form from '../../PDF/Av1Form';
 import B3Form from '../../PDF/B3Form';
 import P1Form from '../../PDF/P1Form';
+import X1Form from '../../PDF/X1Form';
+import G1Form from '../../PDF/G1Form';
+import GS1Form from '../../PDF/GS1Form';
+import QDForm from '../../PDF/QDForm';
 
 const { TabPane } = Tabs;
 
@@ -239,6 +243,10 @@ function Main() {
                         <Route path='/buyurtma/singleBuyurtma/av1' element={<Av1Form/>}/>
                         <Route path='/buyurtma/singleBuyurtma/b3' element={<B3Form/>}/>
                         <Route path='/buyurtma/singleBuyurtma/p1' element={<P1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/x1' element={<X1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/g1' element={<G1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/gs1' element={<GS1Form/>}/>
+                        <Route path='/buyurtma/singleBuyurtma/qd' element={<QDForm/>}/>
                         {/* pdf */}
                         <Route path='/taminot' element={<Taminot/>}/>
                         <Route path='/taminot/form' element={<TaminotForm/>}/>

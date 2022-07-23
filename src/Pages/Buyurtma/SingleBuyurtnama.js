@@ -36,6 +36,10 @@ function SingleBuyurtnama() {
                     <Link to='/buyurtma/singleBuyurtma/av1'>Av1</Link>
                     <Link to='/buyurtma/singleBuyurtma/b3'>B3</Link>
                     <Link to='/buyurtma/singleBuyurtma/p1'>P1</Link>
+                    <Link to='/buyurtma/singleBuyurtma/x1'>X1</Link>
+                    <Link to='/buyurtma/singleBuyurtma/g1'>G1</Link>
+                    <Link to='/buyurtma/singleBuyurtma/gs1'>GS1</Link>
+                    <Link to='/buyurtma/singleBuyurtma/qd'>QD</Link>
                 </div>
             </div>
 

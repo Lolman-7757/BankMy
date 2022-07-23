@@ -72,6 +72,46 @@ function P1Form() {
         )
     },[])
 
+    const getUmumiy = () => {
+        const newUmumiy = []
+        products.map((item, index) => {
+            newUmumiy.push(item.umumiy)
+        })
+        let totalUmumiy = newUmumiy.reduce((prev, current) => prev + current, 0)
+        return totalUmumiy.toLocaleString()
+    }
+
+    const getToshlar = () => {
+        const newToshlar = []
+        products.map((item, index) => {
+            newToshlar.push(item.toshlar)
+        })
+        let totalToshlar = newToshlar.reduce((prev, current) => prev + current, 0)
+        return totalToshlar.toLocaleString()
+    }
+
+    const getSof = () => {
+        const newSof = []
+        products.map((item, index) => {
+            newSof.push(item.sof)
+        })
+        let totalSof = newSof.reduce((prev, current) => prev + current, 0)
+        return totalSof.toLocaleString()
+    }
+
+    const getBaho = () => {
+        const newBaho = []
+        products.map((item, index) => {
+            newBaho.push(item.baho)
+        })
+        let totalBaho = newBaho.reduce((prev, current) => prev + current, 0)
+        return totalBaho.toLocaleString()
+    }
+
+    function NumberSpace(a){
+        return a.toLocaleString()
+    }
+
   return (
     <>
         <div className='pdf_header'>
@@ -104,10 +144,10 @@ function P1Form() {
                 <p></p>
                 <p>Maxkamova M.D.</p>
             </div>
-            <p className='pdf_margin_top_40'>
+            <p className='pdf_margin_top_30'>
                 Kun tartibi: Buyurtma chilar "Omad" qarzdorlar guruhi a'zolari Usmonova Muyassar Abduvaliyevna va Aliyev Ali Aliyvichning ReneTrade shartlari asosida mikroqarz ajratish bo'yicha berilgan buyurtmalarini ko'rib chiqish
             </p>
-            <p className='pdf_margin_top_40'>
+            <p className='pdf_margin_top_30'>
                 "Renesans Mikrokredit Tashkiloti" MChJ Guliston filialiga Buyurtmachilar quyidagi shartlarda mikroqarz so'rab murojaat etgan:
             </p>
             <div className='pdf_p1_table pdf_margin_top_10'>
@@ -134,7 +174,7 @@ function P1Form() {
                     })
                 }
             </div>
-            <p className='pdf_margin_top_40'>
+            <p className='pdf_margin_top_30'>
                 Buyurtmachilar mikroqarz qaytarilishini ta'minlash maqsadida o'zaro solidar javobgarlik to'g'risidagi Kafillik shartnomasini taqdim qilishlarini va garov shartnomasi asosida o'ziga tegishli bo'lgan tilla buyumlarni garovga qo'yishlarini ma'lum qilganlar
             </p>
             <div className='p1_second_table pdf_margin_top_40'>
@@ -158,10 +198,10 @@ function P1Form() {
                                 <p className='p1_second_headers_product'>{item?.proba}</p>
                                 <p className='p1_second_headers_product'>{item?.birlik}</p>
                                 <p className='p1_second_headers_product'>{item?.soni}</p>
-                                <p className='p1_second_headers_product'>{item?.umumiy}</p>
-                                <p className='p1_second_headers_product'>{item?.toshlar}</p>
-                                <p className='p1_second_headers_product'>{item?.sof}</p>
-                                <p className='p1_second_headers_product'>{item?.baho}</p>
+                                <p className='p1_second_headers_product'>{NumberSpace(item?.umumiy)}</p>
+                                <p className='p1_second_headers_product'>{NumberSpace(item?.toshlar)}</p>
+                                <p className='p1_second_headers_product'>{NumberSpace(item?.sof)}</p>
+                                <p className='p1_second_headers_product'>{NumberSpace(item?.baho)}</p>
                             </div>
                         )
                     })
@@ -172,11 +212,62 @@ function P1Form() {
                     <p className='p1_second_headers_product'></p>
                     <p className='p1_second_headers_product'></p>
                     <p className='p1_second_headers_product'></p>
-                    <p className='p1_second_headers_product'></p>
-                    <p className='p1_second_headers_product'></p>
-                    <p className='p1_second_headers_product'></p>
-                    <p className='p1_second_headers_product'></p>
+                    <p className='p1_second_headers_product'>{getUmumiy()}</p>
+                    <p className='p1_second_headers_product'>{getToshlar()}</p>
+                    <p className='p1_second_headers_product'>{getSof()}</p>
+                    <p className='p1_second_headers_product'>{getBaho()}</p>
                 </div>
+            </div>
+            <p className='pdf_margin_top_40'>
+                Buyurtmachilarning xarakteri, salohiyati, daromadi va daromad manbalari, kredit tarixi, ta'lovga qobiliyatliligi, buyurtmada ko'rsatilgan ma'lumotlar, boshqa bank-moliya muassasalari oldidagi mavjud qarzdorligi, ta'minot buyurtmada ko'rsatilgan maqsad va kredit mahsulotining muvofiqligi kredit byurosidan va MKTning boshqa o'z manbalaridan olingan axborotlar asosida o'rganildi va taxlil qilindi. Shu bilan birgalikda, monitoring bo'limi xodimining yakumiy xulosasi inobatga olindi.
+            </p>
+            <p className='pdf_margin_top_30'>
+                Yuqoridagilardan kelib chiqqan holda "Renesans Mikrokredit Tashkiloti" MChJ Guliston filiali Kredit Komissiyasi qaror qiladi:
+            </p>
+            <div className='startRow pdf_margin_top_10'>
+                <p>1</p>
+                <div className='p1_left_space'>
+                    <p>
+                        MKT kredit siyosatiga ko'ra o'rnatilgan tartibda mikroqarz shartnomasiga asosida Buyurtmachilarga quyidagicha mikroqarz ajratilsin:    
+                    </p>       
+                    <ul className='point_list'>
+                        <li className='pdf_margin_top_20 point_list'>
+                            Usmonova Muyassar Abduvaliyevnaga 20 000 000,00 (Yigirma million so'm 00 tiyin) so'm miqdorida yillik 58 foiz ustama tulash shart bilan 4 oylik muddatga shirinlik mahsulotlari savdosi uchun
+                        </li>
+                        <li className='pdf_margin_top_10 point_list'>
+                            Aliyev Ali Aliyvichga 20 000 000,00 (Yigirma million so'm 00 tiyin) so'm miqdorida yillik 58 foiz ustama tulash shart bilan 12 oylik muddatga Damas avtomobilini sotib olib axoliga pullik avtomabil xizmat ko'rsatish uchun
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className='startRow pdf_margin_top_30'>
+                <p>2</p>
+                <div className='p1_left_space'>
+                    <p>
+                        Berilayotgan mikroqarzga ta'minot sifatida o'zaro solidar javobgarlik to'g'risidagi Kafillik shartnomasi va garov shartnomasi asosida o'ziga tegishli bo'lgan Jadval № 1 da ko'rsatilgan tilla buyumlar o'z baholangan qiymatining 113,74% i yoki 20 000 000,00 (Yigirma million so'm 00 tiyin) so'm deb garov uchun qabul qilinsin;    
+                    </p>       
+                </div>
+            </div>
+            <div className='startRow pdf_margin_top_30 pdf_margin_bottom_50'>
+                <p>3</p>
+                <div className='p1_left_space'>
+                    <p>
+                        Kredit bo'limi zaruriy hollarda MKT ichki auditorini ham jalb etgan holda MKT ichki qoidalarida o'rnatilgan tartibda berilgan mikroqarz ustidan doimiy nazorat/monitoring olib bolsin.   
+                    </p>       
+                </div>
+            </div>
+
+            <div className='between align_center pdf_margin_top_10'>
+                <p>Kredit Komissiyasi Raisi</p>
+                <p>Muxammadov B.M.</p>
+            </div>
+            <div className='between align_center pdf_margin_top_10'>
+                <p>Kredit Komissiyasi a'zorali</p>
+                <p>Sultonova G.M.</p>
+            </div>
+            <div className='between align_center pdf_margin_top_10'>
+                <p></p>
+                <p>Maxkamova M.D.</p>
             </div>
         </div>
     </>
